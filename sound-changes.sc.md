@@ -6,6 +6,7 @@ This file is in .sc format, which means the markdown source can be copy-pasted d
 
 ```code
 <velar>=kgŋxʒ
+<coronal>=tdtʰlrszþðn
 <unvoiced stop>=ptk
 <voiced stop>=dbg
 <labial stop>=pbpʰ
@@ -17,15 +18,18 @@ This file is in .sc format, which means the markdown source can be copy-pasted d
 <long vowel>=āēīōūâêîôû
 <unstressed long vowel>=āēīōū
 <stressed long vowel>=âêîôû
+<front vowel>=eiéíēīêî
+<back vowel>=aouáóúāōūâôû
 V=aeiouáéíóúāēīōūâêîôûėȯ
-C=ppʰttʰkkʰdbgfþxvðʒnmŋlrsz
-<nonzero>=aeiouáéíóúāēīōūâêîôûėȯppʰttʰkkʰdbgfþxvðʒnmŋlrsz
+C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
+<nonzero>=aeiouáéíóúāēīōūâêîôûėȯppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 ```
 
 ## Symbol Definitions (only relevant for SCA users)
 
 ```code
 <velar>|G
+<coronal>|Þ
 <unvoiced stop>|T
 <short vowel>|H
 <unstressed short vowel>|Ħ
@@ -33,6 +37,8 @@ C=ppʰttʰkkʰdbgfþxvðʒnmŋlrsz
 <long vowel>|L
 <unstressed long vowel>|Ł
 <stressed long vowel>|Ĺ
+<front vowel>|E
+<back vowel>|O
 <voiced stop>|B
 <labial stop>|P
 <coronal stop>|D
@@ -82,7 +88,7 @@ Long vowels shortened in closed syllables.
 
 ## Early changes in Common Eldarin
 
-̭̭Stops devoiced and deaspirated before `t` and `s`.
+Stops devoiced and deaspirated before `t` and `s`.
 ```code
 [dtʰ]/t/_[ts]
 [gkʰ]/k/_[ts]
@@ -127,6 +133,69 @@ The suffixes `wā` and `mā` became `wē` and `mē` following `t`.
 ā/ē/t[wm]_
 ```
 
+`āu` simplified to `ā`
+```code
+u//ā_
+```
+
+Initial `nd`, `ŋg`, `mb` syllabified.
+
+Where two identical consonants flanked a vowel, they collapsed into a single consonant.
+```code
+tVt/t/_
+kVk/k/_
+lVl/l/_
+ndVnd/nd/_
+mbVmb/mb/_
+```
+
+## Early Lindarin Changes
+
+`gʷ` became `gw`, and the other labiovelars became labials.
+```code
+ŋʷgʷ/mb/_
+ŋʷkʷ/mp/_
+kʷ/p/_
+gʷ/gw/_
+```
+
+`b` became `w` before `d`.
+```code
+b/w/_d
+```
+
+`g` before `d` became a glide: `j` after a front vowel, and `w` after a back vowel.
+```code
+g/j/<front vowel>_d
+g/w/<back vowel>_d
+```
+
+`z` became `j` before a voiced stop.
+```code
+z/j/_<voiced stop>
+```
+
+`iw` became `jū` after a coronal.
+```code
+iw/jū/<coronal>_
+```
+
+Initial coronals (except s) were palatalized before `j`. The palatalization was then lost.
+```code
+j/ʲ/#[tdlrþðn]_
+ʲ//#[tdlrþðn]_
+```
+
+`m` became `n` before a glide.
+```code
+m/n/_[wj]
+```
+
+`j` became `i` before a vowel.
+```code
+j/i/_V
+```
+
 ## Lexicon
 
 ```code
@@ -134,7 +203,7 @@ atakwē
 laikwā
 jágwē
 néŋwi
-líŋʷi
+líŋwi
 ókoto
 ésedē
 mísidē
@@ -166,4 +235,18 @@ lúktjēnē
 nídwō
 kátwā
 játmā
+ostotiriondō
+kʰelkakaraksē
+tuilelindō
+endandorē
+niŋkwē
+glibdā
+kʰagdā
+negdē
+tiwkā
+siwlē
+tʲalja
+nʲarna
+kʰamwā
+ramja
 ```
