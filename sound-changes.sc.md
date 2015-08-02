@@ -7,7 +7,7 @@ This file is in .sc format, which means the markdown source can be copy-pasted d
 Note on orthography: I use macrons (e.g. `ā`) to represent long vowels, and acute accents (`á`) to represent stress. If a vowel is both stressed and long, the combination is represented by a circumflex (`â`). Most representations of Eldarin languages don't mark stress like this, but I've done so here to get the sound change rules to work.
 
 ```code
-<velar>=kgŋxʒ
+<velar>=kkʰgŋxʒ
 <coronal>=tdtʰlrszþðn
 <unvoiced stop>=ptk
 <voiced stop>=dbg
@@ -144,7 +144,14 @@ The suffixes `wā` and `mā` became `wē` and `mē` following `t`.
 u//ā_
 ```
 
-Initial `nd`, `ŋg`, `mb` syllabified.
+Initial `nd`, `ŋg`, `mb` syllabified in certain words.
+
+```code
+mbártā/ṃbártā/#_#
+ndûnē/ṇdûnē/#_#
+ŋgólē/ŋ̣gólē/#_#
+ŋgʲô/ŋ̣gʲô/#_#
+```
 
 Where two identical consonants flanked a vowel, they collapsed into a single consonant.
 ```code
@@ -219,61 +226,94 @@ The vowel of the first syllable often disappeared to form a stop-liquid consonan
 <unstressed vowel>//#[pbkgŋ]_[l]<stressed vowel>
 ```
 
-Initial nasals in such clusters denasalized.
+Initial nasals in these clusters then denasalized.
 ```code
 m/b/_[lr]
 ŋ/g/_[lr]
 ```
 
+Final long vowels of polysyllabic words shortened.
+```code
+<long vowel>/<short vowel>/V…_#
+```
+
+Initial `ŋ` was fortified to `ŋg`, except in the word `ŋōle`, where it disappeared instead.
+```code
+ŋôle/ôle/#_#
+ŋ/ŋg/_V
+```
+
+Palatalization was lost on velars.
+```code
+ʲ//<velar>_
+```
+
+Initial syllabic nasals gained a vowel.
+```code
+ṃ/am/#_
+ṇ/an/#_
+ŋ/aŋ/#_
+```
+
+`h` disappeared before a vowel.
+```code
+h//_V
+```
+
 ## Lexicon
 
 ```code
-atakwē
-baránda
-endandorē
-glibdā
+átakwē
+barádna
+endandórē
+glíbdā
 glímta
 jágwē
 játmā
 kátwā
 kémtano
 kírikta
+kírjā
 kótʰtā
-kʰagdā
-kʰamwā
+kúndū
+kʰágdā
+kʰámwā
 kʰarásse
-kʰelkakaraksē
+kʰelkakaráksē
 kʰótʰsē
 laikwā
 lábmē
+lássē
 líŋwi
 lókʰsē
 lótʰsē
 lúktjēnē
+mbártā
 morókō
 másagā
 mísidē
 mísikā
-negdē
-netstaki
-niŋkwē
+ndûnē
+négdē
+nétstaki
+níŋkwē
 néŋwi
 nídwō
 nôssē
-nʲarna
-ostotiriondō
+nʲárna
+ostotirióndō
 péresta
-ramja
+rámja
 ráŋku
 ríkʰta
-siwlē
+síwlē
 sjádsḽa
 sjádtā
 smálu
-tiwkā
-tuilelindō
+tíwkā
+tuilelíndō
 tárasta
-tʲalja
+tʲálja
 tʰáurēnā
 wédtā
 wégte
@@ -284,5 +324,9 @@ wíŋta
 ésedē
 ókoto
 úsukwē
-ŋalâ
+ŋálâ
+ŋálata
+ŋgólodō
+ŋgólē
+ŋgʲô
 ```
