@@ -4,6 +4,8 @@ This file is in .sc format, which means the markdown source can be copy-pasted d
 
 ## Sound Categories
 
+Note on orthography: I use macrons (e.g. `ā`) to represent long vowels, and acute accents (`á`) to represent stress. If a vowel is both stressed and long, the combination is represented by a circumflex (`â`). Most representations of Eldarin languages don't mark stress like this, but I've done so here to get the sound change rules to work.
+
 ```code
 <velar>=kgŋxʒ
 <coronal>=tdtʰlrszþðn
@@ -13,6 +15,8 @@ This file is in .sc format, which means the markdown source can be copy-pasted d
 <coronal stop>=tdtʰ
 <dorsal stop>=kgkʰ
 <short vowel>=aeiouáéíóúėȯ
+<unstressed vowel>=aeiouāēīōūėȯ
+<stressed vowel>=áéíóúâêîôû
 <unstressed short vowel>=aeiouėȯ
 <stressed short vowel>=áéíóú
 <long vowel>=āēīōūâêîôû
@@ -37,6 +41,8 @@ C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 <long vowel>|L
 <unstressed long vowel>|Ł
 <stressed long vowel>|Ĺ
+<unstressed vowel>|À
+<stressed vowel>|Á
 <front vowel>|E
 <back vowel>|O
 <voiced stop>|B
@@ -196,6 +202,29 @@ m/n/_[wj]
 j/i/_V
 ```
 
+## Changes Following the Split between the Sindar and the Amanyar Teleri
+
+Final diphthongs in `-i` simplified.
+```code
+āi/ī/_#
+ēi/ī/_#
+ōi/ī/_#
+```
+
+The vowel of the first syllable often disappeared to form a stop-liquid consonant cluster.
+```code
+<unstressed vowel>/<stressed vowel>/#C<stressed vowel>r_CC/
+<stressed vowel>/<unstressed vowel>/#C_rVCC/
+<unstressed vowel>//#[pbtdkgmŋ]_[r]<stressed vowel>
+<unstressed vowel>//#[pbkgŋ]_[l]<stressed vowel>
+```
+
+Initial nasals in such clusters denasalized.
+```code
+m/b/_[lr]
+ŋ/g/_[lr]
+```
+
 ## Lexicon
 
 ```code
@@ -249,4 +278,11 @@ tʲalja
 nʲarna
 kʰamwā
 ramja
+tárasta
+péresta
+kírikta
+baránda
+morókō
+ŋalá
+kʰarásse
 ```
