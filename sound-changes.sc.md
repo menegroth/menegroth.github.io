@@ -8,12 +8,16 @@ Note on orthography: I use macrons (e.g. `ā`) to represent long vowels, and acu
 
 ```code
 <velar>=kkʰgŋxʒ
+<nasal>=nmŋ
 <coronal>=tdtʰlrszþðn
 <unvoiced stop>=ptk
-<voiced stop>=dbg
+<aspirated stop>=pʰtʰkʰ
+<voiced stop>=bdg
 <labial stop>=pbpʰ
 <coronal stop>=tdtʰ
 <dorsal stop>=kgkʰ
+<sonorant>=lrnmwj
+<voiceless sonorant>=ḽr̭ṋm̭ƕç
 <short vowel>=aeiouáéíóúėȯ
 <unstressed vowel>=aeiouāēīōūėȯ
 <stressed vowel>=áéíóúâêîôû
@@ -26,6 +30,7 @@ Note on orthography: I use macrons (e.g. `ā`) to represent long vowels, and acu
 <back vowel>=aouáóúāōūâôû
 V=aeiouáéíóúāēīōūâêîôûėȯ
 C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
+<nonstrident>=ppʰttʰkkʰdbgfþxzvðʒnmŋlrhwj
 <nonzero>=aeiouáéíóúāēīōūâêîôûėȯppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 ```
 
@@ -35,6 +40,7 @@ C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 <velar>|G
 <coronal>|Þ
 <unvoiced stop>|T
+<aspirated stop>|Ʈ
 <short vowel>|H
 <unstressed short vowel>|Ħ
 <stressed short vowel>|Ĥ
@@ -49,12 +55,18 @@ C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 <labial stop>|P
 <coronal stop>|D
 <dorsal stop>|K
+<nasal>|N
+<nonstrident>|Ś
 <nonzero>|@
 ```
 
 ## Character Definitions (only relevant for SCA users)
 ```code
 ḽ|ł
+̭̭̭̭r̭|ř
+ṋ|ň
+m̭|ɱ
+
 tʰ|1
 kʰ|2
 pʰ|3
@@ -255,22 +267,187 @@ ṇ/an/#_
 ŋ/aŋ/#_
 ```
 
-`h` disappeared before a vowel.
+`h` underwent many changes. It disappeared before a vowel, became `g` before a nasal, assimilated to a following `t` or `s`, and lengthened the preceding vowel before `r` or a word boundary.
 ```code
 h//_V
+h/g/_<nasal>
+h/t/_t
+h/s/_s
+<short vowel>h/<long vowel>/_r
+<short vowel>h/<long vowel>/_#
+```
+
+Stops became voiced before nasals.
+```code
+<unvoiced stop>/<voiced stop>/_<nasal>
+```
+
+`d` and `b` nasalized before a nasal, even across word boundaries.
+```code
+d/n/_(·)<nasal>
+b/m/_(·)<nasal>
+```
+
+`ln` became `ll`.
+```code
+ln/ll/_
+```
+
+`tʰn` became `tʰtʰ` and then `ttʰ`.
+```code
+tʰn/tʰtʰ/_
+tʰtʰ/ttʰ/_
+```
+
+`m` became `w` after a coronal or velar nasal.
+```code
+m/w/<coronal>_
+m/w/ŋ_
+```
+
+`nt` sometimes, irregularly, became `nd`.
+```code
+lanta/landa/_
+```
+
+Unaspirated voiceless final stops disappeared, as did final `m`. `tʰ` then deaspirated word-finally.
+```code
+<unvoiced stop>//_#
+m//_#
+tʰ/t/_#
+```
+
+Long mid vowels raised. `i` then merged with a following long `ī`.
+```code
+ē/ī/_
+ê/î/_
+ō/ū/_
+ô/û/_
+iī/ī/_
+iî/î/_
+```
+
+Long `ā` rounded to take the place of `ō`.
+```code
+ā/ō/_
+â/ô/_
+```
+
+Mid vowels raised before `i`. `e` also raised before `u`.
+```code
+e/i/_[iíuú]
+é/í/_[iíuú]
+o/u/_[ií]
+ó/ú/_[ií]
+```
+
+Long `ū` shortened before `i`.
+```code
+ū/u/_[ií]
+û/ú/_[ií]
+```
+
+`j` and `i` disappeared before `ui`.
+```code
+[ji]//_ui
+[ji]//_úi
+```
+
+`n` assimilated to the POA of a following stop, even across word boundaries.
+```code
+n/m/_(·)[bp]
+n/m/_(·)mb
+n/ŋ/_(·)[kg]
+n/ŋ/_(·)ng
+```
+
+Voiceless stops aspirated after another consonant (except for `s`), even across word boundaries.
+```code
+<unvoiced stop>/<aspirated stop>/<nonstrident>(·)_
+```
+
+Stops in initial clusters in `s-` did aspirate, however.
+```code
+<unvoiced stop>/<aspirated stop>/#s_
+``
+
+Sonorants devoiced after voiceless fricatives.
+```code
+l/ḽ/s_
+̭̭̭̭r/r̭/s_
+n/ṋ/s_
+m/m̭/s_
+w/ƕ/s_
+j/ç/s_
+```
+
+`ts` became `ttʰ`.
+```code
+ts/ttʰ/_
+```
+
+In clusters with `r`, `ttʰ` simplified to `tʰ`.
+```code
+ttʰ/tʰ/_[r̭̭̭̭r]
+```
+
+`s` disappeared or changed in many positions.
+
+`s` disappeared from initial clusters with voiceless sonorants.
+```code
+s//#_[ḽr̭ṋm̭ƕç]
+```
+
+After a vowel (or a preposition or article ending in a vowel), `s` assimilates to a following voiceless sonorant.
+```code
+<voiceless sonorant>/<voiceless sonorant>²/V(·)s_
+s//V(·)_<voiceless sonorant>
+```
+
+`s` changed to `h` between vowels.
+```code
+s/h/V_V
+```
+
+`s` at the end of a word disappeared.
+```code
+s//_#
+```
+
+`ja` became `ji` before a stressed syllable.
+```code
+ja/ji/_(C)(C)(C)(C)<stressed vowel>
+```
+
+`ji` shortened to `i`.
+```code
+j//_[iīíî]
+```
+
+`ii` became long `ī`.
+```code
+ii/ī/_
+íi/î/_
+ií/î/_
+```
+
+Stressed `wo` became `wa`.
+```code
+wó/wá/_
 ```
 
 ## Lexicon
 
 ```code
 átakwē
-barádna
+barâdnā
 endandórē
 glíbdā
 glímta
 jágwē
 játmā
 kátwā
+--- above have been checked against the lexicon ---
 kémtano
 kírikta
 kírjā
