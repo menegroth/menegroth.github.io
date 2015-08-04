@@ -1,6 +1,6 @@
 # Sound changes in Sindarin
 
-This file is in .sc format, which means the markdown source can be copy-pasted directly into [Zompist's Sound Change Applier](http://zompist.com/sca2). A sample lexicon to use with the SCA can be found at the end of this document.
+This file is in .sc format, which means the markdown source can be copy-pasted directly into [Zompist's Sound Change Applier](http://zompist.com/sca2). A sample Common Eldarin lexicon to use with the SCA can be found in the same Github repo as this document.
 
 ## Sound Categories
 
@@ -41,6 +41,8 @@ C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 <coronal>|Þ
 <unvoiced stop>|T
 <aspirated stop>|Ʈ
+<sonorant>|M
+<voiceless sonorant>|Ɯ
 <short vowel>|H
 <unstressed short vowel>|Ħ
 <stressed short vowel>|Ĥ
@@ -63,7 +65,7 @@ C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
 ## Character Definitions (only relevant for SCA users)
 ```code
 ḽ|ł
-̭̭̭̭r̭|ř
+r̭|ř
 ṋ|ň
 m̭|ɱ
 
@@ -119,10 +121,10 @@ Stops devoiced and deaspirated before `t` and `s`.
 t//_st
 ```
 
-`t` and `d` assimilated to the POA of a following stop.
+`t` and `d` assimilated to the POA of a following stop, even across word boundaries.
 ```code
-<coronal stop>/<labial stop>/_<labial stop>
-<coronal stop>/<dorsal stop>/_<dorsal stop>
+<coronal stop>/<labial stop>/_(·)<labial stop>
+<coronal stop>/<dorsal stop>/_(·)<dorsal stop>
 ```
 
 `m` and `ŋ` assimilated to `n` before nonnasal coronals.
@@ -234,8 +236,8 @@ The vowel of the first syllable often disappeared to form a stop-liquid consonan
 ```code
 <unstressed vowel>/<stressed vowel>/#C<stressed vowel>r_CC/
 <stressed vowel>/<unstressed vowel>/#C_rVCC/
-<unstressed vowel>//#[pbtdkgmŋ]_[r]<stressed vowel>
-<unstressed vowel>//#[pbkgŋ]_[l]<stressed vowel>
+<unstressed vowel>//[pbttʰdkgmŋ]_[r]<stressed vowel>
+<unstressed vowel>//[pbkgŋ]_[l]<stressed vowel>
 ```
 
 Initial nasals in these clusters then denasalized.
@@ -373,12 +375,7 @@ Stops in initial clusters in `s-` did aspirate, however.
 
 Sonorants devoiced after voiceless fricatives.
 ```code
-l/ḽ/s_
-̭̭̭̭r/r̭/s_
-n/ṋ/s_
-m/m̭/s_
-w/ƕ/s_
-j/ç/s_
+<sonorant>/<voiceless sonorant>/s_
 ```
 
 `ts` became `ttʰ`.
@@ -388,7 +385,7 @@ ts/ttʰ/_
 
 In clusters with `r`, `ttʰ` simplified to `tʰ`.
 ```code
-ttʰ/tʰ/_[r̭̭̭̭r]
+ttʰ/tʰ/_[r̭r]
 ```
 
 `s` disappeared or changed in many positions.
@@ -398,7 +395,7 @@ ttʰ/tʰ/_[r̭̭̭̭r]
 s//#_[ḽr̭ṋm̭ƕç]
 ```
 
-After a vowel (or a preposition or article ending in a vowel), `s` assimilates to a following voiceless sonorant.
+After a vowel (or a preposition or article ending in a vowel), `s` assimilated to a following voiceless sonorant.
 ```code
 <voiceless sonorant>/<voiceless sonorant>²/V(·)s_
 s//V(·)_<voiceless sonorant>
@@ -434,76 +431,4 @@ ií/î/_
 Stressed `wo` became `wa`.
 ```code
 wó/wá/_
-```
-
-## Lexicon
-
-```code
-átakwē
-barâdnā
-endandórē
-glíbdā
-glímta
-jágwē
-játmā
-kátwā
---- above have been checked against the lexicon ---
-kémtano
-kírikta
-kírjā
-kótʰtā
-kúndū
-kʰágdā
-kʰámwā
-kʰarásse
-kʰelkakaráksē
-kʰótʰsē
-laikwā
-lábmē
-lássē
-líŋwi
-lókʰsē
-lótʰsē
-lúktjēnē
-mbártā
-morókō
-másagā
-mísidē
-mísikā
-ndûnē
-négdē
-nétstaki
-níŋkwē
-néŋwi
-nídwō
-nôssē
-nʲárna
-ostotirióndō
-péresta
-rámja
-ráŋku
-ríkʰta
-síwlē
-sjádsḽa
-sjádtā
-smálu
-tíwkā
-tuilelíndō
-tárasta
-tʲálja
-tʰáurēnā
-wédtā
-wégte
-wíŋta
-ádnō
-ákalarē
-átalantā
-ésedē
-ókoto
-úsukwē
-ŋálâ
-ŋálata
-ŋgólodō
-ŋgólē
-ŋgʲô
 ```

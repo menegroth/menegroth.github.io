@@ -1,0 +1,1 @@
+- CE awatʰā should change to OS autʰa, according to Salo 240, but does not.
