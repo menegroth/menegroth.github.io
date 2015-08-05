@@ -1,1 +1,1 @@
-- CE awatʰā should change to OS autʰa, according to Salo 240, but does not.
+- CE awatʰā should change to OS autʰa, according to Salo 240, but does not. RESOLVED - conjectured environment for Salo 4.3 was too strict. Expanded to change `awa` to `aw`. The reconstructed OS form is `awtʰa`, not `autʰa`, but other reflexes of CS `au` show `aw` at this stage. c.f. OS `kʰawda` < CE `kʰagdā` (haudh), Salo 4.25.
