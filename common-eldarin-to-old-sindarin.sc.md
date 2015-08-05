@@ -371,7 +371,7 @@ Voiceless stops aspirated after another consonant (except for `s`), even across 
 Stops in initial clusters in `s-` did aspirate, however.
 ```code
 <unvoiced stop>/<aspirated stop>/#s_
-``
+```
 
 Sonorants devoiced after voiceless fricatives.
 ```code
