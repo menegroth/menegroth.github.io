@@ -79,7 +79,7 @@ pʰ|3
 Velars labialized before `w`, and `ŋʷ` became `ŋʷgʷ`
 ```code
 w/ʷ/<velar>_
-ŋʷ/ŋʷgʷ/_
+ŋʷ/ŋʷgʷ/_V
 ```
 
 The second vowel in a word sometimes (when?) disappeared when unstressed. NOTE: this is based on Salo 4.3, but the environments are conjectural.
