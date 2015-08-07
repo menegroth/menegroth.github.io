@@ -6,4 +6,6 @@
 
 - How did the vowel change in CE kaem -> OS kai? c.f. kaolō -> kaulo (caul), ndaer -> ndair (daer)
 
-- Why was the first vowel of CE karáni not lost (Caran)? Why was the second vowel of kárani lost (Carn)? Similarly, why was the second vowel of koronē lost?
+- Why was the first vowel of CE karáni not lost (Caran)?
+
+- Why was the second vowel of kárani lost (Carn)? Similarly, why was the second vowel of koronē lost? RESOLVED: expanded the environment for the pre-CE change that causes vowel deletion.

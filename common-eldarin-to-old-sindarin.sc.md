@@ -86,6 +86,7 @@ The second vowel in a word sometimes (when?) disappeared when unstressed. NOTE: 
 ```code
 <unstressed short vowel>//#(C)Vk_t
 <unstressed short vowel>//#(C)Vs_C
+<unstressed short vowel>//#(C)Vr_n
 <unstressed short vowel>//#(C)[aá]w_C
 <unstressed short vowel>//#(C)V<unvoiced stop>_l
 ```
