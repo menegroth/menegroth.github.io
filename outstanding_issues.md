@@ -4,7 +4,7 @@
 
 - How does BERÉK lose the first vowel before the CE stage?
 
-- How did the vowel change in CE kaem -> OS kai? c.f. kaolō -> kaulo (caul), ndaer -> ndair (daer)
+- How did the vowel change in CE kaem -> OS kai? c.f. kaolō -> kaulo (caul), ndaer -> ndair (daer) RESOLVED: there seemed to be a missing sound change that would cause this. `e` and `o` are already raised when long, so it's not that much of a stretch to say they might raise in long syllables in general.
 
 - Why was the first vowel of CE karáni not lost (Caran)?
 

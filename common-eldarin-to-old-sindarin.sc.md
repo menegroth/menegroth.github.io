@@ -321,12 +321,14 @@ m//_#
 tʰ/t/_#
 ```
 
-Long mid vowels raised. `i` then merged with a following long `ī`.
+Mid vowels raised in long syllables. `i` then merged with a following long `ī`.
 ```code
 ē/ī/_
 ê/î/_
 ō/ū/_
 ô/û/_
+e/i/[aá]_
+o/u/[aá]_
 iī/ī/_
 iî/î/_
 ```
