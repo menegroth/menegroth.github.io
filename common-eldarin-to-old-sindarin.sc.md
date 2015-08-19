@@ -69,6 +69,8 @@ r̭|ř
 ṋ|ň
 m̭|ɱ
 
+ŋ̣|ŵ
+
 tʰ|1
 kʰ|2
 pʰ|3
@@ -268,7 +270,7 @@ Initial syllabic nasals gained a vowel.
 ```code
 ṃ/am/#_
 ṇ/an/#_
-ŋ/aŋ/#_
+ŋ̣/aŋ/#_
 ```
 
 `h` underwent many changes. It disappeared before a vowel, became `g` before a nasal, assimilated to a following `t` or `s`, and lengthened the preceding vowel before `r` or a word boundary.
