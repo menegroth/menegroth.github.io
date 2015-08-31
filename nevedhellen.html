@@ -1,0 +1,295 @@
+<html>
+    <head>
+        <style type="text/css">
+
+        @media screen and (max-width: 768px) {
+          .content {
+            width: 100%;
+            padding: 10px;
+          }
+
+          .stars {
+            padding: 0;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          .content {
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 80px;
+          }
+
+          .stars {
+            padding-top: 80px;
+            padding-bottom: 80px;
+          }
+        }
+
+        * {
+          border: none;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          line-height: 130%;
+        }
+
+        .html {
+          background-color: #000;
+        }
+
+        .stars {
+          width: 100%;
+          background-color: #003;
+          background-image: url('http://1-background.com/images/stars-1/star-space-tile.jpg');
+          background-position: center;
+          background-attachment: fixed;
+          background-repeat: repeat;
+        }
+
+        .content {
+          background-color: #fff8f0;
+          border: 2px solid #dc8;
+          box-shadow: inset 0 0 2px #000, 0 0 5px #000;
+
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          margin-bottom: 1em;
+          margin-top: 0.66em;
+        }
+
+        ul, ol {
+          padding-left: 20px;
+        }
+
+        ul, ol, p {
+          margin-top: 1em;
+          margin-bottom: 1em;
+        }
+
+        li {
+          margin-top: 0.3em;
+          margin-bottom: 0.3em;
+        }
+
+        .s {
+          font-weight: bold;
+          color: #216;
+        }
+
+        .en, .fr, .de, .cy, .gd {
+          color: #800;
+          font-weight: bold;
+        }
+
+        .annotated .att,
+        .annotated .attested,
+        .annotated .post,
+        .annotated .posthumous {
+          font-style: italic;
+        }
+
+        .annotated .re:before,
+        .annotated .reconstructed:before {
+          font-style: normal;
+          content: '*'
+        }
+
+        .annotated .wrong:before {
+          font-style: normal;
+          content: '!'
+        }
+
+        .annotated .post:before,
+        .annotated .posthumous:before {
+          font-style: normal;
+          content: '†'
+        }
+
+        q:before {
+          content: '';
+        }
+
+        q:after {
+          content: '';
+        }
+
+        .annotated q {
+          border-bottom: 1px dotted #aaa;
+        }
+        </style>
+    </head>
+    <body class="annotated">
+        <div class="stars">
+        <div class="content">
+<h1>Nevedhellen: A New Sindarin Grammar</h1>
+
+<h2>Introduction</h2>
+
+<p>Most Tolkienists use the term <em>Neo-Sindarin</em> to describe the language used in post-Tolkien &quot;Sindarin&quot; compositions, emphasizing that the living forms of the language are chimeras stitched together from ambiguous and often conflicting sources, and as such may not reflect Tolkien&#39;s intentions. Since this grammar is likewise a product of conjecture, compromise, and hand-waving, I considered the title <em>A Neo-Sindarin Grammar</em>, but that presents a problem. The term <em>Neo-Sindarin</em> does not denote a single, consistent language, but rather a family of related hypotheses about how Sindarin worked at various stages of Tolkien&#39;s conception of it. We have, for example, at least two competing theories of how the past tense was formed in strong verbs, and even the number of consonant mutations that exist (and how the rarer ones operated, if they existed at all) is far from certain. Descriptions of Neo-Sindarin usually present several theories for the more dubious points, duly annotating them as uncertain, and leave it up to the reader to decide which they want to believe.</p>
+
+<p>My aim, however, is different. I hope to present a comprehensive and unified account of <em>one</em> variety of Neo-Sindarin&mdash;not because I believe it is in any way authoritative, but to show how it could be done. Readers will no doubt disagree with some of my interpretations on scholarly or aesthetic grounds. I hope this grammar will provide a starting point for their many revisions.</p>
+
+<p>Hence the unusual name for the language described in this grammar. I needed to give a name to this particular variety of Neo-Sindarin, and happily a fortuitous one presented itself.</p>
+
+<p>The word <em>Nev-Sindarin</em> (perhaps <em>Nev-edhellen</em> would be better, though less recognizable to casual readers) is my own invention, a kind of cross-linguistic pun. <em>Nev</em> is of course the Nevbosh word for &quot;new&quot; (and thus an echo of <em>neo-</em>), but it is also a possible spelling of the Sindarin element <span class="s">nef/nev</span>, meaning &quot;hither, near&quot; (as a prefix, according to Salo:276, c.f. <em>Nevrast</em> in WJ:197). Nev-Sindarin is thus the New-Sindarin that is nearest my heart, and maybe as near as we (who are, as it were, <em>nef aearon</em>) can come to the language spoken by the Elves of Middle-earth at the end of the Third Age.</p>
+
+<p>In the first section of this book, I present a grammar and lexicon of Third-age Sindarin, the language used in <em>The Lord of the Rings</em>.</p>
+
+<p>The second section comprises a diachronic overview of Sindarin, tracing its ancestry from Cuiviénen up to the fall of Sauron and beyond. The purpose of this section is to illustrate the changes that would produce the word-forms and grammar described in the first section. Possible grammars of Old and Middle Sindarin are briefly treated.</p>
+
+<p>The third section is an in-depth analysis of the primary sources that are our best guide to Sindarin as Tolkien envisioned it. Here I discuss the evidence <em>against</em> my favored interpretation of the data, hopefully providing a guide to further study and future revisions.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>My own studies of Sindarin began with Helge Fauskanger&#39;s essays and Thorsten Renk&#39;s <em>Pedin Edhellen</em> textbook, and their scholarly analyses of the language have proven invaluable in the preparation of this text. My description of the sound changes producing Classical (Third Age) Sindarin is likewise based in David Salo&#39;s excellent analysis.</p>
+
+<h1>Typographic Conventions</h1>
+
+<p>I use <strong>boldface</strong> for Sindarin words and phrases interspersed into the text and additionally <strong><em>italicize</em></strong> examples that are directly attested in Tolkien&#39;s writings. A <strong>&dagger;</strong> symbol marks attested forms found only in writings published after Tolkien&#39;s death.</p>
+
+<p>When discussing a word or phrase that Tolkien did not (as far as we know) actually write, I use the following symbols to indicate why mention of the form is justified:</p>
+
+<ul>
+<li><strong>!</strong> Precedes an incorrect form, useful as an example of what <em>not</em> to write.</li>
+<li><strong>&#42;</strong> Marks a word that has been isolated from a compound, deduced from a mutated form, or reconstructed from an attested historical form.</li>
+<li><strong>&#35;</strong> Marks post-Tolkien coinages. These are always built from attested roots, which gives them a semblance of validity, but that does not mean that Tolkien would have used the word. I also use <strong>&#35;</strong> to mark grammatical constructions that are not Tolkien&#39;s own.</li>
+<li><strong>?</strong> Marks a speculative translation. There are some words for which Tolkien never provided an explanation&mdash;one of the most notorious is <span class="s post">aen</span>, found in the King&#39;s Letter.</li>
+</ul>
+
+<p>The language called Sindarin in <em>The Lord of the Rings</em> was originally called Noldorin, and occupied a different place in the history of Middle-earth. When Tolkien later decided that this language was actually spoken by the Sindar, he made systematic changes to the sounds of Noldorin, &quot;updating&quot; it into Sindarin. Much of the Sindarin vocabulary we use today was published after Tolkien&#39;s death, and comes from material that he worked on while the language was still called Noldorin. Therefore, while I believe that this vocabulary would still be valid in LotR-style Sindarin, it&#39;s hard to know for sure. Note that any Sindarin words cited as coming from &quot;Ety&quot; (the <em>Etymologies</em>) have been updated from their attested Noldorin forms.</p>
+
+<p>All of this is done to aid readers who aim to understand which forms are relatively certain and which are not, and perhaps to draw their own conclusions that differ from my own. For those who simply want to learn the language, I&#39;ve provided a way to hide the annotations in the HTML version of this text.</p>
+
+<p>Glosses of attested words and phrases are Tolkien&#39;s own when he provides one. My own translations are marked with an asterisk.</p>
+
+<h1>Lessons</h1>
+
+<h2>Pronunciation</h2>
+
+<h3>Sindarin of the Third Age</h3>
+
+<p>The vowels <span class="s">a e i o u</span> are pronounced as in Italian, or as exemplified below:</p>
+
+<ul>
+<li><span class="s">a</span> as in <span class="en">father</span></li>
+<li><span class="s">e</span> as in <span class="en">let</span></li>
+<li><span class="s">i</span> as in <span class="en">machine</span></li>
+<li><span class="s">o</span> as in <span class="en">for</span></li>
+<li><span class="s">u</span> as in <span class="en">brute</span></li>
+<li><span class="s">y</span> is close to German <span class="de">ü</span>, or the <span class="fr">u</span> in French <span class="fr">lune</span>. Pronounce the <span class="en">i</span> sound in <span class="en">sit</span> with your lips rounded as if saying <span class="en">oo</span>.</li>
+</ul>
+
+<p>Vowels marked with an accent (<span class="s">á</span>) are held slightly longer than unmarked vowels. A circumflex (<span class="s">â</span>) marks an even longer version of the vowel. Compare the vowel lengths in this greeting:</p>
+
+<p><span class="s">Elen síla na lû govaded</span> &quot;A star shines on the hour of meeting&quot;</p>
+
+<p>In addition to the simple vowels Sindarin also has five <span class="term">diphthongs</span>, combinations of two vowels pronounced in a single syllable, with a smooth transition from one vowel to the other.</p>
+
+<ul>
+<li><span class="s">ai</span> is the sound of <span class="en">y</span> in English <span class="en">sky</span>.</li>
+<li><span class="s">ae</span> has no counterpart in English; it is similar to Sindarin <span class="s">ai</span> but ends with an <span class="s">e</span> sound (as in <span class="en">let</span>), instead of an <span class="s">i</span> sound (as in <span class="en">machine</span>).</li>
+<li><span class="s">au</span> has the sound of <span class="en">ou</span> in <span class="en">house</span>. At the end of a word it is spelled <span class="s">aw</span>: <q cite="Ety:402, entry KAS"><span class="s post">caw</span> &quot;top&quot;</q>.</li>
+<li><span class="s">ei</span> is the sound of <span class="en">ay</span> in English <span class="en">say</span>.</li>
+<li><span class="s">oe</span> has no counterpart in English; it is similar to the <span class="en">oy</span> sound in <span class="en">boy</span>, but ends with the same <span class="s">e</span> sound as Sindarin <span class="s">ae</span>.</li>
+<li><span class="s">ui</span> is the sound in English <span class="s">ruin</span>.</li>
+</ul>
+
+<p>Consonants <span class="s">b, d, m, p, t, v, w</span> are pronounced more or less as in English and need no further description.</p>
+
+<ul>
+<li><span class="s">c</span> is always hard, as in <span class="en">cat</span>. <span class="s attested">Celeborn</span> is pronounced <span class="s sound-spelling">keleborn</span>, not <span class="s wrong sound-spelling">seleborn</span>.</li>
+<li><span class="s">ch</span> is close to the raspy sound of Scottish <span class="gd">loch</span> or German <span class="de">Bach</span>. In Tolkien&#39;s own pronunciation, it was more or less like <span class="s">h</span> with the tongue raised slightly toward the back of the mouth as if to pronounce <span class="s">k</span>.</li>
+<li><span class="s">dh</span> is the <span class="en">th</span> sound in <span class="en">this</span>.</li>
+<li><span class="s">f</span> at the end of a word is pronounced <span class="s">v</span>, as in English <span class="en">of</span>.</li>
+<li><span class="s">g</span> is likewise always hard, as in <span class="en">get</span>; never soft as in <span class="en">gem</span>.</li>
+<li><span class="s">h</span> is pronounced like English <span class="en">h</span>, except in the digraphs <span class="s">th</span>, <span class="s">dh</span>, <span class="s">ch</span>, <span class="s">lh</span>, <span class="s">rh</span>, <span class="s">hw</span>.</li>
+<li><span class="s">hw</span> is the sound heard in English <span class="en">whale</span>, in varieties of English that distinguish it from <span class="en">wail</span>.</li>
+<li><span class="s">l</span> is always the sound in <span class="en">let</span>, pronounced with the tip of the tongue touching the upper teeth or just behind them. English has another <span class="en">l</span> sound used at the end of syllables, e.g. <span class="en">tell</span>, in which the tongue is bunched up at the back of the mouth and doesn&#39;t touch the teeth. This sound does not occur in Sindarin.</li>
+<li><span class="s">lh</span> is the <span class="cy">ll</span> sound of Welsh <span class="cy">Lloyd</span>. Put your tongue in a position to say <span class="en">l</span> and gently exhale as if pronouncing <span class="en">th</span>.</li>
+<li><span class="s">n</span> is pronounced identically to English <span class="en">n</span>. Before <span class="s">c</span>, <span class="s">ch</span>, <span class="s">g</span>, it is pronounced as in <span class="en">think</span> - that is, like the <span class="en">ng</span> sound in <span class="en">thing</span>.</li>
+<li><span class="s">ng</span> at the beginning or end of a word is pronounced as in <span class="en">thing</span>. Between vowels, it is pronounced as the same sound plus <span class="s">g</span>, as in <span class="en">finger</span>.</li>
+<li><span class="s">ph</span> is as in English <span class="en">phone</span>. Between vowels, it represents the same sound held for slightly longer, e.g. in <q cite="RotK Appendix E, p. 392"><span class="s attested">ephel</span> &quot;outer fence&quot;</q>.</li>
+<li><span class="s">r</span> is tapped, as in Spanish, or as in <q cite="http://www.jrrvf.com/~glaemscrafu/english/tolkienhimselflotrhob.html">Tolkien&#39;s own pronunciation of English</q>. It is never articulated in the back of the throat as in French or German - reportedly the Elves found this sound <q cite="RotK:392 Appendix E">&quot;distasteful&quot;</q>.</li>
+<li><span class="s">th</span> is always the sound in <span class="en">thin</span>, never the sound in <span class="en">this</span>, which is represented in Sindarin by <span class="s">dh</span>.</li>
+<li><span class="s">rh</span> is the <span class="cy">rh</span> of Welsh <span class="cy">Rhiannon</span>. Pronounce a Sindarin <span class="s">r</span>, but simultaneously exhale as if pronouncing <span class="s">h</span>.</li>
+</ul>
+
+<p>Sindarin has certain sequences of sounds which are not found in English.</p>
+
+<ul>
+<li><span class="s">w</span> can occur at the end of a word: <span class="s re">têw</span> &quot;letter&quot;, <q cite="RotK Appendix E, p. 395"><span class="s att">tîw</span> &quot;letters&quot;</q>, <q cite="LR:444"><span class="s post">gwaew</span> &quot;wind&quot;</q>.</li>
+<li><span class="s">ng</span> can appear at the beginning of a word: <q cite="LotR, translated in Letters:278 and RGEO:72"><span class="s attested">di-nguruthos</span> &quot;in the shadow of death&quot;</q>.</li>
+<li>Clusters <span class="s">mr</span>, <span class="s">ml</span> are possible at the beginning of a word: <span class="s">am mrôg</span> &quot;for a bear&quot;, <span class="s">am mlabed</span> &quot;for flapping&quot;</li>
+</ul>
+
+<h3>Sindarin of the Fourth Age, as Spoken in Minas Tirith</h3>
+
+<p>Sindarin was used in Minas Tirith, not as the language of everyday life, but... [how?]. By the end of the Third Age, the language spoken there had already acquired a distinctive accent, and as the presence of Elves dwindled in Middle-earth, it diverged still further from its roots. The grammar of the language was slow to change, since many texts in Sindarin were housed in Minas Tirith and were the subject of study. The way those texts were pronounced, however, was changed significantly from the speech of those who had written them.</p>
+
+<ul>
+<li><em>ch</em> often became [k] or [k_h] word-finally, and [h] between vowels.</li>
+<li><em>ae</em> was pronounced [e:] or [ej], according to the Westron dialect of the speaker. (HKF cites Appendix E)</li>
+<li><em>ei</em> could have been pronounced [@j], to distinguish it from <em>ae</em> and <em>ai</em>. HKF notes that Westron &quot;had certain reduction vowels&quot;, c.f. RotK Appendix E p. 404, &quot;The new <span class="s">cirth</span> 55, 56, were in origin a halved form of 46, and were used for vowels like those heard in the English <em>butter</em>, which were frequent in Dwarvish and in the Westron&quot; so a diphthong in [@-] seems a natural choice here.</li>
+<li><em>ui</em> before a vowel became resyllabified as [u.j] due to the Westron substrate. The formerly heavy syllable ceased to be heavy for purposes of stress. Thus a word like <em>aduial</em> was pronounced [&quot;a.du.jal].</li>
+</ul>
+
+<p>Westron lacked the sounds of Sindarin <em>w</em> and <em>hw</em>; Westron-speakers tended to pronounce these <em>v</em> and <em>f</em>, though in clusters <em>w</em> retained its original sound.</p>
+
+<p>Compounds in which each element was a recognizable word (even if affected by mutation) often kept the stress of the individual elements intact. Whichever stress fell on the penultimate or antepenultimate syllable became the primary stress; other stresses were secondary. Thus <span class="s">edhelharn</span> was <span class="phonemic">&quot;EDElharn</span>, while <span class="s">edhellen</span> was still <span class="phonemic">E&quot;DEllEn</span> since the suffix <em>-len</em> could not stand as a word on its own. Stresses of this pattern are seen in hyphenated compounds in classical Sindarin; c.f. <span class="s att">Gil-galad</span>. These words are closely enough connected for <span class="s">calad</span> to lenit to <span class="s">galad</span>, and yet the stress of <em>galad</em> is preserved. In a purely genitive construction &quot;star of light&quot; we might expect <em>gil calad</em>; c.f. <q cite="LotR TODO"><span class="s att">Ennyn Durin Aran Moria</span></q>. (note: though Tolkien also wrote <span class="s post">Ennyn Dhurin Aran Voria</span>, with lenition, in an early draft of the gate inscription. HKF calls this lenition the product of an <q cite="http://folk.uib.no/hnohf/sindarin.htm">&quot;obsolete rule&quot;</q>, which Tolkien seems to have later removed from the language)</p>
+
+<h2>Phrasebook</h2>
+
+<ul>
+<li><strong><em>Mae govannen!</em></strong> -:- &quot;Well met!&quot;</li>
+<li><em>Suilad</em> -:- &quot;Greetings&quot;</li>
+<li><em>Gîl síla nan govaded vín</em> -:- &quot;A star shines on our meeting&quot;</li>
+<li><em>Gîl síla na lû govaded vín</em> -:- &quot;A star shines on the hour of our meeting&quot;</li>
+<li><em>Elo!</em> -:- &quot;Behold!&quot;</li>
+<li><em>Calo Anor na men lín</em> -:- &quot;May the sun shine on your road&quot;</li>
+<li><em>Cuio vae!</em> -:- &quot;Farewell!&quot;</li>
+</ul>
+
+<h2>Thematic Dictionary</h2>
+
+<h3>Stress</h3>
+
+<p>The &quot;diphthongs&quot; <em>ui</em>, <em>ia</em>, <em>ie</em>, <em>io</em> present an interesting difficulty, because although they are described as diphthongs [where?], Tolkien did not pronounce them that way. C.f. the recording of &quot;A Elbereth Gilthoniel&quot; and other recordings of names (<em>Anduin</em>, <em>Duilin</em>, in which Tolkien pronounces <em>ui</em> as [uI])and Sam&#39;s invocation to Elbereth: <strong><em>le nallon sí di&#39; nguruthos! / A tíro nin, Fanuilos!</em></strong>, in which the last line would be a syllable too short for the meter if <em>ui</em> were really pronounced [uj]. Possibly the underlying phonemes are /uj/, but this sound is often realized as [ui], maybe only in verse.</p>
+
+<h3>Consonant Mutations</h3>
+
+<p>Lenition is, in general, the way that Sindarin shows a close interconnection between words. E.g. when a verb and a direct object appear together, they form a <em>verb phrase</em>, a self-contained chunk of the larger sentence.</p>
+
+<h3>Verbal Morphology</h3>
+
+<h4>Perfect Mood</h4>
+
+<p><em>Arphent Rían Tuorna, &quot;Man agorech?&quot;</em> (Tolkien struck out <em>A Rían pent na Duor</em>)
+&quot;And Rían said to Tuor, &#39;What have you done?&#39;&quot;</p>
+
+<ul>
+<li>similar to Quenya perfect</li>
+<li>Taramiluiel notes that the Sindarin in this passage may be Quenya-influenced: http://www.lotrplaza.com/archives/index.php?Archive=First%20Age&amp;TID=89440 &quot;Isn’t this intended to be a northern dialect found in Mithrim? Where Fingolfin, a Noldor, made his realm. Thus the Quenya influence in arphent.&quot;</li>
+</ul>
+
+<h1>The Evolution of Sindarin</h1>
+
+<h1>Analysis</h1>
+
+<h1>List of Attested Forms Published During Tolkien&#39;s Lifetime</h1>
+
+<p>tîw &quot;letters&quot; (RotK:395, Appendix E)
+thîw &quot;letters&quot; (nasal mutation)</p>
+
+<h1>TODO:</h1>
+
+<p>replace c.f. with compare
+replace HKF with Fauskanger
+ensure all S. forms in the text are bold, and all attested forms are in bold italics</p>
+        </div>
+        </div>
+
+    </body>
+</html>
