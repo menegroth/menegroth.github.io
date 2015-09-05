@@ -34,7 +34,7 @@ class Preprocessor
         quote = captures[0]
         source = captures[1]
 
-        "<q cite=\"#{source}\">#{quote}</q>"
+        "<span class=\"cited\">#{quote} <span class=\"citation\">#{source}</span></span>"
       }
 
     end

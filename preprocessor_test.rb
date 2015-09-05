@@ -22,13 +22,13 @@ class TestPreprocessor < Minitest::Test
   def test_citations
     line = Preprocessor::Line.new('["thunk"](^Bloopie, et. al. p. 792)')
 
-    assert_equal '<span class="cited">"thunk"<span class="citation">Bloopie, et. al. p. 792</span></span>', line.processed
+    assert_equal '<span class="cited">"thunk" <span class="citation">Bloopie, et. al. p. 792</span></span>', line.processed
   end
 
   def test_spans_nested_in_citations
     line = Preprocessor::Line.new('[[.heavy "thunk"]](^Bloopie, et. al. p. 792)')
 
-    assert_equal '<q cite="Bloopie, et. al. p. 792"><span class="heavy">"thunk"</span></q>', line.processed
+    assert_equal '<span class="cited"><span class="heavy">"thunk"</span> <span class="citation">Bloopie, et. al. p. 792</span></span>', line.processed
   end
 
   def test_that_it_leaves_markdown_links_alone
