@@ -128,24 +128,97 @@ Sindarin has certain sequences of sounds which are not found in English.
 
 ## Writing Sindarin with Tengwar
 
-1      | 2      | 3      | 4
------- | ------ | ------ | ------
-[.t 1] | [.t q] | [.t a] | [.t z]
-[.t 2] | [.t w] | [.t a] | [.t z]
-[.t 3] | [.t e] | [.t d] | [.t c]
-[.t 4] | [.t r] | [.t f] | [.t v]
-[.t 5] | [.t t] | [.t g] | [.t b]
-[.t 6] | [.t y] | [.t h] | [.t n]
-[.t 7] | [.t u] | [.t j] | [.t m]
-[.t 8] | [.t i] | [.t k] | [.t ,]
+The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). The main letters are shown below in their traditional arrangement.
 
-one | two | three
---- | --- | -----
-a   | b   | c
+<table class="tengwar-table">
+  <tr>
+    <td></td>
+    <td colspan="5"><b><em>témar</em></b></td>
+  </tr>
+  <tr>
+    <td rowspan="10"><b><em>[.vertical tyeller]&nbsp;</em></b></td>
+    <td></td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>[.t 1]</td>
+    <td>[.t q]</td>
+    <td>[.t a]</td>
+    <td>[.t z]</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>[.t 2]</td>
+    <td>[.t w]</td>
+    <td>[.t s]</td>
+    <td>[.t x]</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>[.t 3]</td>
+    <td>[.t e]</td>
+    <td>[.t d]</td>
+    <td>[.t c]</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>[.t 4]</td>
+    <td>[.t r]</td>
+    <td>[.t f]</td>
+    <td>[.t v]</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>[.t 5]</td>
+    <td>[.t t]</td>
+    <td>[.t g]</td>
+    <td>[.t b]</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>[.t 6]</td>
+    <td>[.t y]</td>
+    <td>[.t h]</td>
+    <td>[.t n]</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>[.t 7]</td>
+    <td>[.t u]</td>
+    <td>[.t j]</td>
+    <td>[.t m]</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>[.t 8]</td>
+    <td>[.t i]</td>
+    <td>[.t k]</td>
+    <td>[.t ,]</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>[.t 9]</td>
+    <td>[.t o]</td>
+    <td>[.t l]</td>
+    <td>[.t .]</td>
+  </tr>
+</table>
+
+The letters are grouped into [.q témar] (Quenya for "series") and [.q tyeller] (Quenya "grades"). The first twenty-four letters, in [.q tyeller] 1-6, consist of a vertical stem with a curved bow on one side or the other. Letters in the same [.q téma] have similar bows, while those in the same [.q tyellë] have the same stems.
+
+One of the interesting features of the tengwar is that letters are not arbitrarily assigned to sounds the way they are in English and most other terrestrial languages. For example, the shape of our letter [.en t] has no resemblance to similar-sounding letters like [.en d] or [.en n], which are pronounced with the same tongue position as [.en t], or to [.en p] or [.en k], which have the same sharp release of air. In tengwar, however, these similarities *are* evident in the shape of the letters and the way they are grouped together.
+
+The _tengwar_ in the first column ([.q téma] 1) all have the tongue position of [.en t], while those in the first row ([.q tyellë] 1) all have the sharp release of air.
+
+
+
+
 
 ## Thematic Dictionary
-
-
 
 ### Stress
 

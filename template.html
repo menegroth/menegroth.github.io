@@ -97,6 +97,11 @@
           color: #216;
         }
 
+        .q {
+            font-weight: bold;
+            color: #b08;
+        }
+
         .t, .tengwar {
           font-family: tengwar;
           font-size: 1.2em;
@@ -149,11 +154,36 @@
             content: ')'
         }
 
-        .tengwar-table table {
+        .tengwar-table {
             margin-left: auto;
             margin-right: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .tengwar-table .t {
             font-size: 200%;
         }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 2px solid #666;
+        }
+
+        td {
+            box-shadow: 1px 1px 0 #444, -1px -1px 0 #888;
+            padding: 10px;
+        }
+
+        .vertical {
+            transform:rotate(-90deg);
+            display: block;
+        }
+
         </style>
     </head>
     <body class="annotated">
