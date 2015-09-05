@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <style type="text/css">
 
         @media screen and (max-width: 768px) {
@@ -25,6 +26,11 @@
             padding-top: 80px;
             padding-bottom: 80px;
           }
+        }
+
+        @font-face {
+          font-family: tengwar;
+          src: url(annatar/tnganb.ttf);
         }
 
         * {
@@ -74,9 +80,26 @@
           margin-bottom: 0.3em;
         }
 
+        q {
+          quotes: "“" "”" "‘" "’";
+        }
+
+        q:before {
+          content: open-quote;
+        }
+
+        q:after {
+          content: close-quote;
+        }
+
         .s {
           font-weight: bold;
           color: #216;
+        }
+
+        .t, .tengwar {
+          font-family: tengwar;
+          font-size: 1.2em;
         }
 
         .en, .fr, .de, .cy, .gd {
@@ -108,16 +131,28 @@
           content: '†'
         }
 
-        q:before {
-          content: '';
+        .citation {
+            display: none;
         }
 
-        q:after {
-          content: '';
+        .annotated .citation {
+            display: inline;
+            color: #888;
+            font-size: 0.8em;
         }
 
-        .annotated q {
-          border-bottom: 1px dotted #aaa;
+        .annotated .citation:before {
+            content: '('
+        }
+
+        .annotated .citation:after {
+            content: ')'
+        }
+
+        .tengwar-table table {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 200%;
         }
         </style>
     </head>
