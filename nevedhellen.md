@@ -134,47 +134,59 @@ First, however, I will discuss a very different adaptation of the elvish script:
 
 ### The English Mode
 
-
-
 <table class="tengwar-table">
   <tr>
-    <td>[.en a]</td>
-    <td>[.en b]</td>
-    <td>[.en c/k]</td>
-    <td>[.en ch]</td>
-    <td>[.en d]</td>
-    <td>[.en e]</td>
-    <td>[.en f/ph]</td>
-    <td>[.en g]</td>
-    <td>[.en h]</td>
-    <td>[.en hw]</td>
-    <td>[.en i]</td>
-    <td>[.en j]</td>
-    <td>[.en l]</td>
-    <td>[.en m]</td>
-    <td>[.en n]</td>
-    <td>[.en ng]</td>
-    <td>[.en o]</td>
-    <td>[.en p]</td>
-    <td>[.en qu]</td>
-    <td>[.en r]</td>
-    <td>[.en s], or [.en c] as in [.en cell]</td>
-    <td>[.en sh]</td>
-    <td>[.en t]</td>
-    <td>[.en th] as in [.en thing]</td>
-    <td>[.en th] as in [.en this]</td>
-    <td>[.en u]</td>
-    <td>[.en v]</td>
-    <td>[.en w]</td>
-    <td>[.en x/ks]</td>
-    <td>[.en y]</td>
-    <td>[.en z], or [.en s] as in [.en dogs]</td>
+    <td><p>[.t 1]</p><p>[.en t]</p></td>
+    <td><p>[.t q]</p><p>[.en p]</p></td>
+    <td><p>[.t z]</p><p>[.en k] or hard [.en c]</p></td>
+    <td class="spacer" rowspan="6">&nbsp;</td>
+    <td><p>[.t 7]</p><p>[.en r]</p></td>
+    <td><p>[.t j]</p><p>[.en l]</p></td>
+    <td><p>[.t 9]</p><p>[.en h]</p></td>
+    <td><p>[.t o]</p><p>[.en wh]</p></td>
+  </tr>
+  <tr>
+    <td><p>[.t 2]</p><p>[.en d]</p></td>
+    <td><p>[.t w]</p><p>[.en b]</p></td>
+    <td><p>[.t x]</p><p>[.en g]</p></td>
+    <td><p>[.t 8]</p><p>[.en sh]</p></td>
+    <td><p>[.t i]</p><p>[.en s] or soft [.en c]</p></td>
+    <td><p>[.t ,]</p><p>[.en z]</p></td>
+    <td><p>[.t z&#234;]</p><p>[.en qu]</p></td>
+  </tr>
+  <tr>
+    <td><p>[.t 3]</p><p>[.en th] in [.en thing]</p></td>
+    <td><p>[.t e]</p><p>[.en f/ph]</p></td>
+    <td><p>[.t c]</p><p>[.en ch]</p></td>
+    <td><p>[.t &#93;D]</p><p>[.en a]</p></td>
+    <td><p>[.t lR]</p><p>[.en e]</p></td>
+    <td><p>[.t &#96;B]</p><p>[.en i]</p></td>
+    <td><p>[.t hY]</p><p>[.en o]</p></td>
+
+  </tr>
+  <tr>
+    <td><p>[.t 4]</p><p>[.en th] in [.en this]</p></td>
+    <td><p>[.t r]</p><p>[.en v]</p></td>
+    <td><p>[.t v]</p><p>[.en j]</p></td>
+    <td colspan="2"><p>[.t ~&#215;]</p><p>[.en y] in [.en sky]</p></td>
+    <td colspan="2"><p>[.t .J]</p><p>[.en u]</p></td>
+  </tr>
+  <tr>
+    <td><p>[.t 5]</p><p>[.en n]</p></td>
+    <td><p>[.t t]</p><p>[.en m]</p></td>
+    <td><p>[.t b]</p><p>[.en ng]</p></td>
+    <td rowspan="2" colspan="4"></td>
+  </tr>
+  <tr>
+    <td><p>[.t 6]</p><p>[.en r]</p></td>
+    <td><p>[.t y]</p><p>[.en w]</p></td>
+    <td><p>[.t n]</p><p>[.en y] in [.en yes]</p></td>
   </tr>
 </table>
 
-With the help of the list above, you can try deciphering this text:
+With the help of the table above, you can try deciphering this text:
 
-[.t.text.center 4l 7l1.75 hr 4l z&#96;Bb = w~B f=7=7= 1hjz&#96;Bl5 - wl`Bb 4l 3&#96;B72 q&#93;71 hr 4l jh72 hr 4l 7&#96;Bb,]
+[.t.text.center 4lR 7lR1.J75 hYr 4lR z&#96;Bb = w~&#215; f=7=7= 1hYjz&#96;BlR5 - wlR&#96;Bb 4lR 3&#96;B72 q&#93;D71 hr 4lR jhY72 hYr 4lR 7&#96;Bb,]
 
 As you work on that, you'll probably see some differences between tengwar and our alphabet:
 
@@ -408,3 +420,29 @@ thîw "letters" (nasal mutation)
 replace c.f. with compare
 replace HKF with Fauskanger
 ensure all S. forms in the text are bold, and all attested forms are in bold italics
+
+Nav menu structure:
+
+Beginnings
+  - Overview
+  - Pronunciation
+  - Phrasebook
+  - Thematic Wordlist
+Writing
+  - Introduction to Tengwar
+  - The Mode of Gondor
+  - The Mode of Beleriand
+  - The Consonantal Mode
+Lessons
+  - Imperative Verbs I
+  - Imperative Verbs II (Direct Object Lenition)
+  - Nouns and Names
+  - Plural Nouns
+  - Prepositions and Mutations
+  - Present and Future Tense
+  - Past Tense I
+  - Past Tense II
+  - Other Verb Forms
+
+Analysis
+  - ???
