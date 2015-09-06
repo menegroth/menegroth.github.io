@@ -132,9 +132,57 @@ The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. 
 
 First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they will probably not have the patience to learn Sindarin, but they might be interested having a secret code to write English.
 
+### The English Mode
 
 
-Here are the main tengwar in their traditional arrangement.
+
+<table class="tengwar-table">
+  <tr>
+    <td>[.en a]</td>
+    <td>[.en b]</td>
+    <td>[.en c/k]</td>
+    <td>[.en ch]</td>
+    <td>[.en d]</td>
+    <td>[.en e]</td>
+    <td>[.en f/ph]</td>
+    <td>[.en g]</td>
+    <td>[.en h]</td>
+    <td>[.en hw]</td>
+    <td>[.en i]</td>
+    <td>[.en j]</td>
+    <td>[.en l]</td>
+    <td>[.en m]</td>
+    <td>[.en n]</td>
+    <td>[.en ng]</td>
+    <td>[.en o]</td>
+    <td>[.en p]</td>
+    <td>[.en qu]</td>
+    <td>[.en r]</td>
+    <td>[.en s], or [.en c] as in [.en cell]</td>
+    <td>[.en sh]</td>
+    <td>[.en t]</td>
+    <td>[.en th] as in [.en thing]</td>
+    <td>[.en th] as in [.en this]</td>
+    <td>[.en u]</td>
+    <td>[.en v]</td>
+    <td>[.en w]</td>
+    <td>[.en x/ks]</td>
+    <td>[.en y]</td>
+    <td>[.en z], or [.en s] as in [.en dogs]</td>
+  </tr>
+</table>
+
+With the help of the list above, you can try deciphering this text:
+
+[.t.text.center 4l 7l1.75 hr 4l z&#96;Bb = w~B f=7=7= 1hjz&#96;Bl5 - wl`Bb 4l 3&#96;B72 q&#93;71 hr 4l jh72 hr 4l 7&#96;Bb,]
+
+As you work on that, you'll probably see some differences between tengwar and our alphabet:
+
+* A single [.q tengwa] often corresponds to two letters in English: [.t b] is used for [.en ng].
+* Which tengwa is used for a particular letter depends on the sound of that letter. There is no single tengwa for [.en c] - you have to use [.t z] or [.t i], depending on whether the [.en c] sounds like [.en k] or [.en s].
+* Similar sounds have similar tengwar - the signs for [.en s] and [.en sh] are rotated versions of each other; [.en th] is formed from [.en t] by extending the stem of the [.q tengwa] up rather than down. Doubling the curved bow of a letter adds vibration of the vocal cords to the sound (in linguistic terms, adding _voice_), turning [.en t] into [.en d], [.en ch] into [.en j], and [.en s] into [.en z].
+
+These correspondences between the shape of the letters and their sound are central to the tengwar writing system. The traditional arrangement of the tengwar, shown below, highlights this by grouping the letters together by sound. The four vertical columns, called [.q témar] in Quenya, are named, from left to right, [.q tincotéma] (T-series), [.q parmatéma] (P-series), [.q calmatéma] (K-series), and [.q quessetéma] (Q-series).
 
 [.figure-title The _Tengwar_]
 
