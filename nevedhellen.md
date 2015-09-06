@@ -126,9 +126,17 @@ Sindarin has certain sequences of sounds which are not found in English.
 * _Calo Anor na men lín_ -:- "May the sun shine on your road"
 * _Cuio vae!_ -:- "Farewell!"
 
-## Writing Sindarin with Tengwar
+## The Tengwar
 
-The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). The main letters are shown below in their traditional arrangement.
+The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well-suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, called _modes_, are known: the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**. I will cover each of them in a later section.
+
+First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they will probably not have the patience to learn Sindarin, but they might be interested having a secret code to write English.
+
+
+
+Here are the main tengwar in their traditional arrangement.
+
+[.figure-title The _Tengwar_]
 
 <table class="tengwar-table">
   <tr>
@@ -136,7 +144,7 @@ The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. 
     <td colspan="5"><b><em>témar</em></b></td>
   </tr>
   <tr>
-    <td rowspan="10"><b><em>[.vertical tyeller]&nbsp;</em></b></td>
+    <td rowspan="7"><b><em>[.vertical tyeller]&nbsp;</em></b></td>
     <td></td>
     <td>1</td>
     <td>2</td>
@@ -186,21 +194,22 @@ The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. 
     <td>[.t n]</td>
   </tr>
   <tr>
-    <td>7</td>
+    <td colspan="6" class="spacer">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="3" colspan="2"></td>
     <td>[.t 7]</td>
     <td>[.t u]</td>
     <td>[.t j]</td>
     <td>[.t m]</td>
   </tr>
   <tr>
-    <td>8</td>
     <td>[.t 8]</td>
     <td>[.t i]</td>
     <td>[.t k]</td>
     <td>[.t ,]</td>
   </tr>
   <tr>
-    <td>9</td>
     <td>[.t 9]</td>
     <td>[.t o]</td>
     <td>[.t l]</td>
@@ -208,7 +217,89 @@ The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. 
   </tr>
 </table>
 
-The letters are grouped into [.q témar] (Quenya for "series") and [.q tyeller] (Quenya "grades"). The first twenty-four letters, in [.q tyeller] 1-6, consist of a vertical stem with a curved bow on one side or the other. Letters in the same [.q téma] have similar bows, while those in the same [.q tyellë] have the same stems.
+The letters are grouped into [.q témar] (Quenya for "series") and [.q tyeller] (Quenya "grades") based on their form. The first twenty-four letters, in [.q tyeller] 1-6, consist of a vertical stem with a curved bow on one side or the other. Letters in the same [.q téma] have similar bows, while those in the same [.q tyellë] have the same stems.
+
+### The Mode of Gondor
+
+The tengwar mode of Gondor is the most straightforward of the Sindarin modes, so I will cover it first.
+
+Below is the quick-and-dirty guide to writing in this mode, with the characters arranged according to their transcription into our alphabet.
+
+<table class="tengwar-table">
+  <tr>
+    <td>[.s a]</td>
+    <td>[.s ai]</td>
+    <td>[.s b]</td>
+    <td>[.s c]</td>
+    <td>[.s ch]</td>
+    <td>[.s d]</td>
+    <td>[.s dh]</td>
+    <td>[.s e]</td>
+    <td>[.s ei]</td>
+    <td>[.s f/ph]</td>
+    <td>[.s g]</td>
+    <td>[.s h]</td>
+    <td>[.s hw]</td>
+    <td>[.s i]</td>
+    <td>[.s l]</td>
+  </tr>
+  <tr>
+    <td>[.t &#93;]</td>
+    <td>[.t &#93;&#214;]</td>
+    <td>[.t w]</td>
+    <td>[.t z]</td>
+    <td>[.t c]</td>
+    <td>[.t 2]</td>
+    <td>[.t 4]</td>
+    <td>[.t l]</td>
+    <td>[.t l&#213;]</td>
+    <td>[.t e]</td>
+    <td>[.t x]</td>
+    <td>[.t 9]</td>
+    <td>[.t o]</td>
+    <td>[.t &#96;B]</td>
+    <td>[.t j]</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>[.s lh]</td>
+    <td>[.s m]</td>
+    <td>[.s n]</td>
+    <td>[.s ng]</td>
+    <td>[.s o]</td>
+    <td>[.s p]</td>
+    <td>[.s r]</td>
+    <td>[.s rh]</td>
+    <td>[.s s]</td>
+    <td>[.s t]</td>
+    <td>[.s u]</td>
+    <td>[.s ui]</td>
+    <td>[.s v]</td>
+    <td>[.s w]</td>
+    <td>[.s y]</td>
+  </tr>
+  <tr>
+    <td>[.t m]</td>
+    <td>[.t t]</td>
+    <td>[.t 5]</td>
+    <td>[.t b]</td>
+    <td>[.t h]</td>
+    <td>[.t q]</td>
+    <td>[.t 7]</td>
+    <td>[.t u]</td>
+    <td>[.t 8]</td>
+    <td>[.t 1]</td>
+    <td>[.t .]</td>
+    <td>[.t .&#214;]</td>
+    <td>[.t r]</td>
+    <td>[.t y]</td>
+    <td>[.t I]</td>
+  </tr>
+</table>
+
+These tables should at least get you started reading and writing in tengwar, but they won't be much help The disadvantage of presenting the tengwar like this is that
 
 One of the interesting features of the tengwar is that letters are not arbitrarily assigned to sounds the way they are in English and most other terrestrial languages. For example, the shape of our letter [.en t] has no resemblance to similar-sounding letters like [.en d] or [.en n], which are pronounced with the same tongue position as [.en t], or to [.en p] or [.en k], which have the same sharp release of air. In tengwar, however, these similarities *are* evident in the shape of the letters and the way they are grouped together.
 
