@@ -186,7 +186,7 @@ First, however, I will discuss a very different adaptation of the elvish script:
 
 With the help of the table above, you can try deciphering this text:
 
-[.t.text.center 4lR 7lR1.J75 hYr 4lR z&#96;Bb = w~&#215; f=7=7= 1hYjz&#96;BlR5 - wlR&#96;Bb 4lR 3&#96;B72 q&#93;D71 hr 4lR jhY72 hYr 4lR 7&#96;Bb,]
+[.t.text.center 4lR 7lR1.J75 hYr 4lR z&#96;Bb = w~&#215; v=7=7= 1hYjz&#96;BlR5 - wlR&#96;Bb 4lR 3&#96;B72 q&#93;D71 hr 4lR jhY72 hYr 4lR 7&#96;Bb,]
 
 As you work on that, you'll probably see some differences between tengwar and our alphabet:
 
