@@ -130,7 +130,7 @@ Sindarin has certain sequences of sounds which are not found in English.
 
 The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well-suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, called _modes_, are known: the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**. I will cover each of them in a later section.
 
-First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they will probably not have the patience to learn Sindarin, but they might be interested having a secret code to write English.
+First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they probably won't have the patience to learn Sindarin, but they might be interested in having a secret code to write English.
 
 ### The English Mode
 
@@ -194,7 +194,11 @@ As you work on that, you'll probably see some differences between tengwar and ou
 * Which tengwa is used for a particular letter depends on the sound of that letter. There is no single tengwa for [.en c] - you have to use [.t z] or [.t i], depending on whether the [.en c] sounds like [.en k] or [.en s].
 * Similar sounds have similar tengwar - the signs for [.en s] and [.en sh] are rotated versions of each other; [.en th] is formed from [.en t] by extending the stem of the [.q tengwa] up rather than down. Doubling the curved bow of a letter adds vibration of the vocal cords to the sound (in linguistic terms, adding _voice_), turning [.en t] into [.en d], [.en ch] into [.en j], and [.en s] into [.en z].
 
-These correspondences between the shape of the letters and their sound are central to the tengwar writing system. The traditional arrangement of the tengwar, shown below, highlights this by grouping the letters together by sound. The four vertical columns, called [.q témar] in Quenya, are named, from left to right, [.q tincotéma] (T-series), [.q parmatéma] (P-series), [.q calmatéma] (K-series), and [.q quessetéma] (Q-series).
+Try transcribing each of these tengwar samples into our alphabet. Your answer will turn green when it's correct.
+
+[<exercise data-question="1hYjz&#96;BlR5" data-answer="tolkien">]
+
+Once 
 
 [.figure-title The _Tengwar_]
 
