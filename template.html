@@ -63,7 +63,6 @@
           background-color: #fff8f0;
           border: 2px solid #dc8;
           box-shadow: inset 0 0 2px #000, 0 0 5px #000;
-
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -229,6 +228,20 @@
             color: #888;
         }
 
+        .exercise-answer {
+            font-size: 16px;
+            font-family: 'Times New Roman', Georgia, sans-serif;
+            margin-left: 10px;
+            background: transparent;
+            text-align: center;
+            border-bottom: 1px dotted #444;
+        }
+
+        .exercise-answer:focus {
+            outline: none;
+            border-bottom-color: #a30;
+        }
+
         </style>
     </head>
     <body class="annotated">
@@ -238,5 +251,31 @@
         </div>
         </div>
 
+        <script type="text/javascript">
+            "use strict";
+
+            function AnswerChecker(answer) {
+                answer = answer.toLowerCase()
+
+                return function(submissionEvent) {
+                    var element = submissionEvent.target
+                    var submission = element.value.toLowerCase()
+                    if (answer === submission) {
+                        element.style.color = '#0b6';
+                    } else {
+                        element.style.color = 'black';
+                    }
+                }
+            }
+
+            window.addEventListener('load', function() {
+                var exercises = document.getElementsByClassName('exercise-answer');
+                for (var i = 0; i < exercises.length; i++) {
+                    var answer = exercises[i].attributes['data-answer'].textContent
+
+                    exercises[i].addEventListener('keyup', AnswerChecker(answer))
+                }
+            });
+        </script>
     </body>
 </html>

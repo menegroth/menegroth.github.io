@@ -128,11 +128,15 @@ Sindarin has certain sequences of sounds which are not found in English.
 
 ## The Tengwar
 
-The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well-suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, called _modes_, are known: the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**. I will cover each of them in a later section.
+The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well-suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**, will be covered in a later section.
 
 First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they probably won't have the patience to learn Sindarin, but they might be interested in having a secret code to write English.
 
 ### The English Mode
+
+Here I present my own system for writing English with tengwar. **Note:** This English mode is not authoritative, official (in the sense of having been created by Tolkien), or even widely used. I'm presenting it here primarily because it resembles the Sindarin tengwar modes, so learning it will help you learn to write Sindarin with tengwar.
+
+The table below shows the tengwar used to write English.
 
 <table class="tengwar-table">
   <tr>
@@ -140,7 +144,7 @@ First, however, I will discuss a very different adaptation of the elvish script:
     <td><p>[.t q]</p><p>[.en p]</p></td>
     <td><p>[.t z]</p><p>[.en k] or hard [.en c]</p></td>
     <td class="spacer" rowspan="6">&nbsp;</td>
-    <td><p>[.t 7]</p><p>[.en r]</p></td>
+    <td><p>[.t z&#234;]</p><p>[.en qu]</p></td>
     <td><p>[.t j]</p><p>[.en l]</p></td>
     <td><p>[.t 9]</p><p>[.en h]</p></td>
     <td><p>[.t o]</p><p>[.en wh]</p></td>
@@ -152,7 +156,7 @@ First, however, I will discuss a very different adaptation of the elvish script:
     <td><p>[.t 8]</p><p>[.en sh]</p></td>
     <td><p>[.t i]</p><p>[.en s] or soft [.en c]</p></td>
     <td><p>[.t ,]</p><p>[.en z]</p></td>
-    <td><p>[.t z&#234;]</p><p>[.en qu]</p></td>
+    <td><p>[.t k]</p><p>[.en s] in [.en treasure]</p></td>
   </tr>
   <tr>
     <td><p>[.t 3]</p><p>[.en th] in [.en thing]</p></td>
@@ -191,14 +195,95 @@ With the help of the table above, you can try deciphering this text:
 As you work on that, you'll probably see some differences between tengwar and our alphabet:
 
 * A single [.q tengwa] often corresponds to two letters in English: [.t b] is used for [.en ng].
-* Which tengwa is used for a particular letter depends on the sound of that letter. There is no single tengwa for [.en c] - you have to use [.t z] or [.t i], depending on whether the [.en c] sounds like [.en k] or [.en s].
-* Similar sounds have similar tengwar - the signs for [.en s] and [.en sh] are rotated versions of each other; [.en th] is formed from [.en t] by extending the stem of the [.q tengwa] up rather than down. Doubling the curved bow of a letter adds vibration of the vocal cords to the sound (in linguistic terms, adding _voice_), turning [.en t] into [.en d], [.en ch] into [.en j], and [.en s] into [.en z].
+* Tengwar represent sounds rather than English letters. There is no single tengwa for [.en c] - you have to use [.t z] or [.t i], depending on whether the [.en c] sounds like [.en k] or [.en s].
+* Similar sounds have similar tengwar - the signs for [.en s] and [.en sh] are rotated versions of each other; [.en th] is formed from [.en t] by extending the stem of the [.q tengwa] up rather than down.
+* The tengwar on the left side of the chart have similar shapes&mdash;each tengwa consists of a vertical stem ([.q telco] in Quenya), and a curved bow (Quenya [.q lúva]) branching off from it. The bow can extend to the left or right of the stem, and can either be open, or closed off by a horizontal bar.
+
+The tengwar on the left half of the table are associated with sounds in a predictable way. The column, or [.q téma] (Quenya "series") that a letter belongs to indicates where in the mouth it is articulated. The leftmost column is made up of _coronal_ consonants - pronounced with the tip of the tongue just behind the front teeth, or touching them. The middle column has all the _labial_ consonants, which are pronounced using the lips. The rightmost column is all _dorsal_ consonants, which involve contact between the back of the tongue and the roof of the mouth.
+
+The row, or [.q tyellë] (Quenya "grade") that a letter belongs to tells you how air flows through the mouth when pronouncing it. The first two rows of tengwar consist of _stops_, so named because they stop the flow of air completely. A single bow as in [.t 1 q z] [.en t p k] means the consonant is pronounced without vibration of the vocal cords (_voice_ in linguistics terms). A  double bow adds voice, creating [.t 2 s x] [.en d b g].
+
+The next two rows are _fricatives_, which constrict the flow of air to create a hissing or buzzing sound. (Technically, the sounds [.en ch] and [.en j] consist of a stop plus a fricative: [.en t + sh] and [.en d + zh].) These tengwar are formed from the corresponding stops by extending the stem of the tengwa up instead of down. As with the stops, a doubled bow indicates voice.
+
+The fifth row of tengwar are _nasal_ consonants, pronounced by redirecting air through the nose. In English, nasal consonants are always voiced, so these tengwar have doubled bows.
+
+The sixth row are _approximants_, which barely impede airflow at all. Since these are the "weakest" consonants, they get the smallest tengwar, almost resembling the vowels in their shape.
+
+On the right side of the chart are tengwar for irregular sounds that don't fit into the grid&mdash;for example, [.t j] [.en l], which is unique in English because it involves airflow around the sides of the tongue. However, even these tengwar are systematic when possible&mdash;[.t i] is unvoiced [.en s], while [.t ,] is voiced [.en z], echoing the pattern of the doubled bow that turns unvoiced [.t w] [.en f] into [.t r] [.en v].
 
 Try transcribing each of these tengwar samples into our alphabet. Your answer will turn green when it's correct.
 
-[<exercise data-question="1hYjz&#96;BlR5" data-answer="tolkien">]
+* [<exercise [.t 1hYjz&#96;BlR5] === tolkien>]
+* [<exercise [.t 9hYww&#96;B1i] === hobbits>]
+* [<exercise [.t w&#93;Dxx&#96;B5i] === baggins>]
+* [<exercise [.t 5&#96;Bx91&#96;Bb&#93;DjlR] === nightingale>]
+* [<exercise [.t 26&#93;DxhY5] === dragon>]
+* [<exercise [.t whYtw&#93;D2&#96;Bj] === bombadil>]
 
-Once 
+#### Abbreviations in the English Mode
+
+If you've mastered the basics of writing English with tengwar and want more, you can try out these useful abbreviations:
+
+<table class="tengwar-table">
+  <tr>
+    <td><p>[.t @]</p><p>[.en the]</p></td>
+    <td><p>[.t W]</p><p>[.en of]</p></td>
+    <td><p>[.t W"]</p><p>[.en of the]</p></td>
+  </tr>
+</table>
+
+The vowels [.t &#93;D lR &#96;B hY .J ~&#215;] [.en a e i o u y] have marks above them called [.q tehtar] in Quenya. Instead of writing the vowel out in full, you can simply write the [.q tehta] above the next consonant. [.t 9hYww&#96;B1i] "hobbits" can be shortened to [.t 9w^w1Gi].
+
+### Tengwar Punctuation
+
+Tengwar punctuation is, as far as we know, consistent across all modes, so it's the same for English as it is for Sindarin.
+
+<table class="tengwar-table">
+  <tr>
+    <td><p>[.t 1 = 1]</p><p>comma, short pause</p></td>
+    <td><p>[.t 1 - 1]</p><p>colon, longer pause</p></td>
+    <td><p>[.t 1 == 1]</p><p>period</p></td>
+    <td><p>[.t 1 =-= 1]</p><p>separates sections of a text</p></td>
+  </tr>
+</table>
+
+The rules for tengwar punctuation seem rather fluid, or at least, they don't correspond exactly to English punctuation rules.
+
+### Tengwar Numbers
+
+<table class="tengwar-table">
+  <tr>
+    <td><p>[.t &#241;]</p><p>[.en 1]</p></td>
+    <td><p>[.t &#242;]</p><p>[.en 2]</p></td>
+    <td><p>[.t &#243;]</p><p>[.en 3]</p></td>
+  </tr>
+  <tr>
+    <td><p>[.t &#244;]</p><p>[.en 4]</p></td>
+    <td><p>[.t &#245;]</p><p>[.en 5]</p></td>
+    <td><p>[.t &#246;]</p><p>[.en 6]</p></td>
+  </tr>
+  <tr>
+    <td><p>[.t &#247;]</p><p>[.en 7]</p></td>
+    <td><p>[.t &#248;]</p><p>[.en 8]</p></td>
+    <td><p>[.t &#249;]</p><p>[.en 9]</p></td>
+  </tr>
+  <tr>
+    <td colspan="3"><p>[.t &#240;]</p><p>[.en 0]</p></td>
+  </tr>
+</table>
+
+Numbers in tengwar are written backwards compared to our system, with the ones digit first: 145 (one hundred and forty-five) is written [.t &#245;&#244;&#241;].
+
+In addition to a ten-based number system, the elves also sometimes used a _duodecimal_ or _dozenal_ system. In a dozenal system, 10 and 11 are represented as single digits&mdash;the elves used [.t &#250;] and [.t &#251;]. Instead of having a tens digit, hundreds digit, etc. for larger numbers, a dozenal system has digits for dozens, grosses (groups of 144 = 12 * 12), etc. Twelve was written as [.t &#240;&#241;]: "zero plus one dozen". Thirteen is [.t &#241;&#241;]: "one plus one dozen". The special symbols for 10 and 11 let us write [.t &#250;&#241;] "ten plus one dozen" for 22, and [.t &#251;&#241;] "eleven plus one dozen" for 23. Twenty-four is then written as "two dozen" [.t &#240;&#242;].
+
+The dozenal system is the origin of some elvish terms for quantities that might seem strange to us&mdash;for instance the Quenya word [.q yén], meaning a period of 144 years. This makes sense when you consider that 144 (12 * 12) is the first three-digit number in a dozenal system, so the concept is equivalent to our "century".
+
+<script type="text/javascript">
+
+</script>
+
+The symbols for [.en 10] and [.en 11] are used only in the duodecimal counting system, where 12, not 10, is the first two-digit number. When using duodecimal, [.t &#240;&#241;] means 12, [.t &#241;&#241;] is 13, [.t &#242;&#241;] is 14, and so forth.
+
 
 [.figure-title The _Tengwar_]
 
@@ -363,11 +448,6 @@ Below is the quick-and-dirty guide to writing in this mode, with the characters 
   </tr>
 </table>
 
-These tables should at least get you started reading and writing in tengwar, but they won't be much help The disadvantage of presenting the tengwar like this is that
-
-One of the interesting features of the tengwar is that letters are not arbitrarily assigned to sounds the way they are in English and most other terrestrial languages. For example, the shape of our letter [.en t] has no resemblance to similar-sounding letters like [.en d] or [.en n], which are pronounced with the same tongue position as [.en t], or to [.en p] or [.en k], which have the same sharp release of air. In tengwar, however, these similarities *are* evident in the shape of the letters and the way they are grouped together.
-
-The _tengwar_ in the first column ([.q téma] 1) all have the tongue position of [.en t], while those in the first row ([.q tyellë] 1) all have the sharp release of air.
 
 
 
@@ -423,7 +503,6 @@ thîw "letters" (nasal mutation)
 
 replace c.f. with compare
 replace HKF with Fauskanger
-ensure all S. forms in the text are bold, and all attested forms are in bold italics
 
 Nav menu structure:
 

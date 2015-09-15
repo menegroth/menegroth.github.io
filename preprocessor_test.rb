@@ -36,4 +36,10 @@ class TestPreprocessor < Minitest::Test
 
     assert_equal 'grøtings, [Earth](http://en.wikipedia.org/wiki/Earth)', line.processed
   end
+
+  def test_exercises
+    line = Preprocessor::Line.new('[<exercise What? === That!>]')
+
+    assert_equal '<span class="exercise-prompt">What?</span><input type="text" class="exercise-answer" data-answer="That!" size="5"/>', line.processed
+  end
 end
