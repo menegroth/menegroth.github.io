@@ -34,8 +34,28 @@
         }
 
         @font-face {
+          font-family: tengwaraltitalic;
+          src: url(annatar/tnganabi.ttf);
+        }
+
+        @font-face {
+          font-family: tengwaritalic;
+          src: url(annatar/tnganbi.ttf);
+        }
+
+        @font-face {
           font-family: tengwarlight;
           src: url(annatar/tngan.ttf);
+        }
+
+        @font-face {
+          font-family: tengwaraltitaliclight;
+          src: url(annatar/tnganai.ttf);
+        }
+
+        @font-face {
+          font-family: tengwaritaliclight;
+          src: url(annatar/tngani.ttf);
         }
 
         * {
@@ -114,11 +134,33 @@
           font-size: 1.2em;
         }
 
-        .t.text {
-          font-family: tengwarlight;
+        .ti {
+          font-family: tengwaritalic;
+        }
+
+        .tai {
+          font-family: tengwaraltitalic;
+        }
+
+        .text {
           font-size: 1.56em;
           margin-top: 20px;
           margin-bottom: 20px;
+        }
+
+        .t.text,
+        .text .t {
+          font-family: tengwarlight;
+        }
+
+        .ti.text,
+        .text .ti {
+          font-family: tengwaritaliclight;
+        }
+
+        .tai.text,
+        .text .tai {
+          font-family: tengwaraltitaliclight;
         }
 
         .en, .fr, .de, .cy, .gd {

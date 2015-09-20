@@ -128,13 +128,30 @@ Sindarin has certain sequences of sounds which are not found in English.
 
 ## The Tengwar
 
-The [.q tengwar] (Quenya for "signs") are the best-known elvish writing system. They are a versatile script, well-suited to elvish languages but also adaptable to other uses (the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor). One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**, will be covered in a later section.
+> the Eldar know their tongue, not word by word only, but as a whole: they know even as they speak not only of what sounds is that word woven which they are uttering, but of what sounds and sound-patterns is their whole speech at one time composed. &mdash;Dangweth Pengoloð
+
+The best-known elvish writing system, the one you probably remember and recognize from _The Lord of the Rings_, is called [.q tengwar] (Quenya for "signs"). It is a versatile script, well-suited to elvish languages but also adaptable to other uses. For example, the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor.
+
+[.figure-title The Ring Inscription]
+
+<div class="center text">
+<p>
+[.tai &#187;][.ti AE5,Ex26Yw1E<span class="tai">j</span>^z<span class="tai">H</span>&#186; AE5,ExxwP%1Ej^][.tai &#171;]
+</p>
+<p>
+[.ti AE5,Ex37zE1E<span class="tai">j</span>^z<span class="tai">H</span>&#186; X#w6Ykt^AT`Bz7qpT1Ej^]
+</p>
+</div>
+
+One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**, will be covered in a later section.
 
 First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they probably won't have the patience to learn Sindarin, but they might be interested in having a secret code to write English.
 
-### The English Mode
+### The Standard English Mode
 
-Here I present my own system for writing English with tengwar. **Note:** This English mode is not authoritative, official (in the sense of having been created by Tolkien), or even widely used. I'm presenting it here primarily because it resembles the Sindarin tengwar modes, so learning it will help you learn to write Sindarin with tengwar.
+### An Alternative English Mode
+
+**Disclaimer:** This English mode was created by me, not by Tolkien, and is not widely used. **If you want to learn to write in tengwar in a way that other Tolkien fans will understand, use the Standard English Mode from the previous section**. I have designed this mode and am presenting it here because it resembles the Sindarin tengwar modes and might be of interest to those learning to write Sindarin with tengwar. Besides, I personally prefer alphabetic modes over tehtar modes, and English lacks a standard alphabetic mode.
 
 The table below shows the tengwar used to write English.
 
