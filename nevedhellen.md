@@ -130,7 +130,7 @@ Sindarin has certain sequences of sounds which are not found in English.
 
 > the Eldar know their tongue, not word by word only, but as a whole: they know even as they speak not only of what sounds is that word woven which they are uttering, but of what sounds and sound-patterns is their whole speech at one time composed. &mdash;Dangweth Pengoloð
 
-The best-known elvish writing system, the one you probably remember and recognize from _The Lord of the Rings_, is called [.q tengwar] (Quenya for "signs"). It is a versatile script, well-suited to elvish languages but also adaptable to other uses. For example, the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor.
+The elvish writing you probably remember and recognize from _The Lord of the Rings_ is called [.q tengwar], a Quenya word meaning "signs". The tengwar are very versatile, well-suited to elvish languages but also adaptable to other uses. For example, the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor.
 
 [.figure-title The Ring Inscription]
 
@@ -140,6 +140,16 @@ The best-known elvish writing system, the one you probably remember and recogniz
 </p>
 <p>
 [.ti AE5,Ex37zE1E<span class="tai">j</span>^z<span class="tai">H</span>&#186; X#w6Ykt^AT`Bz7qpT1Ej^]
+</p>
+</div>
+
+Another inscription, in a very different language and style, was encountered by the Fellowship on the gates of Moria.
+
+[.figure-title The Moria Gate Inscription]
+
+<div class="center text">
+<p>
+[.t.text.center -l5I6 2.7&#96;6 &#93;7&#93;6 th7&#96;B&#93; = ql2h tljjh6 &#93; t&#96;B5h- -&#96;y 6&#93;7r&#96; 9&#93;Ö6 ld&#93;1p-aljlw7&#96;BwPh7 h l7ls&#96;Bh6 1lÖ3&#93;1p &#96;B 3&#96;Bn 9&#96;B6-]
 </p>
 </div>
 
@@ -207,7 +217,11 @@ The table below shows the tengwar used to write English.
 
 With the help of the table above, you can try deciphering this text:
 
-[.t.text.center 4lR 7lR1.J75 hYr 4lR z&#96;Bb = w~&#215; v=7=7= 1hYjz&#96;BlR5 - wlR&#96;Bb 4lR 3&#96;B72 q&#93;D71 hr 4lR jhY72 hYr 4lR 7&#96;Bb,]
+<div class="center text">
+<p>
+[.t 4lR 7lR1.J75 hYr 4lR z&#96;Bb = w~&#215; v=7=7= 1hYjz&#96;BlR5 - wlR&#96;Bb 4lR 3&#96;B72 q&#93;D71 hr 4lR jhY72 hYr 4lR 7&#96;Bb,]
+</p>
+</div>
 
 As you work on that, you'll probably see some differences between tengwar and our alphabet:
 
