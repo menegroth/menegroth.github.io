@@ -64,6 +64,7 @@
           padding: 0;
           box-sizing: border-box;
           line-height: 130%;
+          font-family: 'Times New Roman', 'Times', sans-serif;
         }
 
         .html {
@@ -72,8 +73,11 @@
 
         .stars {
           width: 100%;
+          min-height: 100%;
           background-color: #003;
-          background-image: url('http://1-background.com/images/stars-1/star-space-tile.jpg');
+          /*background-image: url('http://www.webweaver.nu/clipart/img/web/backgrounds/space-sky/starry-night-1.gif');*/
+          background-image: url('background-dark.gif');
+          /*background-image: url('http://1-background.com/images/stars-1/star-space-tile.jpg');*/
           background-position: center;
           background-attachment: fixed;
           background-repeat: repeat;
@@ -93,6 +97,33 @@
           word-spacing: 0.03em;
         }
 
+        a, a:visited {
+          color: #080;
+          text-shadow: 0 1px 0 #fff;
+          text-decoration: none;
+          border-bottom: 1px solid #ccc;
+        }
+
+        a.nav, a.nav:visited {
+          color: #a00;
+        }
+
+        a:hover {
+          color: #090;
+        }
+
+        a.nav:hover {
+          color: #b00;
+        }
+
+        .nav-left:before {
+          content: "« "
+        }
+
+        a:active {
+          color: #a00;
+        }
+
         ul, ol {
           padding-left: 20px;
         }
@@ -100,6 +131,14 @@
         ul, ol, p {
           margin-top: 1em;
           margin-bottom: 1em;
+        }
+
+        p {
+          text-align: justify;
+        }
+
+        .center p {
+          text-align: inherit;
         }
 
         li {
