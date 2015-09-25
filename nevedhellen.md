@@ -153,6 +153,8 @@ Another inscription, in a very different language and style, was encountered by 
 </p>
 </div>
 
+The Moria gate inscription was in Sindarin. The tengwar read: [.s Ennyn Durin Aran Moria: pedo mellon a minno. Im Narvi hain echant: Celebrimbor o Eregion teithant i thiw hin.] "The Doors of Durin, Lord of Moria. Speak, friend, and enter. I, Narvi, made them. Celebrimbor of Hollin drew these signs."
+
 One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, the **Mode of Beleriand**, the **Mode of Gondor**, and the **Consonantal Mode**, will be covered in a later section.
 
 First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you're reading the chapters of this book in order, you don't yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don't know yet. And finally, if you want to introduce your friends to tengwar-writing, they probably won't have the patience to learn Sindarin, but they might be interested in having a secret code to write English.
@@ -537,26 +539,42 @@ replace HKF with Fauskanger
 
 Nav menu structure:
 
-Beginnings
-  - Overview
-  - Pronunciation
-  - Phrasebook
-  - Thematic Wordlist
-Writing
-  - Introduction to Tengwar
-  - The Mode of Gondor
-  - The Mode of Beleriand
-  - The Consonantal Mode
-Lessons
-  - Imperative Verbs I
-  - Imperative Verbs II (Direct Object Lenition)
-  - Nouns and Names
-  - Plural Nouns
-  - Prepositions and Mutations
-  - Present and Future Tense
-  - Past Tense I
-  - Past Tense II
-  - Other Verb Forms
+I will not attempt to explain *why* anyone should learn Sindarin or any of Tolkien's invented languages; in my experience, some will accept no justification for such a pursuit, while others will require none. I trust that if you have read this far, you fall into the second, happier camp.
 
-Analysis
-  - ???
+So rather than talk about *why* one should learn this language, I will discuss *what* can actually be learned about it. The answer is, upsettingly, "not much, with certainty". Tolkien never published a comprehensive description of the language; all we have are many tantalizing clues to the system he imagined, many published after his death.
+
+Athraven - The Crossroads
+
+This text is divided into four sections: two short and introductory, two long and in-depth. The first two, _The Tengwar Writing System_ and _Speaking Sindarin_, will give you a taste of the language, and a basic understanding of many of the elvish names, phrases, and inscriptions in _The Lord of the Rings_. The third section, the _Grammar of Sindarin_, is a deeper look at the rules that govern the construction of words and phrases. Finally, there is the _History of Sindarin_, which describes how the languages of the Elves changed through the long histories of Middle-earth and of Aman in the West.
+
+<!--This table of contents tracks your progress by showing a bookmark icon next to the chapter in each section where you last answered a review question. Progress is stored in your browser, so if you visit this page from a different computer, or clear your browser's local storage, the bookmarks will not appear.-->
+
+- The Tengwar Writing System
+  - Writing English with Tengwar (transcribe)
+  - Tengwar Punctuation (transcribe)
+  - Tengwar Numbers (transcribe, base-12)
+  - The Sindarin Mode of Beleriand (transcribe)
+  - The Sindarin Mode of Gondor (transcribe)
+  - The Alphabetic Sindarin Mode (transcribe)
+  - Tips for Tengwar Calligraphy
+  - Extra Credit: Identify the Language (pick tengwar mode)
+- Speaking Sindarin
+  - Pronunciation (transcribe)
+  - Phrasebook (pick translation)
+  - Commands (pick translation, lenition)
+  - "Mine" and "Yours"
+  - Wordlist (pick translation)
+- The Grammar of Sindarin
+  - Edhil a P(h)eriannath: Plural Nouns
+  - Narn i chîn Húrin: The Definite Article; The Soft Mutation
+  - Ennyn Durin Aran Moria: Possession
+  - Silivren penna míriel: Present-tense Verbs
+
+  - Irregular Plurals
+- The History of Sindarin
+  - Sound changes from Common Eldarin to Old Sindarin
+  - The Grammar of Old Sindarin
+  - Innovations in Old Sindarin
+  - Sound changes from Old Sindarin to Middle Sindarin
+  - The Grammar of Middle Sindarin
+  - Sound changes from Middle Sindarin to Classical Sindarin
