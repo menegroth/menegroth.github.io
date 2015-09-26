@@ -144,7 +144,7 @@ wíŋta
 ádnō
 ákalarē
 áklarikʷā
-álkʷā
+álakwā
 ámbalotsē
 ás
 átakwē
