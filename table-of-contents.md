@@ -1,4 +1,4 @@
-<a href="home.html" class="nav nav-left">Home Page</a>
+<a href="index.html" class="nav nav-left">Home Page</a>
 
 # Table of Contents
 
@@ -6,9 +6,9 @@ This text is divided into four sections: two short and introductory, two long an
 
 ## The Tengwar Writing System
 
-- [Writing English with Tengwar](english-tengwar.html)
-- [Tengwar Punctuation](tengwar-punctuation.html)
-- [Tengwar Numbers](tengwar-numbers.html)
+- **[Writing English with Tengwar](english-tengwar.html)**
+- **[Tengwar Punctuation](tengwar-punctuation.html)**
+- **[Tengwar Numbers](tengwar-numbers.html)**
 - The Sindarin Mode of Beleriand
 - The Sindarin Mode of Gondor
 - The Alphabetic Sindarin Mode
