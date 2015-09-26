@@ -1,28 +1,87 @@
 ambasrôna ‣ ambar̭r̭ûna "east"
+anjâra ‣ aniôra "elder"
 anpárkā ‣ "very dry"
 arkʷena ‣ arpʰena "noble"
 arâtā ‣ arôta "noble"
+asmalindē ‣ am̭m̭alinde "yellowhammer"
 atkárnā ‣ akkʰárna "vengeance"
 atéles ‣ atéle "behind"
 atʰará ‣ atʰrá "across"
 atʰarátā ‣ atʰráta "traverse"
 awatʰā ‣ awtʰa "apparition"
-aŋgwaslôki ‣ aŋgwaḽḽûkė "dragon"
+aŋgwaslôki ‣ aŋgwaḽḽûkė "dragon"
+barákālā ‣ brákala "sudden"
 barâdnā ‣ bránda "lofty"
+berékjā ‣ brékia "wild"
+beuja ‣ buia "serve"
+boróna ‣ bróna "survive"
+borônā ‣ brûna "established"
+bárasā
+bâ ‣ bô "don't!"
+bâd
+bâta- ‣ bôta "prohibit"
+bésnō ‣ béṋṋo "husband"
+dohmē ‣ "gloom"
+dubnā ‣ dumna "gloomy"
+dâr ‣ "pause"
+dên ‣ dîn "gap"
+dóhrā ‣ dûra "dark"
+dômi ‣ dûmė "night"
+dʲelikʷā ‣ delipa "horrible"
 endandórē ‣ endóre "middle earth"
+erekʷā ‣ erepa "lonely"
+erjandorē ‣ eriandore "wilderness"
+erjâlā ‣ eriôla "alone"
+erkambjânā ‣ erkʰambiôna "one-handed"
+etkati- ‣ ekkʰati- "make"
+etkelē ‣ ektʰele "source"
+etkoirē ‣ ekkʰuire "spring"
+etkoirē ‣ ekkʰuire "spring"
+etkoro ‣ ekkʰoro "outer circle"
+etkuiwē ‣ ekkʰuiwe "awakening"
+etlednā ‣ etlenna "exiled"
+etpeles ‣ eppʰele "outer fence"
+etsiri ‣ ettʰirė "river mouth"
 et·kírjā ‣ ek·kʰíria "out of a ship"
+gajār ‣ gaiar "ocean"
+galátā ‣ gláta "forest"
+geŋʷgʷā ‣ gemba "sickly"
+glamrâlā ‣ glamrôlā "babbling"
+glimd- ‣ glind- "glance"
+glisi ‣ glihė "honey"
 glíbdā ‣ glíwda "soap"
 glímta ‣ glíntʰa "glance at"
+gâsā ‣ gôha "void"
+gʲellō ‣ gello "joy"
+gʲernā ‣ gerna "worn"
+heklanā ‣ eklana "forsaken"
+hektā ‣ ektʰa "stab"
+heljatmē ‣ elianwe "rainbow"
+helle ‣ elle "sky"
+helwā ‣ elwa "pale blue"
 hánwā ‣ ánwa "male"
 jágwē ‣ "ravine"
 játmā ‣ "bridge"
+kaem ‣ kai "earth"
+kailikʷā ‣ kailipa "bedridden"
+kalârē ‣ klôre "splendor"
+kaolō ‣ kaulo "affliction"
+karákʷan ‣ krápan "crow"
+karáni ‣ "red"
+katwârā ‣ katwôra "shapely"
+kolnā ‣ kolla "cloak"
+kuhnā ‣ "bent"
+kárani ‣ kárnė "red"
 kátwā ‣ "shaped"
+kâs ‣ kô "top"
 kémtano ‣ "potter"
 kírikta ‣ "reap"
 kírjā ‣ kíria "ship"
 kótʰtā ‣ "quarrel"
 kúndū ‣ "prince"
 kʰarásse ‣ ""
+kʲelekā ‣ "swift"
+kʲelepnā ‣ kelemna "silver"
 kʰelkakaráksē ‣ "grinding ice"
 kʰágdā
 kʰámwā
@@ -34,13 +93,19 @@ líŋwi
 lókʰsē
 lótʰsē
 lúktjēnē
+mbauja ‣ mbauia "it is necessary"
+mbundu ‣ mbundȯ "snout"
 mbártā
 morókō
 másagā
 mísidē
 mísikā
-ṃbártā
-ṃbátʰa
+ṃbártā
+ṃbátʰa
+ndeurō ‣ ndiuro "successor"
+ndisi ‣ ndihė "bride"
+ndulnā ‣ ndulla "dark"
+ndêr ‣ ndîr "man"
 ndûnē
 négdē
 nétstaki
@@ -48,16 +113,25 @@ néŋwi
 nídwō
 níŋkwē
 nôssē
-ṇdûjā
+ṇdûjā
 nʲárna
 ostotirióndō
+palápi- ‣ plápi "flap"
 péresta
+pʰeuja ‣ pʰuia "abhor"
+pʰeuja ‣ pʰuia "abhor"
+pʰini ‣ pʰinė "hair"
+pʰiríni ‣ pʰirínė "mortal"
+pʰoroti ‣ pʰorotė "north"
 rámja
 ráŋku
 ríkʰta
 sjádsḽa
 sjádtā
 smálu
+spanâjā ‣ spʰanúia "cloudy"
+spânā ‣ spʰôna "cloud"
+spânā ‣ spʰôna "cloud"
 síwlē
 tuilelíndō
 tárasta
@@ -80,89 +154,15 @@ wíŋta
 ésedē
 ókoto
 úsukwē
+ŋalan- ‣ nglan- "white"
+ŋalatā ‣ ŋgalata "light"
+ŋalâ ‣ ŋglô "radiance"
 ŋgólodō
 ŋgólē
 ŋgʲô
+ŋile ‣ ŋgile "star"
 ŋálata
 ŋálâ
-ŋʷgʷálkā
-bárasā
-bâd
-ŋʷgʷâl ‣ mbôl "torment"
-bâ ‣ bô "don't!"
-bésnō ‣ béṋṋo "husband"
-palápi- ‣ plápi "flap"
-bâta- ‣ bôta "prohibit"
-mbauja ‣ mbauia "it is necessary"
-barákālā ‣ brákala "sudden"
-berékjā ‣ brékia "wild"
-boróna ‣ bróna "survive"
-borônā ‣ brûna "established"
-beuja ‣ buia "serve"
-mbundu ‣ mbundȯ "snout"
-katwârā ‣ katwôra "shapely"
-kaem ‣ kai "earth"
-kailikʷā ‣ kailipa "bedridden"
-kárani ‣ kárnė "red"
-karáni ‣ "red"
-kaolō ‣ kaulo "affliction"
-kâs ‣ kô "top"
-kʲelepnā ‣ kelemna "silver"
-kʲelekā ‣ "swift"
-kalârē ‣ klôre "splendor"
-kolnā ‣ kolla "cloak"
-karákʷan ‣ krápan "crow"
-kuhnā ‣ "bent"
-dâr ‣ "pause"
-dohmē ‣ "gloom"
-dʲelikʷā ‣ delipa "horrible"
-ndisi ‣ ndihė "bride"
-dên ‣ dîn "gap"
-ndêr ‣ ndîr "man"
-dubnā ‣ dumna "gloomy"
-ndulnā ‣ ndulla "dark"
-dômi ‣ dûmė "night"
-dóhrā ‣ dûra "dark"
-ndeurō ‣ ndiuro "successor"
-etkati- ‣ ekkʰati- "make"
-etkoro ‣ ekkʰoro "outer circle"
-etkuiwē ‣ ekkʰuiwe "awakening"
-etkoirē ‣ ekkʰuire "spring"
-etkoirē ‣ ekkʰuire "spring"
-etlednā ‣ etlenna "exiled"
-heklanā ‣ eklana "forsaken"
-heljatmē ‣ elianwe "rainbow"
-anjâra ‣ aniôra "elder"
-hektā ‣ ektʰa "stab"
-etkelē ‣ ektʰele "source"
-helle ‣ elle "sky"
-helwā ‣ elwa "pale blue"
-asmalindē ‣ am̭m̭alinde "yellowhammer"
-etpeles ‣ eppʰele "outer fence"
-erkambjânā ‣ erkʰambiôna "one-handed"
-erekʷā ‣ erepa "lonely"
-erjandorē ‣ eriandore "wilderness"
-erjâlā ‣ eriôla "alone"
-etsiri ‣ ettʰirė "river mouth"
-spanâjā ‣ spʰanúia "cloudy"
-spânā ‣ spʰôna "cloud"
-pʰoroti ‣ pʰorotė "north"
-pʰeuja ‣ pʰuia "abhor"
-spânā ‣ spʰôna "cloud"
-pʰini ‣ pʰinė "hair"
-pʰiríni ‣ pʰirínė "mortal"
-pʰeuja ‣ pʰuia "abhor"
-gajār ‣ gaiar "ocean"
-ŋalatā ‣ ŋgalata "light"
 ŋâlā ‣ ŋgôla "light"
-gâsā ‣ gôha "void"
-gʲellō ‣ gello "joy"
-geŋʷgʷā ‣ gemba "sickly"
-gʲernā ‣ gerna "worn"
-ŋile ‣ ŋgile "star"
-galátā ‣ gláta "forest"
-ŋalan- ‣ nglan- "white"
-glamrâlā ‣ glamrôlā "babbling"
-ŋalâ ‣ ŋglô "radiance"
-glisi ‣ glihė "honey"
-glimd- ‣ glind- "glance"
+ŋʷgʷálkā
+ŋʷgʷâl ‣ mbôl "torment"
