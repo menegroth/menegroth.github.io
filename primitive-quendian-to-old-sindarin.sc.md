@@ -76,7 +76,9 @@ kʰ|2
 pʰ|3
 ```
 
-## Changes Preceding Common Eldarin
+## Changes Between Primitive Quendian and Common Eldarin
+
+Following are the sound changes that occurred during the journey westward from Cuiviénen to the shores of Beleriand. Comparisons between Sindarin and Quenya are useful for divining the changes at this stage, because Common Eldarin is the ancestor of both languages.
 
 Velars labialized before `w`, and `ŋʷ` became `ŋʷgʷ`
 ```code
@@ -85,12 +87,39 @@ w/ʷ/<velar>_
 ```
 
 The second vowel in a word sometimes (when?) disappeared when unstressed. NOTE: this is based on Salo 4.3, but the environments are conjectural.
+
+Examples include:
+
+- ókotō -> óktō (Salo 4.3)
+- ésedē -> esdē (Salo 4.3)
+- mísidē -> mísdē (Salo 4.3)
+- mísikā -> mískā (Salo 4.3)
+- másagā -> másgā (Salo 4.3)
+- úsukwē -> úskwē (Salo 4.3)
+- ákalarē -> áklarē (Salo 4.3)
+- átalantā -> átlantā (Salo 4.3)
+- álak-wā -> álkwā "swan" (Ety:ÁLAK)
+- ásat- -> ást- "dust" (Ety:ÁSAT)
+
+And also possibly:
+
+- eter- -> etr- "open" (Ety:ETER) if nothing else explains the loss of the vowel in "edro". If the vowel was lost at this stage, the cluster -tr- must have been changed in Quenya (if the word indeed survived in that language), since Q. does not allow the cluster -tr-. It seems no Quenya cognate exists, however.
+- ánad- -> ánd- "long" (Ety:ÁNAD), but the root ANDA- is also listed
+- ának- -> ánk- "bite" (Ety:ÁNAK)
+
+Examples of words in which this change did *not* occur include:
+
+- dóron- "oak" (Ety:DÓRON)
+- éned- "centre" (Ety:ÉNED)
+- ének- "six" (Ety:ÉNEK)
+
 ```code
 <unstressed short vowel>//#(C)Vk_t
 <unstressed short vowel>//#(C)Vs_C
 <unstressed short vowel>//#(C)Vr_n
 <unstressed short vowel>//#(C)[aá]w_C
 <unstressed short vowel>//#(C)V<unvoiced stop>_l
+<unstressed short vowel>//#(C)Vl_<unvoiced stop>
 ```
 
 `s` became `z` before voiced stops.
@@ -109,6 +138,8 @@ Long vowels shortened in closed syllables.
 ```code
 <long vowel>/<short vowel>/_CC
 ```
+
+[Renk](http://www.science-and-fiction.org/elvish/rogue.html) posits a change `ds -> ts` at this stage that Salo does not mention. He also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage.
 
 ## Early changes in Common Eldarin
 
