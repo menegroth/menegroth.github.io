@@ -1,6 +1,12 @@
+abaro ‣ abar "recusant, one who refuses to act as advised or commanded" (WJ:371, 361, 380, 411)
+!abarī ‣ !abarī (pl. of abaro) (WJ:371, 361, 380, 411)
+ábārō ‣ !ábārō "refuser, one who does not go forth" (Ety:AB)
+adnō ‣ !andō "entrance, gate" (Ety:AD)
+
 ambasrôna ‣ ambar̭r̭ûna "east"
 anjâra ‣ aniôra "elder"
-anpárkā ‣ "very dry"
+anpárakā ‣ "very dry"
+appárakā ‣ appʰárkʰa "very dry" (this is old noldorin)
 arkʷena ‣ arpʰena "noble"
 arâtā ‣ arôta "noble"
 asmalindē ‣ am̭m̭alinde "yellowhammer"
@@ -123,6 +129,7 @@ pʰeuja ‣ pʰuia "abhor"
 pʰini ‣ pʰinė "hair"
 pʰiríni ‣ pʰirínė "mortal"
 pʰoroti ‣ pʰorotė "north"
+rúdnā ‣ runda "club" ety:rud
 rámja
 ráŋku
 ríkʰta

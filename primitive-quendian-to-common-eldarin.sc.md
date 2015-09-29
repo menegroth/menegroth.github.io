@@ -39,7 +39,7 @@ oral sonant  | w        | l r      | j h
 
 The consonant `s`, with voiced allophone `z`, existed in Primitive Quendian but did not fit into any of the series (VT46).
 
-`j` was a consonantal y-sound. `h` may have been a voiced velar spirant. In the Etymologies, Tolkien used `ʒ` (ezh) where in War of the Jewels he used `h`. Since Primitive Quendian was a reconstructed language inside the mythos, the exact nature of this sound cannot be determined with certainty.
+`j` was a consonantal y-sound. `h` may have been a voiced velar spirant. In the Etymologies, Tolkien used `ʒ` (ezh) for this sound where in War of the Jewels he used `h`. Since Primitive Quendian was a reconstructed language even inside the mythos, the exact nature of this sound cannot be determined with certainty.
 
 
 ## Changes Between Primitive Quendian and Common Eldarin
@@ -56,34 +56,33 @@ s/z/_<voiced stop>
 ñw/ñgw/_
 ```
 
-Unstressed short vowels often disappeared following a stressed syllable. Most of the resulting consonant clusters would be allowed by Quenya phonology, though a few would change further in later Quenya, e.g. `kl -> lc`
+Unstressed short vowels often disappeared following a stressed syllable.
 
-Examples of words that underwent this change include:
-- ókotō -> óktō (Salo 4.3) (though the Etymologies list OKTĀ as the root yielding N. _auth_.)
-- ésedē -> esdē (Salo 4.3) (Ety. has root EZDĒ)
-- mísidē -> mísdē (Salo 4.3) (this example seems erroneous; the Etymologies list a stem MIZD, while Salo:305 marks a stem MÍS-ID as conjectural. It seems more likely that the root of this word was a single syllable.)
-- mísikā -> mískā (Salo 4.3) (Ety. lists root MISK)
+Salo describes this change at (4.3); however, he includes some examples that seem to be contradicted by the Etymologies, while leaving out many relevant ones: e.g. he cites a change `ókotō -> óktō`, when the Etymologies list OKTĀ as the root yielding Noldorin _auth_.
+
+Here I attempt to list all the examples from the Etymologies to which this change might apply.
+
 - másagā -> másgā (Salo 4.3, Ety:MASAG)
 - úsukwē -> úskwē (Salo 4.3, Ety:USUK; Tolkien lists the "reconstructed" CE form as us(u)k-wē)
-- ákalarē -> áklarē (Salo 4.3) (Ety. lists root AKLA-R-)
-- átalantā -> átlantā (Salo 4.3) (It seems to me extremely unlikely that the disappearance of -a- occurred at this early stage; Q. has _atalante_)
 - álak-wā -> álkwā "swan" (Ety:ÁLAK)
-- ásat- -> ást- "dust" (Ety:ÁSAT)
-- gayas- -> gais- "fear" (Ety:GÁYAS)
-- golob- -> golb- "branch" (Ety:GÓLOB)
-- layak- -> laik- "green" (Ety:LÁYAK)
-- nayak- -> naik- "pain" (Ety:NÁYAK)
+- !ásatō -> !ástō "dust" (Ety:ÁSAT) (-ō ending assumed on the basis of Q. _asto_)
+- !gayasā -> !gaisā "dread" (Ety:GÁYAS)
+- !gayastā -> !gaistā "to fear" (Ety:GÁYAS)
+- !gayasrā -> gaisrā "dreadful" (Ety:GÁYAS)
+- !golobā -> golbā "branch" (Ety:GÓLOB)
+- !layakwā -> laik-wā "green" (Ety:LÁYAK)
+- !nayakē -> !naikē "pain" (Ety:NÁYAK)
 - ñganad- -> ñgand- "play a harp" (Ety:ÑGÁNAD)
-- orok- -> ork- "orc" (Ety:ÓROK)
-- parak- -> park- "dry" (Ety:PÁRAK)
-- pened- -> pend- "slope" (Ety:PÉNED)
-- pheleg- -> phelg- "cave" (Ety:PHÉLEG)
+- !oroku -> órku "orc" (Ety:ÓROK)
+- !parakā -> !parkā "dry" (Ety:PÁRAK)
+- !penedē -> !pendē "slope" (Ety:PÉNED)
+- !phelegā -> !phelgā "cave" (Ety:PHÉLEG)
 - rayak- -> raik- "crooked" (Ety:RÁYAK)
 - salap- -> salp- "lick up" (Ety:SÁLAP)
 - spanag- -> spang- "beard" (Ety:SPÁNAG)
 - stalag- -> stalg- "stalwart" (Ety:STÁLAG)
 - tarag- -> targ- "stiff" (Ety:TÁRAG)
-- telek- -> telk- "stem" (Ety:TÉLEK)
+- !telekō -> telkō "stem" (Ety:TÉLEK) (-ō ending assumed on the basis of Q. _telco_, cf. RotK/E)
 - ulug- -> ulg- "monster" (Ety:ÚLUG)
 
 And also possibly:
@@ -104,24 +103,15 @@ Examples of words in which this change did *not* occur include:
 - kánat- "four" (Ety:KÁNAT)
 - néter- "nine" (Ety:NÉTER)
 - néled- "three" (Ety:NÉLED)
-- nélek- "tooth" (Ety:NÉLEK)
+- !nélekī "teeth" (Ety:NÉLEK) (OS form not glossed in Ety, but looks like a plural)
 - phéren- "beech" (Ety:PHÉREN)
 - tawar- "wood" (Ety:TÁWAR)
 
-Interestingly, all of these words later lost the unstressed vowel in Quenya, but preserved it in Sindarin. This leads me to believe that certain environments caused the unstressed second vowel to be preserved in CE - perhaps the very same environments that conditioned its loss in Quenya.
+This sound change rule will delete the vowel from the above words. Care must therefore be taken when using its output, as it contradicts data from the Etymologies.
 
 ```code
-<unstressed short vowel>//<stressed vowel>k_[lstw]V
-<unstressed short vowel>//<stressed vowel>l_[kdlmptwj]V
-<unstressed short vowel>//<stressed vowel>m_[bmnpj]V
-<unstressed short vowel>//<stressed vowel>n_[kdgntwj]V
-<unstressed short vowel>//<stressed vowel>n_gwV
-<unstressed short vowel>//<stressed vowel>[nrls]_kwV
-<unstressed short vowel>//<stressed vowel>[nrks]_tjV
-<unstressed short vowel>//<stressed vowel>p_[st]V
-<unstressed short vowel>//<stressed vowel>r_[kdmnrtswj]
-<unstressed short vowel>//<stressed vowel>s_[kstw]
-<unstressed short vowel>//<stressed vowel>t_[stwj]
+<unstressed short vowel>//<stressed vowel>[ys]_C
+<unstressed short vowel>//<stressed vowel>[lrn]_[ptkφθχbdgn]
 ```
 
 Long vowels shortened in closed syllables.
@@ -137,4 +127,19 @@ dn/nd/_
 bm/mb/_
 gñ/ñg/_
 ```
-[Renk](http://www.science-and-fiction.org/elvish/rogue.html) posits a change `ds -> ts` at this stage that Salo does not mention. He also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage. It is possible that the lowering of final short -i in CE explains Q. ringe, ON. ringe < RINGI- (Ety:RINGI)
+[Renk](http://www.science-and-fiction.org/elvish/rogue.html) posits a change `ds -> ts` at this stage that Salo does not mention - probably based on the development `sjadsē -> sjatsē`. He also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage. The loss of final -o, at least, is supported by `abaro -> abar` (WJ). It is possible that the lowering of final short -i in CE explains Q. ringe, ON. ringe < RINGI- (Ety:RINGI).
+
+I am not sure which words are supposed to have lost -h-, since this would produce an unusual vowel hiatus; maybe `awāwiiē`?
+
+```code
+ds/ts/_
+```
+
+```code
+h//V_V
+```
+
+```code
+[aeo]//VC_#
+i/e/_#
+```
