@@ -145,3 +145,12 @@ h//V_V
 [aeo]//VC_#
 i/e/_#
 ```
+
+Initial `nd`, `ŋg`, `mb` syllabified in certain words.
+
+```code
+mbártā/əmbártā/#_#
+ndûnē/əndûnē/#_#
+ñgólē/əñgólē/#_#
+ñgjô/əñgjô/#_#
+```
