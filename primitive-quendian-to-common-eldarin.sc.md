@@ -1,5 +1,7 @@
 # Sound Changes in Eldarin
 
+This file describes the changes that affected the Primitive Quendian language, producing Common Eldarin. Common Eldarin is the latest common ancestor of all Elvish languages except the Avarin branch.
+
 This file is in .sc format, which means the markdown source can be copy-pasted directly into [Zompist's Sound Change Applier](http://zompist.com/sca2). A sample Common Eldarin lexicon to use with the SCA can be found in the same Github repo as this document.
 
 ## Sound Categories
@@ -127,7 +129,7 @@ dn/nd/_
 bm/mb/_
 gñ/ñg/_
 ```
-[Renk](http://www.science-and-fiction.org/elvish/rogue.html) posits a change `ds -> ts` at this stage that Salo does not mention - probably based on the development `sjadsē -> sjatsē`. He also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage. The loss of final -o, at least, is supported by `abaro -> abar` (WJ). It is possible that the lowering of final short -i in CE explains Q. ringe, ON. ringe < RINGI- (Ety:RINGI).
+[Thorsten  Renk](http://www.science-and-fiction.org/elvish/rogue.html) posits a change `ds -> ts` at this stage, probably based on the development `sjadsē -> sjatsē` (Ety:SYAD). Salo places this change after the Noldor/Lindar split. Renk also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage. The loss of final -o, at least, is supported by `abaro -> abar` (WJ). It is possible that the lowering of final short -i in CE explains Q. ringe, ON. ringe < RINGI- (Ety:RINGI).
 
 I am not sure which words are supposed to have lost -h-, since this would produce an unusual vowel hiatus; maybe `awāwiiē`?
 
