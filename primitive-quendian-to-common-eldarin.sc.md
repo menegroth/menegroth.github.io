@@ -2,7 +2,7 @@
 
 This file describes the changes that affected the Primitive Quendian language, producing Common Eldarin. Common Eldarin is the latest common ancestor of all Elvish languages except the Avarin branch.
 
-This file is in .sc format, which means the markdown source can be copy-pasted directly into [Zompist's Sound Change Applier](http://zompist.com/sca2). A sample Common Eldarin lexicon to use with the SCA can be found in the same Github repo as this document.
+This file is in .sc format, which means the markdown source can be copy-pasted directly into [Zompist's Sound Change Applier](http://zompist.com/sca2). A sample Primitive Quendian lexicon to use with the SCA can be found in the same Github repo as this document.
 
 ## Sound Categories
 
