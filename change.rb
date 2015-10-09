@@ -1,15 +1,35 @@
+def partition_all word, target
+  if Regexp === target && target.inspect == '//'
+    ['', ''] + word.chars.zip([''].cycle).flatten + ['']
+  else
+    before, middle, after = word.partition(target)
+    return [word] if before == word
+    [before, middle] + partition_all(after, target)
+  end
+end
+
 class Change < Struct.new(:find, :replacement, :context_before, :context_after)
-  def apply_to word, prefix=''
-    parts = word.partition(find)
-    if parts[0] == word
-      return prefix + word
+
+  def self.build(find, transformation, context)
+    context_before, _, context_after = context.partition('_')
+    context_before = Regexp.new(context_before + '$')
+    context_after = Regexp.new('^' + context_after)
+
+    new(Regexp.new(find), transformation, context_before, context_after)
+  end
+
+
+  def apply_to word
+    parts = partition_all word, find
+    out_parts = parts.dup
+
+    (1 ... parts.length - 1).step(2) do |n|
+      before = parts[0 ... n]
+      after = parts[n+1 .. -1] || []
+      out_parts[n] = replace(parts[n]) if context_before =~ before.join && context_after =~ after.join
     end
 
-    prefix = prefix + parts[0]
-
-    replaced = context_before =~ prefix && context_after =~ parts[2] ? replace(parts[1]) : parts[1]
-
-    apply_to(parts[2], prefix + replaced)
+    out_parts.join
   end
 
   def replace(part)
@@ -19,25 +39,17 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after)
       replacement
     end
   end
-
-  def self.build(find, transformation, context)
-    context_before, _, context_after = context.partition('_')
-    context_before = Regexp.new(context_before + '$')
-    context_after = Regexp.new('^' + context_after)
-
-    new(Regexp.new(find), transformation, context_before, context_after)
-  end
 end
 
-words = [
-  'folon',
-  #'bad',
-  #'bat',
-  #'bazork',
-  #'batzog',
-  #'dazod',
-  'baiiiar'
-]
+words = {
+  'folon' => 'fulon',
+  'bad' => 'beid',
+  'bat' => 'bat',
+  'bazork' => 'bjork',
+  'batzog' => 'batzug',
+  'dazod' => 'djud',
+  'baiiiar' => 'baar'
+}
 
 lengthen = ->(v) {
   v + v
@@ -55,10 +67,15 @@ changes = [
   Change.build('i', 'j', '_[aeiou]')
 ]
 
-changed = words.map do |word|
-  changes.reduce(word) do |word, change|
+problems = []
+words.each do |word, expected_result_of_change|
+  result = changes.reduce(word) do |word, change|
     change.apply_to word
   end
+  if result != expected_result_of_change
+    problems << "expected #{word} -> #{expected_result_of_change} but got #{result}"
+  end
+  puts result
 end
 
-puts changed
+puts problems.compact
