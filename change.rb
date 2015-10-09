@@ -8,6 +8,34 @@ def partition_all word, target
   end
 end
 
+class ChangeFactory
+  attr_reader :macros
+
+  def initialize macros
+    @macros = macros
+    yield self
+  end
+
+  def build find, replace, context
+    find = apply_macros find
+    context = apply_macros context
+
+    context_before, _, context_after = context.partition('_')
+    context_before = Regexp.new(context_before + '$')
+    context_after = Regexp.new('^' + context_after)
+
+    Change.new(Regexp.new(find), replace, context_before, context_after)
+  end
+
+  private
+
+  def apply_macros s
+    macros.reduce(s) do |s, (find, replace)|
+      s.gsub(find, replace)
+    end
+  end
+end
+
 class Change < Struct.new(:find, :replacement, :context_before, :context_after)
 
   def self.build(find, transformation, context)
@@ -19,7 +47,15 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after)
   end
 
 
-  def apply_to word
+  def apply_to words
+    if !(String === words)
+      words.map { |word| apply_to_one word }.flatten
+    else
+      apply_to_one words
+    end
+  end
+
+  def apply_to_one word
     parts = partition_all word, find
     out_parts = parts.dup
 
@@ -55,17 +91,20 @@ lengthen = ->(v) {
   v + v
 }
 
-changes = [
-  Change.new(/o/, 'oo', /[flo]$/, /^[l]/),
-  Change.build('[aeiou]', lengthen, '_[dbgz]'),
-  Change.build('aa', 'ei', '_'),
-  Change.build('ee', 'i', '_'),
-  Change.build('oo', 'u', '_'),
-  Change.build('z', '', '[aeiou]_[aeiou]'),
-  Change.build('i', '', '[aeiou]_[aeiou]'),
-  Change.build('e', 'i', '_[aou]'),
-  Change.build('i', 'j', '_[aeiou]')
-]
+changes = []
+ChangeFactory.new(
+  'C' => '[tpkdbglrsnmhwyjkzxcvq]',
+  'V' => '[aeiou]'
+) do |c|
+  changes << c.build('V', lengthen, '_[dbgzl]')
+  changes << c.build('aa', 'ei', '_')
+  changes << c.build('ee', 'i', '_')
+  changes << c.build('oo', 'u', '_')
+  changes << c.build('z', '', 'V_V')
+  changes << c.build('i', '', 'V_V')
+  changes << c.build('e', 'i', '_[aou]')
+  changes << c.build('i', 'j', '_V')
+end
 
 problems = []
 words.each do |word, expected_result_of_change|
