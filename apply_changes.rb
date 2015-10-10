@@ -26,7 +26,7 @@ changes = ChangeSequence.new(
   '<long vowel>' => '[āēīōūâêîôû]'
 ) do |s|
   s.change('ñw', 'ñgw', '_') # Salo 4.2
-  s.change('<unstressed vowel>', '', '<stressed vowel>C+_', optional: true) # Salo 4.3
+  s.change('<unstressed vowel>', '', '<stressed vowel>C+_C', optional: true) # Salo 4.3
   s.change('s', 'z', '_[dbg]') # Salo 4.4
   s.change('bm|dn|gñ', metathesis, '_') # Salo 4.5
   s.change('<long vowel>', shorten, '_CC') # Salo 4.6
@@ -40,7 +40,7 @@ end
 output = input.map do |entry|
   word, gloss = entry.split(' = ')
   out = changes.apply(word)
-  puts "#{word} -> #{out.join(', ')} '#{gloss}'"
+  puts "#{out.join(', ')} <- #{word} '#{gloss}'"
   out
 end.flatten
 
