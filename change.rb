@@ -8,15 +8,16 @@ def partition_all word, target
   end
 end
 
-class ChangeFactory
+class ChangeSequence
   attr_reader :macros
 
   def initialize macros
     @macros = macros
+    @changes = []
     yield self
   end
 
-  def build find, replace, context
+  def change find, replace, context, options={}
     find = apply_macros find
     context = apply_macros context
 
@@ -24,7 +25,13 @@ class ChangeFactory
     context_before = Regexp.new(context_before + '$')
     context_after = Regexp.new('^' + context_after)
 
-    Change.new(Regexp.new(find), replace, context_before, context_after)
+    @changes << Change.new(Regexp.new(find), replace, context_before, context_after, options)
+  end
+
+  def apply word
+    @changes.reduce(word) do |word, change|
+      change.apply_to word
+    end
   end
 
   private
@@ -36,20 +43,11 @@ class ChangeFactory
   end
 end
 
-class Change < Struct.new(:find, :replacement, :context_before, :context_after)
-
-  def self.build(find, transformation, context)
-    context_before, _, context_after = context.partition('_')
-    context_before = Regexp.new(context_before + '$')
-    context_after = Regexp.new('^' + context_after)
-
-    new(Regexp.new(find), transformation, context_before, context_after)
-  end
-
+class Change < Struct.new(:find, :replacement, :context_before, :context_after, :options)
 
   def apply_to words
     if !(String === words)
-      words.map { |word| apply_to_one word }.flatten
+      words.map { |word| apply_to_one word }.flatten.uniq
     else
       apply_to_one words
     end
@@ -65,7 +63,15 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after)
       out_parts[n] = replace(parts[n]) if context_before =~ before.join && context_after =~ after.join
     end
 
-    out_parts.join
+    if optional?
+      [out_parts.join, word]
+    else
+      [out_parts.join]
+    end
+  end
+
+  def optional?
+    !!options[:optional]
   end
 
   def replace(part)
@@ -76,45 +82,3 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after)
     end
   end
 end
-
-words = {
-  'folon' => 'fulon',
-  'bad' => 'beid',
-  'bat' => 'bat',
-  'bazork' => 'bjork',
-  'batzog' => 'batzug',
-  'dazod' => 'djud',
-  'baiiiar' => 'baar'
-}
-
-lengthen = ->(v) {
-  v + v
-}
-
-changes = []
-ChangeFactory.new(
-  'C' => '[tpkdbglrsnmhwyjkzxcvq]',
-  'V' => '[aeiou]'
-) do |c|
-  changes << c.build('V', lengthen, '_[dbgzl]')
-  changes << c.build('aa', 'ei', '_')
-  changes << c.build('ee', 'i', '_')
-  changes << c.build('oo', 'u', '_')
-  changes << c.build('z', '', 'V_V')
-  changes << c.build('i', '', 'V_V')
-  changes << c.build('e', 'i', '_[aou]')
-  changes << c.build('i', 'j', '_V')
-end
-
-problems = []
-words.each do |word, expected_result_of_change|
-  result = changes.reduce(word) do |word, change|
-    change.apply_to word
-  end
-  if result != expected_result_of_change
-    problems << "expected #{word} -> #{expected_result_of_change} but got #{result}"
-  end
-  puts result
-end
-
-puts problems.compact
