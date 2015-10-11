@@ -1,7 +1,5 @@
 require_relative './change'
 
-input_lexicon_filename, output_lexicon_filename = ARGV
-
 shorten = -> (v) {
   { 'ā' => 'a',
     'ē' => 'e',
@@ -27,6 +25,10 @@ metathesis = -> (s) { s.reverse }
 
 haplology = -> (s) {
   s.split(/[aeiou]/)[0]
+}
+
+syllabify = -> (nasal) {
+  nasal * 2
 }
 
 changes = ChangeSequence.new(
@@ -58,4 +60,4 @@ changes = ChangeSequence.new(
   s.change '(CC?)V\1', haplology, 'V_V' # Salo 4.21
 end
 
-apply_changes(changes, input_lexicon_filename, output_lexicon_filename)
+apply_changes(changes)

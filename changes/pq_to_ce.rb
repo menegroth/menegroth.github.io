@@ -1,7 +1,5 @@
 require_relative './change'
 
-input_lexicon_filename, output_lexicon_filename = ARGV
-
 shorten = -> (v) {
   { 'ā' => 'a',
     'ē' => 'e',
@@ -103,4 +101,4 @@ changes = ChangeSequence.new(
 
 end
 
-apply_changes(changes, input_lexicon_filename, output_lexicon_filename)
+apply_changes(changes)
