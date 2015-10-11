@@ -82,3 +82,25 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after, 
     end
   end
 end
+
+def apply_changes(changes, input_lexicon_filename, output_lexicon_filename)
+  input = File.read(input_lexicon_filename).split("\n").reject(&:empty?)
+  golden = File.read(output_lexicon_filename).split("\n").reject(&:empty?).map do |w|
+    w.split(' = ')[0]
+  end
+
+  output = input.map do |entry|
+    word, gloss = entry.split(' = ')
+    out = changes.apply(word)
+    out.each do |out|
+      puts "#{out} = <- #{word} :: #{gloss}"
+    end
+    out
+  end.flatten
+
+  golden.each do |golden_word|
+    if !output.include? golden_word
+      puts "NOT FOUND: #{golden_word}"
+    end
+  end
+end
