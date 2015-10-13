@@ -11,7 +11,7 @@ The epochs are:
 * PQ = Primitive Quendian - the ultimate ancestor of all Elvish languages
 * CE = Common Eldarin - the last common ancestor of Sindarin, Telerin, and Quenya.
 * EQ = Exilic Quenya - Quenya as spoken in Middle-earth
-* CT = Common Telerin - the last common ancestor of Sindarin and Telerin
+* CL = Common Lindarin - the last common ancestor of Sindarin and Telerin
 * T = Telerin
 * OS = Old Sindarin - a (recorded?) archaic form of Sindarin
 * CS = Classical Sindarin, as spoken in Rivendell in the Third Age
@@ -21,7 +21,7 @@ The epochs are:
 The change scripts read a lexicon from standard input and print it back, with changes applied, to standard output. You can thus compose scripts with the unix pipe operator:
 
 ```bash
-cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_ct.rb
+cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_cl.rb
 ```
 
 Change scripts may also take an argument, which should refer to a _golden master_ file representing the expected output from the change. If any words in the golden master file are missing from the output, a warning will be printed to standard error. This is useful when experimenting with sound changes, as it ensures the hypothesized changes don't contradict the data.
