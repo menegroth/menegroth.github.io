@@ -11,10 +11,10 @@ end
 class ChangeSequence
   attr_reader :macros
 
-  def initialize macros
+  def initialize macros={}
     @macros = macros
     @changes = []
-    yield self
+    yield self if block_given?
   end
 
   def change find, replace, context, options={}
@@ -29,7 +29,7 @@ class ChangeSequence
   end
 
   def apply word
-    @changes.reduce(word) do |word, change|
+    @changes.reduce([word].flatten) do |word, change|
       change.apply_to word
     end
   end
@@ -87,7 +87,7 @@ def apply_changes(changes)
   output_lexicon_filename = ARGV[0] || '/dev/null'
 
   golden = File.read(output_lexicon_filename).split("\n").reject(&:empty?).map do |w|
-    w.split(' = ')[0]
+    w.split(' = ')[0].sub(/^[\*!]/, '')
   end
 
   output = []
@@ -95,6 +95,8 @@ def apply_changes(changes)
   while entry = STDIN.gets
     next if entry.strip.empty?
     word, gloss = entry.chomp.split(' = ')
+    word.sub!('*', '')
+    word.sub!('!', '')
     out = changes.apply(word)
     out.each do |out|
       puts "#{out} = <- #{word} :: #{gloss}"

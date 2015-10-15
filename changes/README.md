@@ -14,7 +14,10 @@ The epochs are:
 * CL = Common Lindarin - the last common ancestor of Sindarin and Telerin
 * T = Telerin
 * OS = Old Sindarin - a (recorded?) archaic form of Sindarin
+* MS = Middle Sindarin
 * CS = Classical Sindarin, as spoken in Rivendell in the Third Age
+
+Tolkien never used the terms "Old/Middle Sindarin" himself. In the Etymologies, he listed many Old Noldorin forms; we may assume that Old Noldorin would have become Old Sindarin when Tolkien renamed the classical language and changed its place in the mythos. Middle Sindarin is, AFAICT, an term invented by David Salo to describe an intermediate stage between Old Sindarin and Classical Sindarin, but it is unclear why this particular stage of the language was chosen. 
 
 ## Usage
 

@@ -60,7 +60,7 @@ changes = ChangeSequence.new(
   s.change('<unstressed vowel>', '', '<stressed vowel>C+_C', optional: true) # Salo 4.3
   s.change('s', 'z', '_[dbg]') # Salo 4.4
   s.change('bm|dn|gñ', metathesis, '_') # Salo 4.5
-  s.change('<long vowel>', shorten, '_CC') # Salo 4.6
+  s.change('<long vowel>', shorten, '_CC') # Salo 4.6 TODO: remove? (superseded by 4.14)
   s.change('<long vowel>', shorten, '_\+') # Salo 4.6
   s.change('<long vowel>', shorten, '<long vowel>_') # cf. plural -ī shortening to -i after long vowels
   s.change('<long vowel>', shorten, '_i') # cf. Lindāi -> Lindai (WJ:378,385)
