@@ -17,7 +17,7 @@ class ChangeSequence
     yield self if block_given?
   end
 
-  def change find, replace, context, options={}
+  def change find, replace, context='_', options={}
     find = apply_macros find
     context = apply_macros context
 
@@ -86,9 +86,11 @@ end
 def apply_changes(changes)
   output_lexicon_filename = ARGV[0] || '/dev/null'
 
-  golden = File.read(output_lexicon_filename).split("\n").reject(&:empty?).map do |w|
-    w.split(' = ')[0].sub(/^[\*!]/, '')
-  end
+  golden = File.read(output_lexicon_filename)
+    .split("\n")
+    .reject(&:empty?)
+    .reject { |w| w[0] == '!' || w[0] == '*' }
+    .map { |w| w.split(' = ')[0] } #.sub(/^[\*!]/, '') }
 
   output = []
 
