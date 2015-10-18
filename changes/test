@@ -1,0 +1,40 @@
+#!/bin/sh
+
+echo 'Testing PQ -> CE'
+cat pq_lexicon | ruby pq_to_ce.rb ce_lexicon > /dev/null
+
+echo 'Testing PQ -> Quenya'
+cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_eq.rb eq_lexicon > /dev/null
+
+echo 'Testing PQ -> Telerin'
+cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_cl.rb | ruby cl_to_t.rb t_lexicon > /dev/null
+
+echo 'Testing PQ -> OS'
+cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_cl.rb | ruby cl_to_os.rb os_lexicon > /dev/null
+
+echo 'Testing PQ -> Sindarin'
+cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_cl.rb | ruby cl_to_os.rb | ruby os_to_ms.rb | ruby ms_to_cs.rb cs_lexicon > /dev/null
+
+echo 'Testing CE -> Quenya'
+cat ce_lexicon | ruby ce_to_eq.rb eq_lexicon > /dev/null
+
+echo 'Testing CE -> Telerin'
+cat ce_lexicon | ruby ce_to_cl.rb | ruby cl_to_t.rb t_lexicon > /dev/null
+
+echo 'Testing CE -> OS'
+cat ce_lexicon | ruby ce_to_cl.rb | ruby cl_to_os.rb os_lexicon > /dev/null
+
+echo 'Testing CE -> Sindarin'
+cat ce_lexicon | ruby ce_to_cl.rb | ruby cl_to_os.rb | ruby os_to_ms.rb | ruby ms_to_cs.rb cs_lexicon > /dev/null
+
+echo 'Testing CL -> Telerin'
+cat cl_lexicon | ruby cl_to_t.rb t_lexicon > /dev/null
+
+echo 'Testing CL -> OS'
+cat cl_lexicon | ruby cl_to_os.rb os_lexicon > /dev/null
+
+echo 'Testing CL -> S'
+cat cl_lexicon | ruby cl_to_os.rb | ruby os_to_ms.rb | ruby ms_to_cs.rb cs_lexicon > /dev/null
+
+echo 'Testing OS -> S'
+cat os_lexicon | ruby os_to_ms.rb | ruby ms_to_cs.rb cs_lexicon > /dev/null
