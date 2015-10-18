@@ -48,7 +48,7 @@ changes = ChangeSequence.new(
   s.change('[mñ]', 'n', '_[td]') # Salo 4.12
   # s.change 'i', 'è', '_$' # Salo 4.13
   # s.change 'u', 'ò', '_$' # Salo 4.13
-  s.change '<long vowel>', shorten, '_.' # Salo 4.14
+  #s.change '<long vowel>', shorten, '_.' # Salo 4.14
   s.change 'wō', 'wā', '_$' # Salo 4.15
   s.change 'ā', 'ē', 't[wm]_$' # Salo 4.16
   s.change 'āu', 'ā', '_' # Salo 4.17
@@ -65,7 +65,7 @@ changes = ChangeSequence.new(
   s.change 'iw', 'jū', '[tdlsn]|th_' # Salo 4.28
   s.change 'j', '', '^[tdlsn]_' # Salo 4.30
   s.change 'm', 'n', '_[jw]' # Salo 4.31
-  s.change 'j', 'i', '_V' # Salo 4.32
+  s.change 'j', 'i', '(V|r)_V' # Salo 4.32
 end
 
 apply_changes(changes)

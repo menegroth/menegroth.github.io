@@ -90,6 +90,21 @@ geminate = -> (x) {
   x + x
 }
 
+remove_stress_marking = -> (v) {
+  {
+    'á' => 'a',
+    'é' => 'e',
+    'í' => 'i',
+    'ó' => 'o',
+    'ú' => 'u',
+    'â' => 'ā',
+    'ê' => 'ē',
+    'î' => 'ī',
+    'ô' => 'ō',
+    'û' => 'ū'
+  }[v] || v
+}
+
 changes = ChangeSequence.new(
   'C' => '[tpkdbglrszhwjnmñ]',
   'V' => '[aeiouāēīōūáéíóúâêîôû]',
@@ -98,24 +113,25 @@ changes = ChangeSequence.new(
   '<long vowel>' => '[āēīōūâêîôû]',
   '<short vowel>' => '[aeiouáéíóú]'
 ) do |s|
-  s.change '[āēōaeo]i', 'ī', '_$' # Salo 4.33 TODO: figure out if final diphthongs were long or short at this point
+  s.change '[āēōaeo][iī]', 'ī', 'V.*_$' # Salo 4.33 TODO: figure out if final diphthongs were long or short at this point
+  s.change '[āa][īi]', 'ai'
   s.change 'V', stress, '^C<stressed vowel>r_C' # Salo 4.34
   s.change 'V', unstress, '^C_rVC' # Salo 4.34
-  s.change '<unstressed vowel>', '', '^C_rVC' # Salo 4.35 TODO: should this be an optional change? Salo says the change applies "frequently" but gives no examples of words in which it does not occur.
+  s.change '<unstressed vowel>', '', '^C_rVC', optional: true # Salo 4.35; this change does not occur in e.g. baradā
 
   # After this point, stress may no longer be relevant, or it might regularize. TODO remove stress marking?
 
   s.change 'mr', 'br', '^_' # Salo 4.36
   s.change 'ñl', 'gl', '^_' # Salo 4.36
-  s.change '<long vowel>', shorten, 'VC+_$' # Salo 4.37
+  s.change '[nmñ]', 'a', '^_[nmñ]' # Salo 4.40
+  s.change '<long vowel>', shorten, 'V.*_$' # Salo 4.37
   s.change '^ñole$', 'ole', '_' # Salo 4.38
   s.change 'ñ', 'ñg', '^_(V|w|j)' # Salo 4.38
   s.change 'j', '', '[kg]h?_' # Salo 4.39
-  s.change '[nmñ]', 'a', '^_[nmñ]' # Salo 4.40
   s.change 'h', '_', '(^|V)_V' # Salo 4.41
-  s.change 'h', 'g', '_[nmñ]' # Salo 4.42
-  s.change 'h', 't', '_t' # Salo 4.43
-  s.change 'h', 's', '_s' # Salo 4.43
+  s.change 'h', 'g', 'V_[nmñ]' # Salo 4.42
+  s.change 'h', 't', 'V_t' # Salo 4.43
+  s.change 'h', 's', 'V_s' # Salo 4.43
   s.change '<short vowel>', lengthen, '_h[r$]' # Salo 4.44, 4.45
   s.change 'h', '', 'V_[r$]' # Salo 4.44, 4.45
   s.change '[tpk]', voice, '_[\-\+]?[nmñ]' # Salo 4.46
@@ -128,15 +144,15 @@ changes = ChangeSequence.new(
   s.change 'lanta', 'landa' # Salo 4.52
   s.change '[tpkm]', '', '_$' # Salo 4.53-4
   s.change 'th', 't', '_$' # Salo 4.55
-  s.change 'ē', 'ī' # Salo 4.56
-  s.change 'ê', 'î'
-  s.change 'ō', 'ū'
-  s.change 'ô', 'û'
+  s.change 'ē', 'ī', '_', optional: true # Salo 4.56 - some long vowels were not raised; compare b'rōnā > brūna, but ñgōlē > *añgōle > S. angol. Did the vowel shorten, so that the OS reflex of angol was actually *añgole? or was there some other condition for vowel raising?
+  s.change 'ê', 'î', '_', optional: true # Salo 4.56
+  s.change 'ō', 'ū', '_', optional: true # Salo 4.56
+  s.change 'ô', 'û', '_', optional: true # Salo 4.56
   s.change 'j', 'i', '_C'
   s.change '[íî][iī]', 'î' # Salo 4.57
   s.change '[iī][íî]', 'î' # Salo 4.57
   s.change '[iī][iī]', 'ī' # Salo 4.57
-  # I exclude Salo's 4.58, ā > ō̧, because it is non-contrastive.
+  s.change 'ā', 'ō' # Salo 4.58
   s.change 'ei', 'ī' # Salo 4.59
   s.change 'éi', 'î' # Salo 4.59
   s.change 'oi', 'ui' # Salo 4.59
@@ -157,6 +173,8 @@ changes = ChangeSequence.new(
   s.change 's', 'h', 'V_V' # Salo 4.71
   s.change 's', '', '_($|\+C)' # Salo 4.72-3
   s.change 'wó', 'wá' # Salo 4.74
+  s.change 'm\+m', 'm', '_', optional: true # cf. Borommīro, Boromīro, both attested
+  s.change 'V', remove_stress_marking
 end
 
 apply_changes(changes)

@@ -20,7 +20,7 @@ class ChangeContext < Struct.new(:string)
   private
 
   def partition_on_underscore
-    @partition ||= string.partition('_')
+    string.partition('_')
   end
 end
 
@@ -123,8 +123,9 @@ def apply_changes(changes)
   golden = File.read(output_lexicon_filename)
     .split("\n")
     .reject(&:empty?)
+    .reject(&method(:comment?))
     .reject { |w| w[0] == '!' || w[0] == '*' }
-    .map { |w| w.split(' = ')[0] } #.sub(/^[\*!]/, '') }
+    .map { |w| w.split(' = ')[0] }
 
   output = []
 
