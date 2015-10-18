@@ -133,7 +133,9 @@ changes = ChangeSequence.new(
   s.change 'ō', 'ū'
   s.change 'ô', 'û'
   s.change 'j', 'i', '_C'
-  s.change 'i', '', '_[īî]' # Salo 4.57
+  s.change '[íî][iī]', 'î' # Salo 4.57
+  s.change '[iī][íî]', 'î' # Salo 4.57
+  s.change '[iī][iī]', 'ī' # Salo 4.57
   # I exclude Salo's 4.58, ā > ō̧, because it is non-contrastive.
   s.change 'ei', 'ī' # Salo 4.59
   s.change 'éi', 'î' # Salo 4.59

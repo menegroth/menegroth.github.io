@@ -8,6 +8,22 @@ def partition_all word, target
   end
 end
 
+class ChangeContext < Struct.new(:string)
+  def before
+    Regexp.new(partition_on_underscore[0] + '$')
+  end
+
+  def after
+    Regexp.new('^' + partition_on_underscore[-1])
+  end
+
+  private
+
+  def partition_on_underscore
+    @partition ||= string.partition('_')
+  end
+end
+
 class ChangeSequence
   attr_reader :macros
 
@@ -18,25 +34,11 @@ class ChangeSequence
   end
 
   def change find, replace, context='_', options={}
-    find = apply_macros find
-    context = apply_macros context
-
-    context_before, _, context_after = context.partition('_')
-    context_before = Regexp.new(context_before + '$')
-    context_after = Regexp.new('^' + context_after)
-
-    @changes << Change.new(Regexp.new(find), replace, context_before, context_after, options)
+    build_change find, replace, context, options, Change
   end
 
   def debug find, replace, context='_', options={}
-    find = apply_macros find
-    context = apply_macros context
-
-    context_before, _, context_after = context.partition('_')
-    context_before = Regexp.new(context_before + '$')
-    context_after = Regexp.new('^' + context_after)
-
-    @changes << DebugChange.new(Regexp.new(find), replace, context_before, context_after, options)
+    build_change find, replace, context, options, DebugChange
   end
 
   def apply word
@@ -46,6 +48,13 @@ class ChangeSequence
   end
 
   private
+
+  def build_change find, replace, context, options, change_class
+    find = apply_macros find
+    context = ChangeContext.new apply_macros context
+
+    @changes << change_class.new(Regexp.new(find), replace, context.before, context.after, options)
+  end
 
   def apply_macros s
     macros.reduce(s) do |s, (find, replace)|
