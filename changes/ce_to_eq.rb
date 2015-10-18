@@ -14,6 +14,21 @@ shorten = -> (v) {
   }[v] || v
 }
 
+lengthen = -> (v) {
+  { 'a' => 'ā',
+    'e' => 'ē',
+    'i' => 'ī',
+    'o' => 'ō',
+    'u' => 'ū',
+    'á' => 'â',
+    'é' => 'ê',
+    'í' => 'î',
+    'ó' => 'ô',
+    'ú' => 'û'
+  }[v] || v
+}
+
+
 remove_stress_marking = -> (v) {
   {
     'á' => 'a',
@@ -39,6 +54,19 @@ spirantize = -> (c) {
 
 syncopate = -> (s) {
   s[0 .. -4] + s[-2 .. -1]
+}
+
+degeminate = -> (xx) {
+  xx[0]
+}
+
+respell_long_vowels_with_acutes = -> (v) {
+  { 'ā' => 'á',
+    'ē' => 'é',
+    'ī' => 'í',
+    'ō' => 'ó',
+    'ū' => 'ú'
+  }[v] || v
 }
 
 changes = ChangeSequence.new(
@@ -74,7 +102,7 @@ changes = ChangeSequence.new(
   s.change '[tpk]', spirantize, '_h' # Fauskanger:29
   s.change 'h', '', '[þfx]_'
   s.change 'x', 'h', '_[wj]'
-  s.change '<long vowel>', shorten, '_$'
+  s.change '<long vowel>', shorten, 'V.*_$'
   s.change '[sz][td]', 'st', '_'
   s.change '[sz][kg]', 'sk', '_'
   s.change '[kg][td]', 'kt', '_'
@@ -89,7 +117,7 @@ changes = ChangeSequence.new(
   s.change 'ññ', 'iñ', '^_' # Fauskanger:32-33
   s.change 'll', 'il', 'C_$' # Fauskanger:33
   s.change 'll', 'il', '^_'
-  s.change 'r', 'rr', 'CC+_' # Fauskanger:34
+  s.change 'r', 'rr', 'CC+_V' # Fauskanger:34
   s.change 'lr', 'll', 'V_V' # Fauskanger:34
   s.change 'nl', 'll', 'V_V' # Fauskanger:34
   s.change 'ls', 'll', 'V_V' # Fauskanger:34
@@ -113,6 +141,26 @@ changes = ChangeSequence.new(
   s.change '[nt]m', 'nw', 'V_V' # Fauskanger:37
   s.change 'w', '', '$_ō' # Fauskanger: 37
   s.change 's', 'z', 'V_(V|<voiced consonant>)'
+  s.change 'ae', 'ē' # Fauskanger:39
+  s.change 'ao', 'ō' # Fauskanger:39
+  s.change 'ei', 'ī' # Fauskanger:39
+  s.change 'xt', 't', '_$' # Fauskanger:39
+  s.change 'k?st?', 's', '_$' # Fauskanger:39
+  s.change 'd', '', 'C_$' # Fauskanger:39-40
+  s.change 'ñg', 'n', '_$' # Fauskanger:40
+  s.change 'm', 'n', '_$' # Fauskanger:40
+  s.change 'k', 't', '_$' # Fauskanger:40
+  s.change '(C)\1', degeminate, '_$' # Fauskanger:40
+  s.change 'aj', 'ai' # Fauskanger:42
+  s.change 'aw', 'au' # Fauskanger:42
+  s.change 'ai', 'e', '_V' # Fauskanger:42
+  s.change 'au', 'o', '_V' # Fauskanger:42
+  # Hypothesis: long vowels in the penultimate syllable were shortened if
+  # the consonants flanking them could plausibly form a cluster.
+  # See: Fauskanger:43
+  s.change '<long vowel>', shorten, '(V[lr]|V)_[tpkðvʒnmwj]V$'
+  s.change '<long vowel>', shorten, 'V(nd|mb|ñg)_lV$'
+  s.change '<short vowel>', lengthen, 'V[^ie](C|\+)*V[^ie]?(C|\+)*_CVC?$'
 
   s.change 'kj', 'tj'
 
@@ -125,9 +173,8 @@ changes = ChangeSequence.new(
   s.change 'z', 'r'
 
   #s.change '<short vowel>', '', '_$', optional: true # Fauskanger:24; short final vowels in the second element of a compound were regularly deleted.
-  s.change '<short vowel>', '', '\+.*_$' # Fauskanger:24
-  s.change '<short vowel>', '', 'r_$' # cf. Endor, ohtar
-  s.change '<short vowel>', '', 'V_$' # cf. Endor, ohtar
+  s.change '<short vowel>', '', '\+.*[nrt]_$' # Fauskanger:24
+  s.change '<short vowel>', '', 'Vr_$' # cf. Endor, ohtar
 
   # orthographic changes
   s.change 'x', 'h'
@@ -136,6 +183,9 @@ changes = ChangeSequence.new(
   s.change 'kw', 'qu'
   s.change 'k', 'c'
   s.change 'ñ', 'n'
+  s.change '[āēīōū]', respell_long_vowels_with_acutes
+  s.change '\+', ''
+  s.change '-', ' '
 end
 
 apply_changes(changes)

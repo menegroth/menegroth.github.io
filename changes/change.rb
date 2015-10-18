@@ -28,6 +28,17 @@ class ChangeSequence
     @changes << Change.new(Regexp.new(find), replace, context_before, context_after, options)
   end
 
+  def debug find, replace, context='_', options={}
+    find = apply_macros find
+    context = apply_macros context
+
+    context_before, _, context_after = context.partition('_')
+    context_before = Regexp.new(context_before + '$')
+    context_after = Regexp.new('^' + context_after)
+
+    @changes << DebugChange.new(Regexp.new(find), replace, context_before, context_after, options)
+  end
+
   def apply word
     @changes.reduce([word].flatten) do |word, change|
       change.apply_to word
@@ -52,6 +63,8 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after, 
       apply_to_one words
     end
   end
+
+  private
 
   def apply_to_one word
     parts = partition_all word, find
@@ -83,6 +96,18 @@ class Change < Struct.new(:find, :replacement, :context_before, :context_after, 
   end
 end
 
+class DebugChange < Change
+  def apply_to_one word
+    out = super
+    puts "DEBUG: #{word} -> #{out}"
+    out
+  end
+end
+
+def comment?(line_in_lexicon)
+  line_in_lexicon[0] == '#'
+end
+
 def apply_changes(changes)
   output_lexicon_filename = ARGV[0] || '/dev/null'
 
@@ -96,6 +121,7 @@ def apply_changes(changes)
 
   while entry = STDIN.gets
     next if entry.strip.empty?
+    next if comment? entry
     word, gloss = entry.chomp.split(' = ')
     word.sub!('*', '')
     word.sub!('!', '')

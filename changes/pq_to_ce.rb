@@ -1,3 +1,5 @@
+#!ruby
+
 require_relative './change'
 
 shorten = -> (v) {
@@ -77,7 +79,7 @@ changes = ChangeSequence.new(
   s.change('[mñ]', 'n', '_[td]') # Salo 4.12
   # s.change 'i', 'è', '_$' # Salo 4.13
   # s.change 'u', 'ò', '_$' # Salo 4.13
-  s.change '[āēīōū]', shorten, '_.' # Salo 4.14
+  #s.change '[āēīōū]', shorten, '_.' # Salo 4.14 - this change seems implausible: cf. ndūnē -> Q. andúne - some nonfinal long vowels had to survive CE.
   s.change 'wō', 'wā', '_$' # Salo 4.15
   s.change 'ā', 'ē', 't[wm]_$' # Salo 4.16
   s.change 'āu', 'ā', '_' # Salo 4.17
@@ -94,6 +96,7 @@ changes = ChangeSequence.new(
 
   s.change '[aeo]', '', '_$' # cf. abaro -> abar, pl. abarī, ontâro -> Q. ontar "parent". It might be that the -o suffix of masculine nouns in -ro was dropped to form a gender-neutral term which could survive alongside the masculine form. *Avaro might be the masc. Q. form of Avar.
   #s.change 'a', '', '_$' # HKF http://folk.uib.no/hnohf/primelv.htm "original short final -a was lost in Common Eldarin"
+  s.change '[lr]', syllabify, 'C_$'
   s.change 'w', 'u', '_$' # cf. angwa -> angu -> ango
   s.change 'āu', 'ā', '_$' # cf. rāw-?a -> rāu -> rā
   s.change 'u', 'o', '_$'
