@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "QUENYA:"
+echo $1 | ruby pq_to_ce.rb | ruby ce_to_eq.rb
+echo "TELERIN:"
+echo $1 | ruby pq_to_ce.rb | ruby ce_to_cl.rb | ruby cl_to_t.rb
+echo "SINDARIN:"
+echo $1 | ruby pq_to_ce.rb | ruby ce_to_cl.rb | ruby cl_to_os.rb | ruby os_to_ms.rb | ruby ms_to_cs.rb

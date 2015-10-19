@@ -86,8 +86,9 @@ changes = ChangeSequence.new(
   s.change '[nmñ]', syllabify, '^_[dbg]', optional: true # Salo 4.18
   s.change 'j', 'i', 'V\+_' # Salo 4.20
   s.change 'V', '', '_\+V' # Salo 4.19
-  s.change '(CC?)V\+?\1', haplology, 'V_$?' # Salo 4.21
-  s.change '(CC?)V\+?\1', haplology, '^?_V' # Salo 4.21
+  s.change '(CC?)V\+?\1', haplology, 'V_.' # Salo 4.21
+  s.change '(CC?)V\+?\1', haplology, '._V' # Salo 4.21
+  #s.change '(CC?)V\+?\1', haplology, 'V_V' # Salo 4.21
 
   s.change '[ñh]', '', 'V_V'
   s.change '(V)\1', collapse_into_long_vowel, '_'

@@ -124,8 +124,8 @@ def apply_changes(changes)
     .split("\n")
     .reject(&:empty?)
     .reject(&method(:comment?))
-    .reject { |w| w[0] == '!' || w[0] == '*' }
-    .map { |w| w.split(' = ')[0] }
+    .reject { |w| w[0] == '!' }
+    .map { |w| w.split(' = ')[0].sub('*', '') }
 
   output = []
 
