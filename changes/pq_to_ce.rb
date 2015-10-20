@@ -2,20 +2,6 @@
 
 require_relative './change'
 
-shorten = -> (v) {
-  { 'ā' => 'a',
-    'ē' => 'e',
-    'ī' => 'i',
-    'ō' => 'o',
-    'ū' => 'u',
-    'â' => 'á',
-    'ê' => 'é',
-    'î' => 'í',
-    'ô' => 'ó',
-    'û' => 'ú',
-  }[v] || v
-}
-
 lengthen = -> (v) {
   { 'a' => 'ā',
     'e' => 'ē',
@@ -59,13 +45,13 @@ changes = ChangeSequence.new(
   '<long vowel>' => '[āēīōūâêîôû]'
 ) do |s|
   s.change('ñw', 'ñgw', '_') # Salo 4.2
-  s.change('<unstressed vowel>', '', '<stressed vowel>C+_C', optional: true) # Salo 4.3
+  s.change('<unstressed vowel>', '', '^C*<stressed vowel>C+_C', optional: true) # Salo 4.3
   s.change('s', 'z', '_[dbg]') # Salo 4.4
   s.change('bm|dn|gñ', metathesis, '_') # Salo 4.5
-  s.change('<long vowel>', shorten, '_CC') # Salo 4.6 TODO: remove? (superseded by 4.14)
-  s.change('<long vowel>', shorten, '_\+') # Salo 4.6
-  s.change('<long vowel>', shorten, '<long vowel>_') # cf. plural -ī shortening to -i after long vowels
-  s.change('<long vowel>', shorten, '_i') # cf. Lindāi -> Lindai (WJ:378,385)
+  s.change('<long vowel>', $shorten, '_CC') # Salo 4.6 TODO: remove? (superseded by 4.14)
+  s.change('<long vowel>', $shorten, '_\+') # Salo 4.6
+  s.change('<long vowel>', $shorten, '<long vowel>_') # cf. plural -ī shortening to -i after long vowels
+  s.change('<long vowel>', $shorten, '_i') # cf. Lindāi -> Lindai (WJ:378,385)
   s.change('ii', 'ī', '_') # hypothetical: *tārīī "queens" probably became *tārī
   s.change('[dbg]', devoice, '_[st]') # Salo 4.7
   s.change('h', '', '[tpk]_[st]') # Salo 4.7

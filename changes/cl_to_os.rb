@@ -117,7 +117,7 @@ changes = ChangeSequence.new(
   s.change '[āa][īi]', 'ai'
   s.change 'V', stress, '^C<stressed vowel>r_C' # Salo 4.34
   s.change 'V', unstress, '^C_rVC' # Salo 4.34
-  s.change '<unstressed vowel>', '', '^C_rVC', optional: true # Salo 4.35; this change does not occur in e.g. baradā
+  # s.change '<unstressed vowel>', '', '^C_rVC', optional: true # Salo 4.35; this change does not occur in e.g. baradā - MOVED to CE->CL changes
 
   # After this point, stress may no longer be relevant, or it might regularize. TODO remove stress marking?
 

@@ -108,7 +108,7 @@ end
 class DebugChange < Change
   def apply_to_one word
     out = super
-    puts "DEBUG: #{word} -> #{out}"
+    STDERR.puts "DEBUG: #{word} -> #{out}" if out.any? { |o| o != word }
     out
   end
 end
@@ -150,3 +150,40 @@ def apply_changes(changes)
     end
   end
 end
+
+$voice = -> (c) {
+  { 't' => 'd',
+    'p' => 'b',
+    'k' => 'g',
+    's' => 'z'
+  }[c] || c
+}
+
+$remove_stress_marking = -> (v) {
+  {
+    'á' => 'a',
+    'é' => 'e',
+    'í' => 'i',
+    'ó' => 'o',
+    'ú' => 'u',
+    'â' => 'ā',
+    'ê' => 'ē',
+    'î' => 'ī',
+    'ô' => 'ō',
+    'û' => 'ū'
+  }[v] || v
+}
+
+$shorten = -> (v) {
+  { 'ā' => 'a',
+    'ē' => 'e',
+    'ī' => 'i',
+    'ō' => 'o',
+    'ū' => 'u',
+    'â' => 'á',
+    'ê' => 'é',
+    'î' => 'í',
+    'ô' => 'ó',
+    'û' => 'ú',
+  }[v] || v
+}

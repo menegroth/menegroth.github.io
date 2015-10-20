@@ -66,6 +66,8 @@ changes = ChangeSequence.new(
   s.change 'j', '', '^[tdlsn]_' # Salo 4.30
   s.change 'm', 'n', '_[jw]' # Salo 4.31
   s.change 'j', 'i', '(V|r)_V' # Salo 4.32
+  s.change '<unstressed vowel>', '', '^C_rVC', optional: true # Salo 4.35; this change does not occur in e.g. baradā
+  s.change '<long vowel>', shorten, 'V.*_$' # Salo 4.37
 end
 
 apply_changes(changes)
