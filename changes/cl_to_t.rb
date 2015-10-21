@@ -11,6 +11,7 @@ changes = ChangeSequence.new(
   s.change '[tpk]', $voice, '_h'
   s.change 'h', '', '[dbg]_'
   s.change '<long vowel>', $shorten, '_$'
+  s.change '<long vowel>', $shorten, 'VC+_C+V$'
   s.change '<stressed vowel>', $remove_stress_marking
 end
 

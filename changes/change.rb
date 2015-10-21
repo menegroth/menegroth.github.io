@@ -108,7 +108,7 @@ end
 class DebugChange < Change
   def apply_to_one word
     out = super
-    STDERR.puts "DEBUG: #{word} -> #{out}" if out.any? { |o| o != word }
+    STDERR.puts "DEBUG: #{find.inspect[1..-2]} > #{replacement} / #{context_before.inspect[1..-3]}_#{context_after.inspect[2..-2]} : #{word} -> #{out}" if out.any? { |o| o != word }
     out
   end
 end

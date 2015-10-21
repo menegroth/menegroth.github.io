@@ -85,7 +85,7 @@ changes = ChangeSequence.new(
   s.change 's', 'h', '^_[lrw]' # Fauskanger:24-25
   s.change 'ph', 'hw', '_[uúūû]', optional: true # Fauskanger:25; apparently variants of a word with and without this change could coexist, cf. huine vs. fuine.
   s.change '<stressed vowel>', remove_stress_marking, '_' # Fauskanger:25-26
-  s.change '^C*(<short vowel>)C\1CV', syncopate, '_' # Fauskanger:26
+  s.change '^C*(<short vowel>)[lr]\1CV', syncopate, '_' # Fauskanger:26 TODO: the environment for this syncope needs to be clarified. e.g. abaro did not syncopate to **abro
   s.change 'j', 'i', '_C' # Fauskanger:27
   s.change 'w', 'u', '_C' # Fauskanger:27
   s.change 'dr', 'r', '^_' # Fauskanger:27
@@ -173,8 +173,8 @@ changes = ChangeSequence.new(
   s.change 'z', 'r'
 
   #s.change '<short vowel>', '', '_$', optional: true # Fauskanger:24; short final vowels in the second element of a compound were regularly deleted.
-  s.change '<short vowel>', '', '\+.*[nrt]_$' # Fauskanger:24
-  s.change '<short vowel>', '', 'Vr_$' # cf. Endor, ohtar
+  s.change '[aeoáéó]', '', '\+.*[nrt]_$' # Fauskanger:24
+  s.change '[aeoáéó]', '', 'Vr_$' # cf. Endor, ohtar
 
   # orthographic changes
   s.change 'x', 'h'

@@ -1,6 +1,26 @@
-# Lumenyárë Lambion Eldaliéva : A Historical View of Eldarin Languages
+# _Lumenyárë Lambion Eldaliéva_ : A Historical View of Eldarin Languages
 
 To run the sound changes, you will need Ruby >= 2.0.0.
+
+## Running the Tests
+
+You can run
+
+```
+./test > /dev/null
+```
+
+from the `changes` directory to run the test suite. If nothing is printed to STDERR, it means everything works. If you see error messages beginning with `NOT FOUND`, something's wrong; you can run `./test` to see which sequence of changes is messing up.
+
+To see how an individual Primitive Quendian word changes in the Quenya, Telerin, and Sindarin branches, use the `./trace` script, like so:
+
+```
+./trace álakwā
+```
+
+If you run the exact command above, you'll notice that each language has multiple lines of output. For example, the Sindarin reflexes of `álakwā` are given as `alph` and `alab`. Here, only `alph` is correct; `**alab` is a misderived form. The reason for outputting multiple forms is that some of the sound changes appear to be "optional"—Tolkien may simply have applied them or not according to which resulting form he preferred, or he may have had a more formal system that eludes us due to lack of data. The best way for a computer program to handle this apparent indeterminacy is to print all plausible forms and let the human choose the most appropriate one.
+
+## The Sound Changes
 
 Each sound change script represents the changes that occurred between two _epochs_. I define an epoch as a (hypothetical) snapshot of a language at one point in time. For example, Common Eldarin is the last epoch that is an ancestor of both Sindarin and Quenya.
 
@@ -35,7 +55,7 @@ cat pq_lexicon | ruby pq_to_ce.rb ce_lexicon
 
 ## Lexicon Format
 
-Words in the lexicon files are separated from their gloss by ` = ` (an equals sign surrounded by spaces), and from each other by line breaks. Certain symbols may precede a word to indicate that it should not be used to check the output of sound changes when using that lexicon as a golden master. A leading `!` indicates that a word is irregular or an innovation, and so can't be derived via sound change rules. A leading `*` means that the word is reconstructed from a later attested form, and shouldn't be treated as authoritative.
+Words in the lexicon files are separated from their gloss by ` = ` (an equals sign surrounded by spaces), and from each other by line breaks. A `!` before a word indicates that it is irregular or an innovation, and so can't be derived via sound change rules. A leading `*` means that the word is reconstructed from an attested form in a different epoch, and is only as accurate as the sound change scripts.
 
 Lines beginning with `#` are treated as comments–they aren't affected by sound changes or printed in the output.
 
