@@ -41,7 +41,7 @@ changes = ChangeSequence.new(
   s.change 'a', 'e', '_i'
   s.change 'a', 'e', '_C+V?i'
   s.change '[dbg]', spirantize, 'V_V'
-  s.change '[tpc]', voice, 'V_V'
+  s.change '[tpc]', voice, 'V_'
 end
 
 apply_changes(changes)
