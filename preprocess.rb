@@ -1,13 +1,12 @@
 require_relative 'preprocessor.rb'
 require 'redcarpet'
 
-if ARGV.length < 2
-  puts "usage: ruby preprocessor.rb inputfile outputfile"
+if ARGV.length < 3
+  puts "usage: ruby preprocessor.rb template inputfile outputfile"
   exit 1
 end
 
-input_filename, output_filename = ARGV
-template_filename = 'template.html'
+template_filename, input_filename, output_filename = ARGV
 
 if input_filename == output_filename
   puts "error: input and output filenames are equal, which would overwrite the input file"
