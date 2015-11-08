@@ -46,8 +46,8 @@
         margin-bottom: 0em;
     }
 
-    p {
-        line-height: 135%;
+    p, li {
+        line-height: 140%;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -93,6 +93,21 @@
 
     q:after {
         content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #262;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
     }
 
     </style>
