@@ -68,5 +68,5 @@ Other syllable-initial clusters may also cause words to have variable stress. Fo
 
 ## Notes
 
-[^1] Tolkien stated in a letter to a reader that he "spent a long time trying to make a list [of Elvish words for the Appendices] and that is one reason for the delay of Vol. III" (_Letters_ #168).
-[^2] "I am not a 'socialist' in any sense — being averse to 'planning' (as must be plain) most of all because the 'planners', when they acquire power, become so bad[...]" (_Letters_ #181).
+[^1]: Tolkien stated in a letter to a reader that he "spent a long time trying to make a list [of Elvish words for the Appendices] and that is one reason for the delay of Vol. III" (_Letters_ #168).
+[^2]: "I am not a 'socialist' in any sense — being averse to 'planning' (as must be plain) most of all because the 'planners', when they acquire power, become so bad[...]" (_Letters_ #181).
