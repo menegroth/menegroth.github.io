@@ -53,6 +53,9 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Baskerville', serif;
         font-weight: 600;
+    }
+
+    h2, h3, h4, h5, h6 {
         letter-spacing: 0.01em;
         word-spacing: 0.03em;
     }
@@ -62,9 +65,26 @@
     }
 
     h1 {
-        font-variant: small-caps;
-        text-transform: lowercase;
-        font-size: 36px;
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+
+    li {
+        margin-left: 20px;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     blockquote {
@@ -130,13 +150,13 @@
 
 <p>The <q>indefinite</q> period turned out only to last about a year, for Tolkien&#39;s languages again caught my attention from a slightly different angle. I had bought a copy of David Salo&#39;s <em>A Gateway to Sindarin</em> after skimming the preview on Google and discovering, to my great delight, that it contained the complete sequence of sound changes between Common Eldarin and Sindarin. I had long known that the secret ingredient in Tolkien&#39;s linguistic concoctions was <em>time</em>: he did not simply make up Quenya or Sindarin words at random, but created words in a common ancestor of both languages, according to strict derivational rules. He would then simulate, also according to regular rules, the development of those words through the entire history of Elvish speech, until he arrived at the forms that Frodo might have heard in Rivendell or Lothlórien. It was through these sound shifts that the rich and unique flavor of each language was achieved. Seeing them spelled out with mathematical clarity in Salo&#39;s book, I saw a clear path before me: I would use Salo&#39;s work to construct a computer program that would carry out Tolkien&#39;s simulation of language change on a massive scale. My program would derive not only the Sindarin and Quenya forms of each primitive root, but all the intermediate forms as well, checking them for correctness against every word of every dialect of Elvish that Tolkien ever penned. The result would be a computational model of the Eldarin language family, inescapably consistent and demonstrably faithful to Tolkien&#39;s works, that would unite all of the disparate data and make them one. <em>One program to bring them all and in the darkness bind them.</em> I felt certain that such a model was achievable, and also certain that it would yield the most accurate possible description of Tolkien&#39;s languages.</p>
 
-<p>I did not realize the hubris of this endeavor for several hours. One of the first sources I combed for ancient Eldarin words was <em>The Etymologies</em>, a posthumously-published glossary describing the changes wrought upon hundreds of Elvish words by the long ages of Middle-earth. For the sake of thoroughness, I read Christopher Tolkien&#39;s introduction to it, and was a bit taken aback by his statement that <q>finality and a system fixed at every point were not [J.R.R. Tolkien's] underlying aim</q>. Somewhat disheartened, I read on, and my discouragement grew to horror. I learned that within the manuscript of the Etymologies—the ultimate source for most of the Elvish words I had ever learned—there are layers upon layers of struck-out entries and revisions, penciled notes, cryptic jottings, illegible words, and a cornucopia of spelling conventions. Only then did I begin to understand that the data for Quenya and Sindarin are not merely fragmentary, they are not even self-consistent. Tolkien&#39;s languages were characterized, in the real world as in the fictional one, by constant and rapid change. And that means they are dead, more dead than the most scantily-documented dead languages of our own earth, because even in the mind of their creator they never took a fixed and final form.</p>
+<p>I did not realize the hubris of this endeavor for several hours. One of the first sources I combed for ancient Eldarin words was <em>The Etymologies</em>, a posthumously-published glossary describing the changes wrought upon hundreds of Elvish words by the long ages of Middle-earth. For the sake of thoroughness, I read Christopher Tolkien&#39;s introduction to it, and was a bit taken aback by his statement that <q>finality and a system fixed at every point were not [J.R.R. Tolkien's] underlying aim</q>. Somewhat disheartened, I read on, and my discouragement grew to horror. I learned that within the manuscript of the <em>Etymologies</em>—the ultimate source for most of the Elvish words I had ever learned—there are layers upon layers of struck-out entries and revisions, penciled notes, cryptic jottings, illegible words, and a cornucopia of spelling conventions. Only then did I begin to understand that the data for Quenya and Sindarin are not merely fragmentary, they are not even self-consistent. Tolkien&#39;s languages were characterized, in the real world as in the fictional one, by constant and rapid change. And that means they are dead, more dead than the most scantily-documented dead languages of our own earth, because even in the mind of their creator they never took a fixed and final form.</p>
 
 <p><em>But wait,</em> I said to myself. <em>Isn&#39;t consistency of form one of the lauded characteristics of the elvish in</em> The Lord of the Rings<em>? And don&#39;t the Quenya and Sindarin words from Tolkien&#39;s works show clear and systematic relationships to each other? If Tolkien was able to settle on a consistent form of his languages long enough to write</em> The Lord of the Rings<em>, maybe the situation&#39;s not as bad as it seems.</em> And so I continued to write my program and search the Etymologies for words to put into it. I made reasonable progress, though my messianic delusions were thoroughly quenched. At the same time, I decided to do more research on Tolkien&#39;s life and creative process, and through this I eventually discovered that the situation was not, in fact, very bad at all.</p>
 
 <p>But all in due time. First we must come to the turning-point of the story: my discovery of the <em>mistake</em>. For a long time I had worked at learning Elvish, though it was a casual sort of work, undertaken in moments of boredom and solitude. Writing the program was a different beast entirely. It consumed all of my time, to the point where I had to seriously question why I was making the effort. Previously I had told myself that I was learning Elvish in order to use it in poetry or in my own private writings—an explanation that I maintained despite having produced exactly zero lines of text in any Elvish language. This seemed now like a transparent rationalization for an activity that was really not rational. I knew in my heart, and finally admitted to myself, that even if my program miraculously derived a complete grammar of every Elvish language, and the ghost of J.R.R. Tolkien himself appeared in a cloud of lembas crumbs and blessed it with a silver wand, my use for the languages would end there. I had never really wanted to write so much as a sentence in Elvish; I merely liked the idea of being able to.</p>
 
-<p>It appeared plain to me that Tolkien also liked the idea—in a letter he said that he would have preferred to write <em>The Lord of the Rings</em> in Elvish. And yet, examples of Elvish prose by Tolkien&#39;s hand are as thin on the ground as monkeys in France<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup><sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup>. Why would Tolkien labor his entire life over his languages, and yet hardly ever use them, except to derive names and write a very few poems?</p>
+<p>It appeared plain to me that Tolkien also liked the idea—in a letter he said that he would have preferred to write <em>The Lord of the Rings</em> in Elvish. And yet, examples of Elvish prose by Tolkien&#39;s hand are as thin on the ground as monkeys in France.<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup> <sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup> Why would Tolkien labor his entire life over his languages, and yet hardly ever use them, except to derive names and write a very few poems?</p>
 
 <p>For the answer, we need look no further than another letter, in which Tolkien wrote that <q>the word comes first and the story follows</q>. I believe that this adequately explains the lack of Elvish prose among Tolkien&#39;s papers. You see, in order to write <em>The Lord of the Rings</em> or even a less ambitious work in Elvish, Tolkien would first have had to come up with a plot, and then he would have had to invent the words that would allow him to set it down on paper. But that sequence would be antithetical to his actual creative process, in which the story was secondary and subservient to the language that inspired it. A word invented to serve a text would be a poor, lifeless thing. And, (as I thought clear from my inability to produce satisfactory Elvish text) a word pressed into service by the needs of a text is little better. This, then, was my <em>mistake</em>: I had insisted on trying to <em>use</em> Tolkien&#39;s languages, when they were never meant to be used, and this had led to my perennial dissatisfaction with them. Once I realized this, the way forward became clear to me.</p>
 
@@ -144,7 +164,7 @@
 
 <hr>
 
-<p>The story is now fully told, up to the point where I started making this website. My aim here, as you can probably guess, is not to present a completed grammar of any of Tolkien&#39;s languages. I hope merely to make Sindarin <em>accessible</em> to any lover of Tolkien&#39;s works. As the story of my experiences hopefully makes clear, this cannot really be done by creating a <q>Teach Yourself</q>-style course in the language, because such a course will inevitably stray towards non-Tolkien examples and misleading comparisons between Sindarin and English (or whatever language the course is written in). As Carl Hostetter points out in <q>Elvish As She Is Spoke</q>, these faults are serious; they obscure the difference between Tolkien&#39;s own Sindarin and fan-made Sindarins, leading to circular reasoning (e.g. arguing that a particular grammatical construction is <q>correct</q> based on non-Tolkien examples) and clumsy word-by-word translations.</p>
+<p>The story is now fully told, up to the point where I started making the present version of this website. My aim here, as you can probably guess, is not to present a completed grammar of any of Tolkien&#39;s languages. I hope merely to make Sindarin <em>accessible</em> to any lover of Tolkien&#39;s works. As the story of my experiences hopefully makes clear, this cannot really be done by creating a comprehensive course of lessons in the language—such a course, by attempting to make Sindarin as expressive as English or any other living language, will inevitably stray towards non-Tolkien examples. As Carl Hostetter points out in <q>Elvish As She Is Spoke</q>, this is a serious fault. Forcing Sindarin to express ideas that Tolkien did not use it to express inevitably obscures the difference between Tolkien&#39;s own Sindarin and fan-made Sindarins, leading to circular reasoning (e.g. arguing that a particular grammatical construction is <q>correct</q> based on non-Tolkien examples) and clumsy word-by-word translations.</p>
 
 <p>So a traditional language course is not my aim. Instead, I want to attempt something subtly but significantly different: rather than have the primary question be <q>How do you say X in Elvish?</q>, I want to first ask <q>What can we say in Elvish, based on the examples from Tolkien's works?</q> This approach is likelier to yield a description of Sindarin that is true to Tolkien&#39;s intentions. The language described in this way will be sparse, but still expressive. Ultimately, if you read all the articles on this site, you will not be able to speak Sindarin the way you currently speak English, but you <em>will</em> be able to speak Sindarin the way Gandalf speaks it in <em>The Lord of the Rings</em>, and that is perhaps better.</p>
 
