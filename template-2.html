@@ -73,6 +73,8 @@
 
     li {
         margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
     }
 
     hr {
@@ -90,17 +92,17 @@
     blockquote {
         margin-left: 40px;
         margin-right: 40px;
-        font-style: italic;
         white-space: pre-wrap;
     }
 
     blockquote cite {
         display: block;
         text-align: right;
+        font-style: normal;
     }
 
-    blockquote em {
-        font-style: normal;
+    blockquote cite:before {
+        content: '—';
     }
 
     q {
