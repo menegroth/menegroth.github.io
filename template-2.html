@@ -17,7 +17,7 @@
     body {
         min-height: 100%;
         background-color: #faf9f8;
-        background-image: url('stone_border.gif'), url('leaf_border.png'), url('background-dark.gif');
+        background-image: url('/stone_border.gif'), url('/leaf_border.png'), url('/background-dark.gif');
         background-position: top right, top left, top left;
         background-repeat: repeat-y, repeat-y, repeat;
     }
@@ -33,7 +33,10 @@
         text-align: justify;
     }
 
-    .content > * {
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
         margin-bottom: 1em;
         margin-top: 1em;
     }
@@ -64,11 +67,39 @@
         text-align: center;
     }
 
+    h1, h2, h3 {
+        margin-top: 1.5em;
+    }
+
     h1 {
         letter-spacing: 0.03em;
         word-spacing: 0.09em;
         text-transform: uppercase;
         font-size: 22px;
+    }
+
+    h2 {
+        font-size: 22px;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-variant: italic;
+        font-weight: 200;
     }
 
     li {
