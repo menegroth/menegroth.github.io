@@ -17,7 +17,7 @@
     body {
         min-height: 100%;
         background-color: #faf9f8;
-        background-image: url('stone_border.gif'), url('leaf_border.png'), url('background-dark.gif');
+        background-image: url('/stone_border.gif'), url('/leaf_border.png'), url('/background-dark.gif');
         background-position: top right, top left, top left;
         background-repeat: repeat-y, repeat-y, repeat;
     }
@@ -33,7 +33,10 @@
         text-align: justify;
     }
 
-    .content > * {
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
         margin-bottom: 1em;
         margin-top: 1em;
     }
@@ -53,6 +56,9 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Baskerville', serif;
         font-weight: 600;
+    }
+
+    h2, h3, h4, h5, h6 {
         letter-spacing: 0.01em;
         word-spacing: 0.03em;
     }
@@ -61,26 +67,73 @@
         text-align: center;
     }
 
+    h1, h2, h3 {
+        margin-top: 1.5em;
+    }
+
     h1 {
-        font-variant: small-caps;
-        text-transform: lowercase;
-        font-size: 36px;
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 22px;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-variant: italic;
+        font-weight: 200;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     blockquote {
         margin-left: 40px;
         margin-right: 40px;
-        font-style: italic;
         white-space: pre-wrap;
     }
 
     blockquote cite {
         display: block;
         text-align: right;
+        font-style: normal;
     }
 
-    blockquote em {
-        font-style: normal;
+    blockquote cite:before {
+        content: '—';
     }
 
     q {
@@ -172,7 +225,7 @@ The world was fair in Durin&#39;s Day.
 
 <p>If this is the case, it leaves us students of Elvish in an unfortunate position. We can no longer reason about <q>_Lord of the Rings_-style Sindarin</q> as a unitary entity; we have to take into account the conflict between the Appendices and the text. And I think this theory <em>is</em> the most likely of the three, since its reasoning is the simplest. So how are we to resolve the conflict? In my mind, the text should prevail, otherwise the poetry (or else its correct usage of the all-important languages) is marred. Still, the Appendices are our only Tolkien-published formal description of Eldarin languages (the others are all posthumous). We can&#39;t throw out everything we think we know about Sindarin stress-patterns because of two overlooked words.</p>
 
-<p>Tolkien often wrote about his creative process as if it were really a process of discovery. He was a scholar of his own subcreation, piecing together histories from the fragmentary data of inspiration. And between the late thirties and early fifties, he was evidently inspired to feel that <em>Imladris</em> and <em>Nargothrond</em> were stressed (or at least could sometimes be stressed) on the initial syllable. Given that, in Tolkien&#39;s work, the inspiration was primary and the description followed, I think he would have changed the description of Sindarin stress to suit the usage, had he discovered the discrepancy. His distaste for heartless urban planning might have carried over to the disfavor of the opposite approach<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>.</p>
+<p>Tolkien often wrote about his creative process as if it were really a process of discovery. He was a scholar of his own subcreation, piecing together histories from the fragmentary data of inspiration. And between the late thirties and early fifties, he was evidently inspired to feel that <em>Imladris</em> and <em>Nargothrond</em> were stressed (or at least could sometimes be stressed) on the initial syllable. Given that, in Tolkien&#39;s work, the inspiration was primary and the description followed, I think he would have changed the description of Sindarin stress to suit the usage, had he discovered the discrepancy.</p>
 
 <p>Having exhausted the data, we can attempt to guess at the rules that Tolkien might have come up with. No speculation about Sindarin grammar can pretend to be authoritative, but I have the audacity to speculate anyway. Fortunately, we don&#39;t have to reach too far for a description of Sindarin stress patterns that fits the evidence. The theory I propose even has a real-world precedent in Latin, a favorite language of Tolkien&#39;s.</p>
 
@@ -198,10 +251,6 @@ The world was fair in Durin&#39;s Day.
 
 <li id="fn1">
 <p>Tolkien stated in a letter to a reader that he <q>spent a long time trying to make a list [of Elvish words for the Appendices] and that is one reason for the delay of Vol. III</q> (<em>Letters</em> #168).&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
-</li>
-
-<li id="fn2">
-<p><q>I am not a 'socialist' in any sense — being averse to 'planning' (as must be plain) most of all because the 'planners', when they acquire power, become so bad[...]</q> (<em>Letters</em> #181).&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
 </li>
 
 </ol>
