@@ -1,2 +1,22 @@
-#!/bin/sh
-ruby preprocess.rb $1
+#!/usr/bin/ruby
+
+def process_directory(dirname)
+    Dir[dirname+'/*'].each do |filename|
+        #puts filename
+
+        next unless
+
+        if File.file?(filename) && filename.end_with?('.md')
+            html_filename = filename.sub('.md', '.html')
+            if !File.exists?(html_filename) || File.mtime(html_filename) < File.mtime(filename)
+                `ruby preprocess.rb #{filename.sub('.md', '')}`
+            end
+        end
+
+        if File.directory?(filename) && !filename.start_with?('.')
+            process_directory(filename)
+        end
+    end
+end
+
+process_directory(File.expand_path(ARGV[0] || '.'))
