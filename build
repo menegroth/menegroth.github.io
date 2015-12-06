@@ -4,11 +4,12 @@ def process_directory(dirname)
     Dir[dirname+'/*'].each do |filename|
         #puts filename
 
-        next unless
+        template_updated_at = File.mtime(File.expand_path(File.dirname(__FILE__))+'/template-2.html')
 
         if File.file?(filename) && filename.end_with?('.md')
             html_filename = filename.sub('.md', '.html')
-            if !File.exists?(html_filename) || File.mtime(html_filename) < File.mtime(filename)
+            if !File.exists?(html_filename) || File.mtime(html_filename) < File.mtime(filename) || File.mtime(html_filename) < template_updated_at
+                puts "building " + filename
                 `ruby preprocess.rb #{filename.sub('.md', '')}`
             end
         end
