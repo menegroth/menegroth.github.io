@@ -14,13 +14,13 @@ Sindarin vowels are comparable to those of Spanish. A, E, I, O, and U are pronou
 
 Sindarin also has a sixth vowel, Y, whose sound has no equivalent in English. It is the sound of _u_ in French _lune_, or German _ü_ as in _über_. Unlike the English letter Y, Sindarin Y is always a vowel, never a consonant as in "yes".
 
-In Sindarin, the vowels can be marked with an acute accent (á é í ó ú) indicating that they are held for a slightly longer duration. So in a word like _míriel_ "sparkling like jewels" (TODO cite translation), the first syllable _mí_ is held for two "beats", the second syllable _ri_ for one beat, and the third syllable _el_ for one beat (though it may actually take as long to say as _mí_ because of the final L).
+In Sindarin, the vowels can be marked with an acute accent (á é í ó ú) indicating that they are held for a slightly longer duration. So in a word like _míriel_ "sparkling like jewels" (TODO cite translation), the first syllable _mí_ is held for two "beats", the second syllable _ri_ for one beat, and the third syllable _el_ for one beat (though it may actually take longer to say because of the final L).
 
-A circumflex (â ê î ô û) also indicates a long vowel, but is only used in words of one syllable. This may just be an aesthetic whim of Tolkien's, though he justified it by saying that vowels with the circumflex should be held for _even longer_—three beats instead of two. However, the Elvish writing systems only distinguish two vowel lengths, long and short, so the Elves must not have considered this detail very important.
+A circumflex (â ê î ô û) also indicates a long vowel, but is mostly used in words of one syllable. This may just be an aesthetic whim of Tolkien's, though he justified it by saying that vowels with the circumflex should be held for _even longer_—three beats instead of two. However, the Elvish writing systems only distinguish two vowel lengths, long and short, so the Elves must not have considered this detail very important.
 
 ### Typing Accented Characters
 
-On a Mac, you can type vowels with an acute accent by pressing `option+E` and then typing the vowel that you want. To type a circumflex, use `option+I` instead.
+On a Mac, you can type vowels with an acute accent by pressing `option`+`E` and then typing the vowel that you want. To type a circumflex, use `option`+`I` instead.
 
 Typing special characters on Windows is considerably more annoying. The best way is probably to change your keyboard settings to international mode, which will let you type accented letters using key combinations. A guide to doing that can be found [here](http://symbolcodes.tlt.psu.edu/accents/codeint.html). Alternatively, you can copy and paste the accented letters from the table below.
 
@@ -44,22 +44,24 @@ Many Sindarin consonants are pronounced as in English, and so need no further ex
 
 _Digraphs_ are pairs of letters that represent a single, indivisible sound—for example the _th_ in "thin" or the _sh_ in "ship". Sindarin has several digraphs.
 
-#### Voiceless Sounds
+#### Digraphs for Voiceless Sounds
 
-Several of the digraphs represent _voiceless_ versions of more familiar sounds—_voice_ being a linguistics term meaning vibration of the vocal cords. Don't be worried by the terminology, though. If you can speak English, you're already pronouncing voiced and voiceless sounds all the time. You can feel the buzzing of your vocal cords if you put your hand on your throat and say "ZZZ". If you then turn the Z into an S, the buzzing stops. Voiced sounds like Z have a buzzing or humming quality, while voiceless sounds like S sound more like a hiss or whisper.
+Several of the digraphs represent _voiceless_ versions of more familiar sounds—_voice_ being a linguistics term meaning vibration of the vocal cords. Don't be worried by the terminology, though. If you can speak English, you're already pronouncing voiced and voiceless sounds all the time. You can feel the buzzing of your vocal cords if you put your hand on your throat and say "ZZZ". If you then turn the Z into an S, the buzzing stops. Voiced sounds like Z or V have a buzzing or humming quality, while their voiceless counterparts S and F sound more like a hiss or whisper.
 
 The following three digraphs are voiceless versions of Sindarin consonants discussed above.
 
 - HW is the _wh_ sound of "whale", in varieties of English that pronounce it differently from "wail".
-- LH is the sound of _LL_ in Welsh—a peculiar sound, if you've not heard it before. To pronounce it, put your tongue in a position to say L, and blow gently. The resulting sound should be somewhere between _th_ and _sl_ (in fact, the LH sound developed from earlier SL, found in Old Sindarin).
+- LH is the sound of _LL_ in Welsh _Llewellyn_—a peculiar sound, if you've not heard it before. To pronounce it, put your tongue in a position to say L, and blow gently. The resulting sound should be somewhere between _th_ and _sl_ (in fact, the LH sound developed from earlier SL, found in Old Sindarin).
 - RH is a Sindarin R-sound pronounced voicelessly. If you can pronounce R and HW, you're halfway to pronouncing RH. Just pronounce R while exhaling breathily as for HW.
 
 #### TH and DH
 
-Following on the theme of voiced and unvoiced sounds, we have two more digraphs that differ only in voicing: the voiceless _TH_ and voiced _DH_.
+Following on the theme of voiced and unvoiced sounds, we have a pair of digraphs that differ only in voicing: voiceless _TH_ and voiced _DH_.
 
 - TH is the sound of _th_ in _thin_.
-- DH is the sound of _th_ in _this_. If you're having trouble keeping the DH/TH distinction straight, remember that DH is like Z pronounced with an exaggerated lisp.
+- DH is the sound of _th_ in _this_.
+
+If you're having trouble keeping the DH/TH distinction straight, remember that DH is like Z pronounced with an exaggerated lisp.
 
 #### Miscellaneous
 
@@ -81,15 +83,18 @@ Sindarin, like English, puts emphasis or _stress_ on one syllable of multi-sylla
 
 ### Hang on, What's a Syllable?
 
-### Two-Syllable Words
+Breaking up a word into syllables doesn't come naturally to everyone, though it's not hard once you get the hang of it. Each syllable always contains exactly one vowel or diphthong, so to find the syllables in a Sindarin word, you just have to look for vowels, and break up the word so each chunk has one vowel or diphthong in it. A word like _caun_ "prince" has one syllable since _au_ is a diphthong. _Elbereth_ has three syllables: _El.be.reth_.
 
-"In words of two syllables, [the stress] falls in practically all cases on the first syllable." (_LotR_ Appendix E)
+### Stress in Two-Syllable Words
 
-### Longer Words
+"In words of two syllables, [the stress] falls in practically all cases on the first syllable." (_LotR_ Appendix E) Tolkien neglects to list the exceptions to this rule, so for our purposes, two-syllable Sindarin words are *always* stressed on the first syllable.
 
-The general rule for words of more than two syllables is to stress the third-to-last syllable.
+### Stress in Longer Words
 
-However, many words are stressed on the second-to-last syllable. This happens if the second-to-last syllable is followed by two consonants, or contains a long vowel or diphthong. Note that digraphs are considered a single consonant since they are pronounced as a single sound.
+The general rule for words of more than two syllables is to stress the third-to-last syllable. This is the case for _EL.be.reth_ and _gil.THO.ni.el_.
 
+However, many words are stressed on the second-to-last syllable. This happens if the second-to-last syllable is followed by two or more consonants, or contains a long vowel or diphthong. Note that digraphs are considered a single consonant since they are pronounced as a single sound.
+
+## Dialectical Variations
 
 TODO: how are nd-, mb-, ng- supposed to be pronounced?
