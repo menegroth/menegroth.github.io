@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Menegroth ✶ The Thousand Caves</title>
     <style type="text/css">
 
     * {
@@ -17,7 +18,7 @@
     body {
         min-height: 100%;
         background-color: #faf9f8;
-        background-image: url('/stone_border.gif'), url('/leaf_border.png'), url('/background-dark.gif');
+        background-image: url('$ROOT$/stone_border.gif'), url('$ROOT$/leaf_border.png'), url('$ROOT$/background-dark.gif');
         background-position: top right, top left, top left;
         background-repeat: repeat-y, repeat-y, repeat;
     }
@@ -67,8 +68,9 @@
         text-align: center;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5, h6 {
         margin-top: 1.5em;
+        margin-bottom: 1em;
     }
 
     h1 {
@@ -150,6 +152,17 @@
 
     sup {
         line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
     }
 
     /* PAGE-SPECIFIC THINGS */
