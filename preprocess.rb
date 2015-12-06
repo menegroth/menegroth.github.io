@@ -15,11 +15,18 @@ if input_filename == output_filename
   exit 2
 end
 
+path_to_root_dir = '.'
+if input_filename['/']
+  path_to_root_dir = '..'
+end
+
 input = File.open(input_filename, 'r')
 output = File.open(output_filename, 'w')
 template = File.open(template_filename, 'r')
 
 while line = template.gets
+  line = line.gsub('$ROOT$', path_to_root_dir)
+
   if line['ABRACADABRA']
     markdown = ""
     Preprocessor.new(input).each_processed_line do |line|
