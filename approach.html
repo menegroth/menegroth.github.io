@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<p>Definitions:
+- Neo-Elvish (perhaps a better term would be <em>Fan-Elvish</em> or <em>Fanart-Elvish</em>) refers to the languages used in post-Tolkien compositions and described in post-Tolkien grammars. Some neo-elvishes are closer to Tolkien&#39;s exemplars than others. The distance between any given instance of neo-elvish and Tolkien&#39;s own elvish can be approximated by looking at the methods used to fill the gaps between the data.
+- Wholesale invention: Furthest from Tolkien&#39;s languages are neo-elvish languages that use words and ideas from Tolkien&#39;s languages but invent grammatical and syntactical patterns at will. They may also make up new words <em>a priori</em>. Analogous to fanfiction that places Tolkien&#39;s characters in situations that are completely outside Tolkien canon.
+- Cherrypicking of Evidence: It is possible to come up with self-consistent neo-elvishes by picking and choosing data from disparate timeframes in Tolkien&#39;s evolving conception of the languages. The result is a chimerical language in which each element may be attested but the whole does not reflect Tolkien&#39;s intentions at any one point in time.
+- Reconstruction: At least two types of reconstruction are conceivable: reconstruction in the internal and the external histories of the language. Reconstruction in the internal history consists of looking at attested <q>primitive</q> forms underlying Sindarin and Quenya words, and deriving corresponding forms in the daughter languages. One can also work backwards, inferring the primitive form from an attested Quenya word, and then using the reconstructed primitive word to reconstruct its Sindarin reflex. Reconstruction in the external history can be done when Tolkien made a systematic, sweeping revision to one of his languages—as seems to have occurred in the reimagining of Noldorin as Sindarin. In this case, we can look at the changes Tolkien made to Sindarinize Noldorin words, and apply them to other Noldorin words to find their expected Sindarin forms.
+- Novel application of attested derivational or inflectional patterns
+- Novel application of attested syntactical patterns</p>
+
+<p>It is also possible to draw a distinction between neo-elvishes that interpolate between data (for instance, by suggesting that an attested inflection could be applied to a wider set of words) and those that extrapolate by assuming the existence of some pattern (not directly attested) and drawing conclusions as if the assumption were true.</p>
+
+<p>Consistency, detail, and realism are prerequisites for verisimilitude, though not sufficient for <q>usability</q>. The languages should be, if not usable, at least describable.</p>
+
+<p>Planned approach:</p>
+
+<p>The goal is to describe the Sindarin of The Lord of the Rings, and to that end the examples of the language from that novel serve as the core dataset that must be explained by any theories I come up with. To the extent that the Noldorin of the Etymologies is compatible with LotR Sindarin, the Sindarin forms I use should be explicable by historical developments paralleling those in the Etymologies. A comparison of Noldorin forms with LotR Sindarin forms is in order to determine the reliability of this approach. PE17 would be really helpful.</p>
+
+<p>Goals
+- enthusiasm
+I hope to make Sindarin accessible to any lover of Tolkien&#39;s works. This cannot really be done by creating a <q>Teach Yourself</q>-style course in the language, because such a course will inevitably stray towards non-Tolkien examples and misleading comparisons between Sindarin and English (or whatever language the course is written in). As Carl Hostetter points out in <q>Elvish As She Is Spoke</q>, these faults are serious; they obscure the difference between Tolkien&#39;s own Sindarin and fan-made Sindarins, leading to circular reasoning (e.g. arguing that a particular grammatical construction is <q>correct</q> based on non-Tolkien examples) and clumsy word-by-word translations.</p>
+
+<p>It might be possible to develop a variety of Neo-Sindarin that could be used for conversation, but that goal is impractical in more ways than one. For all the attempts that have been made to develop Sindarin and Quenya into <q>usable</q> Neo-Elvish forms, they have no community of fluent speakers, so if you learned to speak one of the Neo-Elvish languages there would be almost no one who could understand you. And any Neo-Elvish sufficiently complete to be <q>usable</q> would necessarily be unfaithful to Tolkien&#39;s thoughts on the languages and his intentions for them. (cite Letters cf. Hostetter and English and Welsh re: the effects of daily usage)</p>
+
+<p>So a traditional <q>Learn to Speak Sindarin</q> course is not my aim. But neither do I want to write a formal grammar—I doubt most of my readers would want to read it, and we don&#39;t know enough about Sindarin to write a comprehensive grammar anyway. Instead, I want to attempt something subtly but significantly different from a normal language course: rather than have the primary question be <q>How do you say X in Elvish?</q>, I want to first ask <q>What can we say in Elvish, based on the examples from Tolkien's works?</q> This approach is likelier to yield a description of Sindarin that is true to Tolkien&#39;s intentions. The language described in this way will be sparse, but still expressive. Ultimately, if you read all the articles on this site, you will not be able to speak Sindarin the way you currently speak English, but you <em>will</em> be able to speak Sindarin the way Gandalf (for instance) speaks it in <em>The Lord of the Rings</em>, and that is perhaps better.</p>
+
+<p>Values
+- verisimilitude
+- aesthetic
+- fidelity</p>
+
+<p>Non-values
+- completeness
+- usability (for running text - the languages should end up usable for expression anyway, even if not much verbal morphology is detailed. <em>A Elbereth</em> has all of two finite verbs, and Sindarin utterances are attested with no verbs at all - conveniently, Sindarin has a zero copula. <em>Ered en echoriath, ered e-mbar nín</em>; <em>Naur an edraith ammen! Naur dan i ngaurhoth!</em>)
+- grammatical or lexical parity with English (or any other language). Sindarin would not benefit from the addition of modern or technical vocabulary.</p>
+        </div>
+    </div>
+</body>
+
+</html>

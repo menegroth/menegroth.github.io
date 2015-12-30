@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(../annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(../annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(../annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(../annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(../annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(../annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>Quick Guide to Sindarin Pronunciation</h1>
+
+<p>This guide is designed to get your pronunciation to a level where Sindarin-speakers will understand you, even if they find your accent strange. If you&#39;re aiming for perfect pronunciation, you should read <a href="./pronunciation-complete.html">the complete description</a>.</p>
+
+<h2>Vowels</h2>
+
+<p>The vowels are similar to those of Spanish, Hawaiian, or Italian: <span class="s">A</span>, <span class="s">E</span>, <span class="s">I</span>, <span class="s">O</span>, and <span class="s">U</span> are pronounced <q>ah</q>, <q>eh</q>, <q>ee</q>, <q>oh</q>, and <q>oo</q>. <span class="s">Y</span> is always a vowel, and can be pronounced <q>ee</q><sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.</p>
+
+<p>Examples:</p>
+
+<table class="pronunciation">
+<tbody>
+  <tr>
+    <td><span class="s">A</span></td>
+    <td>as in &ldquo;f<span class="hi">a</span>ther&rdquo;</td>
+    <td><span class="s">barad</span> <q>tower</q></td>
+  </tr>
+  <tr>
+    <td><span class="s">E</span></td>
+    <td>as in &ldquo;w<span class="hi">e</span>ll&rdquo;</td>
+    <td><span class="s">pen</span> <q>without</q></td>
+  </tr>
+  <tr>
+    <td><span class="s">I</span></td>
+    <td>as in &ldquo;mach<span class="hi">i</span>ne&rdquo;</td>
+    <td><span class="s">hîr</span> <q>lord, master</q></td>
+  </tr>
+  <tr>
+    <td><span class="s">O</span></td>
+    <td>as in &ldquo;f<span class="hi">o</span>r&rdquo;</td>
+    <td><span class="s">tol</span> <q>island</q></td>
+  </tr>
+  <tr>
+    <td><span class="s">U</span></td>
+    <td>as in &ldquo;br<span class="hi">u</span>te&rdquo;</td>
+    <td><span class="s">dûr</span> <q>dark</q></td>
+  </tr>
+</tbody>
+</table>
+
+<p>An accent over a vowel, like <span class="s">á</span> or <span class="s">â</span>, indicates that it is held for slightly longer.</p>
+
+<p>Certain sequences of two vowels have their own pronunciation:</p>
+
+<table class="pronunciation relaxed">
+<tbody>
+  <tr>
+    <td><span class="s">AI</span>, <span class="s">AE</span></td>
+    <td>like <q>eye</q> no English equivalent. <span class="s">AE</span> is a glide from an <span class="s">A</span> into an <span class="s">E</span>. The resulting sound should be similar to <span class="s">AI</span>; Tolkien even suggested pronouncing <span class="s">AE</span> the same as <span class="s">AI</span> if you're not picky. Or you could aim for a Mirkwood accent and pronounce it like <span class="s">E</span>: compare Mirkwood <span class="s">Legolas</span> to Classical Sindarin <span class="s">Laegolas</span>.</td>
+    <td><span class="s">Hithaeglir</span> <q>the Misty Mountains</q></td>
+  </tr>
+  <tr>
+    <td><span class="s">AU</span></td>
+    <td>like "ow" in &ldquo;n<span class="hi">ow</span>&rdquo;</td>
+    <td><span class="s">aur</span> <q>day</q></td>
+  </tr>
+</tbody>
+</table>
+
+<ul>
+<li><span class="s">AI</span> and <span class="s">AE</span> sound like <q>eye</q>. <span class="s">Hithaeglir</span> &quot;</li>
+<li><span class="s">AU</span> ~ like <q>ow</q> in <q>now</q>. <span class="s">Aur</span> <q>day</q> sounds like English <q>hour</q>.</li>
+<li><span class="s">EI</span> ~ as in <q>weigh</q>: <span class="s">leithio</span> <q>release</q>.</li>
+<li><span class="s">UI</span> ~ an <q>oo</q> sound followed quickly by an <q>ee</q> sound, almost as in <q>ruin</q>: <span class="s">Fanuilos</span> (a title of Elbereth).</li>
+</ul>
+
+<h2>Consonants</h2>
+
+<ul>
+<li><span class="s">C</span> is always a hard K-sound, as in <q>cat</q>.</li>
+<li><span class="s">G</span> is likewise always hard, as in <q>get</q>.</li>
+<li><span class="s">R</span> should be trilled, as in Spanish.</li>
+<li><span class="s">CH</span> is the sound heard in Scottish <em>loch</em> or German <em>Bach</em>. Gondorians often turned it into a K or H sound, and so can you, if you prefer.</li>
+<li><span class="s">DH</span> has the sound of <em>th</em> in <q>leather</q>: <span class="s">edhel</span> <q>elf</q>.</li>
+</ul>
+
+<p>The other consonants should be pronounced more or less as in English.</p>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p>You&#39;ll have a Gondorian accent, but Elves should still be able to understand you. Most Sindarin speakers pronounced Y like German <em>ü</em> in <em>über</em>.&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+        </div>
+    </div>
+</body>
+
+</html>

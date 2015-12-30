@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>Nevedhellen: A New Sindarin Grammar</h1>
+
+<h2>Introduction</h2>
+
+<p>Most Tolkienists use the term <em>Neo-Sindarin</em> to describe the language used in post-Tolkien <q>Sindarin</q> compositions, emphasizing that the living forms of the language are chimeras stitched together from ambiguous and often conflicting sources, and as such may not reflect Tolkien&#39;s intentions. Since this grammar is likewise a product of conjecture, compromise, and hand-waving, I considered the title <em>A Neo-Sindarin Grammar</em>, but that presents a problem. The term <em>Neo-Sindarin</em> does not denote a single, consistent language, but rather a family of related hypotheses about how Sindarin worked at various stages of Tolkien&#39;s conception of it. We have, for example, at least two competing theories of how the past tense was formed in strong verbs, and even the number of consonant mutations that exist (and how the rarer ones operated, if they existed at all) is far from certain. Descriptions of Neo-Sindarin usually present several theories for the more dubious points, duly annotating them as uncertain, and leave it up to the reader to decide which they want to believe.</p>
+
+<p>My aim, however, is different. I hope to present a comprehensive and unified account of <em>one</em> variety of Neo-Sindarin&mdash;not because I believe it is in any way authoritative, but to show how it could be done. Readers will no doubt disagree with some of my interpretations on scholarly or aesthetic grounds. I hope this grammar will provide a starting point for their many revisions.</p>
+
+<p>Hence the unusual name for the language described in this grammar. I needed to give a name to this particular variety of Neo-Sindarin, and happily a fortuitous one presented itself.</p>
+
+<p>The word <em>Nev-Sindarin</em> (perhaps <em>Nev-edhellen</em> would be better, though less recognizable to casual readers) is my own invention, a kind of cross-linguistic pun. <em>Nev</em> is of course the Nevbosh word for <q>new</q> (and thus an echo of <em>neo-</em>), but it is also a possible spelling of the Sindarin element <span class="s">nef/nev</span>, meaning <q>hither, near</q> (as a prefix, according to Salo:276, c.f. <em>Nevrast</em> in WJ:197). Nev-Sindarin is thus the New-Sindarin that is nearest my heart, and maybe as near as we (who are, as it were, <em>nef aearon</em>) can come to the language spoken by the Elves of Middle-earth at the end of the Third Age.</p>
+
+<p>In the first section of this book, I present a grammar and lexicon of Third-age Sindarin, the language used in <em>The Lord of the Rings</em>.</p>
+
+<p>The second section comprises a diachronic overview of Sindarin, tracing its ancestry from Cuiviénen up to the fall of Sauron and beyond. The purpose of this section is to illustrate the changes that would produce the word-forms and grammar described in the first section. Possible grammars of Old and Middle Sindarin are briefly treated.</p>
+
+<p>The third section is an in-depth analysis of the primary sources that are our best guide to Sindarin as Tolkien envisioned it. Here I discuss the evidence <em>against</em> my favored interpretation of the data, hopefully providing a guide to further study and future revisions.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>My own studies of Sindarin began with Helge Fauskanger&#39;s essays and Thorsten Renk&#39;s <em>Pedin Edhellen</em> textbook, and their scholarly analyses of the language have proven invaluable in the preparation of this text. My description of the sound changes producing Classical (Third Age) Sindarin is likewise based in David Salo&#39;s excellent analysis.</p>
+
+<h1>Typographic Conventions</h1>
+
+<p>I use <strong>boldface</strong> for Sindarin words and phrases interspersed into the text and additionally <strong><em>italicize</em></strong> examples that are directly attested in Tolkien&#39;s writings. A <strong>&dagger;</strong> symbol marks attested forms found only in writings published after Tolkien&#39;s death.</p>
+
+<p>When discussing a word or grammatical construction that Tolkien did not (as far as we know) actually write, I use the following symbols to indicate why mention of the form is justified:</p>
+
+<ul>
+<li><strong>!</strong> Precedes an incorrect form, useful as an example of what <em>not</em> to write.</li>
+<li><strong>&#42;</strong> Marks a word that has been isolated from a compound, deduced from a mutated form, or reconstructed from an attested historical form.</li>
+<li><strong>&Dagger;</strong> Like <strong>&#42;</strong>, marks a reconstructed form, but indicates that the attested form was published posthumously.</li>
+<li><strong>&#35;</strong> Marks post-Tolkien coinages. These are always built from attested roots, which gives them a semblance of validity, but that does not mean that Tolkien would have used the word. I also use <strong>&#35;</strong> to mark grammatical constructions that are not Tolkien&#39;s own.</li>
+<li><strong>?</strong> Marks a speculative translation. There are some words for which Tolkien never provided an explanation&mdash;one of the most notorious is <span class="s post">aen</span>, found in the King&#39;s Letter.</li>
+</ul>
+
+<p>Unattested phrases, if not otherwise marked, are my own compositions based on my understanding of Sindarin grammar.</p>
+
+<h1>Citation Conventions</h1>
+
+<p>For the sake of brevity, I abbreviate the names of commonly-cited works as follows:</p>
+
+<ul>
+<li>LotR - <em>The Lord of the Rings</em></li>
+<li>LR - <em>The Lost Road</em></li>
+<li>Letters -</li>
+<li>GtS - <em>A Gateway to Sindarin</em> (David Salo)</li>
+<li>Ard - <em>Ardalambion</em> (Helge Fauskanger&#39;s site)</li>
+</ul>
+
+<p>A slash separates the name of the work from a chapter or section identifier, webpage link, or issue number. A colon precedes page numbers. Thus, RotK/E:392 would indicate page 392 of <em>The Return of the King</em>, in Appendix E.</p>
+
+<p>When citing the <em>Etymologies</em>, I identify the Eldarin root instead of the page number, since page numbers vary between editions and it&#39;s easy to look up roots. e.g. LR/Ety:KAL.</p>
+
+<h1>A Note on Sindarin and Noldorin</h1>
+
+<p>The language called Sindarin in <em>The Lord of the Rings</em> was originally called Noldorin, and occupied a different place in the history of Middle-earth. When Tolkien later decided that this language was actually spoken by the Sindar, he made systematic changes to the sounds of Noldorin, <q>updating</q> it into Sindarin. Much of the Sindarin vocabulary we use today was published after Tolkien&#39;s death, and comes from material that he worked on while the language was still called Noldorin. Therefore, while I believe that this vocabulary would still be valid in LotR-style Sindarin, it&#39;s hard to know for sure. Note that any Sindarin words cited as coming from <q>Ety</q> (the <em>Etymologies</em>) have been updated from their attested Noldorin forms.</p>
+
+<p>All of this is done to aid readers who aim to understand which forms are relatively certain and which are not, and perhaps to draw their own conclusions that differ from my own. For those who simply want to learn the language, I&#39;ve provided a way to hide the annotations in the HTML version of this text.</p>
+
+<p>Glosses of attested words and phrases are Tolkien&#39;s own when he provides one. My own translations are marked with an asterisk.</p>
+
+<h1>Lessons</h1>
+
+<h2>Lesson One: Pronunciation and Phrases</h2>
+
+<p>The vowels <span class="s">a e i o u</span> are pronounced as in Italian, or as exemplified below:</p>
+
+<ul>
+<li><span class="s">a</span> as in <span class="en">father</span>: <span class="cited"><span class="s att">aran</span> <q>lord</q> <span class="citation">LotR Doors of Durin TODO</span></span></li>
+<li><span class="s">e</span> as in <span class="en">let</span>: <span class="cited"><span class="s att">Elbereth</span> <q>Star-queen (a name of the _vala_ Varda) (where translated?)</q> <span class="citation">LotR TODO</span></span></li>
+<li><span class="s">i</span> as in <span class="en">machine</span>: <span class="cited"><span class="s att">silivren</span> <q>glittering (where translated?)</q> <span class="citation">LotR TODO</span></span></li>
+<li><span class="s">o</span> as in <span class="en">for</span>: <span class="cited"><span class="s att">Orodruin</span> <q>Mountain of Fire (find translation - PM 366?)</q> <span class="citation">LotR TODO</span></span></li>
+<li><span class="s">u</span> as in <span class="en">brute</span>: <span class="cited"><span class="s post">curu</span> <q>craft, skill</q> <span class="citation">LR/Ety:TODO</span></span></li>
+</ul>
+
+<p>In addition to the five cardinal vowels, Sindarin has a sixth vowel <span class="s">y</span>.</p>
+
+<ul>
+<li><span class="s">y</span> is close to German <span class="de">ü</span>, or the <span class="fr">u</span> in French <span class="fr">lune</span>. Pronounce the <span class="en">i</span> sound in <span class="en">pit</span> with your lips rounded as if saying <span class="en">oo</span>.</li>
+</ul>
+
+<p>Vowels that have an <em>acute accent</em> above them (<span class="s">á é í ó ú</span>) are held slightly longer than unaccented vowels. A circumflex (<span class="s">â ê î ô û</span>) marks an even longer version of the vowel. Compare the vowel lengths in this greeting:</p>
+
+<p><span class="s">Elen síla na lû govaded</span> <q>A star shines on the hour of meeting</q></p>
+
+<p>On a Mac with the default US keyboard layout, you can type the acute accent by pressing <span class="key">option</span>+<span class="key">e</span>, and then typing the vowel. To type the circumflex, use <span class="key">option</span>+<span class="key">i</span>. On Windows, there are <a href="http://superuser.com/questions/110605/how-do-i-type-accented-characters-in-windows">a bunch of different options</a>.</p>
+
+<p>In addition to the simple vowels Sindarin also has five <span class="term">diphthongs</span>, combinations of two vowels pronounced in a single syllable, with a smooth transition from one vowel to the other.</p>
+
+<ul>
+<li><span class="s">ai</span> is the sound of <span class="en">y</span> in English <span class="en">sky</span>.</li>
+<li><span class="s">ae</span> has no counterpart in English; it is similar to Sindarin <span class="s">ai</span> but ends with an <span class="s">e</span> sound (as in <span class="en">let</span>), instead of an <span class="s">i</span> sound (as in <span class="en">machine</span>).</li>
+<li><span class="s">au</span> has the sound of <span class="en">ou</span> in <span class="en">house</span>. At the end of a word it is spelled <span class="s">aw</span>: <span class="cited"><span class="s post">caw</span> <q>top</q> <span class="citation">Ety:402, entry KAS</span></span>.</li>
+<li><span class="s">ei</span> is the sound of <span class="en">ay</span> in English <span class="en">say</span>.</li>
+<li><span class="s">oe</span> has no counterpart in English; it is similar to the <span class="en">oy</span> sound in <span class="en">boy</span>, but ends with the same <span class="s">e</span> sound as Sindarin <span class="s">ae</span>.</li>
+<li><span class="s">ui</span> is the sound in English <span class="s">ruin</span>.</li>
+</ul>
+
+<p>Consonants <span class="s">b, d, m, p, t, v, w</span> are pronounced more or less as in English and need no further description.</p>
+
+<ul>
+<li><span class="s">c</span> is always hard, as in <span class="en">cat</span>. <span class="s attested">Celeborn</span> is pronounced <span class="s sound-spelling">keleborn</span>, not <span class="s wrong sound-spelling">seleborn</span>.</li>
+<li><span class="s">ch</span> is close to the raspy sound of Scottish <span class="gd">loch</span> or German <span class="de">Bach</span>. In Tolkien&#39;s own pronunciation, it was more or less like <span class="s">h</span> with the tongue raised slightly toward the back of the mouth as if to pronounce <span class="s">k</span>.</li>
+<li><span class="s">dh</span> is the <span class="en">th</span> sound in <span class="en">this</span>.</li>
+<li><span class="s">f</span> at the end of a word is pronounced <span class="s">v</span>, as in English <span class="en">of</span>.</li>
+<li><span class="s">g</span> is likewise always hard, as in <span class="en">get</span>; never soft as in <span class="en">gem</span>.</li>
+<li><span class="s">h</span> is pronounced like English <span class="en">h</span>, except in the digraphs <span class="s">th</span>, <span class="s">dh</span>, <span class="s">ch</span>, <span class="s">lh</span>, <span class="s">rh</span>, <span class="s">hw</span>.</li>
+<li><span class="s">hw</span> is the sound heard in English <span class="en">whale</span>, in varieties of English that distinguish it from <span class="en">wail</span>.</li>
+<li><span class="s">l</span> is always the sound in <span class="en">let</span>, pronounced with the tip of the tongue touching the upper teeth or just behind them. English has another <span class="en">l</span> sound used at the end of syllables, e.g. <span class="en">tell</span>, in which the tongue is bunched up at the back of the mouth and doesn&#39;t touch the teeth. This sound does not occur in Sindarin.</li>
+<li><span class="s">lh</span> is the <span class="cy">ll</span> sound of Welsh <span class="cy">Lloyd</span>. Put your tongue in a position to say <span class="en">l</span> and gently exhale as if pronouncing <span class="en">th</span>.</li>
+<li><span class="s">n</span> is pronounced identically to English <span class="en">n</span>. Before <span class="s">c</span>, <span class="s">ch</span>, <span class="s">g</span>, it is pronounced as in <span class="en">think</span> - that is, like the <span class="en">ng</span> sound in <span class="en">thing</span>.</li>
+<li><span class="s">ng</span> at the beginning or end of a word is pronounced as in <span class="en">thing</span>. Between vowels, it is pronounced as the same sound plus <span class="s">g</span>, as in <span class="en">finger</span>.</li>
+<li><span class="s">ph</span> is as in English <span class="en">phone</span>. Between vowels, it represents the same sound held for slightly longer, e.g. in <span class="cited"><span class="s attested">ephel</span> <q>outer fence</q> <span class="citation">LotR/E:392</span></span>.</li>
+<li><span class="s">r</span> is tapped, as in Spanish, or as in <span class="cited">Tolkien&#39;s own pronunciation of English <span class="citation"><a href="http://www.jrrvf.com/%7Eglaemscrafu/english/tolkienhimselflotrhob.html">http://www.jrrvf.com/~glaemscrafu/english/tolkienhimselflotrhob.html</a></span></span>. It is never articulated in the back of the throat as in French or German - reportedly the Elves found this sound <span class="cited"><q>distasteful</q> <span class="citation">RotK:392 Appendix E</span></span>.</li>
+<li><span class="s">th</span> is always the sound in <span class="en">thin</span>, never the sound in <span class="en">this</span>, which is represented in Sindarin by <span class="s">dh</span>.</li>
+<li><span class="s">rh</span> is the <span class="cy">rh</span> of Welsh <span class="cy">Rhiannon</span>. Pronounce a Sindarin <span class="s">r</span>, but simultaneously exhale as if pronouncing <span class="s">h</span>.</li>
+</ul>
+
+<p>Sindarin has certain sequences of sounds which are not found in English.</p>
+
+<ul>
+<li><span class="s">w</span> can occur at the end of a word: <span class="s re">têw</span> <q>letter</q>, <span class="cited"><span class="s att">tîw</span> <q>letters</q> <span class="citation">LotR/E:395</span></span>, <span class="cited"><span class="s post">gwaew</span> <q>wind</q> <span class="citation">LR/Ety:WĀ</span></span>.</li>
+<li><span class="s">ng</span> can appear at the beginning of a word: <span class="cited"><span class="s attested">di-nguruthos</span> <span class="citation">LotR:TODO</span></span> <span class="cited"><q>in the shadow of death</q> <span class="citation">Letters:278</span></span>.</li>
+<li>Clusters <span class="s">mr</span>, <span class="s">ml</span> are possible at the beginning of a word: <span class="s">am mrôg</span> <q>for a bear</q>, <span class="s">am mlabed</span> <q>for flapping</q></li>
+</ul>
+
+<h2>Phrasebook</h2>
+
+<ul>
+<li><strong><em>Mae govannen!</em></strong> -:- <q>Well met!</q></li>
+<li><em>Suilad</em> -:- <q>Greetings</q></li>
+<li><em>Gîl síla nan govaded vín</em> -:- <q>A star shines on our meeting</q></li>
+<li><em>Gîl síla na lû govaded vín</em> -:- <q>A star shines on the hour of our meeting</q></li>
+<li><em>Elo!</em> -:- <q>Wow!</q></li>
+<li><em>A tiro i ngîl!</em> -:- <q>Look at the stars!</q></li>
+<li><em>Henach i ven?</em> -:-</li>
+<li><em>Na van bâd i ven hen?</em></li>
+<li><em>Calo Anor na men lín</em> -:- <q>May the sun shine on your road</q></li>
+<li><em>Cuio vae!</em> -:- <q>Farewell!</q></li>
+</ul>
+
+<h2>The Tengwar</h2>
+
+<blockquote>
+<p>the Eldar know their tongue, not word by word only, but as a whole: they know even as they speak not only of what sounds is that word woven which they are uttering, but of what sounds and sound-patterns is their whole speech at one time composed. &mdash;Dangweth Pengoloð</p>
+</blockquote>
+
+<p>The elvish writing you probably remember and recognize from <em>The Lord of the Rings</em> is called <span class="q">tengwar</span>, a Quenya word meaning <q>signs</q>. The tengwar are very versatile, well-suited to elvish languages but also adaptable to other uses. For example, the inscription on the One Ring used tengwar, but was in the Black Speech of Mordor.</p>
+
+<p><span class="figure-title">The Ring Inscription</span></p>
+
+<div class="center text">
+<p>
+<span class="tai">&#187;</span><span class="ti">AE5,Ex26Yw1E<span class="tai">j</span>^z<span class="tai">H</span>&#186; AE5,ExxwP%1Ej^</span><span class="tai">&#171;</span>
+</p>
+<p>
+<span class="ti">AE5,Ex37zE1E<span class="tai">j</span>^z<span class="tai">H</span>&#186; X#w6Ykt^AT`Bz7qpT1Ej^</span>
+</p>
+</div>
+
+<p>Another inscription, in a very different language and style, was encountered by the Fellowship on the gates of Moria.</p>
+
+<p><span class="figure-title">The Moria Gate Inscription</span></p>
+
+<div class="center text">
+<p>
+<span class="t text center">-l5I6 2.7&#96;6 &#93;7&#93;6 th7&#96;B&#93; = ql2h tljjh6 &#93; t&#96;B5h- -&#96;y 6&#93;7r&#96; 9&#93;Ö6 ld&#93;1p-aljlw7&#96;BwPh7 h l7ls&#96;Bh6 1lÖ3&#93;1p &#96;B 3&#96;Bn 9&#96;B6-</span>
+</p>
+</div>
+
+<p>The Moria gate inscription was in Sindarin. The tengwar read: <span class="s">Ennyn Durin Aran Moria: pedo mellon a minno. Im Narvi hain echant: Celebrimbor o Eregion teithant i thiw hin.</span> <q>The Doors of Durin, Lord of Moria. Speak, friend, and enter. I, Narvi, made them. Celebrimbor of Hollin drew these signs.</q></p>
+
+<p>One effect of this versatility was that the elves developed multiple styles of writing Sindarin with tengwar. Three of these styles, the <strong>Mode of Beleriand</strong>, the <strong>Mode of Gondor</strong>, and the <strong>Consonantal Mode</strong>, will be covered in a later section.</p>
+
+<p>First, however, I will discuss a very different adaptation of the elvish script: the use of tengwar to write in English. There are a few reasons why I think this is the best way to start learning the tengwar, the main one being that if you&#39;re reading the chapters of this book in order, you don&#39;t yet know any Sindarin words, so learning how to write Sindarin in tengwar at this stage is not very useful. Additionally, the tengwar are very different from our alphabet, not just in their shapes but in the way the whole writing system is organized, and learning how those differences apply to a familiar language like English will be much easier than trying to figure them out in a language you don&#39;t know yet. And finally, if you want to introduce your friends to tengwar-writing, they probably won&#39;t have the patience to learn Sindarin, but they might be interested in having a secret code to write English.</p>
+
+<h3>The Standard English Mode</h3>
+
+<h3>An Alternative English Mode</h3>
+
+<p><strong>Disclaimer:</strong> This English mode was created by me, not by Tolkien, and is not widely used. <strong>If you want to learn to write in tengwar in a way that other Tolkien fans will understand, use the Standard English Mode from the previous section</strong>. I have designed this mode and am presenting it here because it resembles the Sindarin tengwar modes and might be of interest to those learning to write Sindarin with tengwar. Besides, I personally prefer alphabetic modes over tehtar modes, and English lacks a standard alphabetic mode.</p>
+
+<p>The table below shows the tengwar used to write English.</p>
+
+<table class="tengwar-table">
+  <tr>
+    <td><p><span class="t">1</span></p><p><span class="en">t</span></p></td>
+    <td><p><span class="t">q</span></p><p><span class="en">p</span></p></td>
+    <td><p><span class="t">z</span></p><p><span class="en">k</span> or hard <span class="en">c</span></p></td>
+    <td class="spacer" rowspan="6">&nbsp;</td>
+    <td><p><span class="t">z&#234;</span></p><p><span class="en">qu</span></p></td>
+    <td><p><span class="t">j</span></p><p><span class="en">l</span></p></td>
+    <td><p><span class="t">9</span></p><p><span class="en">h</span></p></td>
+    <td><p><span class="t">o</span></p><p><span class="en">wh</span></p></td>
+  </tr>
+  <tr>
+    <td><p><span class="t">2</span></p><p><span class="en">d</span></p></td>
+    <td><p><span class="t">w</span></p><p><span class="en">b</span></p></td>
+    <td><p><span class="t">x</span></p><p><span class="en">g</span></p></td>
+    <td><p><span class="t">8</span></p><p><span class="en">sh</span></p></td>
+    <td><p><span class="t">i</span></p><p><span class="en">s</span> or soft <span class="en">c</span></p></td>
+    <td><p><span class="t">,</span></p><p><span class="en">z</span></p></td>
+    <td><p><span class="t">k</span></p><p><span class="en">s</span> in <span class="en">treasure</span></p></td>
+  </tr>
+  <tr>
+    <td><p><span class="t">3</span></p><p><span class="en">th</span> in <span class="en">thing</span></p></td>
+    <td><p><span class="t">e</span></p><p><span class="en">f/ph</span></p></td>
+    <td><p><span class="t">c</span></p><p><span class="en">ch</span></p></td>
+    <td><p><span class="t">&#93;D</span></p><p><span class="en">a</span></p></td>
+    <td><p><span class="t">lR</span></p><p><span class="en">e</span></p></td>
+    <td><p><span class="t">&#96;B</span></p><p><span class="en">i</span></p></td>
+    <td><p><span class="t">hY</span></p><p><span class="en">o</span></p></td>
+
+  </tr>
+  <tr>
+    <td><p><span class="t">4</span></p><p><span class="en">th</span> in <span class="en">this</span></p></td>
+    <td><p><span class="t">r</span></p><p><span class="en">v</span></p></td>
+    <td><p><span class="t">v</span></p><p><span class="en">j</span></p></td>
+    <td colspan="2"><p><span class="t">~&#215;</span></p><p><span class="en">y</span> in <span class="en">sky</span></p></td>
+    <td colspan="2"><p><span class="t">.J</span></p><p><span class="en">u</span></p></td>
+  </tr>
+  <tr>
+    <td><p><span class="t">5</span></p><p><span class="en">n</span></p></td>
+    <td><p><span class="t">t</span></p><p><span class="en">m</span></p></td>
+    <td><p><span class="t">b</span></p><p><span class="en">ng</span></p></td>
+    <td rowspan="2" colspan="4"></td>
+  </tr>
+  <tr>
+    <td><p><span class="t">6</span></p><p><span class="en">r</span></p></td>
+    <td><p><span class="t">y</span></p><p><span class="en">w</span></p></td>
+    <td><p><span class="t">n</span></p><p><span class="en">y</span> in <span class="en">yes</span></p></td>
+  </tr>
+</table>
+
+<p>With the help of the table above, you can try deciphering this text:</p>
+
+<div class="center text">
+<p>
+<span class="t">4lR 7lR1.J75 hYr 4lR z&#96;Bb = w~&#215; v=7=7= 1hYjz&#96;BlR5 - wlR&#96;Bb 4lR 3&#96;B72 q&#93;D71 hr 4lR jhY72 hYr 4lR 7&#96;Bb,</span>
+</p>
+</div>
+
+<p>As you work on that, you&#39;ll probably see some differences between tengwar and our alphabet:</p>
+
+<ul>
+<li>A single <span class="q">tengwa</span> often corresponds to two letters in English: <span class="t">b</span> is used for <span class="en">ng</span>.</li>
+<li>Tengwar represent sounds rather than English letters. There is no single tengwa for <span class="en">c</span> - you have to use <span class="t">z</span> or <span class="t">i</span>, depending on whether the <span class="en">c</span> sounds like <span class="en">k</span> or <span class="en">s</span>.</li>
+<li>Similar sounds have similar tengwar - the signs for <span class="en">s</span> and <span class="en">sh</span> are rotated versions of each other; <span class="en">th</span> is formed from <span class="en">t</span> by extending the stem of the <span class="q">tengwa</span> up rather than down.</li>
+<li>The tengwar on the left side of the chart have similar shapes&mdash;each tengwa consists of a vertical stem (<span class="q">telco</span> in Quenya), and a curved bow (Quenya <span class="q">lúva</span>) branching off from it. The bow can extend to the left or right of the stem, and can either be open, or closed off by a horizontal bar.</li>
+</ul>
+
+<p>The tengwar on the left half of the table are associated with sounds in a predictable way. The column, or <span class="q">téma</span> (Quenya <q>series</q>) that a letter belongs to indicates where in the mouth it is articulated. The leftmost column is made up of <em>coronal</em> consonants - pronounced with the tip of the tongue just behind the front teeth, or touching them. The middle column has all the <em>labial</em> consonants, which are pronounced using the lips. The rightmost column is all <em>dorsal</em> consonants, which involve contact between the back of the tongue and the roof of the mouth.</p>
+
+<p>The row, or <span class="q">tyellë</span> (Quenya <q>grade</q>) that a letter belongs to tells you how air flows through the mouth when pronouncing it. The first two rows of tengwar consist of <em>stops</em>, so named because they stop the flow of air completely. A single bow as in <span class="t">1 q z</span> <span class="en">t p k</span> means the consonant is pronounced without vibration of the vocal cords (<em>voice</em> in linguistics terms). A  double bow adds voice, creating <span class="t">2 s x</span> <span class="en">d b g</span>.</p>
+
+<p>The next two rows are <em>fricatives</em>, which constrict the flow of air to create a hissing or buzzing sound. (Technically, the sounds <span class="en">ch</span> and <span class="en">j</span> consist of a stop plus a fricative: <span class="en">t + sh</span> and <span class="en">d + zh</span>.) These tengwar are formed from the corresponding stops by extending the stem of the tengwa up instead of down. As with the stops, a doubled bow indicates voice.</p>
+
+<p>The fifth row of tengwar are <em>nasal</em> consonants, pronounced by redirecting air through the nose. In English, nasal consonants are always voiced, so these tengwar have doubled bows.</p>
+
+<p>The sixth row are <em>approximants</em>, which barely impede airflow at all. Since these are the <q>weakest</q> consonants, they get the smallest tengwar, almost resembling the vowels in their shape.</p>
+
+<p>On the right side of the chart are tengwar for irregular sounds that don&#39;t fit into the grid&mdash;for example, <span class="t">j</span> <span class="en">l</span>, which is unique in English because it involves airflow around the sides of the tongue. However, even these tengwar are systematic when possible&mdash;<span class="t">i</span> is unvoiced <span class="en">s</span>, while <span class="t">,</span> is voiced <span class="en">z</span>, echoing the pattern of the doubled bow that turns unvoiced <span class="t">w</span> <span class="en">f</span> into <span class="t">r</span> <span class="en">v</span>.</p>
+
+<p>Try transcribing each of these tengwar samples into our alphabet. Your answer will turn green when it&#39;s correct.</p>
+
+<ul>
+<li><span class="exercise-prompt"><span class="t">1hYjz&#96;BlR5</span></span><input type="text" class="exercise-answer" data-answer="tolkien" size="7"/></li>
+<li><span class="exercise-prompt"><span class="t">9hYww&#96;B1i</span></span><input type="text" class="exercise-answer" data-answer="hobbits" size="7"/></li>
+<li><span class="exercise-prompt"><span class="t">w&#93;Dxx&#96;B5i</span></span><input type="text" class="exercise-answer" data-answer="baggins" size="7"/></li>
+<li><span class="exercise-prompt"><span class="t">5&#96;Bx91&#96;Bb&#93;DjlR</span></span><input type="text" class="exercise-answer" data-answer="nightingale" size="11"/></li>
+<li><span class="exercise-prompt"><span class="t">26&#93;DxhY5</span></span><input type="text" class="exercise-answer" data-answer="dragon" size="6"/></li>
+<li><span class="exercise-prompt"><span class="t">whYtw&#93;D2&#96;Bj</span></span><input type="text" class="exercise-answer" data-answer="bombadil" size="8"/></li>
+</ul>
+
+<h4>Abbreviations in the English Mode</h4>
+
+<p>If you&#39;ve mastered the basics of writing English with tengwar and want more, you can try out these useful abbreviations:</p>
+
+<table class="tengwar-table">
+  <tr>
+    <td><p><span class="t">@</span></p><p><span class="en">the</span></p></td>
+    <td><p><span class="t">W</span></p><p><span class="en">of</span></p></td>
+    <td><p><span class="t">W"</span></p><p><span class="en">of the</span></p></td>
+  </tr>
+</table>
+
+<p>The vowels <span class="t">&#93;D lR &#96;B hY .J ~&#215;</span> <span class="en">a e i o u y</span> have marks above them called <span class="q">tehtar</span> in Quenya. Instead of writing the vowel out in full, you can simply write the <span class="q">tehta</span> above the next consonant. <span class="t">9hYww&#96;B1i</span> <q>hobbits</q> can be shortened to <span class="t">9w^w1Gi</span>.</p>
+
+<h3>Tengwar Punctuation</h3>
+
+<p>Tengwar punctuation is, as far as we know, consistent across all modes, so it&#39;s the same for English as it is for Sindarin.</p>
+
+<table class="tengwar-table">
+  <tr>
+    <td><p><span class="t">1 = 1</span></p><p>comma, short pause</p></td>
+    <td><p><span class="t">1 - 1</span></p><p>colon, longer pause</p></td>
+    <td><p><span class="t">1 == 1</span></p><p>period</p></td>
+    <td><p><span class="t">1 =-= 1</span></p><p>separates sections of a text</p></td>
+  </tr>
+</table>
+
+<p>The rules for tengwar punctuation seem rather fluid, or at least, they don&#39;t correspond exactly to English punctuation rules.</p>
+
+<h3>Tengwar Numbers</h3>
+
+<table class="tengwar-table">
+  <tr>
+    <td><p><span class="t">&#241;</span></p><p><span class="en">1</span></p></td>
+    <td><p><span class="t">&#242;</span></p><p><span class="en">2</span></p></td>
+    <td><p><span class="t">&#243;</span></p><p><span class="en">3</span></p></td>
+  </tr>
+  <tr>
+    <td><p><span class="t">&#244;</span></p><p><span class="en">4</span></p></td>
+    <td><p><span class="t">&#245;</span></p><p><span class="en">5</span></p></td>
+    <td><p><span class="t">&#246;</span></p><p><span class="en">6</span></p></td>
+  </tr>
+  <tr>
+    <td><p><span class="t">&#247;</span></p><p><span class="en">7</span></p></td>
+    <td><p><span class="t">&#248;</span></p><p><span class="en">8</span></p></td>
+    <td><p><span class="t">&#249;</span></p><p><span class="en">9</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="3"><p><span class="t">&#240;</span></p><p><span class="en">0</span></p></td>
+  </tr>
+</table>
+
+<p>Numbers in tengwar are written backwards compared to our system, with the ones digit first: 145 (one hundred and forty-five) is written <span class="t">&#245;&#244;&#241;</span>.</p>
+
+<p>In addition to a ten-based number system, the elves also sometimes used a <em>duodecimal</em> or <em>dozenal</em> system. In a dozenal system, 10 and 11 are represented as single digits&mdash;the elves used <span class="t">&#250;</span> and <span class="t">&#251;</span>. Instead of having a tens digit, hundreds digit, etc. for larger numbers, a dozenal system has digits for dozens, grosses (groups of 144 = 12 * 12), etc. Twelve was written as <span class="t">&#240;&#241;</span>: <q>zero plus one dozen</q>. Thirteen is <span class="t">&#241;&#241;</span>: <q>one plus one dozen</q>. The special symbols for 10 and 11 let us write <span class="t">&#250;&#241;</span> <q>ten plus one dozen</q> for 22, and <span class="t">&#251;&#241;</span> <q>eleven plus one dozen</q> for 23. Twenty-four is then written as <q>two dozen</q> <span class="t">&#240;&#242;</span>.</p>
+
+<p>The dozenal system is the origin of some elvish terms for quantities that might seem strange to us&mdash;for instance the Quenya word <span class="q">yén</span>, meaning a period of 144 years. This makes sense when you consider that 144 (12 * 12) is the first three-digit number in a dozenal system, so the concept is equivalent to our <q>century</q>.</p>
+
+<script type="text/javascript">
+
+</script>
+
+<p>The symbols for <span class="en">10</span> and <span class="en">11</span> are used only in the duodecimal counting system, where 12, not 10, is the first two-digit number. When using duodecimal, <span class="t">&#240;&#241;</span> means 12, <span class="t">&#241;&#241;</span> is 13, <span class="t">&#242;&#241;</span> is 14, and so forth.</p>
+
+<p><span class="figure-title">The <em>Tengwar</em></span></p>
+
+<table class="tengwar-table">
+  <tr>
+    <td></td>
+    <td colspan="5"><b><em>témar</em></b></td>
+  </tr>
+  <tr>
+    <td rowspan="7"><b><em><span class="vertical">tyeller</span>&nbsp;</em></b></td>
+    <td></td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><span class="t">1</span></td>
+    <td><span class="t">q</span></td>
+    <td><span class="t">a</span></td>
+    <td><span class="t">z</span></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><span class="t">2</span></td>
+    <td><span class="t">w</span></td>
+    <td><span class="t">s</span></td>
+    <td><span class="t">x</span></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><span class="t">3</span></td>
+    <td><span class="t">e</span></td>
+    <td><span class="t">d</span></td>
+    <td><span class="t">c</span></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><span class="t">4</span></td>
+    <td><span class="t">r</span></td>
+    <td><span class="t">f</span></td>
+    <td><span class="t">v</span></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><span class="t">5</span></td>
+    <td><span class="t">t</span></td>
+    <td><span class="t">g</span></td>
+    <td><span class="t">b</span></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><span class="t">6</span></td>
+    <td><span class="t">y</span></td>
+    <td><span class="t">h</span></td>
+    <td><span class="t">n</span></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="spacer">&nbsp;</td>
+  </tr>
+  <tr>
+    <td rowspan="3" colspan="2"></td>
+    <td><span class="t">7</span></td>
+    <td><span class="t">u</span></td>
+    <td><span class="t">j</span></td>
+    <td><span class="t">m</span></td>
+  </tr>
+  <tr>
+    <td><span class="t">8</span></td>
+    <td><span class="t">i</span></td>
+    <td><span class="t">k</span></td>
+    <td><span class="t">,</span></td>
+  </tr>
+  <tr>
+    <td><span class="t">9</span></td>
+    <td><span class="t">o</span></td>
+    <td><span class="t">l</span></td>
+    <td><span class="t">.</span></td>
+  </tr>
+</table>
+
+<p>The letters are grouped into <span class="q">témar</span> (Quenya for <q>series</q>) and <span class="q">tyeller</span> (Quenya <q>grades</q>) based on their form. The first twenty-four letters, in <span class="q">tyeller</span> 1-6, consist of a vertical stem with a curved bow on one side or the other. Letters in the same <span class="q">téma</span> have similar bows, while those in the same <span class="q">tyellë</span> have the same stems.</p>
+
+<h3>The Mode of Gondor</h3>
+
+<p>The tengwar mode of Gondor is the most straightforward of the Sindarin modes, so I will cover it first.</p>
+
+<p>Below is the quick-and-dirty guide to writing in this mode, with the characters arranged according to their transcription into our alphabet.</p>
+
+<table class="tengwar-table">
+  <tr>
+    <td><span class="s">a</span></td>
+    <td><span class="s">ai</span></td>
+    <td><span class="s">b</span></td>
+    <td><span class="s">c</span></td>
+    <td><span class="s">ch</span></td>
+    <td><span class="s">d</span></td>
+    <td><span class="s">dh</span></td>
+    <td><span class="s">e</span></td>
+    <td><span class="s">ei</span></td>
+    <td><span class="s">f/ph</span></td>
+    <td><span class="s">g</span></td>
+    <td><span class="s">h</span></td>
+    <td><span class="s">hw</span></td>
+    <td><span class="s">i</span></td>
+    <td><span class="s">l</span></td>
+  </tr>
+  <tr>
+    <td><span class="t">&#93;</span></td>
+    <td><span class="t">&#93;&#214;</span></td>
+    <td><span class="t">w</span></td>
+    <td><span class="t">z</span></td>
+    <td><span class="t">c</span></td>
+    <td><span class="t">2</span></td>
+    <td><span class="t">4</span></td>
+    <td><span class="t">l</span></td>
+    <td><span class="t">l&#213;</span></td>
+    <td><span class="t">e</span></td>
+    <td><span class="t">x</span></td>
+    <td><span class="t">9</span></td>
+    <td><span class="t">o</span></td>
+    <td><span class="t">&#96;B</span></td>
+    <td><span class="t">j</span></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><span class="s">lh</span></td>
+    <td><span class="s">m</span></td>
+    <td><span class="s">n</span></td>
+    <td><span class="s">ng</span></td>
+    <td><span class="s">o</span></td>
+    <td><span class="s">p</span></td>
+    <td><span class="s">r</span></td>
+    <td><span class="s">rh</span></td>
+    <td><span class="s">s</span></td>
+    <td><span class="s">t</span></td>
+    <td><span class="s">u</span></td>
+    <td><span class="s">ui</span></td>
+    <td><span class="s">v</span></td>
+    <td><span class="s">w</span></td>
+    <td><span class="s">y</span></td>
+  </tr>
+  <tr>
+    <td><span class="t">m</span></td>
+    <td><span class="t">t</span></td>
+    <td><span class="t">5</span></td>
+    <td><span class="t">b</span></td>
+    <td><span class="t">h</span></td>
+    <td><span class="t">q</span></td>
+    <td><span class="t">7</span></td>
+    <td><span class="t">u</span></td>
+    <td><span class="t">8</span></td>
+    <td><span class="t">1</span></td>
+    <td><span class="t">.</span></td>
+    <td><span class="t">.&#214;</span></td>
+    <td><span class="t">r</span></td>
+    <td><span class="t">y</span></td>
+    <td><span class="t">I</span></td>
+  </tr>
+</table>
+
+<h2>Thematic Dictionary</h2>
+
+<h3>Stress</h3>
+
+<p>The <q>diphthongs</q> <em>ui</em>, <em>ia</em>, <em>ie</em>, <em>io</em> present an interesting difficulty, because although they are described as diphthongs [where?], Tolkien did not pronounce them that way. C.f. the recording of <q>A Elbereth Gilthoniel</q> and other recordings of names (<em>Anduin</em>, <em>Duilin</em>, in which Tolkien pronounces <em>ui</em> as [uI])and Sam&#39;s invocation to Elbereth: <strong><em>le nallon sí di&#39; nguruthos! / A tíro nin, Fanuilos!</em></strong>, in which the last line would be a syllable too short for the meter if <em>ui</em> were really pronounced [uj]. Possibly the underlying phonemes are /uj/, but this sound is often realized as [ui], maybe only in verse.</p>
+
+<h3>Consonant Mutations</h3>
+
+<p>Lenition is, in general, the way that Sindarin shows a close interconnection between words. E.g. when a verb and a direct object appear together, they form a <em>verb phrase</em>, a self-contained chunk of the larger sentence.</p>
+
+<h3>Verbal Morphology</h3>
+
+<h4>Perfect Mood</h4>
+
+<p><em>Arphent Rían Tuorna, <q>Man agorech?</q></em> (Tolkien struck out <em>A Rían pent na Duor</em>)
+<q>And Rían said to Tuor, 'What have you done?'</q></p>
+
+<ul>
+<li>similar to Quenya perfect</li>
+<li>Taramiluiel notes that the Sindarin in this passage may be Quenya-influenced: <a href="http://www.lotrplaza.com/archives/index.php?Archive=First%20Age&amp;TID=89440">http://www.lotrplaza.com/archives/index.php?Archive=First%20Age&amp;TID=89440</a> <q>Isn’t this intended to be a northern dialect found in Mithrim? Where Fingolfin, a Noldor, made his realm. Thus the Quenya influence in arphent.</q></li>
+</ul>
+
+<h1>The Evolution of Sindarin</h1>
+
+<h3>Sindarin of the Fourth Age, as Spoken in Minas Tirith</h3>
+
+<p>Sindarin was used in Minas Tirith, not as the language of everyday life, but... [how?]. By the end of the Third Age, the language spoken there had already acquired a distinctive accent, and as the presence of Elves dwindled in Middle-earth, it diverged still further from its roots. The grammar of the language was slow to change, since many texts in Sindarin were housed in Minas Tirith and were the subject of study. The way those texts were pronounced, however, was changed significantly from the speech of those who had written them.</p>
+
+<ul>
+<li><em>ch</em> often became [k] or [k_h] word-finally, and [h] between vowels.</li>
+<li><em>ae</em> was pronounced [e:] or [ej], according to the Westron dialect of the speaker. (HKF cites Lotr/E?)</li>
+<li><em>ei</em> could have been pronounced [@j], to distinguish it from <em>ae</em> and <em>ai</em>. HKF notes that Westron <q>had certain reduction vowels</q>, c.f. RotK Appendix E p. 404, <q>The new <span class=</q>s<q>>cirth</span> 55, 56, were in origin a halved form of 46, and were used for vowels like those heard in the English _butter_, which were frequent in Dwarvish and in the Westron</q> so a diphthong in [@-] seems a natural choice here.</li>
+<li><em>ui</em> before a vowel became resyllabified as [u.j] due to the Westron substrate. The formerly heavy syllable ceased to be heavy for purposes of stress. Thus a word like <em>aduial</em> was pronounced [&quot;a.du.jal].</li>
+</ul>
+
+<p>Westron lacked the sounds of Sindarin <em>w</em> and <em>hw</em>; Westron-speakers tended to pronounce these <em>v</em> and <em>f</em>, though in clusters <em>w</em> retained its original sound.</p>
+
+<p>Compounds in which each element was a recognizable word (even if affected by mutation) often kept the stress of the individual elements intact. Whichever stress fell on the penultimate or antepenultimate syllable became the primary stress; other stresses were secondary. Thus <span class="s">edhelharn</span> was <span class="phonemic"><q>EDElharn</span>, while <span class=</q>s<q>>edhellen</span> was still <span class=</q>phonemic<q>>E</q>DEllEn</span> since the suffix <em>-len</em> could not stand as a word on its own.</p>
+
+<h1>Analysis</h1>
+
+<h1>List of Attested Forms Published During Tolkien&#39;s Lifetime</h1>
+
+<p>tîw <q>letters</q> (LotR/E:395)
+thîw <q>letters</q> (nasal mutation)</p>
+
+<h1>TODO:</h1>
+
+<p>replace c.f. with compare
+replace HKF with Fauskanger</p>
+
+<p>Nav menu structure:</p>
+
+<p>I will not attempt to explain <em>why</em> anyone should learn Sindarin or any of Tolkien&#39;s invented languages; in my experience, some will accept no justification for such a pursuit, while others will require none. I trust that if you have read this far, you fall into the second, happier camp.</p>
+
+<p>So rather than talk about <em>why</em> one should learn this language, I will discuss <em>what</em> can actually be learned about it. The answer is, upsettingly, <q>not much, with certainty</q>. Tolkien never published a comprehensive description of the language; all we have are many tantalizing clues to the system he imagined, many published after his death.</p>
+
+<p>Athraven - The Crossroads</p>
+
+<p>This text is divided into four sections: two short and introductory, two long and in-depth. The first two, <em>The Tengwar Writing System</em> and <em>Speaking Sindarin</em>, will give you a taste of the language, and a basic understanding of many of the elvish names, phrases, and inscriptions in <em>The Lord of the Rings</em>. The third section, the <em>Grammar of Sindarin</em>, is a deeper look at the rules that govern the construction of words and phrases. Finally, there is the <em>History of Sindarin</em>, which describes how the languages of the Elves changed through the long histories of Middle-earth and of Aman in the West.</p>
+
+<!--This table of contents tracks your progress by showing a bookmark icon next to the chapter in each section where you last answered a review question. Progress is stored in your browser, so if you visit this page from a different computer, or clear your browser's local storage, the bookmarks will not appear.-->
+
+<ul>
+<li>The Tengwar Writing System
+
+<ul>
+<li>Writing English with Tengwar (transcribe)</li>
+<li>Tengwar Punctuation (transcribe)</li>
+<li>Tengwar Numbers (transcribe, base-12)</li>
+<li>The Sindarin Mode of Beleriand (transcribe)</li>
+<li>The Sindarin Mode of Gondor (transcribe)</li>
+<li>The Alphabetic Sindarin Mode (transcribe)</li>
+<li>Tips for Tengwar Calligraphy</li>
+<li>Extra Credit: Identify the Language (pick tengwar mode)</li>
+</ul></li>
+<li>Speaking Sindarin
+
+<ul>
+<li>Pronunciation (transcribe)</li>
+<li>Phrasebook (pick translation)</li>
+<li>Commands (pick translation, lenition)</li>
+<li><q>Mine</q> and <q>Yours</q></li>
+<li>Wordlist (pick translation)</li>
+</ul></li>
+<li><p>The Grammar of Sindarin</p>
+
+<ul>
+<li>Edhil a P(h)eriannath: Plural Nouns</li>
+<li>Narn i chîn Húrin: The Definite Article; The Soft Mutation</li>
+<li>Ennyn Durin Aran Moria: Possession</li>
+<li>Silivren penna míriel: Present-tense Verbs</li>
+<li>Irregular Plurals</li>
+</ul></li>
+<li><p>The History of Sindarin</p>
+
+<ul>
+<li>Sound changes from Common Eldarin to Old Sindarin</li>
+<li>The Grammar of Old Sindarin</li>
+<li>Innovations in Old Sindarin</li>
+<li>Sound changes from Old Sindarin to Middle Sindarin</li>
+<li>The Grammar of Middle Sindarin</li>
+<li>Sound changes from Middle Sindarin to Classical Sindarin</li>
+</ul></li>
+</ul>
+        </div>
+    </div>
+</body>
+
+</html>

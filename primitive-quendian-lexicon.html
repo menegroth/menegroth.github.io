@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<p>abaro ‣ abar <q>recusant, one who refuses to act as advised or commanded</q> (WJ:371, 361, 380, 411)
+!abarī ‣ !abarī (pl. of abaro) (WJ:371, 361, 380, 411)
+ábārō ‣ !ábārō <q>refuser, one who does not go forth</q> (Ety:AB)
+adnō ‣ !andō <q>entrance, gate</q> (Ety:AD)</p>
+
+<p>ambasrôna ‣ ambar̭r̭ûna <q>east</q>
+anjâra ‣ aniôra <q>elder</q>
+anpárakā ‣ <q>very dry</q>
+appárakā ‣ appʰárkʰa <q>very dry</q> (this is old noldorin)
+arkʷena ‣ arpʰena <q>noble</q>
+arâtā ‣ arôta <q>noble</q>
+asmalindē ‣ am̭m̭alinde <q>yellowhammer</q>
+atkárnā ‣ akkʰárna <q>vengeance</q>
+atéles ‣ atéle <q>behind</q>
+atʰará ‣ atʰrá <q>across</q>
+atʰarátā ‣ atʰráta <q>traverse</q>
+awatʰā ‣ awtʰa <q>apparition</q>
+aŋgwaslôki ‣ aŋgwaḽḽûkė <q>dragon</q>
+barákālā ‣ brákala <q>sudden</q>
+barâdnā ‣ bránda <q>lofty</q>
+berékjā ‣ brékia <q>wild</q>
+beuja ‣ buia <q>serve</q>
+boróna ‣ bróna <q>survive</q>
+borônā ‣ brûna <q>established</q>
+bárasā
+bâ ‣ bô <q>don't!</q>
+bâd
+bâta- ‣ bôta <q>prohibit</q>
+bésnō ‣ béṋṋo <q>husband</q>
+dohmē ‣ <q>gloom</q>
+dubnā ‣ dumna <q>gloomy</q>
+dâr ‣ <q>pause</q>
+dên ‣ dîn <q>gap</q>
+dóhrā ‣ dûra <q>dark</q>
+dômi ‣ dûmė <q>night</q>
+dʲelikʷā ‣ delipa <q>horrible</q>
+endandórē ‣ endóre <q>middle earth</q>
+erekʷā ‣ erepa <q>lonely</q>
+erjandorē ‣ eriandore <q>wilderness</q>
+erjâlā ‣ eriôla <q>alone</q>
+erkambjânā ‣ erkʰambiôna <q>one-handed</q>
+etkati- ‣ ekkʰati- <q>make</q>
+etkelē ‣ ektʰele <q>source</q>
+etkoirē ‣ ekkʰuire <q>spring</q>
+etkoirē ‣ ekkʰuire <q>spring</q>
+etkoro ‣ ekkʰoro <q>outer circle</q>
+etkuiwē ‣ ekkʰuiwe <q>awakening</q>
+etlednā ‣ etlenna <q>exiled</q>
+etpeles ‣ eppʰele <q>outer fence</q>
+etsiri ‣ ettʰirė <q>river mouth</q>
+et·kírjā ‣ ek·kʰíria <q>out of a ship</q>
+gajār ‣ gaiar <q>ocean</q>
+galátā ‣ gláta <q>forest</q>
+geŋʷgʷā ‣ gemba <q>sickly</q>
+glamrâlā ‣ glamrôlā <q>babbling</q>
+glimd- ‣ glind- <q>glance</q>
+glisi ‣ glihė <q>honey</q>
+glíbdā ‣ glíwda <q>soap</q>
+glímta ‣ glíntʰa <q>glance at</q>
+gâsā ‣ gôha <q>void</q>
+gʲellō ‣ gello <q>joy</q>
+gʲernā ‣ gerna <q>worn</q>
+heklanā ‣ eklana <q>forsaken</q>
+hektā ‣ ektʰa <q>stab</q>
+heljatmē ‣ elianwe <q>rainbow</q>
+helle ‣ elle <q>sky</q>
+helwā ‣ elwa <q>pale blue</q>
+hánwā ‣ ánwa <q>male</q>
+jágwē ‣ <q>ravine</q>
+játmā ‣ <q>bridge</q>
+kaem ‣ kai <q>earth</q>
+kailikʷā ‣ kailipa <q>bedridden</q>
+kalârē ‣ klôre <q>splendor</q>
+kaolō ‣ kaulo <q>affliction</q>
+karákʷan ‣ krápan <q>crow</q>
+karáni ‣ <q>red</q>
+katwârā ‣ katwôra <q>shapely</q>
+kolnā ‣ kolla <q>cloak</q>
+kuhnā ‣ <q>bent</q>
+kárani ‣ kárnė <q>red</q>
+kátwā ‣ <q>shaped</q>
+kâs ‣ kô <q>top</q>
+kémtano ‣ <q>potter</q>
+kírikta ‣ <q>reap</q>
+kírjā ‣ kíria <q>ship</q>
+kótʰtā ‣ <q>quarrel</q>
+kúndū ‣ <q>prince</q>
+kʰarásse ‣ &quot;<q>
+kʲelekā ‣</q>swift<q>
+kʲelepnā ‣ kelemna</q>silver<q>
+kʰelkakaráksē ‣</q>grinding ice<q>
+kʰágdā
+kʰámwā
+kʰótʰsē
+laikwā
+lábmē
+lássē
+líŋwi
+lókʰsē
+lótʰsē
+lúktjēnē
+mbauja ‣ mbauia</q>it is necessary<q>
+mbundu ‣ mbundȯ</q>snout<q>
+mbártā
+morókō
+másagā
+mísidē
+mísikā
+ṃbártā
+ṃbátʰa
+ndeurō ‣ ndiuro</q>successor<q>
+ndisi ‣ ndihė</q>bride<q>
+ndulnā ‣ ndulla</q>dark<q>
+ndêr ‣ ndîr</q>man<q>
+ndûnē
+négdē
+nétstaki
+néŋwi
+nídwō
+níŋkwē
+nôssē
+ṇdûjā
+nʲárna
+ostotirióndō
+palápi- ‣ plápi</q>flap<q>
+péresta
+pʰeuja ‣ pʰuia</q>abhor<q>
+pʰeuja ‣ pʰuia</q>abhor<q>
+pʰini ‣ pʰinė</q>hair<q>
+pʰiríni ‣ pʰirínė</q>mortal<q>
+pʰoroti ‣ pʰorotė</q>north<q>
+rúdnā ‣ runda</q>club<q>ety:rud
+rámja
+ráŋku
+ríkʰta
+sjádsḽa
+sjádtā
+smálu
+spanâjā ‣ spʰanúia</q>cloudy<q>
+spânā ‣ spʰôna</q>cloud<q>
+spânā ‣ spʰôna</q>cloud<q>
+síwlē
+tuilelíndō
+tárasta
+tíwkā
+tʲálja
+tʰáurēnā
+wédtā
+wégte
+wíŋta
+ádnō
+ákalarē
+áklarikʷā
+álakwā
+ámbalotsē
+ás
+átakwē
+átakʷē
+átalantā
+áŋkā
+ésedē
+ókoto
+úsukwē
+ŋalan- ‣ nglan-</q>white<q>
+ŋalatā ‣ ŋgalata</q>light<q>
+ŋalâ ‣ ŋglô</q>radiance<q>
+ŋgólodō
+ŋgólē
+ŋgʲô
+ŋile ‣ ŋgile</q>star<q>
+ŋálata
+ŋálâ
+ŋâlā ‣ ŋgôla</q>light<q>
+ŋʷgʷálkā
+ŋʷgʷâl ‣ mbôl</q>torment&quot;</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<p>How does CE <code>arātā</code> lead to both S <code>arth</code> and <code>arod</code>? Stress difference? Salo 240.</p>
+
+<p>How does BERÉK lose the first vowel before the CE stage?</p>
+
+<p>Why was the first vowel of CE karáni not lost (Caran)? Salo explicitly states that the second vowel was stressed.</p>
+
+<p>There may be a misplaced sound change (ja -&gt; ji) on Salo 43. The examples given look like middle Sindarin and the OS examples in the lexicon don&#39;t show this change. C.f. the entry for Ivon on 353.</p>
+
+<p>etkelē → ekkʰele ‣ ektʰele <q>source</q>. ekkʰele is expected here, but OS has ektʰele instead. Could be that the first syllable is stressed, which causes the tk -&gt; kt metathesis?</p>
+
+<p>spanâjā → spʰanôia ‣ spʰanúia <q>cloudy</q>.</p>
+
+<p>etlednā → etlenda ‣ etlenna <q>exiled</q></p>
+
+<p>Salo disagrees with himself on whether initial ŋl became ŋgl or gl. On p. 38 he states that initial ŋl became gl and gives <em>glaw</em> as an example. But <em>ŋglô</em> is given as the OS reflex of <em>glaw</em> on p. 257. No source is cited in the glossary and the OS form is marked as hypothetical, so it seems plausible that it&#39;s the glossary that&#39;s wrong. c.f. entry in Etymologies for KAL, which lists <code>g&#39;lā</code> as the CE form of <em>glaw</em> (possibly implying earlier <code>galā</code> from the root GAL?) Not sure where Salo gets <code>ŋalâ</code> from, since <code>galâ</code> also generates <em>glô</em> in OS and Hisweloke only lists the Etymologies as the source for <em>glaw</em>.</p>
+
+<blockquote>
+<p>The CE form of <em>gling</em> is given as <em>liŋgi</em> on Salo 257. This seems wrong, since the sound changes give no indication of how the initial <em>g</em> could arise from such a form, and the listed root is <q>G-LIŋG</q>. However, this seeming inconsistency is repeated on page 258, in the entries for <em>glóren</em> and <em>glóriel</em>. RESOLVED: Reference to the Etymologies clarifies this somewhat. The G- was apparently gained subsequent to the split of Noldorin from Q(u)enya. I&#39;m not sure how we know it should be kept in the conversion to Sindarin.</p>
+
+<p>CE awatʰā should change to OS autʰa, according to Salo 240, but does not. RESOLVED - conjectured environment for Salo 4.3 was too strict. Expanded to change <code>awa</code> to <code>aw</code>. The reconstructed OS form is <code>awtʰa</code>, not <code>autʰa</code>, but other reflexes of CS <code>au</code> show <code>aw</code> at this stage. c.f. OS <code>kʰawda</code> &lt; CE <code>kʰagdā</code> (haudh), Salo 4.25.</p>
+
+<p>How did the vowel change in CE kaem -&gt; OS kai? c.f. kaolō -&gt; kaulo (caul), ndaer -&gt; ndair (daer) RESOLVED: there seemed to be a missing sound change that would cause this. <code>e</code> and <code>o</code> are already raised when long, so it&#39;s not that much of a stretch to say they might raise in long syllables in general.</p>
+
+<p>Why was the second vowel of kárani lost (Carn)? Similarly, why was the second vowel of koronē lost? RESOLVED: expanded the environment for the pre-CE change that causes vowel deletion.</p>
+</blockquote>
+        </div>
+    </div>
+</body>
+
+</html>

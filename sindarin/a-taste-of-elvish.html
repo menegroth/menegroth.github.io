@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(../annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(../annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(../annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(../annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(../annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(../annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>A Taste of Elvish</h1>
+
+<p>When the first Elves awoke on the shores of Cuiviénen, they began to make a language. The first word they spoke, according to later Elven lore, was <em>ele!</em>—an exclamation of wonder and delight that they uttered upon first seeing the stars. They called themselves <em>kwendī</em>, meaning <q>those who speak</q>, since they knew of no other beings that could use language.</p>
+
+<p>When the Vala Arômez (often called <em>Oromë</em>) met the Elves and told them of Aman, the land of the Valar beyond the sea, some Elves wished to go there and some were afraid to make the journey. Those who refused the journey were called the <em>abarī</em>. They were lost in the wilds of Middle-earth and play small part in its later history. Those who heeded Oromë and marched across Middle-earth to the shores of the Great Sea were called <em>edeloī</em>—in later Quenya, <em>eldar</em>.</p>
+
+<p>During the journey, the Elves were sundered yet again. The Vanyar and Noldor clans, who arrived at the shore first, hastened across the Sea to Aman. Those who tarried behind, the Teleri, waited at the shore, torn between their love for Middle-earth and their desire to cross the sea. Before they could begin the sea voyage, their leader, Elwë, crossed the path of Melian, a Maia. He fell at once in love with her and for many years they remained under an enchantment in the forest of Nan Elmoth. The other Teleri could not find him, and many refused to cross the Sea without their lord. And so they remained in Middle-earth.</p>
+
+<p>Two hundred years later, Elwë reappeared, and with Melian as his queen reassumed rulership of the Teleri. As the long, sunless years passed and the Teleri and Noldor remained apart, their speech gradually changed. The language of the Noldor became the speech known in the Third Age as Quenya, while the Teleri came to speak a language that had as yet no name, for since their separation from the Noldor they heard no speech except their own and needed no word to distinguish it.</p>
+
+<p>When the Noldorin exiles returned to Middle-earth, and Elwë learned of the Kinslaying they had committed at Alqualondë, he banned their language Quenya from his realm. Thereafter, the Elves of Middle-earth spoke the language of Elwë, but since that language had no name of its own it was given a Quenya one: <em>Sindarin</em>.</p>
+
+<p>Sindarin was from its beginnings the language of a people that loved and revered Middle-earth. It is perhaps because of this that Sindarin, more so than Quenya, echoes in its words the changefulness of the mortal world.</p>
+
+<blockquote>
+<p><em>A Elbereth Gilthoniel,</em>
+<em>silivren penna míriel</em>
+<em>o menel aglar elenath!</em>
+<em>Na-chaered palan-díriel</em>
+<em>o galadhremmin ennorath,</em>
+<em>Fanuilos, le linnathon</em>
+<em>nef aear, sí nef aearon!</em>
+<cite>The Fellowship of the Ring, p. 250</cite></p>
+</blockquote>
+
+<p>(In free translation, this reads: <q>O Elbereth Starkindler, the glory of the star-host slants down from heaven, shining white, sparkling like jewels! Having gazed afar from the tree-woven lands of Middle-earth, to you, Everwhite, I will sing, here on this side of the great ocean!</q> Elbereth is a Sindarin name of the Valië whom the Noldor called Varda.)</p>
+
+<p>What do I mean when I say that Sindarin <q>echoes the changefulness of the mortal world</q>? Certainly Sindarin doesn&#39;t sound like the original Elvish language spoken by the <em>kwendī</em> at Cuiviénen, and so in that sense it has changed. But that is not so interesting; all languages change over time, and Quenya too underwent many changes while the Noldor dwelt in Aman. But whereas Quenya expresses shades of meaning by adding suffixes to words, leaving the base word unchanged, Sindarin often makes changes within the base word itself, such that two forms of the same Sindarin word may at first glance appear totally different. For example, the word for a letter in Quenya is <em>tengwa</em>. To form the plural, we just add <em>-r</em>, creating <em>tengwar</em> <q>letters</q>. In Sindarin, by contrast, <q>the letter</q> would be <em>i dêw</em>, but the plural version <q>the letters</q> would be... <em>i thîw</em>! So if you saw these phrases in a Sindarin text and wanted to look up the word, where in the dictionary should you look? Under <em>dêw</em> or <em>thîw</em>? It turns out that this is a trick question, because <em>both</em> of these forms are <q>mutated</q> versions of the basic word <em>têw</em>—which is what an Elf would likely say if you asked <q>how do you say 'letter' in Sindarin?</q></p>
+
+<p>If this makes Sindarin sound like a terrifyingly difficult language... I promise you it&#39;s not. The mutations follow regular patterns and are easy to look up if you forget them. If on the other hand you think the idea of mutations is terrifically clever and awesome... then I agree with you! The idea of internal mutations in words is not original to Tolkien, though—he got it from the Celtic languages (which include Welsh), and it&#39;s not even unique to the Celtic family. Japanese has a very similar phenomenon where the second element of compounds often shows a mutation: for example, when <em>kami</em> <q>paper</q> becomes <em>-gami</em> in <em>origami</em>.</p>
+
+<div class="nav-links">
+<p><a href="./learning.html">Onward to the section on learning Tolkien's languages!</a></p>
+<p><a href="../sindarin.html">Back to the Table of Contents</a></p>
+</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(../annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(../annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(../annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(../annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(../annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(../annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>The Sounds of Elvish</h1>
+
+<p>Before you start to put Sindarin words together into sentences, it&#39;s a good idea to learn how the words themselves are supposed to be pronounced. One of Tolkien&#39;s goals in designing his languages was to create words that he personally found beautiful, and he wrote a great deal about his love for the euphony of certain languages (notably Welsh and Finnish). With this in mind, it should be clear that correct pronunciation of Tolkien&#39;s languages is essential to appreciate them fully.</p>
+
+<p>Following is a list of resources for studying Sindarin pronunciation.</p>
+
+<h2>Primary Sources</h2>
+
+<ul>
+<li>Appendix E of <em>The Lord of the Rings</em> – <span class="toc-detail">covers many aspects of the languages, including pronunciation.</span></li>
+<li><a href="http://www.jrrvf.com/%7Eglaemscrafu/english/tolkienhimself.html">Recordings of Tolkien (on the Glǽmscrafu site)</a> – <span class="toc-detail">In 1952, Tolkien read excerpts from the then-unpublished <em>Lord of the Rings</em> into a tape recorder, giving us a unique view into how he pronounced his own words. Highly recommended listening!</span></li>
+</ul>
+
+<h2>Secondary Sources</h2>
+
+<h3>On This Site</h3>
+
+<ul>
+<li><a href="./pronunciation-quick.html">The Quick Guide</a> – <span class="toc-detail">If you&#39;re just here to learn tengwar writing and don&#39;t want an exhaustive pronunciation tutorial, this one is for you.</span></li>
+<li><a href="./pronunciation-complete.html">The Complete Guide to Sindarin Pronunciation</a> – <span class="toc-detail">my attempt to provide the information from Appendix E in an easier-to-digest format.</span></li>
+<li><a href="../todo.html">Linguist&#39;s Guide to Sindarin Pronunciation</a> – <span class="toc-detail">If you happen to know IPA, this is the best resource I can provide.</span></li>
+</ul>
+
+<h3>External Links</h3>
+
+<ul>
+<li>Sindarin teacher <strong>dreamingfifi</strong> has a <a href="http://your-sindarin-textbook.realelvish.net/chapter1/lesson3/">very thorough set of lessons</a> on Sindarin pronunciation. She uses IPA alongside less technical methods to teach the sounds.</li>
+<li>Quenya revivalist Helge Fauskanger has an <a href="http://folk.uib.no/hnohf/sindarin.htm#Heading6">article on Sindarin</a> that briefly covers pronunciation. (Note that the article, while superbly researched at the time it was written, has not been updated recently. Some of its material may be out of date. The pronunciation section is still as relevant as ever, though.)</li>
+</ul>
+
+<div class="nav-links">
+<p><a href="./writing.html">Onward to the section on Writing!</a></p>
+<p><a href="../sindarin.html">Back to the Table of Contents</a></p>
+</div>
+        </div>
+    </div>
+</body>
+
+</html>

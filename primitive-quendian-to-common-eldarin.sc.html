@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>Sound Changes in Eldarin</h1>
+
+<p>This file describes the changes that affected the Primitive Quendian language, producing Common Eldarin. Common Eldarin is the latest common ancestor of all Elvish languages except the Avarin branch.</p>
+
+<p>This file is in .sc format, which means the markdown source can be copy-pasted directly into <a href="http://zompist.com/sca2">Zompist&#39;s Sound Change Applier</a>. A sample Primitive Quendian lexicon to use with the SCA can be found in the same Github repo as this document.</p>
+
+<h2>Sound Categories</h2>
+
+<p>Note on orthography: I use macrons (e.g. <code>ā</code>) to represent long vowels, and acute accents (<code>á</code>) to represent stress. If a vowel is both stressed and long, the combination is represented by a circumflex (<code>â</code>). Most representations of Eldarin languages don&#39;t mark stress like this, but I&#39;ve done so here to get the sound change rules to work.</p>
+
+<p><code>code
+C=ptkφθχbdgnmñwlrjhsz
+V=aeiouáéíóúāēīōūâêîôûėȯ
+&lt;unstressed short vowel&gt;=aeiou
+&lt;stressed vowel&gt;=áéíóúâêîôû
+&lt;long vowel&gt;=āēīōūâêîôû
+&lt;short vowel&gt;=aeiouáéíóú
+</code></p>
+
+<h2>Character Definitions (only relevant for SCA users)</h2>
+
+<p><code>code
+&lt;unstressed short vowel&gt;|A
+&lt;stressed vowel&gt;|B
+&lt;long vowel&gt;|C
+&lt;short vowel&gt;|D
+</code></p>
+
+<h2>The Phonology of Primitive Quendian</h2>
+
+<p>Tolkien, in <em>Vinyar Tengwar</em> issue 46, organizes the consonants of Primitive Quendian into a grid with three <em>series</em>, echoing the organization of the later (in the internal history) tengwar.</p>
+
+<p>type         | P-series | T-series | K-series
+------------ | -------- | -------- | --------
+stop         | p        | t        | k
+aspirate     | φ        | θ        | χ
+voiced stop  | b        | d        | g
+nasal stop   | mb       | nd       | ñg
+nasal sonant | m        | n        | ñ
+oral sonant  | w        | l r      | j h</p>
+
+<p>The consonant <code>s</code>, with voiced allophone <code>z</code>, existed in Primitive Quendian but did not fit into any of the series (VT46).</p>
+
+<p><code>j</code> was a consonantal y-sound. <code>h</code> may have been a voiced velar spirant. In the Etymologies, Tolkien used <code>ʒ</code> (ezh) for this sound where in War of the Jewels he used <code>h</code>. Since Primitive Quendian was a reconstructed language even inside the mythos, the exact nature of this sound cannot be determined with certainty.</p>
+
+<h2>Changes Between Primitive Quendian and Common Eldarin</h2>
+
+<p><code>s</code> voiced to <code>z</code> before a voiced stop.</p>
+
+<p><code>code
+s/z/_&lt;voiced stop&gt;
+</code></p>
+
+<p><code>ñw</code> changed to <code>ñgw</code>.</p>
+
+<p><code>code
+ñw/ñgw/_
+</code></p>
+
+<p>Unstressed short vowels often disappeared following a stressed syllable.</p>
+
+<p>Salo describes this change at (4.3); however, he includes some examples that seem to be contradicted by the Etymologies, while leaving out many relevant ones: e.g. he cites a change <code>ókotō -&gt; óktō</code>, when the Etymologies list OKTĀ as the root yielding Noldorin <em>auth</em>.</p>
+
+<p>Here I attempt to list all the examples from the Etymologies to which this change might apply.</p>
+
+<ul>
+<li>másagā -&gt; másgā (Salo 4.3, Ety:MASAG)</li>
+<li>úsukwē -&gt; úskwē (Salo 4.3, Ety:USUK; Tolkien lists the <q>reconstructed</q> CE form as us(u)k-wē)</li>
+<li>álak-wā -&gt; álkwā <q>swan</q> (Ety:ÁLAK)</li>
+<li>!ásatō -&gt; !ástō <q>dust</q> (Ety:ÁSAT) (-ō ending assumed on the basis of Q. <em>asto</em>)</li>
+<li>!gayasā -&gt; !gaisā <q>dread</q> (Ety:GÁYAS)</li>
+<li>!gayastā -&gt; !gaistā <q>to fear</q> (Ety:GÁYAS)</li>
+<li>!gayasrā -&gt; gaisrā <q>dreadful</q> (Ety:GÁYAS)</li>
+<li>!golobā -&gt; golbā <q>branch</q> (Ety:GÓLOB)</li>
+<li>!layakwā -&gt; laik-wā <q>green</q> (Ety:LÁYAK)</li>
+<li>!nayakē -&gt; !naikē <q>pain</q> (Ety:NÁYAK)</li>
+<li>ñganad- -&gt; ñgand- <q>play a harp</q> (Ety:ÑGÁNAD)</li>
+<li>!oroku -&gt; órku <q>orc</q> (Ety:ÓROK)</li>
+<li>!parakā -&gt; !parkā <q>dry</q> (Ety:PÁRAK)</li>
+<li>!penedē -&gt; !pendē <q>slope</q> (Ety:PÉNED)</li>
+<li>!phelegā -&gt; !phelgā <q>cave</q> (Ety:PHÉLEG)</li>
+<li>rayak- -&gt; raik- <q>crooked</q> (Ety:RÁYAK)</li>
+<li>salap- -&gt; salp- <q>lick up</q> (Ety:SÁLAP)</li>
+<li>spanag- -&gt; spang- <q>beard</q> (Ety:SPÁNAG)</li>
+<li>stalag- -&gt; stalg- <q>stalwart</q> (Ety:STÁLAG)</li>
+<li>tarag- -&gt; targ- <q>stiff</q> (Ety:TÁRAG)</li>
+<li>!telekō -&gt; telkō <q>stem</q> (Ety:TÉLEK) (-ō ending assumed on the basis of Q. <em>telco</em>, cf. RotK/E)</li>
+<li>ulug- -&gt; ulg- <q>monster</q> (Ety:ÚLUG)</li>
+</ul>
+
+<p>And also possibly:</p>
+
+<ul>
+<li>eter- -&gt; etr- <q>open</q> (Ety:ETER) if nothing else explains the loss of the vowel in <q>edro</q>. If the vowel was lost at this stage, the cluster -tr- must have been changed in Quenya (if the word indeed survived in that language), since Q. does not allow the cluster -tr-. It seems no Quenya cognate exists, however.</li>
+<li>ánad- -&gt; ánd- <q>long</q> (Ety:ÁNAD), but the root ANDA- is also listed</li>
+<li>ának- -&gt; ánk- <q>bite</q> (Ety:ÁNAK)</li>
+<li>kirik- -&gt; kirk- <q>sickle</q> (Ety:KIRIK)</li>
+<li>milik- -&gt; milk- <q>greedy</q> (Ety:MIL-IK)</li>
+<li>mbarat- -&gt; mbart- <q>doom</q> (Ety:MBARAT)</li>
+<li>wened- -&gt; wend- <q>maiden</q> (Ety:WENED)</li>
+</ul>
+
+<p>Examples of words in which this change did <em>not</em> occur include:</p>
+
+<ul>
+<li>dóron- <q>oak</q> (Ety:DÓRON)</li>
+<li>éned- <q>centre</q> (Ety:ÉNED)</li>
+<li>ének- <q>six</q> (Ety:ÉNEK)</li>
+<li>kánat- <q>four</q> (Ety:KÁNAT)</li>
+<li>néter- <q>nine</q> (Ety:NÉTER)</li>
+<li>néled- <q>three</q> (Ety:NÉLED)</li>
+<li>!nélekī <q>teeth</q> (Ety:NÉLEK) (OS form not glossed in Ety, but looks like a plural)</li>
+<li>phéren- <q>beech</q> (Ety:PHÉREN)</li>
+<li>tawar- <q>wood</q> (Ety:TÁWAR)</li>
+</ul>
+
+<p>This sound change rule will delete the vowel from the above words. Care must therefore be taken when using its output, as it contradicts data from the Etymologies.</p>
+
+<p><code>code
+&lt;unstressed short vowel&gt;//&lt;stressed vowel&gt;[ys]_C
+&lt;unstressed short vowel&gt;//&lt;stressed vowel&gt;[lrn]_[ptkφθχbdgn]
+</code></p>
+
+<p>Long vowels shortened in closed syllables.</p>
+
+<p><code>code
+&lt;long vowel&gt;/&lt;short vowel&gt;/_C[ptkφθχbdgnmñlrh]
+</code></p>
+
+<p>Voiced stops followed by nasals at the same place of articulation underwent metathesis.</p>
+
+<p><code>code
+dn/nd/_
+bm/mb/_
+gñ/ñg/_
+</code>
+<a href="http://www.science-and-fiction.org/elvish/rogue.html">Thorsten  Renk</a> posits a change <code>ds -&gt; ts</code> at this stage, probably based on the development <code>sjadsē -&gt; sjatsē</code> (Ety:SYAD). Salo places this change after the Noldor/Lindar split. Renk also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage. The loss of final -o, at least, is supported by <code>abaro -&gt; abar</code> (WJ). It is possible that the lowering of final short -i in CE explains Q. ringe, ON. ringe &lt; RINGI- (Ety:RINGI).</p>
+
+<p>I am not sure which words are supposed to have lost -h-, since this would produce an unusual vowel hiatus; maybe <code>awāwiiē</code>?</p>
+
+<p><code>code
+ds/ts/_
+</code></p>
+
+<p><code>code
+h//V_V
+</code></p>
+
+<p><code>code
+[aeo]//VC_#
+i/e/_#
+</code></p>
+
+<p>Initial <code>nd</code>, <code>ŋg</code>, <code>mb</code> syllabified in certain words.</p>
+
+<p><code>code
+mbártā/əmbártā/#_#
+ndûnē/əndûnē/#_#
+ñgólē/əñgólē/#_#
+ñgjô/əñgjô/#_#
+</code></p>
+        </div>
+    </div>
+</body>
+
+</html>

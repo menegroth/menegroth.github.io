@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>Sound changes in Sindarin</h1>
+
+<p>This file is in .sc format, which means the markdown source can be copy-pasted directly into <a href="http://zompist.com/sca2">Zompist&#39;s Sound Change Applier</a>. A sample Common Eldarin lexicon to use with the SCA can be found in the same Github repo as this document.</p>
+
+<h2>Sound Categories</h2>
+
+<p>Note on orthography: I use macrons (e.g. <code>ā</code>) to represent long vowels, and acute accents (<code>á</code>) to represent stress. If a vowel is both stressed and long, the combination is represented by a circumflex (<code>â</code>). Most representations of Eldarin languages don&#39;t mark stress like this, but I&#39;ve done so here to get the sound change rules to work.</p>
+
+<p><code>code
+&lt;velar&gt;=kkʰgŋxʒ
+&lt;nasal&gt;=nmŋ
+&lt;coronal&gt;=tdtʰlrszþðn
+&lt;unvoiced stop&gt;=ptk
+&lt;aspirated stop&gt;=pʰtʰkʰ
+&lt;voiced stop&gt;=bdg
+&lt;labial stop&gt;=pbpʰ
+&lt;coronal stop&gt;=tdtʰ
+&lt;dorsal stop&gt;=kgkʰ
+&lt;sonorant&gt;=lrnmwj
+&lt;voiceless sonorant&gt;=ḽr̭ṋm̭ƕç
+&lt;short vowel&gt;=aeiouáéíóúėȯ
+&lt;unstressed vowel&gt;=aeiouāēīōūėȯ
+&lt;stressed vowel&gt;=áéíóúâêîôû
+&lt;unstressed short vowel&gt;=aeiouėȯ
+&lt;stressed short vowel&gt;=áéíóú
+&lt;long vowel&gt;=āēīōūâêîôû
+&lt;unstressed long vowel&gt;=āēīōū
+&lt;stressed long vowel&gt;=âêîôû
+&lt;front vowel&gt;=eiéíēīêî
+&lt;back vowel&gt;=aouáóúāōūâôû
+V=aeiouáéíóúāēīōūâêîôûėȯ
+C=ppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
+&lt;nonstrident&gt;=ppʰttʰkkʰdbgfþxzvðʒnmŋlrhwj
+&lt;nonzero&gt;=aeiouáéíóúāēīōūâêîôûėȯppʰttʰkkʰdbgfþxszvðʒnmŋlrhwj
+</code></p>
+
+<h2>Symbol Definitions (only relevant for SCA users)</h2>
+
+<p><code>code
+&lt;velar&gt;|G
+&lt;coronal&gt;|Þ
+&lt;unvoiced stop&gt;|T
+&lt;aspirated stop&gt;|Ʈ
+&lt;sonorant&gt;|M
+&lt;voiceless sonorant&gt;|Ɯ
+&lt;short vowel&gt;|H
+&lt;unstressed short vowel&gt;|Ħ
+&lt;stressed short vowel&gt;|Ĥ
+&lt;long vowel&gt;|L
+&lt;unstressed long vowel&gt;|Ł
+&lt;stressed long vowel&gt;|Ĺ
+&lt;unstressed vowel&gt;|À
+&lt;stressed vowel&gt;|Á
+&lt;front vowel&gt;|E
+&lt;back vowel&gt;|O
+&lt;voiced stop&gt;|B
+&lt;labial stop&gt;|P
+&lt;coronal stop&gt;|D
+&lt;dorsal stop&gt;|K
+&lt;nasal&gt;|N
+&lt;nonstrident&gt;|Ś
+&lt;nonzero&gt;|@
+</code></p>
+
+<h2>Character Definitions (only relevant for SCA users)</h2>
+
+<p>```code
+ḽ|ł
+r̭|ř
+ṋ|ň
+m̭|ɱ</p>
+
+<p>ŋ̣|ŵ</p>
+
+<p>tʰ|1
+kʰ|2
+pʰ|3
+```</p>
+
+<h2>Changes Between Primitive Quendian and Common Eldarin</h2>
+
+<p>Following are the sound changes that occurred during the journey westward from Cuiviénen to the shores of Beleriand. Comparisons between Sindarin and Quenya are useful for divining the changes at this stage, because Common Eldarin is the ancestor of both languages.</p>
+
+<p>Velars labialized before <code>w</code>, and <code>ŋʷ</code> became <code>ŋʷgʷ</code>
+<code>code
+w/ʷ/&lt;velar&gt;_
+ŋʷ/ŋʷgʷ/_V
+</code></p>
+
+<p>The second vowel in a word sometimes (when?) disappeared when unstressed. NOTE: this is based on Salo 4.3, but the environments are conjectural.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>ókotō -&gt; óktō (Salo 4.3)</li>
+<li>ésedē -&gt; esdē (Salo 4.3)</li>
+<li>mísidē -&gt; mísdē (Salo 4.3)</li>
+<li>mísikā -&gt; mískā (Salo 4.3)</li>
+<li>másagā -&gt; másgā (Salo 4.3)</li>
+<li>úsukwē -&gt; úskwē (Salo 4.3)</li>
+<li>ákalarē -&gt; áklarē (Salo 4.3)</li>
+<li>átalantā -&gt; átlantā (Salo 4.3)</li>
+<li>álak-wā -&gt; álkwā <q>swan</q> (Ety:ÁLAK)</li>
+<li>ásat- -&gt; ást- <q>dust</q> (Ety:ÁSAT)</li>
+</ul>
+
+<p>And also possibly:</p>
+
+<ul>
+<li>eter- -&gt; etr- <q>open</q> (Ety:ETER) if nothing else explains the loss of the vowel in <q>edro</q>. If the vowel was lost at this stage, the cluster -tr- must have been changed in Quenya (if the word indeed survived in that language), since Q. does not allow the cluster -tr-. It seems no Quenya cognate exists, however.</li>
+<li>ánad- -&gt; ánd- <q>long</q> (Ety:ÁNAD), but the root ANDA- is also listed</li>
+<li>ának- -&gt; ánk- <q>bite</q> (Ety:ÁNAK)</li>
+</ul>
+
+<p>Examples of words in which this change did <em>not</em> occur include:</p>
+
+<ul>
+<li>dóron- <q>oak</q> (Ety:DÓRON)</li>
+<li>éned- <q>centre</q> (Ety:ÉNED)</li>
+<li>ének- <q>six</q> (Ety:ÉNEK)</li>
+</ul>
+
+<p><code>code
+&lt;unstressed short vowel&gt;//#(C)Vk_t
+&lt;unstressed short vowel&gt;//#(C)Vs_C
+&lt;unstressed short vowel&gt;//#(C)Vr_n
+&lt;unstressed short vowel&gt;//#(C)[aá]w_C
+&lt;unstressed short vowel&gt;//#(C)V&lt;unvoiced stop&gt;_l
+&lt;unstressed short vowel&gt;//#(C)Vl_&lt;unvoiced stop&gt;
+</code></p>
+
+<p><code>s</code> became <code>z</code> before voiced stops.
+<code>code
+s/z/_&lt;voiced stop&gt;
+</code></p>
+
+<p>Voiced stops followed by nasals at the same place of articulation underwent metathesis.
+<code>code
+dn/nd/_
+bm/mb/_
+gŋ/ŋg/_
+</code></p>
+
+<p>Long vowels shortened in closed syllables.
+<code>code
+&lt;long vowel&gt;/&lt;short vowel&gt;/_CC
+</code></p>
+
+<p><a href="http://www.science-and-fiction.org/elvish/rogue.html">Renk</a> posits a change <code>ds -&gt; ts</code> at this stage that Salo does not mention. He also places the loss of intervocalic -h- and final -a, -e, -o, as well as the lowering of final -i, before the CE stage.</p>
+
+<h2>Early changes in Common Eldarin</h2>
+
+<p>Stops devoiced and deaspirated before <code>t</code> and <code>s</code>.
+<code>code
+[dtʰ]/t/_[ts]
+[gkʰ]/k/_[ts]
+[bpʰ]/p/_[ts]
+</code></p>
+
+<p><code>tt</code> &gt; <code>tst</code> &gt; <code>st</code>
+<code>code
+/s/t_t
+t//_st
+</code></p>
+
+<p><code>t</code> and <code>d</code> assimilated to the POA of a following stop, even across word boundaries.
+<code>code
+&lt;coronal stop&gt;/&lt;labial stop&gt;/_(·)&lt;labial stop&gt;
+&lt;coronal stop&gt;/&lt;dorsal stop&gt;/_(·)&lt;dorsal stop&gt;
+</code></p>
+
+<p><code>m</code> and <code>ŋ</code> assimilated to <code>n</code> before nonnasal coronals.
+<code>code
+[mŋ]/n/_&lt;coronal stop&gt;
+</code></p>
+
+<p>Final high vowels were laxed.
+<code>code
+i/ė/_#
+u/ȯ/_#
+</code></p>
+
+<p>Unstressed nonfinal long vowels were shortened.
+<code>code
+&lt;unstressed long vowel&gt;/&lt;unstressed short vowel&gt;/_&lt;nonzero&gt;
+</code></p>
+
+<p>Final <code>wō</code> &gt; <code>wā</code>.
+<code>code
+ō/ā/w_#
+</code></p>
+
+<p>The suffixes <code>wā</code> and <code>mā</code> became <code>wē</code> and <code>mē</code> following <code>t</code>.
+<code>code
+ā/ē/t[wm]_
+</code></p>
+
+<p><code>āu</code> simplified to <code>ā</code>
+<code>code
+u//ā_
+</code></p>
+
+<p>Initial <code>nd</code>, <code>ŋg</code>, <code>mb</code> syllabified in certain words.</p>
+
+<p><code>code
+mbártā/ṃbártā/#_#
+ndûnē/ṇdûnē/#_#
+ŋgólē/ŋ̣gólē/#_#
+ŋgʲô/ŋ̣gʲô/#_#
+</code></p>
+
+<p>Where two identical consonants flanked a vowel, they collapsed into a single consonant.
+<code>code
+tVt/t/_
+kVk/k/_
+lVl/l/_
+ndVnd/nd/_
+mbVmb/mb/_
+</code></p>
+
+<h2>Early Lindarin Changes</h2>
+
+<p><code>gʷ</code> became <code>gw</code>, and the other labiovelars became labials.
+<code>code
+ŋʷgʷ/mb/_
+ŋʷkʷ/mp/_
+kʷ/p/_
+gʷ/gw/_
+</code></p>
+
+<p><code>b</code> became <code>w</code> before <code>d</code>.
+<code>code
+b/w/_d
+</code></p>
+
+<p><code>g</code> before <code>d</code> became a glide: <code>j</code> after a front vowel, and <code>w</code> after a back vowel.
+<code>code
+g/j/&lt;front vowel&gt;_d
+g/w/&lt;back vowel&gt;_d
+</code></p>
+
+<p><code>z</code> became <code>j</code> before a voiced stop.
+<code>code
+z/j/_&lt;voiced stop&gt;
+</code></p>
+
+<p><code>iw</code> became <code>jū</code> after a coronal.
+<code>code
+iw/jū/&lt;coronal&gt;_
+</code></p>
+
+<p>Initial coronals (except s) were palatalized before <code>j</code>. The palatalization was then lost.
+<code>code
+j/ʲ/#[tdlrþðn]_
+ʲ//#[tdlrþðn]_
+</code></p>
+
+<p><code>m</code> became <code>n</code> before a glide.
+<code>code
+m/n/_[wj]
+</code></p>
+
+<p><code>j</code> became <code>i</code> before a vowel.
+<code>code
+j/i/_V
+</code></p>
+
+<h2>Changes Following the Split between the Sindar and the Amanyar Teleri</h2>
+
+<p>Final diphthongs in <code>-i</code> simplified.
+<code>code
+āi/ī/_#
+ēi/ī/_#
+ōi/ī/_#
+</code></p>
+
+<p>The vowel of the first syllable often disappeared to form a stop-liquid consonant cluster.
+<code>code
+&lt;unstressed vowel&gt;/&lt;stressed vowel&gt;/#C&lt;stressed vowel&gt;r_CC/
+&lt;stressed vowel&gt;/&lt;unstressed vowel&gt;/#C_rVCC/
+&lt;unstressed vowel&gt;//[pbttʰdkgmŋ]_[r]&lt;stressed vowel&gt;
+&lt;unstressed vowel&gt;//[pbkgŋ]_[l]&lt;stressed vowel&gt;
+</code></p>
+
+<p>Initial nasals in these clusters then denasalized.
+<code>code
+m/b/_[lr]
+ŋ/g/_[lr]
+</code></p>
+
+<p>Final long vowels of polysyllabic words shortened.
+<code>code
+&lt;long vowel&gt;/&lt;short vowel&gt;/V…_#
+</code></p>
+
+<p>Initial <code>ŋ</code> was fortified to <code>ŋg</code>, except in the word <code>ŋōle</code>, where it disappeared instead.
+<code>code
+ŋôle/ôle/#_#
+ŋ/ŋg/_V
+</code></p>
+
+<p>Palatalization was lost on velars.
+<code>code
+ʲ//&lt;velar&gt;_
+</code></p>
+
+<p>Initial syllabic nasals gained a vowel.
+<code>code
+ṃ/am/#_
+ṇ/an/#_
+ŋ̣/aŋ/#_
+</code></p>
+
+<p><code>h</code> underwent many changes. It disappeared before a vowel, became <code>g</code> before a nasal, assimilated to a following <code>t</code> or <code>s</code>, and lengthened the preceding vowel before <code>r</code> or a word boundary.
+<code>code
+h//_V
+h/g/_&lt;nasal&gt;
+h/t/_t
+h/s/_s
+&lt;short vowel&gt;h/&lt;long vowel&gt;/_r
+&lt;short vowel&gt;h/&lt;long vowel&gt;/_#
+</code></p>
+
+<p>Stops became voiced before nasals.
+<code>code
+&lt;unvoiced stop&gt;/&lt;voiced stop&gt;/_&lt;nasal&gt;
+</code></p>
+
+<p><code>d</code> and <code>b</code> nasalized before a nasal, even across word boundaries.
+<code>code
+d/n/_(·)&lt;nasal&gt;
+b/m/_(·)&lt;nasal&gt;
+</code></p>
+
+<p><code>ln</code> became <code>ll</code>.
+<code>code
+ln/ll/_
+</code></p>
+
+<p><code>tʰn</code> became <code>tʰtʰ</code> and then <code>ttʰ</code>.
+<code>code
+tʰn/tʰtʰ/_
+tʰtʰ/ttʰ/_
+</code></p>
+
+<p><code>m</code> became <code>w</code> after a coronal or velar nasal.
+<code>code
+m/w/&lt;coronal&gt;_
+m/w/ŋ_
+</code></p>
+
+<p><code>nt</code> sometimes, irregularly, became <code>nd</code>.
+<code>code
+lanta/landa/_
+</code></p>
+
+<p>Unaspirated voiceless final stops disappeared, as did final <code>m</code>. <code>tʰ</code> then deaspirated word-finally.
+<code>code
+&lt;unvoiced stop&gt;//_#
+m//_#
+tʰ/t/_#
+</code></p>
+
+<p>Mid vowels raised in long syllables. <code>i</code> then merged with a following long <code>ī</code>.
+<code>code
+ē/ī/_
+ê/î/_
+ō/ū/_
+ô/û/_
+e/i/[aá]_
+o/u/[aá]_
+iī/ī/_
+iî/î/_
+</code></p>
+
+<p>Long <code>ā</code> rounded to take the place of <code>ō</code>.
+<code>code
+ā/ō/_
+â/ô/_
+</code></p>
+
+<p>Mid vowels raised before <code>i</code>. <code>e</code> also raised before <code>u</code>.
+<code>code
+e/i/_[iíuú]
+é/í/_[iíuú]
+o/u/_[ií]
+ó/ú/_[ií]
+</code></p>
+
+<p>Long <code>ū</code> shortened before <code>i</code>.
+<code>code
+ū/u/_[ií]
+û/ú/_[ií]
+</code></p>
+
+<p><code>j</code> and <code>i</code> disappeared before <code>ui</code>.
+<code>code
+[ji]//_ui
+[ji]//_úi
+</code></p>
+
+<p><code>n</code> assimilated to the POA of a following stop, even across word boundaries.
+<code>code
+n/m/_(·)[bp]
+n/m/_(·)mb
+n/ŋ/_(·)[kg]
+n/ŋ/_(·)ng
+</code></p>
+
+<p>Voiceless stops aspirated after another consonant (except for <code>s</code>), even across word boundaries.
+<code>code
+&lt;unvoiced stop&gt;/&lt;aspirated stop&gt;/&lt;nonstrident&gt;(·)_
+</code></p>
+
+<p>Stops in initial clusters in <code>s-</code> did aspirate, however.
+<code>code
+&lt;unvoiced stop&gt;/&lt;aspirated stop&gt;/#s_
+</code></p>
+
+<p>Sonorants devoiced after voiceless fricatives.
+<code>code
+&lt;sonorant&gt;/&lt;voiceless sonorant&gt;/s_
+</code></p>
+
+<p><code>ts</code> became <code>ttʰ</code>.
+<code>code
+ts/ttʰ/_
+</code></p>
+
+<p>In clusters with <code>r</code>, <code>ttʰ</code> simplified to <code>tʰ</code>.
+<code>code
+ttʰ/tʰ/_[r̭r]
+</code></p>
+
+<p><code>s</code> disappeared or changed in many positions.</p>
+
+<p><code>s</code> disappeared from initial clusters with voiceless sonorants.
+<code>code
+s//#_[ḽr̭ṋm̭ƕç]
+</code></p>
+
+<p>After a vowel (or a preposition or article ending in a vowel), <code>s</code> assimilated to a following voiceless sonorant.
+<code>code
+&lt;voiceless sonorant&gt;/&lt;voiceless sonorant&gt;²/V(·)s_
+s//V(·)_&lt;voiceless sonorant&gt;
+</code></p>
+
+<p><code>s</code> changed to <code>h</code> between vowels.
+<code>code
+s/h/V_V
+</code></p>
+
+<p><code>s</code> at the end of a word disappeared.
+<code>code
+s//_#
+</code></p>
+
+<p><code>ja</code> became <code>ji</code> before a stressed syllable.
+<code>code
+ja/ji/_(C)(C)(C)(C)&lt;stressed vowel&gt;
+</code></p>
+
+<p><code>ji</code> shortened to <code>i</code>.
+<code>code
+j//_[iīíî]
+</code></p>
+
+<p><code>ii</code> became long <code>ī</code>.
+<code>code
+ii/ī/_
+íi/î/_
+ií/î/_
+</code></p>
+
+<p>Stressed <code>wo</code> became <code>wa</code>.
+<code>code
+wó/wá/_
+</code></p>
+        </div>
+    </div>
+</body>
+
+</html>

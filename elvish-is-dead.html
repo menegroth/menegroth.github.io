@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>Elvish Is Dead; Long Live Elvish!</h1>
+
+<p>In January of 2002, I received an issue of <em>Muse</em> magazine<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup> whose cover story was titled in an unfamiliar language: <em>Ma quetelyë i eldalambë?</em><sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>—meaning, I soon discovered, <q>Do you speak Elvish?</q> The language was Quenya, invented by J.R.R. Tolkien and used in his epic novel <em>The Lord of the Rings</em>, and although the magazine focused on the film adaptation of <em>The Fellowship of the Ring</em> (which had just been released the previous month) I was inspired to read the book. I had attempted the journey into Middle-earth twice before, out of a vague curiosity and a feeling that I was missing out on a cultural touchstone, but this time I had a stronger motivation. If anyone ever asked me <em><q>Ma quetelyë i eldalambë</q></em>, I wanted to respond (in Quenya, of course) <q>Yes!</q></p>
+
+<p>Fast-forward thirteen years, and I still don&#39;t know how to say <q>yes</q> in Quenya. No one does.<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup> It&#39;s a paradoxical fact that the Elvish languages, held up by Tolkien and his critics alike as the element that, more than any other, made Middle-earth feel <q>real</q>, are full of holes and inconsistencies that thwart even trivial attempts to converse in them. Through many attempts to learn Quenya (and, later, Sindarin, Tolkien&#39;s other main Elvish language), I eventually came to terms with the fact that the task I had set for myself was not possible.</p>
+
+<p>But despair not! Before you hit the back button on your browser and give up forever on your dreams of learning Elvish, you should know that this story has a happy ending. I will get there in time. The turning point comes when I realize that I had made a <em>mistake</em>, a rather fundamental one, that prevented me from seeing the way forward. But not so hasty! First, let me describe what I was actually doing for those thirteen years that I was trying and failing to learn Tolkien&#39;s languages.</p>
+
+<p>It certainly seemed <em>possible</em>, at the beginning at any rate, to learn Quenya and Sindarin. To be sure, there were missing pieces of the puzzle, but the authors of the courses I was using seemed to have filled in the blanks pretty well. My lack of progress was due to no fault in my instructors&#39; teaching ability, nor to lack of aptitude on my part. It was due to the fact that I kept giving up, and later beginning again, over and over. I would learn a bit of Elvish, try to use it in a sentence or maybe a longer composition, and become increasingly frustrated by it. Although my instructors and fellow students reassured me that my grammar was correct, the sentences I produced didn&#39;t <em>feel</em> right. They were clumsy and ugly and entirely different from the passages I loved from <em>The Lord of the Rings</em>, despite being built of words drawn from dictionaries that cited Tolkien&#39;s works. And so the vicissitudes of my studies led me from aspiration to frustration and back again, but always toward the conclusion that the languages were not actually as I had first thought them to be; that I had ascribed to them a type of beauty that they did not in fact possess.</p>
+
+<p>In between bouts of learning Sindarin and Quenya (I alternated between the two, with the changing winds of my aesthetic preference), I struck out on my own, sketching new invented languages and dabbling in many real-world ones. I always came back to Tolkien&#39;s languages, though. My obstinance, together with the evidence of the Elvish phrases in <em>The Lord of the Rings</em>, made me unwilling to believe that my first impressions had been false. After many years of this cycle, I convinced myself that the languages I loved were illusions and that there was no real purpose to learning them anyway, and put my studies on the shelf indefinitely.</p>
+
+<p>The <q>indefinite</q> period turned out only to last about a year, for Tolkien&#39;s languages again caught my attention from a slightly different angle. I had bought a copy of David Salo&#39;s <em>A Gateway to Sindarin</em> after skimming the preview on Google and discovering, to my great delight, that it contained the complete sequence of sound changes between Common Eldarin and Sindarin. I had long known that the secret ingredient in Tolkien&#39;s linguistic concoctions was <em>time</em>. He did not simply make up Quenya or Sindarin words at random; he instead crafted words in Primitive Quendian, the language spoken by the first Elves who awoke at Cuiviénen. He would then simulate, according to regular rules, the development of those words through the entire history of Elvish speech, until he arrived at the forms that Frodo might have heard in Rivendell or Lothlórien. Through this process, an ancient root <strong>STAN-</strong> meaning <q>fix, decide</q> would produce Quenya <em>sanda</em> and Sindarin<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup> <em>thand</em> <q>firm, true, abiding</q>. It was through these sound shifts that the rich and unique flavor of each language was achieved. Seeing them spelled out with mathematical clarity in Salo&#39;s book, I saw a clear path before me: I would use Salo&#39;s work to construct a computer program that would carry out Tolkien&#39;s simulation of language change on a massive scale. My program would derive not only the Sindarin and Quenya forms of each primitive root, but all the intermediate forms as well, checking them for correctness against every word of every dialect of Elvish that Tolkien ever penned. The result would be a computational model of the Eldarin language family, inescapably consistent and demonstrably faithful to Tolkien&#39;s works, that would unite all of the disparate data and make them one. <em>One program to bring them all and in the darkness bind them.</em> I felt certain that such a model was achievable, and also certain that it would yield the most accurate possible description of Tolkien&#39;s languages.</p>
+
+<p>I did not realize the hubris of this endeavor for several hours. One of the first sources I combed for ancient Eldarin words was <em>The Etymologies</em>, a posthumously-published glossary describing the changes wrought upon hundreds of Elvish words by the long ages of Middle-earth. For the sake of thoroughness, I read Christopher Tolkien&#39;s introduction to it, and was a bit taken aback by his statement that <q>finality and a system fixed at every point were not [J.R.R. Tolkien's] underlying aim</q>. Somewhat disheartened, I read on, and my discouragement grew to horror. I learned that within the manuscript of the <em>Etymologies</em>—the ultimate source for most of the Elvish words I had ever learned—there are layers upon layers of struck-out entries and revisions, penciled notes, cryptic jottings, illegible words, and a cornucopia of spelling conventions. Only then did I begin to understand that the data for Quenya and Sindarin are not merely fragmentary, they are not even self-consistent. Tolkien&#39;s languages were characterized, in the real world as in the fictional one, by constant and rapid change. And that means they are dead, more dead than the most scantily-documented dead languages of our own earth, because even in the mind of their creator they never took a fixed and final form.</p>
+
+<p><em>But wait,</em> I said to myself. <em>Isn&#39;t consistency of form one of the lauded characteristics of the elvish in</em> The Lord of the Rings<em>? And don&#39;t the Quenya and Sindarin words from Tolkien&#39;s works show clear and systematic relationships to each other? If Tolkien was able to settle on a consistent form of his languages long enough to write</em> The Lord of the Rings<em>, maybe the situation&#39;s not as bad as it seems.</em> And so I continued to write my program and search the <em>Etymologies</em> for words to put into it. In the process, I learned a lot about Tolkien&#39;s languages, though my messianic delusions were thoroughly quenched. At the same time, I decided to do more research on Tolkien&#39;s life and creative process, and through this I eventually discovered that the situation was not, in fact, very bad at all.</p>
+
+<p>But all in due time. Until I discovered my <em>mistake</em>, things did not seem so hopeful. Writing the program and studying Tolkien&#39;s linguistic writings was more work than I had expected, and I began to seriously question why I was making the effort. Previously I had told myself that I was learning Elvish in order to use it in poetry or in my own private writings—an explanation that I maintained despite having produced exactly zero lines of text in any Elvish language. This seemed now like a transparent rationalization for an activity that was really not rational. I knew in my heart, and finally admitted to myself, that even if my program miraculously derived a complete grammar of every Elvish language, and the ghost of J.R.R. Tolkien himself appeared in a cloud of lembas crumbs and blessed it with a silver wand, my use for the languages would end there. I had never really wanted to write so much as a sentence in Elvish; I merely liked the idea of being able to.</p>
+
+<p>It appeared plain to me that Tolkien also liked the idea—in a letter to his publisher he wrote, <q>I should have preferred to write in 'Elvish'. But, of course, such a work as <em>The Lord of the Rings</em> has been edited and only as much 'language' has been left in as I thought would be stomached by readers.</q> (<em>Letters</em> #165) And yet, despite this clear statement, Tolkien seems to have edited very little <q>language</q> from the book. Carl Hostetter notes that <q>judging from the surviving manuscripts and typescripts [. . .] more Elvish was put into the book in the course of rewriting than had originally been in it. It may likewise be noted that if Tolkien ever made any attempt at composing Elvish narrative for his novel, it has apparently not survived.</q> (<q>Elvish As She Is Spoke</q> p. 233) By all accounts, then, examples of Elvish prose by Tolkien&#39;s hand are as thin on the ground as monkeys in France.<sup id="fnref5"><a href="#fn5" rel="footnote">5</a></sup> <sup id="fnref6"><a href="#fn6" rel="footnote">6</a></sup> Why, I wondered, would Tolkien labor his entire life over his languages, and yet hardly ever use them, except to derive names and write a very few poems?</p>
+
+<p>For a resolution to the paradox, the weary researcher need look no further than the same letter cited above, wherein Tolkien writes,</p>
+
+<!-- The authorities of the university might well consider it an abberation of an elderly professor of philology to write a publish fairy stories and romances, and call it a 'hobby', pardonable because it has been (suprisingly to me as much as to anyone) successfully. But it is not a 'hobby', in the sense of something quite different from one's work, taken up as a relief-outlet. The invention of languages is the foundation.-->
+
+<blockquote>
+<p>[. . .] the remark about &#39;philology&#39; was intended to allude to what is I think a primary &#39;fact&#39; about my work, that it is all of a piece, and <em>fundamentally linguistic</em> in inspiration. [. . .] The &#39;stories&#39; were made rather to provide a world for the languages than the reverse. To me a name comes first and the story follows.<cite><em>Letters</em> #165</cite></p>
+</blockquote>
+
+<p>With this <q>primary fact</q> in mind, I began to understand why Tolkien&#39;s languages play such an integral and yet limited role in his literature. It seems that regardless of what language Tolkien would have <q>preferred</q> to write in, the Elvish tongues were not able to sustain long prose texts, and Tolkien could not simply generate more <q>language</q> at will as his story demanded. To do so would be contrary to his actual creative process, in which the story was secondary and subservient to the language that inspired it. The languages were never intended to serve <em>as languages</em>, as fully general means of communication, but rather to express Tolkien&#39;s linguistic aesthetic.</p>
+
+<p>At this point, I saw my <em>mistake</em>: previously I had believed that the beauty of Tolkien&#39;s languages was illusory, that it was an accident of the way the words happened to fall together in the text. Now I saw that their beauty was real; it was their <em>language-ness</em> that was an illusion. Tolkien&#39;s languages were not, and never could be, fully usable for communication in the way that real languages were, at least not without distorting their aesthetic beyond recognition. And yet I had insisted on trying to use them as if they <em>were</em> real languages, and this had led to my perennial dissatisfaction with them. Once I realized this, the way forward became clear to me.</p>
+
+<p>Well, clear<em>er</em>, anyway. I still had to figure out how one could appreciate a language <em>as language</em> (that is, as meaning and structure, not just a sequence of pretty sounds) without actually using it as such. Carl Hostetter&#39;s article <em>Elvish As She Is Spoke</em> finally clarified the matter for me. I did not have to forgo use of the Elvish languages entirely. Rather, instead of deciding on what I wanted to say and then writing it down in Elvish, I could examine the use of Elvish in Tolkien&#39;s works and build phrases and sentences from the patterns evidenced there. Lest the difference between the two procedures remain unclear, I should point out that the latter approach tends to produce sentences that <em>might conceivably be uttered by a character from Tolkien&#39;s mythos</em>, not merely ones that are <q>grammatical</q> according to some non-Tolkien person&#39;s analysis. And this recalls a central thesis of Tolkien&#39;s work: that language and mythology are inextricably intertwined. You cannot have Middle-earth without Elvish, nor Elvish without Middle-earth. Remove the language from the mythos and it withers and dies.</p>
+
+<hr>
+
+<p>This brings us now to the question of why I made this website. Currently it focuses on Sindarin, though I may expand it to include Quenya later (the languages are suited to expressing different things, so I think it is valuable to learn both). My aim here, as you can probably guess, is not to present a completed grammar of any of Tolkien&#39;s languages. I hope merely to make the enjoyment of Sindarin accessible to any lover of Tolkien&#39;s works. As I have hopefully made clear, this cannot really be done by creating a comprehensive course of lessons in the language—such a course, by attempting to make Sindarin as expressive and well-defined as English or any other living language, would inevitably smooth over the ambiguities and contradictions that are as much a part of Sindarin as any of the certainties. And that would be unfortunate; I think the feeling of remoteness and loss inspired by the missing pieces gives as much emotional weight to Tolkien&#39;s works (both <q>lang</q> and <q>lit</q>) as any of the things he actually describes. But that is a subject for another essay.</p>
+
+<p>So a traditional language course is not my aim. Instead, I want to attempt something subtly but significantly different: rather than have the primary question be <q>How do you say X in Elvish?</q>, I want to first ask <q>What do we know how to say in Elvish, based on the examples from Tolkien's works?</q> The language described by this approach will be sparse, but I hope Tolkien&#39;s artistry will be able to shine through the clearer for it. Ultimately, if you read all the articles on this site, you will not be able to speak Sindarin the way you currently speak English, but you <em>will</em> be able to speak Sindarin the way Gandalf speaks it in <em>The Lord of the Rings</em>, and that is perhaps better.</p>
+
+<p><em>Cuio i lam edhellen anann!</em></p>
+
+<p>—Ben Christel, November 2015</p>
+
+<p><a href="index.html">Back to Index</a></p>
+
+<p><em>For other perspectives on Tolkien&#39;s creative process and whether it is possible to <q>learn Elvish</q> and what that even means, please see:</em></p>
+
+<ul>
+<li><a href="http://www.elvish.org/articles/EASIS.pdf"><em>Elvish As She Is Spoke</em> (by Carl Hostetter, PDF download)</a></li>
+<li><a href="http://folk.uib.no/hnohf/vice.htm"><q>Tolkien's Secret Vice</q> (by Helge Fauskanger of <em>Ardalambion</em>)</a></li>
+<li><a href="http://www.science-and-fiction.org/elvish/learn_elvish.html"><q>So you want to learn Elvish?</q> (by Thorsten Renk of <em>Parma Tyelpelassiva</em>)</a></li>
+</ul>
+
+<!-- For more on the differences between Noldorin and Sindarin, see Helge Fauskanger's articles under the heading "The Quest for Standard Sindarin" on [Ardalambion](http://folk.uib.no/hnohf), for example the article ["AE or OE: Tolkien's Hard Choice"](http://folk.uib.no/hnohf/oe.htm). -->
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p><a href="http://shop.cricketmedia.com/muse/lord-of-the-rings.html">http://shop.cricketmedia.com/muse/lord-of-the-rings.html</a>&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn2">
+<p>[sic]. As best as I can tell, we should read <em>quetilyë</em> for <em>quetelyë</em>.&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn3">
+<p><a href="http://www.science-and-fiction.org/elvish/learn_elvish.html">Thorsten Renk</a> cites Bill Welden&#39;s <q>Negation in Quenya</q> (<em>Vinyar Tengwar</em> #42), observing that Tolkien changed his mind about whether the Quenya word <em>lá</em> meant <q>yes</q> or <q>no</q>. So no one can say with authority that <em>lá</em> is Quenya for <q>yes</q>—depending on one&#39;s editorial preference, it could just as easily mean <q>no</q>.&nbsp;<a href="#fnref3" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn4">
+<p>The form <em>thand</em> is actually listed in the <em>Etymologies</em> as Noldorin, not Sindarin (and mis-printed as &#42;&#42;<em>thenid</em>—this error was corrected in <em>Vinyar Tengwar</em> #46, p. 16). After writing the <em>Etymologies</em>, Tolkien would decide that his Celtic-sounding language was actually spoken by the Sindar and not the Noldor, and would update the name of the language accordingly.&nbsp;<a href="#fnref4" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn5">
+<p>For more on the disposition of monkeys with respect to France, as well as the perils of learning a language from inauthentic examples, see: <a href="https://www.youtube.com/watch?v=x1sQkEfAdfY">Eddie Izzard: Dress to Kill</a>.&nbsp;<a href="#fnref5" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn6">
+<p>The longest known example of Sindarin prose, the King&#39;s Letter, was written for an epilogue to <em>The Lord of the Rings</em>, but not published until after Tolkien&#39;s death.&nbsp;<a href="#fnref6" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+        </div>
+    </div>
+</body>
+
+</html>

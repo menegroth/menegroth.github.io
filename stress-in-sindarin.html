@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(./annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(./annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(./annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(./annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(./annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(./annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1>Concerning Stress Placement In Sindarin</h1>
+
+<p>In Appendix E of <em>The Lord of the Rings</em>, Tolkien gives the following description of stress in Eldarin languages:</p>
+
+<blockquote>
+<p>In words of two syllables [the stress] falls in practically all cases on the first syllable. In longer words it falls on the last syllable but one, where that contains a long vowel, a diphthong, or a vowel followed by two (or more) consonants. Where the last syllable but one contains (as often) a short vowel followed by only one (or no) consonant, the stress falls on the syllable before it, the third from the end.</p>
+</blockquote>
+
+<p>An elegant system, to be sure! But Tolkien himself seems to have contradicted this description in a few places, and therefore I think the subject of stress in elvish languages merits closer study than the Appendices will support.</p>
+
+<p>The contradictory examples I have in mind are the Sindarin place-names <em>Imladris</em>, that is Rivendell, and <em>Nargothrond</em>, the stronghold of Finrod. If the Appendices are taken at their word, these should be stressed <em>imlAdris</em>, <em>nargOthrond</em>, since the next-to-last syllable has two following consonants. However, these names are found in verses whose meter makes it clear that they are stressed on the <em>initial</em> syllable:</p>
+
+<p>Boromir&#39;s poem at the Council of Elrond:</p>
+
+<blockquote>
+<p>Seek for the Sword that was broken:
+In Imladris it dwells[...]
+<cite>(<em>The Fellowship of the Ring</em>, p. 259)</cite></p>
+</blockquote>
+
+<p>Gimli&#39;s song in Moria:</p>
+
+<blockquote>
+<p>The world was fair, the mountains tall,
+In Elder Days before the fall
+Of mighty kings in Nargothrond
+And Gondolin, who now beyond
+The Western Seas have passed away:
+The world was fair in Durin&#39;s Day.
+<cite>(<em>The Fellowship of the Ring</em>, p. 330)</cite></p>
+</blockquote>
+
+<p>A recording of Tolkien reading a fragment of the latter poem confirms the stress placement beyond doubt; that recording can be found <a href="http://www.jrrvf.com/%7Eglaemscrafu/english/tolkienhimselflotrhob.html">here</a> (click on <q>Nargothrond</q> in the list). The metrical evidence for initial stress in <em>Imladris</em> may be strengthened by the observation that Tolkien could have substituted <em>Rivendell</em> for <em>Imladris</em> without marring the meaning of the poem, if he found the stress of the Sindarin word unsuited.</p>
+
+<p>If we accept that <em>Imladris</em> and <em>Nargothrond</em> are counterexamples to the stress rules laid out by Tolkien in Appendix E, that leaves us with the question of <em>why</em> their stress is exceptional. Several explanations are possible.</p>
+
+<h2>1. <em>Nargothrond</em> is Exceptional</h2>
+
+<p>Tolkien lists <em>Nargothrond</em> among <q>ancient names derived from an older period</q> (Appendix E) to explain why it doesn&#39;t show the usual change of final <em>nd</em> to <em>n</em>. Since <em>Nargothrond</em> is not pure classical Sindarin, it might not be subject to the stress rules from Appendix E.</p>
+
+<p><em>Imladris</em> must have a different explanation. Boromir&#39;s pronunciation might show Gondorian influence, as Gondor had its own distinct dialect of Sindarin. However, this seems less likely in light of the poem apparently being divine inspiration, and not a product of Boromir&#39;s own mind. He did not know the name Imladris before he heard the poem in his dream.</p>
+
+<h2>2. Sindarin Meter Is Based on Quantity, Not Stress</h2>
+
+<p>The discussion of the <q>exceptional</q> stress in <em>Nargothrond</em> and <em>Imladris</em> is founded on the assumption that Sindarin considers stress relevant to the meter of a poem. It is possible that stress is actually not relevant, and Sindarin poetry is based on syllable length or <em>quantity</em> instead. There is some indirect evidence that this is how Sindarin poetry works. In <em>The Fellowship of the Ring</em>, Aragorn mentions a mode of verse called <em>ann-thennath</em>, presumably meaning <q>long-shorts</q> and describing a pattern of alternating long and short syllables. If <em>Imladris</em> and <em>Nargothrond</em> are syllabified as <em>Im.la.dris</em> and <em>Nar.go.thrond</em>, the first and last syllables of each would be long (due to the consonant coda), and we would therefore expect those syllables to fall on stresses in the meter of the poem, which in fact they do.</p>
+
+<p>This theory is wounded by the fact that <em>Imladris</em> and <em>Nargothrond</em> are found in poems written in <em>English</em>. English verse often conflates stress and length by making stressed syllables long, but it is stress that is most important to the meter. Additionally, the metrical patterns of our only example of Sindarin verse, the hymn to Elbereth, seem to be stress-based and not quantity-based, so perhaps quantity is not relevant at all for Sindarin poetry.</p>
+
+<p>It is conceivable that Tolkien simply disregarded the normal stress of these words when writing their containing verses, but I find that implausible. None of the other usages of Sindarin names in English poems show unexpected stress.</p>
+
+<h2>3. Tolkien Changed His Mind</h2>
+
+<p>The recording of Gimli&#39;s song was made in 1952 from a text written in 1940 (cf. the Foreword to the second edition of LotR), but Tolkien continued work on the Appendices until <em>The Return of the King</em> was published in 1955<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>. In that span of fifteen years he had ample time to revise the stress rules, and when he finally settled on those published in Appendix E he may have overlooked the verses in <em>The Fellowship of the Ring</em> that contradicted them. From <em>Letters</em> it seems that he was (as usual) very pressed for time in the months leading up to publication. He might not have closely reviewed the text of <em>The Lord of the Rings</em> for inconsistencies with the Appendices.</p>
+
+<p>If this is the case, it leaves us students of Elvish in an unfortunate position. We can no longer reason about <q>_Lord of the Rings_-style Sindarin</q> as a unitary entity; we have to take into account the conflict between the Appendices and the text. And I think this theory <em>is</em> the most likely of the three, since its reasoning is the simplest. So how are we to resolve the conflict? In my mind, the text should prevail, otherwise the poetry (or else its correct usage of the all-important languages) is marred. Still, the Appendices are our only Tolkien-published formal description of Eldarin languages (the others are all posthumous). We can&#39;t throw out everything we think we know about Sindarin stress-patterns because of two overlooked words.</p>
+
+<p>Tolkien often wrote about his creative process as if it were really a process of discovery. He was a scholar of his own subcreation, piecing together histories from the fragmentary data of inspiration. And between the late thirties and early fifties, he was evidently inspired to feel that <em>Imladris</em> and <em>Nargothrond</em> were stressed (or at least could sometimes be stressed) on the initial syllable. Given that, in Tolkien&#39;s work, the inspiration was primary and the description followed, I think he would have changed the description of Sindarin stress to suit the usage, had he discovered the discrepancy.</p>
+
+<p>Having exhausted the data, we can attempt to guess at the rules that Tolkien might have come up with. No speculation about Sindarin grammar can pretend to be authoritative, but I have the audacity to speculate anyway. Fortunately, we don&#39;t have to reach too far for a description of Sindarin stress patterns that fits the evidence. The theory I propose even has a real-world precedent in Latin, a favorite language of Tolkien&#39;s.</p>
+
+<h2>A Speculative Description of Sindarin Stress</h2>
+
+<p>But first, a bit of background on the precedent: In Latin, as in Elvish, the position of stress depended on the length of a word&#39;s second-to-last syllable. If this syllable was long, it was stressed; if not, the syllable before it was stressed. A syllable was long if it ended in a long vowel, diphthong, or consonant.</p>
+
+<p>When a consonant cluster occurred in the middle of a word, it was usually split between its adjacent syllables, causing the preceding syllable to end in a consonant and thus be long. However, if the cluster could occur at the beginning of a syllable (as <em>cr</em>, <em>tr</em>, etc.), then it was usual for both consonants to cleave to the following syllable, leaving the preceding one short. Clusters of this kind could still be split if it was desirable for the preceding syllable to be long—for instance, in poetry.</p>
+
+<p>Thus, a word like <em>volucris</em> <q>bird</q> would normally be syllabified and stressed <em>vó.lu.cris</em>, though <em>vo.lúc.ris</em> would also be possible.</p>
+
+<p>If we apply the same pattern to Sindarin, then a word like <em>Imladris</em> could be syllabified as either <em>im.lád.ris</em> or <em>ím.la.dris</em>, since the cluster <em>dr</em> can begin a syllable in Sindarin (cf. the many words that begin in <em>dr</em>). The same rule would apply to <em>Nargothrond</em>, which could be pronounced <em>nar.góth.rond</em> or <em>nár.go.thrond</em>.</p>
+
+<p>This pattern generalizes to many other compound names where the second element begins in L or R, including <em>Caradhras</em>, <em>Celebrant</em>, <em>Celebrond</em>, <em>Eledhrim</em>, <em>Falathrim</em>, <em>Galadhrim</em>, <em>Hadhodrond</em>, <em>Halethrim</em>, and <em>Orodruin</em>. All of these could optionally be stressed on the third-to-last syllable.</p>
+
+<p>Other syllable-initial clusters may also cause words to have variable stress. For example, <em>mb</em>, <em>nd</em>, <em>ng</em> can probably begin a syllable. If these clusters can also be syllable-initial when they occur between vowels, then we would expect e.g. <em>Mithrandir</em>, <em>Glorfindel</em> to be optionally stressed on the first syllable.</p>
+
+<h2>Other Resources</h2>
+
+<p>After writing the initial version of this article, I discovered that neither my observations nor my <q>speculative description</q> were original to me. Following is a list of those who beat me to the punch:</p>
+
+<ul>
+<li>A <a href="https://mildred-of-midgard.dreamwidth.org/158375.html">2012 discussion</a> on <strong>mildred<em>of</em>midgard</strong>&#39;s blog mentions <em>Nargothrond</em> as possible evidence of a Sindarin <em>muta cum liquida</em> rule, also bringing in evidence from the <em>Lay of Leithian</em>, which I had not previously considered. The <em>Lay</em> mentions <em>Nargothrond</em> many times, always with initial stress. <em>Menegroth</em> appears with initial stress as well. Those who wish to pronounce the name of this site correctly, take note!</li>
+<li>In a <a href="http://archives.conlang.info/gho/bhelgho/tree.html">2003 discussion</a> on the Conlang mailing list, Pavel Iosad and John Cowan discussed the metrical evidence for a revised Sindarin stress rule.</li>
+</ul>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p>Tolkien stated in a letter to a reader that he <q>spent a long time trying to make a list [of Elvish words for the Appendices] and that is one reason for the delay of Vol. III</q> (<em>Letters</em> #168).&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+        </div>
+    </div>
+</body>
+
+</html>

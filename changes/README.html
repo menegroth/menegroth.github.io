@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menegroth ✶ The Thousand Caves</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style type="text/css">
+
+    @font-face {
+        font-family: tengwar;
+        src: url(../annatar/tnganb.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitalic;
+        src: url(../annatar/tnganabi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritalic;
+        src: url(../annatar/tnganbi.ttf);
+    }
+
+    @font-face {
+        font-family: tengwarlight;
+        src: url(../annatar/tngan.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaraltitaliclight;
+        src: url(../annatar/tnganai.ttf);
+    }
+
+    @font-face {
+        font-family: tengwaritaliclight;
+        src: url(../annatar/tngani.ttf);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        background-color: #000
+        ;
+        background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
+        background-position: top right, top left, top left;
+        background-attachment: scroll, scroll, fixed;
+        background-repeat: repeat-y, repeat-y, repeat;
+    }
+
+    .content {
+        background-color: #faf9f8;
+        color: #222;
+        padding: 80px;
+        min-height: 100%;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    .content > p,
+    .content > ol,
+    .content > ul,
+    .content > blockquote {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .content > *:first-child {
+        margin-top: 0em;
+    }
+
+    .content > *:last-child {
+        margin-bottom: 0em;
+    }
+
+    p, li {
+        line-height: 140%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Baskerville', serif;
+        font-weight: 600;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        line-height: 150%;
+    }
+
+    h2, h3, h4, h5, h6 {
+        letter-spacing: 0.01em;
+        word-spacing: 0.03em;
+    }
+
+    h1 {
+        letter-spacing: 0.03em;
+        word-spacing: 0.09em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;/*
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #ccc;*/
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h1.site-title {
+        text-transform: none;
+        font-variant: small-caps;
+        font-size: 36px;
+        color: #328;
+        margin: 0;
+    }
+
+    h1.subtitle {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        word-spacing: 0.1em;
+        margin-top: 0.5em;
+        margin-bottom: 4em;
+        color: #999;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li {
+        margin-left: 20px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    .content > hr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        margin-left: 40px;
+        margin-right: 40px;
+        white-space: pre-wrap;
+    }
+
+    blockquote cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+    }
+
+    blockquote cite:before {
+        content: '—';
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    sup {
+        line-height: 100%; /* prevent footnote references from altering line spacing */
+    }
+
+    code {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 100%;
+        background-color: #e8e8e0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .nav-links p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .highlight, .hi {
+        text-decoration: underline;
+    }
+
+    .pron {
+        font-variant: small-caps;
+        color: #800;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #b0b;
+    }
+
+    /* LANGUAGES */
+
+    /* Sindarin */
+    .s {
+        font-weight: bold;
+        color: #038;
+    }
+
+    /* Quenya */
+    .q {
+        font-weight: bold;
+        color: #b08;
+    }
+
+    /* TENGWAR */
+
+    .t, .tengwar {
+        font-family: tengwar;
+        font-size: 1.2em;
+    }
+
+    .ti {
+        font-family: tengwaritalic;
+    }
+
+    .tai {
+        font-family: tengwaraltitalic;
+    }
+
+    /* PAGE-SPECIFIC THINGS */
+
+    .toc-detail {
+        color: #0090d0;
+        font-style: italic;
+    }
+
+    .toc-detail em {
+        font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="around-content">
+        <div class="content">
+<h1><em>Lumenyárë Lambion Eldaliéva</em> : A Historical View of Eldarin Languages</h1>
+
+<p>To run the sound changes, you will need Ruby &gt;= 2.0.0.</p>
+
+<h2>Running the Tests</h2>
+
+<p>You can run</p>
+
+<p><code>
+./test &gt; /dev/null
+</code></p>
+
+<p>from the <code>changes</code> directory to run the test suite. If nothing is printed to STDERR, it means everything works. If you see error messages beginning with <code>NOT FOUND</code>, something&#39;s wrong; you can run <code>./test</code> to see which sequence of changes is messing up.</p>
+
+<p>To see how an individual Primitive Quendian word changes in the Quenya, Telerin, and Sindarin branches, use the <code>./trace</code> script, like so:</p>
+
+<p><code>
+./trace álakwā
+</code></p>
+
+<p>If you run the exact command above, you&#39;ll notice that each language has multiple lines of output. For example, the Sindarin reflexes of <code>álakwā</code> are given as <code>alph</code> and <code>alab</code>. Here, only <code>alph</code> is correct; <code>**alab</code> is a misderived form. The reason for outputting multiple forms is that some of the sound changes appear to be <q>optional</q>—Tolkien may simply have applied them or not according to which resulting form he preferred, or he may have had a more formal system that eludes us due to lack of data. The best way for a computer program to handle this apparent indeterminacy is to print all plausible forms and let the human choose the most appropriate one.</p>
+
+<h2>The Sound Changes</h2>
+
+<p>Each sound change script represents the changes that occurred between two <em>epochs</em>. I define an epoch as a (hypothetical) snapshot of a language at one point in time. For example, Common Eldarin is the last epoch that is an ancestor of both Sindarin and Quenya.</p>
+
+<p>This idea of epochs is somewhat artificial. Tolkien wrote about divergent dialects that were still considered the same language, and changes <em>within</em> a stage of a language, so that, for example, we might speak of <q>Early Old Sindarin</q> and <q>Late Old Sindarin</q>. When multiple forms of a language exist, I have tried to pinpoint the latest form as the epoch.</p>
+
+<p>The epochs are:</p>
+
+<ul>
+<li>PQ = Primitive Quendian - the ultimate ancestor of all Elvish languages</li>
+<li>CE = Common Eldarin - the last common ancestor of Sindarin, Telerin, and Quenya.</li>
+<li>EQ = Exilic Quenya - Quenya as spoken in Middle-earth</li>
+<li>CL = Common Lindarin - the last common ancestor of Sindarin and Telerin</li>
+<li>T = Telerin</li>
+<li>OS = Old Sindarin - a (recorded?) archaic form of Sindarin</li>
+<li>MS = Middle Sindarin</li>
+<li>CS = Classical Sindarin, as spoken in Rivendell in the Third Age</li>
+</ul>
+
+<p>Tolkien never used the terms <q>Old/Middle Sindarin</q> himself. In the Etymologies, he listed many Old Noldorin forms; we may assume that Old Noldorin would have become Old Sindarin when Tolkien renamed the classical language and changed its place in the mythos. Middle Sindarin is, AFAICT, an term invented by David Salo to describe an intermediate stage between Old Sindarin and Classical Sindarin, but it is unclear why this particular stage of the language was chosen.</p>
+
+<h2>Usage</h2>
+
+<p>The change scripts read a lexicon from standard input and print it back, with changes applied, to standard output. You can thus compose scripts with the unix pipe operator:</p>
+
+<p><code>bash
+cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_cl.rb
+</code></p>
+
+<p>Change scripts may also take an argument, which should refer to a <em>golden master</em> file representing the expected output from the change. If any words in the golden master file are missing from the output, a warning will be printed to standard error. This is useful when experimenting with sound changes, as it ensures the hypothesized changes don&#39;t contradict the data.</p>
+
+<p><code>bash
+cat pq_lexicon | ruby pq_to_ce.rb ce_lexicon
+</code></p>
+
+<h2>Lexicon Format</h2>
+
+<p>Words in the lexicon files are separated from their gloss by <code>=</code> (an equals sign surrounded by spaces), and from each other by line breaks. A <code>!</code> before a word indicates that it is irregular or an innovation, and so can&#39;t be derived via sound change rules. A leading <code>*</code> means that the word is reconstructed from an attested form in a different epoch, and is only as accurate as the sound change scripts.</p>
+
+<p>Lines beginning with <code>#</code> are treated as comments–they aren&#39;t affected by sound changes or printed in the output.</p>
+
+<h2>Typographic and Orthographic Conventions</h2>
+
+<p>I use a <code>+</code> to separate elements of a compound, and <code>-</code> to separate words that are closely associated (for example, a preposition and its object).  An acute accent over a vowel (áéíóú) marks stress; a macron (āēīōū) marks length. Where a vowel is both stressed and long, the combination is represented by a circumflex (âêîôû). Stress is marked sporadically–only where necessary for the correct sound changes to take effect. This is in part because <em>Tolkien</em> marked stress only occasionally in the Etymologies. Adding stress marking of my own would have required me to asterisk and explain forms that are attested with no indication of stress.</p>
+
+<p>Late in the development of Sindarin, <em>overlong</em> vowels arose in monosyllables. Tolkien marked these with a circumflex. I don&#39;t distinguish them from normal long vowels until the final orthographic adjustments to Classical Sindarin that present it in its LOTR-style form, since no sound changes depend on the long/overlong distinction.</p>
+
+<p>In all epochs except the terminal ones (Telerin, Sindarin, and Exilic Quenya), I use <code>k</code> and <code>j</code> for their IPA values, and <code>ñ</code> for the velar nasal. Quendian roots are spelled as printed in the Etymologies of <em>The Lost Road</em>. I don&#39;t distinguish palatalization, labialization, or aspiration of consonants from full <code>j</code>, <code>w</code>, and <code>h</code>, since such distinctions are not necessary for the sound changes to work.</p>
+
+<p>The lexicon files should not be used for new scholarly investigations, since the forms given are normalized and so deviate from those in the primary sources (usually without comment).</p>
+        </div>
+    </div>
+</body>
+
+</html>
