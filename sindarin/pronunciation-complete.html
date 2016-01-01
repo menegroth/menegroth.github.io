@@ -4,6 +4,7 @@
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <style type="text/css">
 
     @font-face {
@@ -36,6 +37,7 @@
         src: url(../annatar/tngani.ttf);
     }
 
+
     * {
         padding: 0;
         margin: 0;
@@ -48,231 +50,11 @@
 
     body {
         min-height: 100%;
-        background-color: #000
-        ;
+        background-color: #000;
         background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
         background-position: top right, top left, top left;
         background-attachment: scroll, scroll, fixed;
         background-repeat: repeat-y, repeat-y, repeat;
-    }
-
-    .content {
-        background-color: #faf9f8;
-        color: #222;
-        padding: 80px;
-        min-height: 100%;
-        width: 768px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: justify;
-    }
-
-    .content > p,
-    .content > ol,
-    .content > ul,
-    .content > blockquote {
-        margin-bottom: 1em;
-        margin-top: 1em;
-    }
-
-    .content > *:first-child {
-        margin-top: 0em;
-    }
-
-    .content > *:last-child {
-        margin-bottom: 0em;
-    }
-
-    p, li {
-        line-height: 140%;
-    }
-
-    h1 + p,
-    h2 + p,
-    h3 + p,
-    h4 + p,
-    h5 + p,
-    h6 + p,
-    p + p {
-        text-indent: 20px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Baskerville', serif;
-        font-weight: 600;
-        margin-top: 1.5em;
-        margin-bottom: 1em;
-        line-height: 150%;
-    }
-
-    h2, h3, h4, h5, h6 {
-        letter-spacing: 0.01em;
-        word-spacing: 0.03em;
-    }
-
-    h1 {
-        letter-spacing: 0.03em;
-        word-spacing: 0.09em;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 22px;/*
-        padding-bottom: 0.3em;
-        border-bottom: 1px solid #ccc;*/
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-    }
-
-    h1.site-title {
-        text-transform: none;
-        font-variant: small-caps;
-        font-size: 36px;
-        color: #328;
-        margin: 0;
-    }
-
-    h1.subtitle {
-        font-size: 12px;
-        letter-spacing: 0.2em;
-        word-spacing: 0.1em;
-        margin-top: 0.5em;
-        margin-bottom: 4em;
-        color: #999;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    li {
-        margin-left: 20px;
-        margin-top: 0.3em;
-        margin-bottom: 0.3em;
-    }
-
-    hr {
-        margin-top: 40px;
-    }
-
-    .content > hr {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    blockquote {
-        margin-left: 40px;
-        margin-right: 40px;
-        white-space: pre-wrap;
-    }
-
-    blockquote cite {
-        display: block;
-        text-align: right;
-        font-style: normal;
-    }
-
-    blockquote cite:before {
-        content: '—';
-    }
-
-    q {
-        quotes: "“" "”" "‘" "’";
-    }
-
-    q:before {
-        content: open-quote;
-    }
-
-    q:after {
-        content: close-quote;
-    }
-
-    sup {
-        line-height: 100%; /* prevent footnote references from altering line spacing */
-    }
-
-    code {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        padding-left: 3px;
-        padding-right: 3px;
-        line-height: 100%;
-        background-color: #e8e8e0;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
-
-    .nav-links div {
-        text-align: center;
-        margin: 0;
-    }
-
-    .highlight, .hi {
-        text-decoration: underline;
-    }
-
-    .pron {
-        font-variant: small-caps;
-        color: #800;
-    }
-
-    a {
-        text-decoration: underline;
-        color: #00c;
-    }
-
-    a:visited {
-        color: #71a;
-    }
-
-    a:hover {
-        color: #b0b;
-    }
-
-    /* LANGUAGES */
-
-    /* Sindarin */
-    .s {
-        font-weight: bold;
-        color: #038;
-    }
-
-    /* Quenya */
-    .q {
-        font-weight: bold;
-        color: #b08;
-    }
-
-    /* TENGWAR */
-
-    .t, .tengwar {
-        font-family: tengwar;
-        font-size: 1.2em;
-    }
-
-    .ti {
-        font-family: tengwaritalic;
-    }
-
-    .tai {
-        font-family: tengwaraltitalic;
-    }
-
-    /* PAGE-SPECIFIC THINGS */
-
-    .toc-detail {
-        color: #0090d0;
-        font-style: italic;
-    }
-
-    .toc-detail em {
-        font-style: normal;
     }
 
     </style>
@@ -335,17 +117,6 @@ pike         poke</p>
 
 <p>A circumflex (<span class="s">â ê î ô û</span>) also indicates a long vowel, but is mostly used in words of one syllable. This may just be an aesthetic whim of Tolkien&#39;s, though he justified it by saying that vowels with the circumflex should be held <em>even longer</em>. However, the Elvish writing systems only distinguish two vowel lengths, long and short, so the Elves must not have considered this detail very important.</p>
 
-<h3>Typing Accented Characters</h3>
-
-<p>On a Mac, you can type vowels with an acute accent by pressing <code>option</code>+<code>E</code> and then typing the vowel that you want. To type a circumflex, use <code>option</code>+<code>I</code> instead.</p>
-
-<p>Typing special characters on Windows is considerably more annoying. The best way is probably to change your keyboard settings to international mode, which will let you type accented letters using key combinations. A guide to doing that can be found <a href="http://symbolcodes.tlt.psu.edu/accents/codeint.html">here</a>. Alternatively, you can copy and paste the accented letters from the table below.</p>
-
-<div style="text-align:center;font-size:24px">
-á é í ó ú ý — â ê î ô û ŷ<br/>
-Á É Í Ó Ú Ý — Â Ê Î Ô Û Ŷ
-</div>
-
 <h3>Diphthongs</h3>
 
 <p>A diphthong (pronounced <span class="pron">DIFF-thong</span>, from the Greek for <q>two sounds</q>) is a combination of two vowel sounds that blur together into a single syllable. Diphthongs appear frequently in English, like the <q>ou</q> in <q>house</q> that starts with an <q>ah</q> sound and ends with an <q>oo</q> sound. Sindarin has a similar diphthong, spelled <span class="s">au</span>.</p>
@@ -362,10 +133,6 @@ pike         poke</p>
 </ul>
 
 <h2>Consonants</h2>
-
-<p>Consonants are the sounds of a language that impede airflow through the mouth, creating a popping, hissing, or humming sound. We tend to think of consonants as letters of the alphabet (i.e. all except A, E, I, O, and U). But the correspondence between sound and letter is not always straightforward. Two consonant letters can represent a single, indivisible sound, like TH. On the other hand, a single letter can represent a sequence of sounds: X is pronounced K+S.</p>
-
-<p>The distinction between sound and letter is important to keep in mind because I&#39;m going to be focusing on consonant <em>sounds</em>. So when I say something like &ldquo;the consonant <span class="s">TH</span>&rdquo;, I&#39;m talking about the Sindarin sound that is spelled TH.</p>
 
 <h3>Voiced and Voiceless Sounds</h3>
 
@@ -467,12 +234,12 @@ Galadriel will <strong>present</strong> the hobbits with lembas.</p>
 <p>However, the second-to-last syllable gets the stress if its vowel is:</p>
 
 <ul>
-<li>long, as <span class="s">í</span> in <span class="s">Celeb<span class="hi">rí</span>an</span> (<q>Silver-queen</q>, Arwen&#39;s mother)</li>
+<li>long (accented), as <span class="s">í</span> in <span class="s">Celeb<span class="hi">rí</span>an</span> (<q>Silver-queen</q>, Arwen&#39;s mother)</li>
 <li>a diphthong, as <span class="s">ae</span> in <span class="s">Hi<span class="hi">thaeg</span>lir</span> (<q>the Misty Mountains</q>)</li>
 <li>or followed by multiple consonants: <span class="s">Cele<span class="hi">brim</span>bor</span> (<q>Silver-fist</q>)</li>
 </ul>
 
-<p>Note that in the last case, it&#39;s consonant <em>sounds</em> and not letters that are important. The combinations <span class="s">TH</span>, <span class="s">DH</span>, etc. are single sounds even though they&#39;re represented by two letters, so the <span class="s">th</span> in <span class="s"><span class="hi">Nim</span>brethil</span> doesn&#39;t cause the stress to move.</p>
+<p>Note that in the last case, it&#39;s consonant <em>sounds</em> and not letters that are important. <span class="s">TH</span>, <span class="s">DH</span>, etc. are single sounds even though they&#39;re represented by two letters, so the <span class="s">th</span> in <span class="s"><span class="hi">Nim</span>brethil</span> doesn&#39;t cause the stress to move.</p>
 
 <h3>Possible Exceptions to the Stress Rule</h3>
 

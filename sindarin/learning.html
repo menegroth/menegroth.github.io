@@ -4,6 +4,7 @@
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <style type="text/css">
 
     @font-face {
@@ -36,6 +37,7 @@
         src: url(../annatar/tngani.ttf);
     }
 
+
     * {
         padding: 0;
         margin: 0;
@@ -48,231 +50,11 @@
 
     body {
         min-height: 100%;
-        background-color: #000
-        ;
+        background-color: #000;
         background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
         background-position: top right, top left, top left;
         background-attachment: scroll, scroll, fixed;
         background-repeat: repeat-y, repeat-y, repeat;
-    }
-
-    .content {
-        background-color: #faf9f8;
-        color: #222;
-        padding: 80px;
-        min-height: 100%;
-        width: 768px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: justify;
-    }
-
-    .content > p,
-    .content > ol,
-    .content > ul,
-    .content > blockquote {
-        margin-bottom: 1em;
-        margin-top: 1em;
-    }
-
-    .content > *:first-child {
-        margin-top: 0em;
-    }
-
-    .content > *:last-child {
-        margin-bottom: 0em;
-    }
-
-    p, li {
-        line-height: 140%;
-    }
-
-    h1 + p,
-    h2 + p,
-    h3 + p,
-    h4 + p,
-    h5 + p,
-    h6 + p,
-    p + p {
-        text-indent: 20px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Baskerville', serif;
-        font-weight: 600;
-        margin-top: 1.5em;
-        margin-bottom: 1em;
-        line-height: 150%;
-    }
-
-    h2, h3, h4, h5, h6 {
-        letter-spacing: 0.01em;
-        word-spacing: 0.03em;
-    }
-
-    h1 {
-        letter-spacing: 0.03em;
-        word-spacing: 0.09em;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 22px;/*
-        padding-bottom: 0.3em;
-        border-bottom: 1px solid #ccc;*/
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-    }
-
-    h1.site-title {
-        text-transform: none;
-        font-variant: small-caps;
-        font-size: 36px;
-        color: #328;
-        margin: 0;
-    }
-
-    h1.subtitle {
-        font-size: 12px;
-        letter-spacing: 0.2em;
-        word-spacing: 0.1em;
-        margin-top: 0.5em;
-        margin-bottom: 4em;
-        color: #999;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    li {
-        margin-left: 20px;
-        margin-top: 0.3em;
-        margin-bottom: 0.3em;
-    }
-
-    hr {
-        margin-top: 40px;
-    }
-
-    .content > hr {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    blockquote {
-        margin-left: 40px;
-        margin-right: 40px;
-        white-space: pre-wrap;
-    }
-
-    blockquote cite {
-        display: block;
-        text-align: right;
-        font-style: normal;
-    }
-
-    blockquote cite:before {
-        content: '—';
-    }
-
-    q {
-        quotes: "“" "”" "‘" "’";
-    }
-
-    q:before {
-        content: open-quote;
-    }
-
-    q:after {
-        content: close-quote;
-    }
-
-    sup {
-        line-height: 100%; /* prevent footnote references from altering line spacing */
-    }
-
-    code {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        padding-left: 3px;
-        padding-right: 3px;
-        line-height: 100%;
-        background-color: #e8e8e0;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
-
-    .nav-links div {
-        text-align: center;
-        margin: 0;
-    }
-
-    .highlight, .hi {
-        text-decoration: underline;
-    }
-
-    .pron {
-        font-variant: small-caps;
-        color: #800;
-    }
-
-    a {
-        text-decoration: underline;
-        color: #00c;
-    }
-
-    a:visited {
-        color: #71a;
-    }
-
-    a:hover {
-        color: #b0b;
-    }
-
-    /* LANGUAGES */
-
-    /* Sindarin */
-    .s {
-        font-weight: bold;
-        color: #038;
-    }
-
-    /* Quenya */
-    .q {
-        font-weight: bold;
-        color: #b08;
-    }
-
-    /* TENGWAR */
-
-    .t, .tengwar {
-        font-family: tengwar;
-        font-size: 1.2em;
-    }
-
-    .ti {
-        font-family: tengwaritalic;
-    }
-
-    .tai {
-        font-family: tengwaraltitalic;
-    }
-
-    /* PAGE-SPECIFIC THINGS */
-
-    .toc-detail {
-        color: #0090d0;
-        font-style: italic;
-    }
-
-    .toc-detail em {
-        font-style: normal;
     }
 
     </style>
@@ -287,13 +69,13 @@
 
 <p>A typical language course will start off with common phrases, like <q>please</q>, <q>thank you</q>, and <q>goodbye</q>—indispensable words, if you&#39;re going to travel in a foreign country. Yet Sindarin has no equivalent for any of these<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>. The language course will also list the pronouns: <em>I</em>, <em>you</em>, <em>he</em>, <em>she</em>, etc. But Sindarin pronouns are a point of great contention: would you believe that people are still trying to figure out what the Sindarin word for <em>he</em> is? In spite of these and many other difficulties, various people have tried to write language courses in Sindarin. While their efforts are impressive in their own right, I think that to approach Sindarin as if it were a living language of Earth is misguided. Sindarin is fundamentally unlike earthly languages in its purpose and execution, and deserves a different approach if we are truly to understand it.</p>
 
-<p>Alert readers should smell a paradox here: Tolkien is renowned as a master linguist, a passionate philologist, and a pioneer of the art of language creation. He worked on Sindarin (or at least, on successive languages of a similar style to Sindarin) for essentially his entire adult life. How could he just <em>forget</em> to write down the Sindarin equivalents of <q>please</q> and <q>thank you</q>? I will devote the rest of this essay to resolving the paradox, but the summary is this: the lack of such conversational niceties among Tolkien&#39;s linguistic papers shows that he wasn&#39;t particularly interested in that aspect of language. His goal was not to make another Esperanto<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>, but to commune with his own linguistic muse to create something of great beauty. Measured against that goal his languages are a triumph. Against any other, they will inevitably fall short. Our proper course is not to patch up their supposed <q>faults</q>, nor to dismiss them as unworthy, but to understand why they are the way they are. They are not that way by accident!</p>
+<p>Alert readers should smell a paradox here: Tolkien is renowned as a master linguist, a passionate philologist, and a pioneer of the art of language creation. He worked on Sindarin (or at least, on languages of a similar style) for his entire adult life. How could he just <em>forget</em> to write down the Sindarin equivalents of <q>please</q> and <q>thank you</q>? I will devote the rest of this essay to resolving the paradox, but the summary is this: the lack of such conversational niceties among Tolkien&#39;s linguistic papers shows that he wasn&#39;t particularly interested in that aspect of language. His goal was not to make another Esperanto<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>, but to commune with his own linguistic muse to create something of great beauty. Measured against that goal his languages are a triumph. Against any other, they will inevitably fall short. Our proper course is not to patch up their supposed <q>faults</q>, nor to dismiss them as unworthy, but to understand why they are the way they are. They are not that way by accident!</p>
 
-<p>Tolkien&#39;s views on the matter of language creation are probably most fully revealed in the essay <q>A Secret Vice</q>. The <q>vice</q> in question is of course his peculiar hobby, which he calls <q>secret</q> because <q>it can earn no prizes, win no competitions [. . .] make no birthday presents for aunts</q> (<em>The Monsters and the Critics</em>, hereafter <em>MC</em>, p. 207). He approaches the topic from an interesting angle: to dispel any preconceptions his audience might have about what the <q>secret vice</q> is, he first describes what it <em>isn&#39;t</em>.</p>
+<p>Tolkien&#39;s views on language creation are revealed most fully in the essay <q>A Secret Vice</q>. The <q>vice</q> in question is of course his peculiar hobby, which he calls <q>secret</q> because <q>it can earn no prizes, win no competitions (as yet) – make no birthday presents for aunts</q> (<em>The Monsters and the Critics</em>, hereafter <em>MC</em>, p. 207). But as his argument unfolds it becomes clear that the <q>vice</q>, to him, is no mere hobby, but an art-form as worthy as music or literature. This may take some of his audience by surprise, so to dispel any preconceptions they might have about what this art-form is, he first describes what it <em>isn&#39;t</em>.</p>
 
-<p>First on the <q>not it</q> list is <em>Animalic</em>, a language-game invented by his childhood acquaintances, which substituted animal names for ordinary English words. <em>Dog nightingale woodpecker forty</em> meant <q>you are an ass</q>. <q>Crude,</q> notes Tolkien, <q>in the extreme</q> (<em>MC</em> p. 200). However, he excludes Animalic from the ranks of true linguistic art not because of its crudeness, but because it was <q>not primarily concerned at all with relations of sound and sense</q> and was in fact wholly <q>practical</q>—in the sense that it served only the needs of communication and secrecy, not the desire for aesthetic pleasure (<em>MC</em> p. 201).</p>
+<p>First on the <q>not it</q> list is <em>Animalic</em>, a language-game invented by his childhood acquaintances, which substituted animal names for ordinary English words. <em>Dog nightingale woodpecker forty</em> meant <q>you are an ass</q>. <q>Crude,</q> notes Tolkien, <q>in the extreme</q> (<em>MC</em> p. 200). However, he excludes Animalic from the ranks of true linguistic art not for mere crudeness, but because it was <q>not primarily concerned at all with relations of sound and sense</q> and was in fact wholly <q>practical</q>—in the sense that it served only the needs of communication and secrecy, not the desire for aesthetic pleasure (<em>MC</em> p. 201).</p>
 
-<p>A later childhood language, <em>Nevbosh</em>, was a bit less primitive, but still did not reach the heights of artistry that Tolkien would later aspire to. It was invented mainly by one of Tolkien&#39;s friends, though the young JRRT also contributed some words. The bulk of it consisted of distorted English, French, and Latin, and the words were strung together with English syntax:</p>
+<p>A later childhood language, <em>Nevbosh</em>, was a bit less primitive, but still fell short of Tolkien&#39;s later artistic aspirations. It was invented mainly by one of Tolkien&#39;s friends, though the young JRRT also contributed some words. The bulk of it consisted of distorted English, French, and Latin, and the words were strung together with English syntax:</p>
 
 <blockquote>
 <p><em>Dar fys ma vel gom co palt, &lsquo;hoc</em>
@@ -306,20 +88,20 @@
 
 <p>(A full translation is not given, but it must be: <em>There was an old man who said, <q>how / can I possibly carry my cow? / For if I were to ask it / To get in my basket / It would make such a terrible row!</q></em>)</p>
 
-<p>Interestingly, at least one word from Nevbosh appears to have made it into Elvish: <em>lint</em> <q>quick, clever, nimble</q> (<em>MC</em> p. 205). When Galadriel sang of <em>yéni ve <strong>lintë</strong> yuldar</em> (<q>years like <b>swift</b> draughts</q>) she must have little suspected that her speech was Nevbosh-influenced! However, Tolkien draws attention to <em>lint</em> not because it inspired a Quenya word (since Quenya, or rather Qenya, was still in its early stages, and Lothlórien yet undiscovered), but because it was a rarity in Nevbosh—a word invented out of thin air and treasured at first for the pleasure in the association of its sound and meaning. I say <q>at first</q> because Tolkien is quick to note that <q>the &lsquo;word&rsquo; once thus established, though owing its being to this pleasure, this sense of fitness, quickly became a mere chance symbol dominated by the notion and its circle of association [.&nbsp;.&nbsp;.]</q> (<em>MC</em> p. 205). It seems that <em>use</em> of the word dulled its beauty (or at least the perception of it) and distorted its sense—a refrain that Tolkien repeats elsewhere, and to which I will return.</p>
+<p>Tolkien translates many of the Nevbosh words in his essay, but draws attention to one in particular: <em>lint</em> <q>quick, clever, nimble</q>, which curiously enough seems to have been transplanted into his Elvish languages. When Galadriel sang of <em>yéni ve <strong>lintë</strong> yuldar</em> (<q>years like <b>swift</b> draughts</q>) she must have little suspected that her speech was Nevbosh-influenced! However, <em>lint</em> is interesting to Tolkien not because it inspired a Quenya word<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup>, but because it was a rarity in Nevbosh: a word invented out of thin air and treasured (at first) for the pleasure in the association of its sound and meaning. I say <q>at first</q> because Tolkien is quick to note that <q>the &lsquo;word&rsquo; once thus established, though owing its being to this pleasure, this sense of fitness, quickly became a mere chance symbol dominated by the notion and its circle of association [.&nbsp;.&nbsp;.]</q> (<em>MC</em> p. 205). It seems that <em>use</em> of the word obscured its beauty and distorted its sense—a refrain that Tolkien repeats elsewhere, and to which I will return.</p>
 
-<p>Tolkien claims that Nevbosh is a lower form of the linguistic art than his later Elvish languages, precisely because it was poor in words chosen for their aesthetic value. But if <em>lint</em> gave the Nevbosh-creators particular pleasure, why did they not make more words like it? That is, what prevented Nevbosh from becoming an <q>art-language</q> on the level of Sindarin or Quenya? Tolkien has a ready answer:</p>
+<p>In any case, <em>lint</em> is exceptional. Most Nevbosh words were not created or enjoyed for their beauty, and because of this Tolkien places Nevbosh low on the linguistic totem pole. But this raises another question: if <em>lint</em> gave the Nevbosh-creators particular pleasure, why did they not make more words like it? That is, what prevented Nevbosh from becoming an <q>art-language</q> on the level of Sindarin or Quenya? Tolkien has a ready answer:</p>
 
 <blockquote>
 <p><em>Nevbosh</em> represented the <em>highest common linguistic capacity</em> of a small group, not the best that could be produced by its best member. It remained unfreed from the purely <em>communicative</em> aspect of language—the one that seems usually supposed to be the real germ and original impulse of language. But I doubt this exceedingly; as much as one doubts a poet&#39;s sole object, even primary one, being to talk in a special way to other people.
 <cite><em>MC</em> p. 208</cite></p>
 </blockquote>
 
-<p>What a telling choice of words—<q>unfreed from the purely <em>communicative</em> aspect</q>! In Tolkien&#39;s mind, Nevbosh was a lesser language than Q(u)enya because it was the thrall of communication, and because it had to serve a multitude it was essentially <a href="https://en.wikipedia.org/wiki/Design_by_committee">designed by committee</a>. In light of this statement, it starts to become clear why Sindarin is lacking in so many of the vital particulars of living languages—it was never Tolkien&#39;s aim to create a <q>purely <em>communicative</em></q> language. For him, communication (when it was considered at all) had to be secondary to the creation of beauty, in order for that creation to achieve its highest form.</p>
+<p>What a telling choice of words—<q>unfreed from the purely <em>communicative</em> aspect</q>! In Tolkien&#39;s mind, Nevbosh was a lesser language than Quenya because it was the thrall of communication, and because it had to serve a multitude it was essentially <a href="https://en.wikipedia.org/wiki/Design_by_committee">designed by committee</a>. In light of this statement, it starts to become clear why Sindarin is lacking in so many of the vital particulars of living languages—it was never Tolkien&#39;s aim to create a <q>purely <em>communicative</em></q> language. For him, communication (when it was considered at all) had to be secondary to the creation of beauty, in order for that creation to achieve its highest form.</p>
 
-<p>One could argue that a language that can&#39;t be used for communication is no language at all, and even Tolkien acknowledges this point, admitting that <q>[t]he crude <em>Nevbosh</em> was a &lsquo;language&rsquo; in a fuller sense than the things we are coming to [i.e. the Elvish tongues]</q>. Of course, <em>within the fictional world</em>, Quenya and Sindarin certainly are complete languages. But if we approach them with our feet firmly planted on our own Earth, we have to consider them as works of art created by one man, and for that purpose we may want a term other than <q>language</q>—maybe <q>glossopoesis</q> will do for now<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup>. But <q>Language</q> implies communica&shy;tion, and thus misrepresents Tolkien&#39;s real intentions.</p>
+<p>A language that can&#39;t be used for communication is arguably not a language at all, and even Tolkien acknowledges this point, admitting that <q>[t]he crude <em>Nevbosh</em> was a &lsquo;language&rsquo; in a fuller sense than the things we are coming to [i.e. the Elvish tongues]</q>. Of course, <em>within the fictional world</em>, Quenya and Sindarin certainly are complete languages. But if we approach them with our feet firmly planted on our own Earth, we have to consider them as works of art created by one man, and for that purpose we may want a term other than <q>language</q>—maybe <q>glossopoesis</q> will do for now<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup>. But <q>Language</q> implies communica&shy;tion, and so misrepresents Tolkien&#39;s real intentions.</p>
 
-<p>But maybe simply admiring Sindarin from afar is not your goal. Maybe you want to bring it fully to life, to forge fellowship in the voices of Lórien, or make merry in Mirkwood&#39;s speech. But before you set your heart on that, I should caution you that using <em>Sindarin</em> for such a purpose may not even be accurate within Tolkien&#39;s canon. For Sindarin was not (in the Third Age at any rate) the daily language of the majority of Elves! I&#39;ll let Tolkien explain:<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup></p>
+<p>But maybe simply admiring Sindarin from afar is not your goal. Maybe you want to bring it fully to life, to forge fellowship in the voices of Lórien, or make merry in Mirkwood&#39;s speech. But before you set your heart on that, I should caution you that using <em>Sindarin</em> for such a purpose may not even be accurate within Tolkien&#39;s canon. For Sindarin was not (in the Third Age at any rate) the daily language of the majority of Elves! I&#39;ll let Tolkien explain:<sup id="fnref5"><a href="#fn5" rel="footnote">5</a></sup></p>
 
 <blockquote>
 <p>The Elves far back in the Elder Days became divided into two main branches: the West-elves (the <em>Eldar</em>) and the East-elves. Of the latter kind were most of the elven-folk of Mirkwood and Lórien; but their languages do not appear in this history, in which all the Elvish names and words are of <em>Eldarin</em> form. [. . .]
@@ -327,11 +109,11 @@
 <cite><em>The Return of the King</em> Appendix F, pp. 405-6</cite></p>
 </blockquote>
 
-<p>Since Sindarin was by the Third Age used mainly by the Elven nobility, it&#39;s possible that the attested Sindarin texts—consisting of highly formalized poetry, spells, salutations, prayers, and the like—are actually pretty representative of how Tolkien imagined Sindarin to be used by the Elves. For more mundane things, most Elves would probably use a different language. But Tolkien wrote very little about the languages of the <q>East-elves</q>—the <em>Avari</em> and <em>Nandor</em> as they were called in Quenya. This seeming lack actually gives us an opportunity to create fan-art languages that imagine what <em>Avarin</em> or <em>Nandorin</em> might have been like. Such languages would not, of course, be part of Tolkien canon, but they could reasonably borrow as much as their creators liked from the Eldarin languages, since in their fictional context they would be in close contact with Sindarin (and, to a lesser extent, Quenya).</p>
+<p>Since Sindarin was by the Third Age used mainly by the Eldarin nobility, it&#39;s possible that Tolkien imagined it to be a language of lore and ceremony. The attested Sindarin texts agree with this: Sindarin is rich in poetry, inscriptions, incantations, and formal greetings, but poor in dialogue. For mundane matters most Elves would probably use a different language. But Tolkien wrote very little about the languages of the <q>East-elves</q>—the <em>Avari</em> and <em>Nandor</em> as they were called in Quenya. This seeming lack actually gives us an opportunity to create fan-art languages that imagine what <em>Avarin</em> or <em>Nandorin</em> might have been like. Such languages would not, of course, be part of Tolkien canon, but they could reasonably borrow as much as their creators liked from the Eldarin languages, since in their fictional context they would be in close contact with Sindarin (and, to a lesser extent, Quenya).</p>
 
-<p>As far as I know, only one attempt has been made to base a Tolkien fan-language on an Avarin or Nandorin tongue, and that is David Salo&#39;s <em>Silvan</em> language, published in <em>Other Hands</em> issue 28, which can be downloaded from <a href="http://www.othermindsmagazine.com/downloads/oh-archive/other-hands-issue-28.pdf/view">this page</a>. While the language is based on Eldarin and clearly Elvish in form, the majority of it is Salo&#39;s invention, and other interpretations of Silvan are possible. I consider the field of Nandorin linguistics still wide open.</p>
+<p>As far as I know, only one attempt has been made to base a Tolkien fan-language on an Avarin or Nandorin tongue, and that is David Salo&#39;s <em>Silvan</em> language, published in <a href="http://www.othermindsmagazine.com/downloads/oh-archive/other-hands-issue-28.pdf/view"><em>Other Hands</em> issue 28</a>. While the language is based on Eldarin and clearly Elvish in form, the majority of it is Salo&#39;s invention, and other interpretations of Silvan are possible. I consider the field of Nandorin linguistics still wide open.</p>
 
-<p>But fan-art languages are not the subject of <em>this</em> text—Sindarin is. And if we are to study Sindarin, it must be as <q>glossopoesis</q> and not <q>language</q>. What, then, is the substance of <q>glossopoesis</q>? What remains of language when the <q>purely communicative aspect</q> is sublimated away? Tolkien was well acquainted with the products of a similar sublimation process (though one performed by time rather than by human creativity)—namely, the remains of ancient and long-dead languages. Ancient tongues were to him peculiarly delightful, precisely <em>because</em> their daily, fluent use was impossible:</p>
+<p>But fan-art languages are not the subject of <em>this</em> text—Sindarin is. And if we are to study Sindarin, it must be as <q>glossopoesis</q> and not <q>language</q>. What, then, is the substance of <q>glossopoesis</q>? What remains of language when the <q>purely communicative aspect</q> is sublimated away? We can see a hint of the answer in the dead languages of our own Earth, still utterable but uncommunicative in the absence of living speakers. Tolkien knew well how rich and romantic such ancient languages could be. To him they were delightful precisely <em>because</em> their daily, fluent use was impossible:</p>
 
 <blockquote>
 <p>Certainly in the case of dead languages no scholar can ever reach the full position of a native with regard to the purely notional side of the language he studies [. . .]. His compensation remains a great freshness of perception of the word-form. Thus [. . .] our appreciation of the splendour of Homeric Greek in word-form is possibly keener, or more conscious, than it was to a Greek, much else of other elements of poetry though we may miss.
@@ -344,13 +126,15 @@
 
 <p>Those who <em>do</em> share Tolkien&#39;s tastes are hopefully still interested in learning Sindarin, and I think I have now collected enough data to give them some conclusions about the nature of Tolkien&#39;s Elvish tongues. There is some good news, and some bad news. The bad news is that you can&#39;t learn to speak Sindarin the way you currently speak English—it&#39;s simply not designed for that, and <em>intentionally</em> so. The good news is that <em>Tolkien couldn&#39;t speak his languages either</em>, but despite that fact (and even because of it) he found beauty in his languages and kept working on them, which means there&#39;s hope for us who want to study them. We can relish Sindarin the same way Tolkien did, and even revel in its incompleteness, if we are drawn by the same beacons that first attracted him: the harmony of sound and meaning; the nostalgia for a world that never was; the ache of unknowable loss. It was a feat of nigh-Fëanorian prowess that Tolkien achieved when he caught these great lights with his words and made them imperishable.</p>
 
-<p>I am aware that these abstract statements may not be particularly helpful to the hopeful student of Elvish. I have so far offered nothing concrete on what it is like to study an Elvish language from an angle that respects Tolkien&#39;s intentions. What can you actually learn about Sindarin from reading the rest of my rather verbose website? And perhaps closer to the heart of the matter: what can you <em>do</em> with Sindarin? What can you tell your friends about it? For while it is a necessity of the glossopoetic art that new works be produced by solitary toil (otherwise one ends up with <em>Nevbosh</em>), it would be nice if the appreciation of the finished product could be a shared experience.</p>
+<p>I am aware that my poetical ramblings may not be particularly helpful to the hopeful student of Elvish. I have so far offered nothing concrete on what it is like to study an Elvish language from an angle that respects Tolkien&#39;s intentions. What can you actually learn about Sindarin from reading the rest of my rather verbose website? And perhaps closer to the heart of the matter: what can you <em>do</em> with Sindarin? What can you tell your friends about it? For while new glossopoetic works must be created by solitary toil (otherwise you end up with <em>Nevbosh</em>), the finished products can and should be shared.</p>
 
-<p>Although you can&#39;t expect to hold conversations entirely in Sindarin, you can still use the language for some things, though with some limitations due to its incompleteness. Poetry, inscriptions, names, expressions of deeply-felt sentiment—these are the things that Tolkien used his languages for, and they will be the focus of the lessons in subsequent chapters. Also, just because Sindarin is not designed for <em>conversation</em> does not mean that it can never be uttered aloud—it would be a shame if a language designed with such attention to euphony was never heard by human ears. In bygone days my friend and I used to greet each other with a hearty <em>mae govannen</em>, and while we amused ourselves with this private form of greeting, the fitness of sound to sense was also in our minds.</p>
+<p>Although you can&#39;t expect to hold conversations entirely in Sindarin, you can still use the language for some things. Poetry, inscriptions, names, expressions of deeply-felt sentiment—these are the things that Tolkien used his languages for, and they will be the focus of the lessons in subsequent chapters. Also, just because Sindarin is not designed for <em>conversation</em> does not mean that it can never be uttered aloud—it would be a shame if a language designed with such attention to euphony was never heard by human ears. In bygone days my friend and I used to greet each other with a hearty <em>mae govannen</em>, and while we amused ourselves with this private form of greeting, the fitness of sound to sense was also in our minds.</p>
 
-<p>Now, before I let you loose on the lessons, there is one other point that I want to address. I have so far talked about the ways in which Sindarin is <em>incomplete</em>, but there is another factor that makes it difficult to study: Tolkien changed his mind about his languages <em>constantly</em>. A prime example (though from Quenya, not Sindarin) is the word <em>lá</em>. Bill Welden, in the article <q>Negation in Quenya</q>, cites two sources: In a 1960 wordlist, <em>lá</em> meant <q>yes</q>; in an essay from ten years later, <em>lá</em> meant <q>no</q> (<em>Vinyar Tengwar</em> #42, p. 32). Tolkien&#39;s revision of his languages wasn&#39;t carried out slowly or isolated to a few words, either: Christopher Tolkien describes parts of one manuscript (the <em>Etymologies</em>) as a <q>maze of forms and cancellations [. . .] so dense, and for the most part made so quickly, that one cannot be sure what [JRRT's] final intention was: in these parts he was working out potential connections and derivations on the spot, by no means setting down already determined histories</q> (<em>The Lost Road</em> p. 380). Even the finality of publication did not wholly quell Tolkien&#39;s revisionist tendencies. We know, for example, that Tolkien considered no fewer than three alternative explanations for the greeting <em>mae govannen</em> <q>well met</q>: a verb <em>covad-</em> <q>meet</q>, with mutation of <em>c</em> to <em>g</em> yielding <em>govannen</em>; a verb <em>govan-</em>, with no mutation; and a verb <em>govan-</em> with the initial <em>g</em> disappearing under the effect of a second-person pronoun <em>ci</em>, itself mutated and abbreviated to <em>g&#39;</em>, yielding <em>g&#39;ovannen</em>. The problem (for us students) is that even after <em>LotR</em> was published and the phrase <em>mae govannen</em> set in stone, Tolkien could and did change his mind about the underlying words and grammatical rules that produced it. And that means that <em>none</em> of the possible interpretations of <em>mae govannen</em> can be picked out as the <q>right</q> one.</p>
+<p>Now, before I let you loose on the lessons, there is one other point that I want to address. I have so far talked about the ways in which Sindarin is <em>incomplete</em>, but there is another factor that makes it difficult to study: Tolkien changed his mind about his languages <em>constantly</em>. A prime example (though from Quenya, not Sindarin) is the word <em>lá</em>. Bill Welden, in the article <q>Negation in Quenya</q>, cites two sources from Tolkien&#39;s notes: In a 1960 wordlist, <em>lá</em> meant <q>yes</q>; in 1970, <em>lá</em> meant <q>no</q> (<em>Vinyar Tengwar</em> #42, p. 32). Tolkien&#39;s revision of his languages wasn&#39;t carried out slowly or isolated to a few words, either: Christopher Tolkien describes parts of one manuscript (the <em>Etymologies</em>) as a <q>maze of forms and cancellations [. . .] so dense, and for the most part made so quickly, that one cannot be sure what [JRRT's] final intention was: in these parts he was working out potential connections and derivations on the spot, by no means setting down already determined histories</q> (<em>The Lost Road</em> p. 380).</p>
 
-<p>Any attempt to describe Tolkien&#39;s languages will have to confront this frustrating fluidity, either by arbitrarily picking one version and running with it, or by exhaustively detailing the alternatives that Tolkien considered and letting the reader choose. I lean towards the former option—where I have to. Actually, my preference is for a third option, which is to avoid the frequently-revised sections of the language until the stable parts have been thoroughly described. And there <em>are</em> stable parts. Some elements of Sindarin remained constant from Tolkien&#39;s first Gnomish grammar to <em>The Lord of the Rings</em> and beyond—like the word <em>gloss</em> <q>white</q>. Personally, I believe that the stable parts of the languages were those that Tolkien felt the strongest affection for anyway—he seemed really sure that he wanted Glorfindel&#39;s greeting to Aragorn to be pronounced <em>mae govannen</em>, even when he couldn&#39;t decide on the grammar rules that would produce such a phrase. My guess is that the elements of Elvish can be roughly divided into two categories: those discovered through inspiration (and consequently treasured), and those added out of necessity (and thus disposable at a whim). For our present purpose, which is to glimpse the beauty that Tolkien wanted to convey through his languages, the first category is no doubt more interesting. And that is fortunate, because it means we are focusing on the parts of the language about which we can be most certain.</p>
+<p>Even the finality of publication did not wholly quell Tolkien&#39;s revisionist tendencies. We know, for example, that Tolkien considered no fewer than three alternative explanations for the greeting <em>mae govannen</em> <q>well met</q>: a verb <em>covad-</em> <q>meet</q>, with mutation of <em>c</em> to <em>g</em> yielding <em>govannen</em>; a verb <em>govan-</em>, with no mutation; and a verb <em>govan-</em> with the initial <em>g</em> disappearing under the effect of a prefix <em>ci</em> <q>you</q>, itself mutated and abbreviated to <em>g&#39;</em>, yielding <em>g&#39;ovannen</em>. The problem (for us students) is that even after <em>LotR</em> was published and the phrase <em>mae govannen</em> set in stone, Tolkien could and did change his mind about the underlying words and grammatical rules that produced it. And that means that <em>none</em> of the possible interpretations of <em>mae govannen</em> can be picked out as the <q>right</q> one.</p>
+
+<p>Any attempt to describe Tolkien&#39;s languages will have to confront this frustrating fluidity, either by picking one version and sticking to it, or by listing all the alternatives that Tolkien considered and letting the reader choose. I lean towards the second option—where I have to. Actually, my preference is for a third option, which is to avoid the frequently-revised sections of the language until the stable parts have been thoroughly described. And there <em>are</em> stable parts. Some elements of Sindarin remained constant from Tolkien&#39;s first Gnomish grammar to <em>The Lord of the Rings</em> and beyond—like the word <em>gloss</em> <q>white</q>. Personally, I believe that the stable parts of the languages were those that Tolkien felt the strongest affection for anyway—why else would they have lasted through countless rounds of revision? My guess is that the elements of Elvish can be roughly divided into two categories: those discovered through inspiration (and consequently treasured), and those added out of necessity (and so disposable at a whim). For our present purpose, which is to glimpse the beauty that Tolkien wanted to convey through his languages, the products of inspiration are no doubt more interesting. And that is fortunate, because it means we are focusing on the parts of the language about which we can be most certain.</p>
 
 <p>This work is called <q>A Ranger's Guide to Sindarin</q> because of the peculiar nature of Elvish, even among invented languages. Calling it <q>A Student's Primer in Sindarin</q> or <q>An Introductory Sindarin Grammar</q> would not do—learning Sindarin is not a textbook exercise. It is more like exploring the wilderness. There are treacherous paths; there are monsters. But there is also great beauty, if you know how to see it. My goal with the <q>Ranger's Guide</q> is to map the territory (tree-tangled as it is) of Tolkien&#39;s Sindarin. I will not try to cut a path, but I hope to teach you to live among the trees.</p>
 
@@ -368,15 +152,19 @@
 </li>
 
 <li id="fn2">
-<p>Esperanto is an <q>International Auxiliary Language</q> designed to aid communication between people of different native tongues. Tolkien had some fondness for Esperanto, owing to its origins as <q>the creation ultimately of one man, not a philologist</q> (<q>A Secret Vice</q>, <em>The Monsters and the Critics</em> p.198) but apparently he didn&#39;t feel the need to imitate it!&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
+<p>Esperanto is an <q>International Auxiliary Language</q> designed to aid communication between people of different native tongues. Tolkien had some fondness for Esperanto, owing to its origins as <q>the creation ultimately of one man, not a philologist</q> (<em>MC</em> p.198) but apparently he didn&#39;t feel the need to imitate it!&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
 </li>
 
 <li id="fn3">
-<p><em>Glosso-poesis</em> = Greek <q>word-making</q>.&nbsp;<a href="#fnref3" rev="footnote">&#8617;</a></p>
+<p>Quenya, or Qenya as it was then spelled, was still in its early stages. Tolkien probably had not yet imagined that <em>lintë</em> was Quenya for <q>swift</q>.&nbsp;<a href="#fnref3" rev="footnote">&#8617;</a></p>
 </li>
 
 <li id="fn4">
-<p>Contradicting my interpretation of Appendix F is a passage in <em>Unfinished Tales</em>: <q>By the end of the Third Age, the Silvan tongues had probably ceased to be spoken in the two regions that had importance at the time of the War of the Ring: Lórien and the realm of Thranduil in northern Mirkwood. All that survived of them in the records was a few words and several names of persons and places</q> (p. 257). But compare a passage from <em>The Fellowship of the Ring</em>: <q>[. . .] another clear voice spoke in an Elven tongue. Frodo could understand little of what was said, for the speech that the Silvan folk east of the mountains used among themselves was unlike that of the West. Legolas looked up and answered in the same language</q> (p. 365). A footnote references Appendix F. In my mind, the evidence from <em>LotR</em> has more weight, since Tolkien chose to publish <em>LotR</em> but did not choose what went into <em>Unfinished Tales</em>—that volume was published after his death.&nbsp;<a href="#fnref4" rev="footnote">&#8617;</a></p>
+<p><em>Glosso-poesis</em> = Greek <q>word-making</q>.&nbsp;<a href="#fnref4" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn5">
+<p>Contradicting my interpretation of Appendix F is a passage in <em>Unfinished Tales</em>: <q>By the end of the Third Age, the Silvan tongues had probably ceased to be spoken in the two regions that had importance at the time of the War of the Ring: Lórien and the realm of Thranduil in northern Mirkwood. All that survived of them in the records was a few words and several names of persons and places</q> (p. 257). But compare a passage from <em>The Fellowship of the Ring</em>: <q>[. . .] another clear voice spoke in an Elven tongue. Frodo could understand little of what was said, for the speech that the Silvan folk east of the mountains used among themselves was unlike that of the West. Legolas looked up and answered in the same language</q> (p. 365). A footnote references Appendix F. In my mind, the evidence from <em>LotR</em> has more weight, since Tolkien chose to publish <em>LotR</em> but did not choose what went into <em>Unfinished Tales</em>—that volume was published after his death.&nbsp;<a href="#fnref5" rev="footnote">&#8617;</a></p>
 </li>
 
 </ol>
