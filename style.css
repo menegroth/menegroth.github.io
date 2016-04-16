@@ -1,12 +1,22 @@
-.content {
-    background-color: #faf9f8;
+@media screen {
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
     color: #222;
-    padding: 80px;
-    min-height: 100%;
-    width: 768px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.content {
+    padding: 1em;
+    border-left: 6px solid #093;
+    border-left: 6px solid #093;
 }
 
 .content > p,
@@ -15,14 +25,6 @@
 .content > blockquote {
     margin-bottom: 1em;
     margin-top: 1em;
-}
-
-.content > *:first-child {
-    margin-top: 0em;
-}
-
-.content > *:last-child {
-    margin-bottom: 0em;
 }
 
 p, li {
@@ -40,53 +42,24 @@ p + p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Baskerville', serif;
-    font-weight: 600;
+    font-weight: normal;
     margin-top: 1.5em;
-    margin-bottom: 1em;
     line-height: 150%;
-}
-
-h2, h3, h4, h5, h6 {
-    letter-spacing: 0.01em;
-    word-spacing: 0.03em;
 }
 
 h1 {
     letter-spacing: 0.03em;
     word-spacing: 0.09em;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 22px;/*
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #ccc;*/
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-h1.site-title {
-    text-transform: none;
-    font-variant: small-caps;
-    font-size: 36px;
-    color: #328;
-    margin: 0;
-}
-
-h1.subtitle {
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    word-spacing: 0.1em;
-    margin-top: 0.5em;
-    margin-bottom: 4em;
-    color: #999;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 1.3em;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 li {
@@ -95,59 +68,8 @@ li {
     margin-bottom: 0.3em;
 }
 
-hr {
-    margin-top: 40px;
-}
-
-.content > hr {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-blockquote {
-    margin-left: 40px;
-    margin-right: 40px;
-    white-space: pre-wrap;
-}
-
-blockquote cite {
-    display: block;
-    text-align: right;
-    font-style: normal;
-}
-
-blockquote cite:before {
-    content: '—';
-}
-
-q {
-    quotes: "“" "”" "‘" "’";
-}
-
-q:before {
-    content: open-quote;
-}
-
-q:after {
-    content: close-quote;
-}
-
-sup {
-    line-height: 100%; /* prevent footnote references from altering line spacing */
-}
-
-code {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    padding-left: 3px;
-    padding-right: 3px;
-    line-height: 100%;
-    background-color: #e8e8e0;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+.center {
+    text-align: center;
 }
 
 .nav-links div {
@@ -209,10 +131,12 @@ a:hover {
 /* PAGE-SPECIFIC THINGS */
 
 .toc-detail {
-    color: #0090d0;
+    color: #00b0f0;
     font-style: italic;
 }
 
 .toc-detail em {
     font-style: normal;
+}
+
 }
