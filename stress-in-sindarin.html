@@ -3,8 +3,12 @@
 
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./print.css">
     <style type="text/css">
 
     @font-face {
@@ -37,24 +41,9 @@
         src: url(./annatar/tngani.ttf);
     }
 
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        min-height: 100%;
-    }
-
-    body {
-        min-height: 100%;
-        background-color: #000;
-        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
-        background-position: top right, top left, top left;
-        background-attachment: scroll, scroll, fixed;
-        background-repeat: repeat-y, repeat-y, repeat;
+    @font-face {
+        font-family: cirth;
+        src: url(./Erebor.ttf)
     }
 
     </style>
@@ -75,7 +64,7 @@
 
 <p>The contradictory examples are the Sindarin place-names <em>Imladris</em>, that is Rivendell, and <em>Nargothrond</em>, the stronghold of Finrod. If the Appendices are taken at their word, these should be stressed <em>imlAdris</em>, <em>nargOthrond</em>, since the next-to-last syllable has two following consonants. However, these names are found in verses whose meter makes it clear that they are stressed on the <em>initial</em> syllable:</p>
 
-<p>Boromir&#39;s poem at the Council of Elrond:</p>
+<p>Boromir&rsquo;s poem at the Council of Elrond:</p>
 
 <blockquote>
 <p>Seek for the Sword that was broken:
@@ -83,7 +72,7 @@ In Imladris it dwells[...]
 <cite>(<em>The Fellowship of the Ring</em>, p. 259)</cite></p>
 </blockquote>
 
-<p>Gimli&#39;s song in Moria:</p>
+<p>Gimli&rsquo;s song in Moria:</p>
 
 <blockquote>
 <p>The world was fair, the mountains tall,
@@ -91,7 +80,7 @@ In Elder Days before the fall
 Of mighty kings in Nargothrond
 And Gondolin, who now beyond
 The Western Seas have passed away:
-The world was fair in Durin&#39;s Day.
+The world was fair in Durin&rsquo;s Day.
 <cite>(<em>The Fellowship of the Ring</em>, p. 330)</cite></p>
 </blockquote>
 
@@ -101,7 +90,7 @@ The world was fair in Durin&#39;s Day.
 
 <h2>Analogy with Latin</h2>
 
-<p>Latin was one of Tolkien&#39;s favorite languages, and it seems to have inspired the stress rule common to Sindarin and Quenya. In fact, Latin stress patterns follow the rule in Appendix E almost exactly, with one important exception: the <em>muta cum liquida</em> rule.</p>
+<p>Latin was one of Tolkien&rsquo;s favorite languages, and it seems to have inspired the stress rule common to Sindarin and Quenya. In fact, Latin stress patterns follow the rule in Appendix E almost exactly, with one important exception: the <em>muta cum liquida</em> rule.</p>
 
 <p>This phrase is Latin for <q>stop with liquid</q>, referring to consonant clusters formed of a <em>stop</em> (T, P, K, D, B, or G) and a <em>liquid</em> (L or R) in that order. When one of these clusters followed the second-to-last vowel in a word, the stress did not normally fall on that vowel. There is a deeper underlying reason for this pattern, whose explanation requires a slight digression.</p>
 
@@ -109,15 +98,15 @@ The world was fair in Durin&#39;s Day.
 
 <p>To understand the Latin stress rule, we first need to understand how words are divided into syllables. The general rule for finding syllable breaks in Latin is that consonant clusters should be broken up. Where this causes a syllable to end in a consonant, that syllable becomes <q>long by position</q> (as opposed to <q>long by nature</q>, i.e. having a long vowel or diphthong). The second-to-last syllable is stressed if it is long, whether by position or by nature.</p>
 
-<p>Here&#39;s the catch: <em>muta cum liquida</em> clusters are not broken up into separate syllables, so they don&#39;t lengthen the preceding syllable. A word like <em>tenebrae</em> would thus be syllabified and stressed <em><span class="hi">te</span>&middot;ne&middot;brae</em>.</p>
+<p>Here&rsquo;s the catch: <em>muta cum liquida</em> clusters are not broken up into separate syllables, so they don&rsquo;t lengthen the preceding syllable. A word like <em>tenebrae</em> would thus be syllabified and stressed <em><span class="hi">te</span>&middot;ne&middot;brae</em>.</p>
 
 <p>The further underlying reason for this is that stop+liquid clusters can begin a syllable in Latin (as evidenced by the many words that begin with such clusters), while other clusters cannot. Thus, these other clusters must be broken up, while stop+liquid clusters can remain.</p>
 
-<p>There&#39;s one more layer of complication: in poetry, stop+liquid clusters <em>can</em> make the previous syllable long to fit the meter of the poem.</p>
+<p>There&rsquo;s one more layer of complication: in poetry, stop+liquid clusters <em>can</em> make the previous syllable long to fit the meter of the poem.</p>
 
 <h3>Applying the Rule to Sindarin</h3>
 
-<p>Now let&#39;s see how we can apply the logic behind the Latin <em>muta cum liquida</em> rule to Sindarin. The first thing to note is that the Sindarin equivalent of the rule need not apply strictly to stop+liquid clusters, since Sindarin syllables can also begin with fricative+liquid clusters like <em>thr</em>: e.g. <em>Thranduil</em>. Thus, <em>Nargothrond</em> could be syllabified and stressed <em><span class="hi">Nar</span>&middot;go&middot;thrond</em>. <em>Imladris</em> has a stop+liquid cluster <em>dr</em>: <em><span class="hi">Im</span>&middot;la&middot;dris</em>.</p>
+<p>Now let&rsquo;s see how we can apply the logic behind the Latin <em>muta cum liquida</em> rule to Sindarin. The first thing to note is that the Sindarin equivalent of the rule need not apply strictly to stop+liquid clusters, since Sindarin syllables can also begin with fricative+liquid clusters like <em>thr</em>: e.g. <em>Thranduil</em>. Thus, <em>Nargothrond</em> could be syllabified and stressed <em><span class="hi">Nar</span>&middot;go&middot;thrond</em>. <em>Imladris</em> has a stop+liquid cluster <em>dr</em>: <em><span class="hi">Im</span>&middot;la&middot;dris</em>.</p>
 
 <p>As in Latin, the Sindarin <em>muta cum liquida</em> rule must be somewhat flexible (if it in fact exists). Some words like <em>silivren</em> (in the Hymn to Elbereth) and <em>Thangorodrim</em> show penultimate stress.</p>
 
@@ -130,10 +119,10 @@ The world was fair in Durin&#39;s Day.
 <ul>
 <li>A Tolkien manuscript comes to light explaining the abnormal stress of <em>Nargothrond</em> and <em>Imladris</em> without referring to a <em>muta cum liquida</em> rule.</li>
 <li>A large body of Tolkien poetry is found in which many polysyllabic words with no <em>muta cum liquida</em> cluster are stressed abnormally. This would show that Tolkien often bent his own stress rules regardless of the shape of the word, weakening the case for a specific <em>muta cum liquida</em> rule.</li>
-<li>A Tolkien manuscript surfaces stating explicitly that Sindarin has no <em>muta cum liquida</em> rule and that the stress rules in Appendix E are absolute. This would be the least satisfying of the possible refutations, since it would mean that we would either have to disobey the new edict when reading Tolkien&#39;s poems, or else stumble over awkwardly-stressed words.</li>
+<li>A Tolkien manuscript surfaces stating explicitly that Sindarin has no <em>muta cum liquida</em> rule and that the stress rules in Appendix E are absolute. This would be the least satisfying of the possible refutations, since it would mean that we would either have to disobey the new edict when reading Tolkien&rsquo;s poems, or else stumble over awkwardly-stressed words.</li>
 </ul>
 
-<p>So far, though, the evidence from outside <em>LotR</em> seems to support the <em>muta cum liquida</em> theory. After writing the first draft of this essay, I discovered that there were more <em>muta cum liquida</em> examples in <em>The Lay of Leithian</em>, among them many more occurrences of <em>Nargothrond</em> with initial stress, as well as new examples: <em>Menegroth</em> and possibly <em>Orodreth</em>. The evidence from the <em>Lay</em> is analyzed <a href="https://mildred-of-midgard.dreamwidth.org/158375.html">here</a> by people more knowledgeable than I in these matters, so I won&#39;t attempt to redo their work.</p>
+<p>So far, though, the evidence from outside <em>LotR</em> seems to support the <em>muta cum liquida</em> theory. After writing the first draft of this essay, I discovered that there were more <em>muta cum liquida</em> examples in <em>The Lay of Leithian</em>, among them many more occurrences of <em>Nargothrond</em> with initial stress, as well as new examples: <em>Menegroth</em> and possibly <em>Orodreth</em>. The evidence from the <em>Lay</em> is analyzed <a href="https://mildred-of-midgard.dreamwidth.org/158375.html">here</a> by people more knowledgeable than I in matters of poetry, so I won&rsquo;t attempt to redo their work.</p>
 
 <p>The sequence of events leading to this essay was fortunate. If I had seen the evidence from the <em>Lay</em> before theorizing a Sindarin <em>muta cum liquida</em> rule, I would not be as confident in the theory. But now I know that the <em>muta cum liquida</em> rule can be inferred from only part of the existing evidence, which means the totality of the evidence is more than the minimum necessary to inspire the theory. Thus we can be confident that the theory does not overfit the data. It has the power to explain evidence that was not involved in its construction.</p>
 
@@ -141,28 +130,28 @@ The world was fair in Durin&#39;s Day.
 
 <p>Nevertheless, we must consider the possibility that when <em>The Return of the King</em> was published, Tolkien had no <em>muta cum liquida</em> rule in mind for Sindarin. For the fact remains that the description of Eldarin stress in the Appendices does not mention such a rule.</p>
 
-<p>It may be significant that all of the evidence for <em>muta cum liquida</em> is drawn from the earliest parts of <em>The Lord of the Rings</em> and from the <em>Lay of Leithian</em> which predated it. Tolkien was constantly revising his thoughts on the languages, and it may be that in writing the Appendices he overlooked the <em>muta cum liquida</em> examples in the poems he&#39;d written years earlier. The <em>Lay of Leithian</em> wasn&#39;t published during Tolkien&#39;s lifetime, so he probably wouldn&#39;t have considered it when deciding which stress rules to immortalize in print.</p>
+<p>It may be significant that all of the evidence for <em>muta cum liquida</em> is drawn from the earliest parts of <em>The Lord of the Rings</em> and from the <em>Lay of Leithian</em> which predated it. Tolkien was constantly revising his thoughts on the languages, and it may be that in writing the Appendices he overlooked the <em>muta cum liquida</em> examples in the poems he&rsquo;d written years earlier. The <em>Lay of Leithian</em> wasn&rsquo;t published during Tolkien&rsquo;s lifetime, so he probably wouldn&rsquo;t have considered it when deciding which stress rules to immortalize in print.</p>
 
 <p>If anyone had called attention to the discrepancy between the Appendices and the poems in <em>The Fellowship of the Ring</em>, there are three fairly obvious ways Tolkien could have resolved it:</p>
 
 <ul>
-<li>He could provide a historical reason for why <em>Imladris</em> and <em>Nargothrond</em> show abnormal stress. <em>Nargothrond</em> would be easier to explain because it is not pure Classical Sindarin. Tolkien lists it among <q>ancient names derived from an older period</q> (Appendix E) to explain why it doesn&#39;t show the usual change of final <em>nd</em> to <em>n</em>. It would be a natural extension of this to exempt it from the normal stress patterns.</li>
+<li>He could provide a historical reason for why <em>Imladris</em> and <em>Nargothrond</em> show abnormal stress. <em>Nargothrond</em> would be easier to explain because it is not pure Classical Sindarin. Tolkien lists it among <q>ancient names derived from an older period</q> (Appendix E) to explain why it doesn&rsquo;t show the usual change of final <em>nd</em> to <em>n</em>. It would be a natural extension of this to exempt it from the normal stress patterns.</li>
 <li>He could revise the stress rule in Appendix E to include a <em>muta cum liquida</em> clause.</li>
 <li>He could say that Sindarin names used in English poems do not have to follow the normal stress rules of Sindarin. However, I think this the least likely possibility. <em>The Lord of the Rings</em> is itself an English text peppered with Sindarin names, and these names are not anglicized in any way. The inclusion of the pronunciation rules in Appendix E seems rather to indicate that Tolkien wanted to keep these names distinctly Elvish and to contrast them with the surrounding English text.</li>
 </ul>
 
-<p>There&#39;s no way to tell for sure which of these approaches Tolkien would have preferred. Since he knew Latin, he must have at least considered a <em>muta cum liquida</em> rule for Sindarin, so maybe he&#39;d lean toward that option. On the other hand, he might have preferred to keep the published stress rule and simply make an exception for the two words that contradict it.</p>
+<p>There&rsquo;s no way to tell for sure which of these approaches Tolkien would have preferred. Since he knew Latin, he must have at least considered a <em>muta cum liquida</em> rule for Sindarin, so maybe he&rsquo;d lean toward that option. On the other hand, he might have preferred to keep the published stress rule and simply make an exception for the two words that contradict it.</p>
 
 <h2>Conclusions?</h2>
 
-<p>Unfortunately, this essay must end with a whimper and not a bang. I can&#39;t offer any conclusions more firm than <q>maybe Tolkien considered a <em>muta cum liquida</em> rule for Sindarin; make of that what you will</q>. I have presented the evidence; the interpretation is up to your discretion. I personally will always stress <em>Imladris</em> and <em>Nargothrond</em> on the first syllable, and will likewise continue to indulge in pronouncing the name of this website <em><span class="hi">Men</span>egroth</em>. Until more evidence comes to light, I don&#39;t feel completely confident in generalizing further.</p>
+<p>Unfortunately, this essay must end with a whimper and not a bang. I can&rsquo;t offer any conclusions more firm than <q>maybe Tolkien considered a <em>muta cum liquida</em> rule for Sindarin; make of that what you will</q>. I have presented the evidence; the interpretation is up to your discretion. I personally will always stress <em>Imladris</em> and <em>Nargothrond</em> on the first syllable, and will likewise continue to indulge in pronouncing the name of this website <em><span class="hi">Men</span>egroth</em>. Until more evidence comes to light, I don&rsquo;t feel completely confident in generalizing further.</p>
 
 <h2>Other Resources</h2>
 
 <p>After writing the initial version of this article, I discovered that neither my observations nor my derivation of a <em>muta cum liquida</em> rule were original to me. Following is a list of those who beat me to the punch:</p>
 
 <ul>
-<li>A <a href="https://mildred-of-midgard.dreamwidth.org/158375.html">2012 discussion</a> on mildred&#95;of&#95;midgard&#39;s blog (also linked above) mentions <em>Nargothrond</em> as possible evidence of a Sindarin <em>muta cum liquida</em> rule, also bringing in evidence from the <em>Lay of Leithian</em>.</li>
+<li>A <a href="https://mildred-of-midgard.dreamwidth.org/158375.html">2012 discussion</a> on mildred&#95;of&#95;midgard&rsquo;s blog (also linked above) mentions <em>Nargothrond</em> as possible evidence of a Sindarin <em>muta cum liquida</em> rule, also bringing in evidence from the <em>Lay of Leithian</em>.</li>
 <li>In a <a href="http://archives.conlang.info/gho/bhelgho/tree.html">2003 discussion</a> on the Conlang mailing list, Pavel Iosad and John Cowan discussed the metrical evidence for a revised Sindarin stress rule.</li>
 </ul>
         </div>

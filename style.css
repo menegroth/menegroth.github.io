@@ -72,20 +72,6 @@ li {
     text-align: center;
 }
 
-.nav-links div {
-    text-align: center;
-    margin: 0;
-}
-
-.highlight, .hi {
-    text-decoration: underline;
-}
-
-.pron {
-    font-variant: small-caps;
-    color: #800;
-}
-
 a {
     text-decoration: underline;
     color: #00c;

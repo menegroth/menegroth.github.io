@@ -3,8 +3,12 @@
 
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./print.css">
     <style type="text/css">
 
     @font-face {
@@ -37,24 +41,9 @@
         src: url(./annatar/tngani.ttf);
     }
 
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        min-height: 100%;
-    }
-
-    body {
-        min-height: 100%;
-        background-color: #000;
-        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
-        background-position: top right, top left, top left;
-        background-attachment: scroll, scroll, fixed;
-        background-repeat: repeat-y, repeat-y, repeat;
+    @font-face {
+        font-family: cirth;
+        src: url(./Erebor.ttf)
     }
 
     </style>
@@ -63,54 +52,76 @@
 <body>
     <div class="around-content">
         <div class="content">
-<p><a href="index.html" class="nav nav-left">Home Page</a></p>
-
 <h1>Table of Contents</h1>
 
-<p>This text is divided into four sections: two short and introductory, two long and in-depth. The first two, <em>The Tengwar Writing System</em> and <em>Speaking Sindarin</em>, will give you a taste of the language, and a basic understanding of many of the elvish names, phrases, and inscriptions in <em>The Lord of the Rings</em>. The third section, the <em>Grammar of Sindarin</em>, is a deeper look at the rules that govern the construction of words and phrases. Finally, there is the <em>History of Sindarin</em>, which describes how the languages of the Elves changed through the long histories of Middle-earth and of Aman in the West.</p>
-
-<h2>The Tengwar Writing System</h2>
-
-<ul>
-<li><strong><a href="english-tengwar.html">Writing English with Tengwar</a></strong></li>
-<li><strong><a href="tengwar-punctuation.html">Tengwar Punctuation</a></strong></li>
-<li><strong><a href="tengwar-numbers.html">Tengwar Numbers</a></strong></li>
-<li>The Sindarin Mode of Beleriand</li>
-<li>The Sindarin Mode of Gondor</li>
-<li>The Alphabetic Sindarin Mode</li>
-<li>Tips for Tengwar Calligraphy</li>
-<li>Extra Credit: Identify the Language</li>
-</ul>
-
-<h2>Speaking Sindarin</h2>
-
-<ul>
-<li><a href="pronunciation.html">Pronunciation</a></li>
-<li>Phrasebook</li>
-<li>Commands</li>
-<li><q>Mine</q> and <q>Yours</q></li>
-<li>Wordlist</li>
-</ul>
-
-<h2>The Grammar of Sindarin</h2>
-
-<ul>
-<li>Plural Nouns</li>
-<li>The Definite Article; The Soft Mutation</li>
-<li>Possession</li>
-<li>Present-tense Verbs</li>
-<li>Irregular Plurals</li>
-</ul>
-
-<h2>The History of Sindarin</h2>
-
-<ul>
-<li>Sound changes from Common Eldarin to Old Sindarin</li>
-<li>The Grammar of Old Sindarin</li>
-<li>Innovations in Old Sindarin</li>
-<li>Sound changes from Old Sindarin to Middle Sindarin</li>
-<li>The Grammar of Middle Sindarin</li>
-<li>Sound changes from Middle Sindarin to Classical Sindarin</li>
+<ul class="toc">
+  <li>
+    <h4>Roots</h4>
+    <ul>
+        <li>
+          <p><a href="#selected-vocabulary">Selected Vocabulary</a></p>
+        </li>
+        <li>
+          <p><a href="#pronunciation">Pronunciation</a></p>
+        </li>
+        <li>
+          <p><a href="#writing-systems">The Tengwar</a></p>
+        </li>
+        <li>
+          <p><a href="#imperatives">Wishes, Commands</a></p>
+        </li>
+        <li>
+          <p><a href="#possessives">Possessives</a></p>
+        </li>
+        <li>
+          <p><a href="#plurals">Plurals</a></p>
+        </li>
+        <li>
+          <p><a href="#adjectives-the-soft-mutation">Adjectives and the Soft Mutation</a></p>
+        </li>
+        <li>
+          <p><a href="#articles-the-soft-mutation">Articles and the Nasal Mutation</a></p>
+        </li>
+        <li>
+          <p><a href="#present-tense-verbs">Present Tense Verbs</a></p>
+        </li>
+        <li>
+          <p><a href="#future-tense-verbs">Future Tense Verbs</a></p>
+        </li>
+        <li>
+          <p><a href="#the-present-participle">The Present Participle</a></p>
+        </li>
+    </ul>
+  </li>
+  <li>
+    <h4>Branches</h4>
+    <ul>
+        <li>
+          <p><a href="#negation">Negation</a></p>
+        </li>
+        <li>
+          <p><a href="#prepositions-and-their-mutations">Prepositions and Their Mutations</a></p>
+        </li>
+        <li>
+          <p><a href="#pronouns">Pronouns</a></p>
+        </li>
+        <li>
+          <p><a href="#past-tense-verbs">Past-tense Verbs</a></p>
+        </li>
+        <li>
+          <p><a href="#the-past-participle">The Past Participle</a></p>
+        </li>
+        <li>
+          <p><a href="#the-present-perfect-participle">The Present Perfect Participle</a></p>
+        </li>
+        <li>
+          <p><a href="#word-order-in-sentences">Word Order in Sentences</a></p>
+        </li>
+    </ul>
+  </li>
+  <li>
+    <h4>Scattered Leaves</h4>
+  </li>
 </ul>
         </div>
     </div>

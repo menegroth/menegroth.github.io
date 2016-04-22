@@ -3,8 +3,12 @@
 
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../print.css">
     <style type="text/css">
 
     @font-face {
@@ -37,24 +41,9 @@
         src: url(../annatar/tngani.ttf);
     }
 
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        min-height: 100%;
-    }
-
-    body {
-        min-height: 100%;
-        background-color: #000;
-        background-image: url('../stone_border.png'), url('../leaf_border.png'), url('../background-dark.gif');
-        background-position: top right, top left, top left;
-        background-attachment: scroll, scroll, fixed;
-        background-repeat: repeat-y, repeat-y, repeat;
+    @font-face {
+        font-family: cirth;
+        src: url(../Erebor.ttf)
     }
 
     </style>
@@ -75,7 +64,7 @@
 ./test &gt; /dev/null
 </code></p>
 
-<p>from the <code>changes</code> directory to run the test suite. If nothing is printed to STDERR, it means everything works. If you see error messages beginning with <code>NOT FOUND</code>, something&#39;s wrong; you can run <code>./test</code> to see which sequence of changes is messing up.</p>
+<p>from the <code>changes</code> directory to run the test suite. If nothing is printed to STDERR, it means everything works. If you see error messages beginning with <code>NOT FOUND</code>, something&rsquo;s wrong; you can run <code>./test</code> to see which sequence of changes is messing up.</p>
 
 <p>To see how an individual Primitive Quendian word changes in the Quenya, Telerin, and Sindarin branches, use the <code>./trace</code> script, like so:</p>
 
@@ -83,7 +72,7 @@
 ./trace álakwā
 </code></p>
 
-<p>If you run the exact command above, you&#39;ll notice that each language has multiple lines of output. For example, the Sindarin reflexes of <code>álakwā</code> are given as <code>alph</code> and <code>alab</code>. Here, only <code>alph</code> is correct; <code>**alab</code> is a misderived form. The reason for outputting multiple forms is that some of the sound changes appear to be <q>optional</q>—Tolkien may simply have applied them or not according to which resulting form he preferred, or he may have had a more formal system that eludes us due to lack of data. The best way for a computer program to handle this apparent indeterminacy is to print all plausible forms and let the human choose the most appropriate one.</p>
+<p>If you run the exact command above, you&rsquo;ll notice that each language has multiple lines of output. For example, the Sindarin reflexes of <code>álakwā</code> are given as <code>alph</code> and <code>alab</code>. Here, only <code>alph</code> is correct; <code>**alab</code> is a misderived form. The reason for outputting multiple forms is that some of the sound changes appear to be <q>optional</q>—Tolkien may simply have applied them or not according to which resulting form he preferred, or he may have had a more formal system that eludes us due to lack of data. The best way for a computer program to handle this apparent indeterminacy is to print all plausible forms and let the human choose the most appropriate one.</p>
 
 <h2>The Sound Changes</h2>
 
@@ -114,7 +103,7 @@
 cat pq_lexicon | ruby pq_to_ce.rb | ruby ce_to_cl.rb
 </code></p>
 
-<p>Change scripts may also take an argument, which should refer to a <em>golden master</em> file representing the expected output from the change. If any words in the golden master file are missing from the output, a warning will be printed to standard error. This is useful when experimenting with sound changes, as it ensures the hypothesized changes don&#39;t contradict the data.</p>
+<p>Change scripts may also take an argument, which should refer to a <em>golden master</em> file representing the expected output from the change. If any words in the golden master file are missing from the output, a warning will be printed to standard error. This is useful when experimenting with sound changes, as it ensures the hypothesized changes don&rsquo;t contradict the data.</p>
 
 <p><code>bash
 cat pq_lexicon | ruby pq_to_ce.rb ce_lexicon
@@ -122,17 +111,17 @@ cat pq_lexicon | ruby pq_to_ce.rb ce_lexicon
 
 <h2>Lexicon Format</h2>
 
-<p>Words in the lexicon files are separated from their gloss by <code>=</code> (an equals sign surrounded by spaces), and from each other by line breaks. A <code>!</code> before a word indicates that it is irregular or an innovation, and so can&#39;t be derived via sound change rules. A leading <code>*</code> means that the word is reconstructed from an attested form in a different epoch, and is only as accurate as the sound change scripts.</p>
+<p>Words in the lexicon files are separated from their gloss by <code>=</code> (an equals sign surrounded by spaces), and from each other by line breaks. A <code>!</code> before a word indicates that it is irregular or an innovation, and so can&rsquo;t be derived via sound change rules. A leading <code>*</code> means that the word is reconstructed from an attested form in a different epoch, and is only as accurate as the sound change scripts.</p>
 
-<p>Lines beginning with <code>#</code> are treated as comments–they aren&#39;t affected by sound changes or printed in the output.</p>
+<p>Lines beginning with <code>#</code> are treated as comments–they aren&rsquo;t affected by sound changes or printed in the output.</p>
 
 <h2>Typographic and Orthographic Conventions</h2>
 
 <p>I use a <code>+</code> to separate elements of a compound, and <code>-</code> to separate words that are closely associated (for example, a preposition and its object).  An acute accent over a vowel (áéíóú) marks stress; a macron (āēīōū) marks length. Where a vowel is both stressed and long, the combination is represented by a circumflex (âêîôû). Stress is marked sporadically–only where necessary for the correct sound changes to take effect. This is in part because <em>Tolkien</em> marked stress only occasionally in the Etymologies. Adding stress marking of my own would have required me to asterisk and explain forms that are attested with no indication of stress.</p>
 
-<p>Late in the development of Sindarin, <em>overlong</em> vowels arose in monosyllables. Tolkien marked these with a circumflex. I don&#39;t distinguish them from normal long vowels until the final orthographic adjustments to Classical Sindarin that present it in its LOTR-style form, since no sound changes depend on the long/overlong distinction.</p>
+<p>Late in the development of Sindarin, <em>overlong</em> vowels arose in monosyllables. Tolkien marked these with a circumflex. I don&rsquo;t distinguish them from normal long vowels until the final orthographic adjustments to Classical Sindarin that present it in its LOTR-style form, since no sound changes depend on the long/overlong distinction.</p>
 
-<p>In all epochs except the terminal ones (Telerin, Sindarin, and Exilic Quenya), I use <code>k</code> and <code>j</code> for their IPA values, and <code>ñ</code> for the velar nasal. Quendian roots are spelled as printed in the Etymologies of <em>The Lost Road</em>. I don&#39;t distinguish palatalization, labialization, or aspiration of consonants from full <code>j</code>, <code>w</code>, and <code>h</code>, since such distinctions are not necessary for the sound changes to work.</p>
+<p>In all epochs except the terminal ones (Telerin, Sindarin, and Exilic Quenya), I use <code>k</code> and <code>j</code> for their IPA values, and <code>ñ</code> for the velar nasal. Quendian roots are spelled as printed in the Etymologies of <em>The Lost Road</em>. I don&rsquo;t distinguish palatalization, labialization, or aspiration of consonants from full <code>j</code>, <code>w</code>, and <code>h</code>, since such distinctions are not necessary for the sound changes to work.</p>
 
 <p>The lexicon files should not be used for new scholarly investigations, since the forms given are normalized and so deviate from those in the primary sources (usually without comment).</p>
         </div>

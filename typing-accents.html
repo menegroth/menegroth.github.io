@@ -3,8 +3,12 @@
 
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./print.css">
     <style type="text/css">
 
     @font-face {
@@ -37,24 +41,9 @@
         src: url(./annatar/tngani.ttf);
     }
 
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        min-height: 100%;
-    }
-
-    body {
-        min-height: 100%;
-        background-color: #000;
-        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
-        background-position: top right, top left, top left;
-        background-attachment: scroll, scroll, fixed;
-        background-repeat: repeat-y, repeat-y, repeat;
+    @font-face {
+        font-family: cirth;
+        src: url(./Erebor.ttf)
     }
 
     </style>
@@ -65,18 +54,68 @@
         <div class="content">
 <h1>Typing Accented Characters</h1>
 
-<h2>On Mac OSX</h2>
+<h2>The Failsafe</h2>
 
-<p>On a Mac, you can type vowels with an acute accent by pressing <code>option</code>+<code>E</code> and then typing the vowel that you want. To type a circumflex, use <code>option</code>+<code>I</code> instead.</p>
-
-<h2>On Windows</h2>
-
-<p>Typing special characters on Windows is considerably more annoying. The best way is probably to change your keyboard settings to international mode, which will let you type accented letters using key combinations. A guide to doing that can be found <a href="http://symbolcodes.tlt.psu.edu/accents/codeint.html">here</a>. Alternatively, you can copy and paste the accented letters from the table below.</p>
+<p>The easiest way to get accented letters is to just copy-paste them from somewhere else—like this table:</p>
 
 <div style="text-align:center;font-size:24px">
 á é í ó ú ý â ê î ô û ŷ<br/>
 Á É Í Ó Ú Ý Â Ê Î Ô Û Ŷ
 </div>
+
+<p>If you plan on writing a lot of Elvish, though, copy-pasting single letters all the time is going to get annoying. That&rsquo;s where the rest of this guide comes in. It describes how to type accented characters with key combos.</p>
+
+<h2>On Mac OSX</h2>
+
+<p>On a Mac, you can create accents by holding down the <code>option</code> key while pressing another key. For example, <code>option</code>+<code>e</code> will create a floating accent mark that will be placed on whatever character you type next. Try it out:</p>
+
+<p><textarea></textarea></p>
+
+<p>Unfortunately, the default keyboard settings do not let you place accents over the letter Y, which is necessary for some Sindarin names like <span class="s">Bar-in-Mŷl</span> (<q>Home of the Gulls</q>). To type all the characters needed for Sindarin, you&rsquo;ll have to change your keyboard settings to the <q>U.S. Extended</q> layout.</p>
+
+<ol>
+<li>Open the System Preferences application. The easiest way to do this is from the Apple menu at the top left corner of the screen.</li>
+<li>Go to <q>Language and Text</q>.</li>
+<li>Check the box <q>Show Input menu in menu bar</q>.</li>
+<li>In the list titled <q>Select input methods to use</q>, find <q>U.S. Extended</q> (the list is alphabetical, so it will be near the bottom). Check the box next to it.</li>
+<li>Close System Preferences.</li>
+<li>You should now see a U.S. flag in your menu bar near the top right corner of your screen (this was added by checking the <q>Show input menu in menu bar</q> box). Click on it and select <q>U.S. Extended</q> from the menu that appears.</li>
+</ol>
+
+<p>To test that it worked, try typing an accented Y in the box above. Press <code>option</code>+<code>6</code>, then <code>Y</code>. You should see a Y with a circumflex over it: ŷ.</p>
+
+<p>A list of key combinations needed for Elvish is below. <strong>Note that some of these will only work if you have changed your keyboard settings to <q>U.S. Extended</q>.</strong></p>
+
+<table class="bordered block-center">
+<thead>
+    <tr>
+        <td>to type...</td>
+        <td>press...</td>
+        <td>then type...</td>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>á, é, í, ó, ú, or ý</td>
+        <td><code>option</code>+<code>e</code></td>
+        <td>a, e, i, o, u, or y</td>
+    </tr>
+    <tr>
+        <td>â, ê, î, ô, û, or ŷ</td>
+        <td><code>option</code>+<code>6</code></td>
+        <td>a, e, i, o, u, or y</td>
+    </tr>
+    <tr>
+        <td>ä, ë, or ö</td>
+        <td><code>option</code>+<code>u</code></td>
+        <td>a, e, or o</td>
+    </tr>
+</tbody>
+</table>
+
+<h2>On Windows</h2>
+
+<p>First, a disclaimer: I don&rsquo;t own a Windows computer. The best I can do is link to guides explaining how to type accents on Windows. One way is to change your keyboard settings to international mode, which will let you type accented letters using key combinations. A guide to doing that can be found <a href="http://symbolcodes.tlt.psu.edu/accents/codeint.html">here</a>.</p>
         </div>
     </div>
 </body>

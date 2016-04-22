@@ -3,8 +3,12 @@
 
 <head>
     <title>Menegroth ✶ The Thousand Caves</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./print.css">
     <style type="text/css">
 
     @font-face {
@@ -37,24 +41,9 @@
         src: url(./annatar/tngani.ttf);
     }
 
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        min-height: 100%;
-    }
-
-    body {
-        min-height: 100%;
-        background-color: #000;
-        background-image: url('./stone_border.png'), url('./leaf_border.png'), url('./background-dark.gif');
-        background-position: top right, top left, top left;
-        background-attachment: scroll, scroll, fixed;
-        background-repeat: repeat-y, repeat-y, repeat;
+    @font-face {
+        font-family: cirth;
+        src: url(./Erebor.ttf)
     }
 
     </style>
@@ -65,11 +54,11 @@
         <div class="content">
 <h1>Sound changes in Sindarin</h1>
 
-<p>This file is in .sc format, which means the markdown source can be copy-pasted directly into <a href="http://zompist.com/sca2">Zompist&#39;s Sound Change Applier</a>. A sample Common Eldarin lexicon to use with the SCA can be found in the same Github repo as this document.</p>
+<p>This file is in .sc format, which means the markdown source can be copy-pasted directly into <a href="http://zompist.com/sca2">Zompist&rsquo;s Sound Change Applier</a>. A sample Common Eldarin lexicon to use with the SCA can be found in the same Github repo as this document.</p>
 
 <h2>Sound Categories</h2>
 
-<p>Note on orthography: I use macrons (e.g. <code>ā</code>) to represent long vowels, and acute accents (<code>á</code>) to represent stress. If a vowel is both stressed and long, the combination is represented by a circumflex (<code>â</code>). Most representations of Eldarin languages don&#39;t mark stress like this, but I&#39;ve done so here to get the sound change rules to work.</p>
+<p>Note on orthography: I use macrons (e.g. <code>ā</code>) to represent long vowels, and acute accents (<code>á</code>) to represent stress. If a vowel is both stressed and long, the combination is represented by a circumflex (<code>â</code>). Most representations of Eldarin languages don&rsquo;t mark stress like this, but I&rsquo;ve done so here to get the sound change rules to work.</p>
 
 <p><code>code
 &lt;velar&gt;=kkʰgŋxʒ
